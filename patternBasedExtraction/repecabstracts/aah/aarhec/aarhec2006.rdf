@@ -1,0 +1,439 @@
+Template-Type: ReDIF-Paper 1.0
+Title: A Note on the Vogelsang Test for Additive Outliers
+Creation-Date: 20060116
+Author-Name: Niels Haldrup
+Author-X-Name-First: Niels
+Author-X-Name-Last: Haldrup
+Author-Name: Andreu Sansó
+Author-X-Name-First: Andreu
+Author-X-Name-Last: Sansó
+Author-Email: nhaldrup@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: The role of additive outliers in integrated time series has attracted
+some attention recently and research shows that outlier detection should
+be an integral part of unit root testing procedures. Recently, Vogelsang
+(1999) suggested an iterative procedure for the detection of multiple additive
+outliers in integrated time series. However, the procedure appears
+to suffr from serious size distortions towards the finding of too many
+outliers as has been shown by Perron and Rodriguez (2003). In this note
+we prove the inconsistency of the test in each step of the iterative procedure
+and hence alternative routes need to be taken to detect outliers in
+nonstationary time series.
+Classification-JEL: C12, C2, C22
+Keywords: Additive outliers, outlier detection, integrated processes
+Length: 7
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/06/wp06_01.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2006-01
+
+Template-Type: ReDIF-Paper 1.0
+Title: The Risk-Return Trade-Off in Human Capital Investment
+Creation-Date: 20060201
+Author-Name: Charlotte Christiansen
+Author-X-Name-First: Charlotte
+Author-X-Name-Last: Christiansen
+Author-Name: Juanna Schröter Joensen
+Author-X-Name-First: Juanna Schröter
+Author-X-Name-Last: Joensen
+Author-X-Name-First: Helena Skyt
+Author-X-Name-Last: Nielsen
+Author-Email: hnielsen@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: 
+In this paper we analyze investments in human capital assets in a 
+way which is standard for financial assets, but not (yet) for human capital 
+assets. We study mean-variance plots of human capital assets. We compare 
+the properties of human capital returns using a performance measure and by 
+sing tests for mean-variance spanning. A risk-return trade-off is revealed, 
+hich is not only related to the length of education but also to the type of 
+education. We identify a range of educations that are efficient in terms of 
+investment goods, and a range of educations that are inefficient, and may be 
+chosen for consumption purposes.
+Classification-JEL: I21, J24
+Keywords: Educational Choice; Efficient Frontier; Human Capital Investment; Mean-Variance Analysis
+Length: 40
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/06/wp06_02.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2006-02
+
+Template-Type: ReDIF-Paper 1.0
+Title: A Gaussian IV estimator of cointegrating relations
+Creation-Date: 20060216
+Author-Name: Gunnar Bårdsen
+Author-X-Name-First: Gunnar
+Author-X-Name-Last: Bårdsen
+Author-Name: Niels Haldrup
+Author-X-Name-First: Niels
+Author-X-Name-Last: Haldrup
+Author-Email: nhaldrup@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: In static single equation cointegration regression models
+the OLS estimator will have a non-standard distribution unless regressors are
+strictly exogenous. In the literature a number of estimators have been suggested
+to deal with this problem, especially by the use of semi-nonparametric
+estimators. Theoretically ideal instruments can be defined to ensure a limiting
+Gaussian distribution of IV estimators, but unfortunately such instruments are
+unlikely to be found in real data. In the present paper we suggest an IV estimator
+where the Hodrick-Prescott filtered trends are used as instruments for
+the regressors in cointegrating regressions. These instruments are almost ideal
+and simulations show that the IV estimator using such instruments alleviate
+the endogeneity problem extremely well in both finite and large samples.
+Classification-JEL: C2, C22, C32
+Keywords: Cointegration, Instrumental variables, Mixed Gaussianity.
+Length: 19
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/06/wp06_03.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2006-03
+
+Template-Type: ReDIF-Paper 1.0
+Title: Seasonal Adjustment
+Creation-Date: 20060222
+Author-Name: Svend Hylleberg
+Author-X-Name-First: Svend
+Author-X-Name-Last: Hylleberg
+Author-Email: shylleberg@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: The main objective behind the production of seasonally adjusted time series
+is to give an easy access to a common time series data set purged of what is
+considered seasonal noise. Although the application of o¢ cially seasonally
+adjusted data may have the advantage of being cost saving it may also
+imply a less e¢ cient use of the information available, and one may apply a
+distorted set of data. Hence, in many cases, there may be a need for treating
+seasonality as an integrated part of an econometric analysis. In this article
+we present several di¤erent ways to integrate the seasonal adjustment into
+the econometric analysis in addition to applying data adjusted by the two
+most popular adjustment methods.
+Classification-JEL: C10
+Keywords: Seasonality
+Length: 29
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/06/wp06_04.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2006-04
+
+Template-Type: ReDIF-Paper 1.0
+Title: The link between individual expectations and savings: Do nursing home expectations matter? 
+Creation-Date: 20060424
+Author-Name: Kristin J. Kleinjans
+Author-X-Name-First: Kristin J.
+Author-X-Name-Last: Kleinjans
+Author-Name: Jinkook Lee
+Author-X-Name-First: Jinkook
+Author-X-Name-Last: Lee
+Author-Email: kkleinjans@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: Preparing for the end of life, especially for the prospect of needing long-term 
+care, is an important issue facing older Americans.  Those who reach age 65 
+have a 40% chance of going into a nursing home in their remaining lifetime, 
+and about 10% of those who do will stay there for at least five years.  The 
+costs of a stay are high with on average US$70,000 annually for a private 
+room.  Long-term stays in nursing homes are, therefore, not likely, but very 
+expensive.  In this paper, we examine individual expectations about future 
+nursing home entry and study the relationship between these expectations and 
+savings behavior, using data from the Health and Retirement Study.  We find a 
+clear relation between subjective expectations and probability of future 
+nursing home entry, and a positive effect of these expectations on savings 
+behavior.  Surprisingly, we find no difference of this effect by wealth group, 
+so it seems that Medicaid eligibility in the context of nursing home entry plays 
+no factor in the decision to save.
+Classification-JEL: D12, J14, J26
+Keywords: expectations, nursing home, savings
+Length: 38
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/06/wp06_05.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2006-05
+
+Template-Type: ReDIF-Paper 1.0
+Title: Home Ownership, Job Duration, and Wages
+Creation-Date: 20060502
+Author-Name: Jakob Roland Munch
+Author-X-Name-First: Jakob Roland
+Author-X-Name-Last: Munch
+Author-Name: Michael Rosholm
+Author-X-Name-First: Michael
+Author-X-Name-Last: Rosholm
+Author-Name: Michael Svarer
+Author-X-Name-First: Michael
+Author-X-Name-Last: Svarer
+Author-Email: msvarer@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: We investigate the impact of home ownership on individual job mobility and wages 
+in Denmark. We find that home ownership has a negative impact on job-to-job mobility
+both in terms of transition into new local jobs and new jobs outside the local labour
+market. In addition, there is a clear negative effect of home ownership on the 
+unemployment risk and a positive impact on wages. These results are robust to different
+strategies for correcting for the possible endogeneity of the home owner variable.
+Classification-JEL: J6, R2
+Keywords: Home ownership, job mobility, duration model
+Length: 24
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/06/wp06_06.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2006-06
+
+Template-Type: ReDIF-Paper 1.0
+Title: Skills, sunspots and cycles
+Creation-Date: 20060531
+Author-Name: Francesco Busato
+Author-X-Name-First: Francesco
+Author-X-Name-Last: Busato
+Author-Name: Enrico Marchetti
+Author-X-Name-First: Enrico
+Author-X-Name-Last: Marchetti
+Author-Email: fbusato@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: This paper explores the ability of a class of one-sector,
+multi-input models to generate indeterminate equilibrium paths, and
+endogenous cycles, without relying on factors' hoarding. The model
+presents a novel theoretical economic mechanism that supports
+sunspot-driven expansions without requiring upward sloping labor
+demand schedules. Its distinctive characteristic is that the skill
+composition of aggregate labor demand drives expansionary i.i.d.
+demand shocks. Next, the model explains the labor market dynamics
+from the supply side, while endogenizing the capital productivity
+response to changes in the aggregate labor demand composition. Last
+but not least, it is worth to mention that the model presents an
+effective shock propagation mechanism that operates into the labor
+market and across labor market segments through the cross
+elasticities of equilibrium labor demand and supplies. In this
+respect the model can be seen as quite general formulation (with or
+without aggregate increasing returns to scale) for analyzing labor
+market dynamics within a general equilibrium model with labor market
+segmentation.
+Classification-JEL: O40, J24
+Keywords: Indeterminacy and Sunspots, Skills
+Length: 27
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/06/wp06_07.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2006-07
+
+Template-Type: ReDIF-Paper 1.0
+Title: On determining the importance of a regressor with small
+and undersized samples
+Creation-Date: 20060714
+Author-Name: Peter Sandholt Jensen
+Author-X-Name-First: Peter Sandholt
+Author-X-Name-Last: Jensen
+Author-Name: Allan H. Würtz
+Author-X-Name-First: Allan H.
+Author-X-Name-Last: Würtz
+Author-Email: awurtz@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: A problem encountered in, for instance, growth empirics is that the number of
+explanatory variables is large compared to the number of observations. This makes
+it infeasible to condition on all variables in order to determine the importance of a
+variable of interest. We prove identifying assumptions under which the problem is
+not ill-posed. Under these assumptions, we derive properties of the most commonly
+used methods: Extreme bounds analysis, Sala-i-Martin’s method, BACE, generalto-
+specific, minimum t-statistics, BIC and AIC. We propose a new method and show
+that it has good finite sample properties.
+Classification-JEL: C12, C51, C52
+Keywords: AIC, BACE, BIC, extreme bounds analysis, general-to-specific, identification,
+ill-posed inverse problem, robustness, sensitivity analysis
+Length: 39
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/06/wp06_08.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2006-08
+
+Template-Type: ReDIF-Paper 1.0
+Title: Working late: Do Workplace Sex Ratios Affect Partnership Formation and Dissolution?
+Creation-Date: 20060816
+Author-Name: Michael Svarer
+Author-X-Name-First: Michael
+Author-X-Name-Last: Svarer
+Author-Email: msvarer@econ.au.dk
+Author-WorkPlace-Name: School of Economics and Management, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: In this paper, I analyse the association between workplace sex ratios and partnership 
+formation and dissolution. I find that the risk of dissolution increases with the fraction 
+of coworkers of the opposite sex at both the female and male workplace. On the other hand, 
+workplace sex ratios are not important for the overall transition rate from singlehood 
+to partnership. The results suggest that the workplace constitutes a more important 
+marriage market segment for individuals who are already in a partnership presumably due 
+to higher search cost for (alternative) partners in general.
+Classification-JEL: J12
+Keywords: Partnership formation, dissolution, workplace sex ratios
+Length: 25
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/06/wp06_09.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2006-09
+
+Template-Type: ReDIF-Paper 1.0
+Title: Educational Homogamy: Preferences or Opportunities?
+Creation-Date: 20060816
+Author-Name: Michael Svarer
+Author-X-Name-First: Michael
+Author-X-Name-Last: Svarer
+Author-Name: Helena Skyt Nielsen
+Author-X-Name-First: Helena skyt
+Author-X-Name-Last: Nielsen
+Author-Email: hnielsen@econ.au.dk
+Author-WorkPlace-Name: School of Economics and Management, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: Individuals match on length and type of education. We investigate whether the
+systematic relationship between educations of partners is explained by opportuni-
+ties (e.g. low search frictions) or preferences (e.g. complementarities in household
+production or portfolio optimization). We find that half of the systematic sorting
+on education is due to low search frictions in marriage markets of the educational
+institutions. The other half is attributed to complementarities in household pro-
+duction, since income properties of the joint income process show no influence on
+partner selection.
+Classification-JEL: J12, J24.
+Keywords: positive assortative matching on education, search frictions, hedging,
+complementarities in household production
+Length: 33
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/06/wp06_10.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2006-10
+
+Template-Type: ReDIF-Paper 1.0
+Title: Is there a Causal Effect of High School Math on Labor Market Outcomes?
+Creation-Date: 20061003
+Author-Name: Juanna Schrøter Joensen
+Author-X-Name-First: Juanna  Schrøter
+Author-X-Name-Last: Joensen
+Author-Name: Helena Skyt Nielsen
+Author-X-Name-First: Helena skyt
+Author-X-Name-Last: Nielsen
+Author-Email: hnielsen@econ.au.dk
+Author-WorkPlace-Name: School of Economics and Management, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: Outsourcing of jobs to low-wage countries has increased the focus on
+the accumulation of skills - such as Math skills - in high-wage countries.
+In this paper, we exploit a high school pilot scheme to identify the causal
+effect of advanced high school Math on labor market outcomes. The pilot
+scheme reduced the costs of choosing advanced Math because it allowed
+for at more flexible combination of Math with other courses. We find
+clear evidence of a causal relationship between Math and earnings for the
+students who are induced to choose Math after being exposed to the pilot
+scheme. The effect partly stems from the fact that these students end up
+with higher education.
+Classification-JEL: I20, J24
+Keywords: Math, High School Curriculum, Instrumental Variable, Local Average Treatment Effect.
+Length: 42
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/06/wp06_11.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2006-11
+
+Template-Type: ReDIF-Paper 1.0
+Title:  On the Rationale for the Use of Border Taxes in Developing Countries
+Creation-Date: 20061230
+Author-Name: Knud Jørgen Munk
+Author-X-Name-First: Knud Jørgen
+Author-X-Name-Last: Munk
+Author-Email: Kmunk@econ.au.dk
+Author-WorkPlace-Name: School of Economics and Management, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: With reference to the size of the informal sector, Stiglitz (2003) argues that border taxes are
+superior to VAT in certain developing countries. By way of a quantitative example this paper shows 
+that, while Stiglitz’ claim is probably will turn out to be correct, a large informal sector is not a 
+sufficient condition for border taxes to be preferable to a VAT regime as shown by Keen (2006). 
+Making the case for using border taxes also requires the plausible supplementary assumptions that 
+(i) border taxes are associated with lower administrative costs, and (ii) that this difference is 
+sufficiently large to justify the larger distortionary costs associated with border taxes compared to 
+domestic taxes.
+Classification-JEL: F11, F13, H21
+Keywords: Optimal trade policy, VAT, tax-tariff reform, costs of tax administration, informal sector, developing countries
+Length: 11
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/06/wp06_12.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2006-12
+
+Template-Type: ReDIF-Paper 1.0
+Title:  Rules of Normalisation and their Importance for Interpretation of Systems of Optimal Taxation
+Creation-Date: 20061230
+Author-Name: Knud Jørgen Munk
+Author-X-Name-First: Knud Jørgen
+Author-X-Name-Last: Munk
+Author-Email: Kmunk@econ.au.dk
+Author-WorkPlace-Name: School of Economics and Management, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: The adoption of proper rules of normalisation is in general considered a trivial problem
+which deserves little attention. Possibly for that very reason errors in normalisation have
+resulted in flawed interpretations of the conditions for optimal commodity taxation. We
+state based on an explicit representation of the general equilibrium conditions the rules of
+normalisation in standard optimal tax models. This allows us to provide an intuitive
+explanation of what determines the optimal tax system. Finally, we review a number of
+examples where lack of precision with respect to normalisation in otherwise important
+contributions to the literature on optimal taxation has given rise to misinterpretations of
+of analytical results.
+Classification-JEL: H2
+Keywords: Public economics, optimal taxation, normalisation rules, p-complements, q-complements,
+distance function
+Length: 19
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/06/wp06_13.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2006-13
+
+Template-Type: ReDIF-Paper 1.0
+Title:  Tax-tariff reform with costs of tax administration
+Creation-Date: 20061230
+Author-Name: Knud Jørgen Munk
+Author-X-Name-First: Knud Jørgen
+Author-X-Name-Last: Munk
+Author-Email: Kmunk@econ.au.dk
+Author-WorkPlace-Name: School of Economics and Management, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: As is broadly recognized, the straightforward application of the Diamond-Mirrlees (1971) production 
+efficiency theorem implies that when lump-sum taxation is not available, then it is optimal for the 
+government in a small open economy to rely on taxes on the net demand of households rather than on 
+border taxes to finance its resource requirements. However, the theorem does not hold when taxation 
+is associated with administrative costs. The present paper explores the implications of taking into 
+account the costs of tax administration for optimal taxation and for desirable directions of tax-tariff 
+reform in countries at different levels of economic development. The paper clarifies the reasons for, 
+and lends support to, the criticism by Stiglitz (2003) of the IMF and the World Bank's recommendation 
+to developing countries to adopt VAT to replace border taxes.
+Classification-JEL: F11, F13, H21
+Keywords: Optimal taxation, optimal trade policy, VAT, tax-tariff reform, costs of tax administration, 
+informal sector, developing countries
+Length: 21
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/06/wp06_14.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2006-14
+
+Template-Type: ReDIF-Paper 1.0
+Title:  Welfare Effects of Tax and Price Changes and the CES-UT Utility Function
+Creation-Date: 20061230
+Author-Name: Knud Jørgen Munk
+Author-X-Name-First: Knud Jørgen
+Author-X-Name-Last: Munk
+Author-Email: Kmunk@econ.au.dk
+Author-WorkPlace-Name: School of Economics and Management, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: Dixit’s 1975 paper "Welfare Effects of Tax and Price Changes" constitutes a seminal contribution to 
+the theory of tax reform within a second-best general equilibrium framework. The present paper clarifies 
+ambiguities with respect to normalisation which has led to misinterpretation of some of Dixit’s analytical 
+results. It proves that a marginal tax reform starting from a proportional tax system will improve social 
+welfare if it increases the supply of labour, whatever the rule of normalisation adopted. In models which 
+impose additive separability between consumption and leisure in household preferences this insight cannot 
+be articulated. This paper proposes as an alternative a parameterised utility function with explicit 
+representation of the use of time, the CES-UT, which allows a flexible representation of the relationship 
+between consumption and leisure. It also demonstrates how standard compensated price elasticities can be 
+derived from the parameters of the CES-UT and how it may be used for applied tax reform analysis.
+Classification-JEL: H2
+Keywords: Public economics, optimal taxation, tax reform, tax simulation, CGE models
+Length: 21
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/06/wp06_15.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2006-15

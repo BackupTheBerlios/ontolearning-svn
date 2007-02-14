@@ -1,0 +1,658 @@
+Template-Type: ReDIF-Paper 1.0
+Title: Testing for Multicointegration
+Author-Name: Tom Engsted
+Author-Name: Jesus Gonzalo
+Author-Name: Niels Haldrup
+Author-Email: nhaldrup@eco.aau.dk
+Author-WorkPlace-Name: University of Aarhus, Denmark, Department of
+  	Economics
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: 45 86 13 63 34
+Abstract: We suggest how to redefine the multicointegration model of Granger
+  	and Lee (1990) in terms of an I(2) system and subsequently propose a
+  	one-step procedure for estimation and inference which will have
+  	favourable statistical properties compared to the two-step procedure
+  	suggested by Granger and Lee. With respect to the single equation
+  	residual based cointegration procedure for I(2) systems we tabulate
+  	new critical values that are necessary to accomodate the presence of
+  	deterministic components.
+Classification-JEL: C12; C13; C22
+Keywords: Cointegration, multicointegration, I(2) processes
+Length: 14 pages
+Series: Working Paper
+Number: 1997-1
+File-URL: ftp://ftp.eco.aau.dk/afn/wp/wp97_1.ps
+File-Format: application/postscript
+File-URL: ftp://ftp.eco.aau.dk/afn/wp/wp97_1.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:1997-1
+
+Template-Type: ReDIF-Paper 1.0
+Title: Political Internalization of Economic Externalities. The Case of
+  	Environmental Policy in a Politico-Economic Model with Lobby Groups
+Author-Name: Toke S. Aidt
+Author-Email: taidt@eco.aau.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: This paper shows how competition between interests can internalize
+  	economic externalities groups. The key feature is that some lobby
+  	groups give political voice to environmental demands. We illustrate
+  	the basic ideas in a common agency model of politics, into which we
+  	introduce a negative output externality. We show that the
+  	politically optimal structure of environmental taxes incorporates
+  	the full Pigouvian adjustment. However, since lobby groups care
+  	about the distribution of income as well as about efficiency, the
+  	equilibrium structure of taxes differs considerably from the set of
+  	Pigouvian taxes. In particular, organized sectors get a tax
+  	discount, while unorganized sectors are taxed at an inefficiently
+  	high rate. Hence, environmental lobbying has a huge beggar-thy-
+  	neighbour element.
+Classification-JEL: H23,; D78,; Q28
+Keywords: Environmental policy, lobby groups, lobbying, positive
+  	environmental economics
+Length: 25
+Series: Working Paper
+Number: 1997-10
+File-URL: Ftp://ftp.eco.aau.dk/afn/wp/wp1997_10.ps
+File-Format: application/postscript
+Handle: RePEc:aah:aarhec:1997-10
+
+Template-Type: ReDIF-Paper 1.0
+Title: Effort, Taxation and Unemployment
+Author-Name: Torben M. Andersen
+Author-Email: tandersen@eco.aau.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus,
+  	Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Author-Name: Bo Sandemann Rasmussen
+Author-Email: brasmussen@eco.aau.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus,
+  	Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: The importance of the design of the income tax system for the
+  	incentive to supply effort is considered for both a situation where
+  	firms (efficiency wage model) or unions (monopoly union model) have
+  	the power to determine wages. A tax reform raising marginal taxes at
+  	all income levels and increasing (decreasing) average taxes at high
+  	(low) income levels may lead to higher wages, lower employment and
+  	higher unemployment under either wage determination regime.
+Classification-JEL: J41, J51, H22
+Keywords: Progressive taxation, wage formation, unemployment, effort, trade
+  	unions
+Length: 15
+Series: Working Paper
+Number: 1997-11
+File-URL: Ftp://ftp.eco.aau.dk/afn/wp/1997_11.ps
+File-Format: application/postscript
+Handle: RePEc:aah:aarhec:1997-11
+
+
+Template-Type: ReDIF-Paper 1.0
+Title: The Micro Efficiency of Danish Development Aid
+Author-Name: Martin Paldam
+Author-Email: mpaldam@eco.aau.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus,
+  	Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: Danish development aid is analyzed by visiting a sample of
+  	projects five years after their completion. The sample is stratified
+  	to nine countries chosen to be main, peaceful recipients in the main
+  	regions. The criterion of success is if the projects do what it is
+  	meant to. If we think the project would not have been accepted by
+  	Danida given present knowledge, it gets 0 to 2 points, and vice
+  	versa from 2 to 4 points. The average project obtains 2.16 points,
+  	but as our selection process has a couple of small upward biases, it
+  	is dubious if the true average is above 2. Projects in Africa,
+  	agriculture and parastatals are negative outliers with 3/4 to 1
+  	point, while projects in East Asia get 1 point more. There are some
+  	indications that Danida is more successful with small projects and
+  	NGO-projects. The soft, informal, multi-goal decision process used
+  	by Danida is discussed.
+Classification-JEL: F35, H43
+Keywords: Danish development aid, project evaluation
+Length: 28
+Series: Working Paper
+Number: 1997-13
+File-URL: Ftp://ftp.eco.aau.dk/afn/wp/1997_13.ps
+File-Format: application/postscript
+Handle: RePEc:aah:aarhec:1997-13
+
+Template-Type: ReDIF-Paper 1.0
+Title: Better Confidence Intervals for the Population Mean by Using Trimmed
+  	Means and The Iterated Bootstrap?
+Author-Name: Viggo Hoest
+Author-Email: vhoest@eco.aau.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus,
+  	Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: In the quarterly Danish sample based wage statistics firms within
+  	a given industry are randomly selected with probabilities
+  	proportional to size. The hourly mean wage per employee is
+  	registered within each selected firm. Then the population mean per
+  	employee is estimated by the pps-estimator, i.e. the simple mean of
+  	the selected firm means per employee. I raise the question: Is it
+  	possible to produce better confidence intervals for the population
+  	mean by using trimmed means instead of the simple mean when the
+  	iterated bootstrap is used? Monte Carlo experiments indicate that it
+  	is the case.
+Classification-JEL: C13, C15, C42, J30
+Keywords: Trimmed means, pps-sampling, iterated bootstrap, confidence
+  	intervals, wage statistics
+Length: 16
+Series: Working Paper
+Number: 1997-14
+File-URL: Ftp://ftp.eco.aau.dk/afn/wp/1997_14.ps
+File-Format: application/postscript
+Handle: RePEc:aah:aarhec:1997-14
+
+Template-Type: ReDIF-Paper 1.0
+Title: On the Effects of Drug Policy
+Author-Name: Gunnar Thorlund Jepsen
+Author-Email: gjepsen@eco.aau.dk
+Author-Name: Peter Skott
+Author-Email: pskott@eco.aau.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus,
+  	Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: This paper presents a simple analytical model of the market for
+  	hard drugs. The key assumptions are (i) a distinction between new
+  	users and existing addicts, (ii) imperfect competition, (iii)
+  	selective marketing efforts towards potential users, and (iv) the
+  	existence of policy effects on consumer loyalty as well as on the
+  	static price elasticity of demand facing individual suppliers at any
+  	given moment. It is shown that the long-run effects of stricter
+  	enforcement may be an increase in both the number of addicts and
+  	total consumption.
+Classification-JEL: D43, D92, I18, K14, K32
+Keywords: Drugs, enforcement strategy, addiction, consumer loyalty,
+  	marketing of illicit drugs, transaction costs.
+Length: 25
+Number: 1997-15
+File-URL: Ftp://ftp.eco.aau.dk/afn/wp/1997_15.ps
+File-Format: application/postscript
+Handle: RePEc:aah:aarhec:1997-15
+
+Template-Type: ReDIF-Paper 1.0
+Title: Growth and Stagnation in a Two-Sector Model: Kaldor's Mattioli
+  	Lectures
+Author-Name: Peter Skott
+Author-Email: pskott@eco.aau.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus,
+  	Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: Kaldor's Mattioli lectures analyse a two-sector model with
+  	increasing returns to scale (IRS) in industry and decreasing returns
+  	(DRS) in agriculture. This review article shows that (i) with IRS in
+  	industry a long-run equilibrium growth path with strictly positive
+  	growth rates may exist even if agriculture is subject to DRS; (ii)
+  	the industrial sector is the 'engine of growth' if agricultural
+  	investment is determined passively by available saving; (iii) if one
+  	introduces a separate agricultural investment function both positive
+  	and negative agricultural supply shocks may lead to stagnation, thus
+  	vindicating Kaldor's emphasis on commodity price stabilization.
+Classification-JEL: O41
+Keywords: Kaldor, two-sector model, engine of growth, price stabilization
+Length: 31
+Number: 1997-16
+File-URL: Ftp://ftp.eco.aau.dk/afn/wp/1997_16.ps
+File-Format: application/postscript
+Handle: RePEc:aah:aarhec:1997-16
+
+Template-Type: ReDIF-Paper 1.0
+Title: The Effect of Nuisance Parameters on Size and Power; LM Tests in
+  	Logit Models
+Author-Name: N.E. Savin
+Author-Name: Allan H. Wuertz
+Author-Email: awyrtz@eco.aau.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus,
+  	Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: In econometrics, most null hypotheses are composite, dividing the
+  	parameters into parameters of interest and nuisance parameters.
+  	Typically, a composite hypothesis can be tested using two or more
+  	testing procedures. Competing testing procedures are commonly
+  	compared using size-corrected powers. What is often overlooked is
+  	that the size-corrected critical value of a test can be sensitive to
+  	the set of admissible values of the nuisance parameters, and hence
+  	its size-corrected power. As a result, different choices for the
+  	admissible set can produce different conclusions about which test is
+  	best. This fact complicates the interpretation of Monte Carlo power
+  	studies because in many cases there is no natural definition of the
+  	set of admissible values. We find this fact to be crucial when
+  	choosing a Lagrange Multiplier test in the case of a logit model. A
+  	theoretical explanation for this effect is developed using large
+  	parameter asymptotics.
+Classification-JEL: C12; C15; C25
+Keywords: Composite hypotheses, finite sample power, Hessian information
+  	matrix, Lagrange multiplier test, logit model, nuisance parameter,
+  	outer product information matrix.
+Length: 24
+Number: 1997-17
+File-URL: ftp://ftp.eco.aau.dk/afn/wp/wp97_17.ps
+File-Format: application/postscript
+File-URL: ftp://ftp.eco.aau.dk/afn/wp/wp97_17.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:1997-17
+
+Template-Type: ReDIF-Paper 1.0
+Title: Multicointegration in Stock-Flow Models
+Author-Name: Tom Engsted
+Author-Name: Niels Haldrup
+Author-Email: nhaldrup@eco.aau.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus,
+  	Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: Multicointegration, in the sense of Granger and Lee (1990),
+  	frequently occurs in models of stock-flow adjustment and implies
+  	cointegration amongst I(2) variables and their differences
+  	(polynomial cointegration). The purpose of this article is two-fold.
+  	First, we demonstrate that based on a multicointegrated vector
+  	autoregression (VAR) two equivalent error correction model (ECM)
+  	representations can be derived; the first is expressed in terms of
+  	adjustments in the flows of the variables (the standard I(2) ECM),
+  	and the second is expressed in terms of adjustments in both the
+  	stocks and the flows. Secondly, we apply I(2) estimation and testing
+  	procedures for multicointegrated time series to analyze data for US
+  	housing construction. We find that stocks of housing units started
+  	and completed exhibit polynomial cointegration (and hence the flows
+  	are multicointegrated) and the associated ECM's are estimated. Lee
+  	(1992, 1996) also found multicointegration in this data set but
+  	without explicitly exploiting the I(2) property.
+Classification-JEL: C12; C13; C22; C32; C51
+Keywords: Cointegration, multicointegration, I(2) processes, housing
+  	construction
+Length: 20
+Number: 1997-18
+File-URL: ftp://ftp.eco.aau.dk/afn/wp/wp97_18.ps
+File-Format: application/postscript
+File-URL: ftp://ftp.eco.aau.dk/afn/wp/wp97_18.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:1997-18
+
+Template-Type: ReDIF-Paper 1.0
+Title: Persistency in Sticky Price Models
+Author-Name: Torben M. Andersen
+Author-Email: tandersen@eco.aau.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus,
+  	Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: Nominal rigidities imply that nominal shock have an impact effect
+  	which may be propagated by standard mechanisms. However, the nominal
+  	adjustment process may in itself be a propagation mechanism causing
+  	persistent effects of nominal shocks. This may be caused by inertia
+  	in nominal wage and price adjustment arising due to input- output
+  	networks or multiperiod nominal contracting as captured in models
+  	with staggered price/wage decisions. It has recently been contested
+  	whether staggering can account for persistency of any quantitative
+  	importance. This paper reviews the theory and empirical evidence on
+  	this issue and it is concluded that staggering may be a quantitative
+  	important propagation mechanism.
+Classification-JEL: E32; E24; J31
+Keywords: Nominal rigidities, classical neutrality, staggering
+Length: 17
+Number: 1997-19
+File-URL: ftp://ftp.eco.aau.dk/afn/wp/wp97_19.ps
+File-Format: application/postscript
+File-URL: ftp://ftp.eco.aau.dk/afn/wp/wp97_19.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:1997-19
+
+Template-Type: ReDIF-Paper 1.0
+Title: Modelling the Relationship between Government Policy, Economic
+  	Growth, and Deforestation in the Brazilian Amazon.
+Author-Name: Lykke Eg Andersen
+Author-Email: landersen@eco.aau.dk
+Author-WorkPlace-Name: University of Aarhus, Denmark, Department of
+  	Economics
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: This paper develops a theoretical as well as an empirical model of
+  	deforestation and economic development in a tropical forest economy.
+  	The empirical model is estimated using panel data for 316
+  	municipalities in the Brazilian Amazon during the period 1970-1985.
+  	The effects of controversial Brazilian policies, such as road
+  	building through the Amazon and subsidized credit to agricultural
+  	establishments, are evaluated both in the theoretical model and in
+  	the estimated empirical model. The paper concludes that subsidized
+  	credit, while certainly causing deforestation, is so beneficial for
+  	economic growth that the benefits seem to outweigh the environmental
+  	costs. This does not hold for road building, however, because the
+  	opening up of new land by federal road building tend to promote a
+  	wasteful use of land.
+Classification-JEL: C33; R11; R13; O18; Q23; Q28
+Keywords: Tropical deforestation and economic growth, policy evaluation,
+  	multiple equation spatial panel data model
+Length: 38
+Series: Working Paper
+Number: 1997-2
+File-URL: Ftp://ftp.eco.aau.dk/afn/wp/wp/wp1997_2.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:1997-2
+
+Template-Type: ReDIF-Paper 1.0
+Title: On the Political Economy of Green Tax Reforms
+Author-Name: Toke Skovsgaard Aidt
+Author-Email: taidt@eco.aau.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus,
+  	Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: This paper offers a political model of green tax reforms in which
+  	the use of the revenue from the ecotax is an integrated part. We use
+  	the model to explain why and when a link between an ecotax and cuts
+  	in other non-environmental taxes can be expected. In our model,
+  	green tax swaps arise because a producer lobby group, even if the
+  	use of the revenue does not affect profits per se, takes an interest
+  	in the allocation of revenue from the ecotax. The reason being that
+  	the lobby group uses the allocation of the revenue to reduce the
+  	'price' of other political favours that it cares a lot about. To
+  	this end, the lobby group acts in the best interest of the voters,
+  	and to the extent the the voters prefer tax cuts on labour income.
+  	The paper also analyses the environmental impact of various
+  	budgetary procedures and discusses to what extent the revenue from
+  	an ecotax can be used to create a constituency in favour of the
+  	environmental protection.
+Classification-JEL: D72, D78, H23, H41
+Keywords: Political economy, green tax reforms, environmental policy, lobby
+  	groups
+Length: 25
+Number: 1997-20
+File-URL: Ftp://ftp.eco.aau.dk/afn/wp/1997_20.ps
+File-Format: application/postscript
+Handle: RePEc:aah:aarhec:1997-20
+
+Template-Type: ReDIF-Paper 1.0
+Title: Strategic Entry, Rent-Seeking and Transfers
+Author-Name: Toke Skovsgaard Aidt
+Author-Email: taidt@eco.aau.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus,
+  	Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: In this paper, we consider strategic entry decisions in a two-
+  	player political transfer contest, i.e. the prize is a transfer from
+  	one lobby group to another. The size of the transfer depends on the
+  	lobbying effort of the political active lobby groups. We show that
+  	the entry decision involves a trade-off between an influence loss
+  	and a strategic gain. The influence loss is related to the value of
+  	the foregone option to influence policymaking. The strategic gain is
+  	related to the strategic behaviour of the competitor. The existence
+  	of symmetric equilibria in which both lobby groups enter the contest
+  	and asymmetric equilibria in which only one lobby group enters is
+  	proved. In the latter type of equilibrium, rent-seeking expenditures
+  	are substantially reduced, and the strategic behaviour of the active
+  	lobby group acts as a barrier to entry by rewarding the competitor
+  	for staying out of the contest.
+Classification-JEL: D23, D72, D78
+Keywords: Rent-seeking, entry, lobby groups, transfer contests
+Length: 23
+Number: 1997-21
+File-URL: Ftp://ftp.eco.aau.dk/afn/wp/1997_21.ps
+File-Format: application/postscript
+Handle: RePEc:aah:aarhec:1997-21
+
+Template-Type: ReDIF-Paper 1.0
+Title: Non-Equivalence of Employment and Payroll Taxes in Imperfectly
+  	Competitive Labour Markets
+Author-Name: Bo Sandemann Rasmussen
+Author-Email: brasmussen@eco.aau.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus,
+  	Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: Equilibrium allocations in competitive labour market models are
+  	independent of whether labour taxes on firms are levied as
+  	employment taxes or payroll taxes, for given tax revenue. Turning to
+  	non-competitive labour market models, like wage bargaining of
+  	efficiency wage models, the two taxes cease to be equivalent in the
+  	sense that balanced-budget substitutions of one tax for the other
+  	affect equilibrium allocations. However, while more extensive use of
+  	payroll taxes always increases equilibrium employment in the wage
+  	bargaining model, it may lead to a lower level of equilibrium
+  	employment in the efficiency wage model.
+Classification-JEL: H22, J51
+Keywords: Employment taxes, payroll taxes, tax equivalence, employment, wage
+  	bargaining, efficiency wages
+Length: 17
+Number: 1997-22
+File-URL: Ftp://ftp.eco.aau.dk/afn/wp/1997_22.ps
+File-Format: application/postscript
+Handle: RePEc:aah:aarhec:1997-22
+
+Template-Type: ReDIF-Paper 1.0
+Title: Uneven Development and the Dynamics of Distortion
+Author-Name: Rajiv Sethi
+Author-WorkPlace-Name: Department of Economics, Columbia Univesity
+Author-Name: Peter Skott
+Author-Email: pskott@eco.aau.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus,
+  	Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: This paper develops a two-country, two-sector model of
+  	international trade with increasing returns to scale in one sector.
+  	Free trade leads to asymmetric equilibria even when both countries
+  	are identical with respect to technology, tastes and factor
+  	endowments. For some parameter values, trade leads to a uniform
+  	welfare improvement in both countries, while for others it can give
+  	rise to uneven development in the sense of persistent disparities in
+  	wages, income and welfare. In the latter case, distortionary
+  	industrial policy by the less developed country may be welfare
+  	enhancing. If the dynamics of policy changes are endogenized, the
+  	model gives rise to periodic changes in industrial leadership or
+  	leapfrogging. Implications of this phenomenon for the empirical
+  	literature on convergence are discussed.
+Classification-JEL: F12, F13, O19
+Keywords: Uneven development, scale economies, trade, distortion,
+  	convergence growth regressions.
+Length: 29
+Number: 1997-23
+File-URL: Ftp://ftp.eco.aau.dk/afn/wp/1997_23.ps
+File-Format: application/postscript
+Handle: RePEc:aah:aarhec:1997-23
+
+Template-Type: ReDIF-Paper 1.0
+Title: The Hobson-Marshall Controversy on the Marginal Product of Labour
+Author-Name: Ebbe Yndgaard
+Author-Email: eyndgaard@eco.aau.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus,
+  	Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: On the occasion of the one hundred years' anniversary an unsettled
+  	dispute between John Hobson and Alfred Marshall is revived. The
+  	paper argues that Marshall misunderstood Hobson who by claiming that
+  	the choice of technique is endogenous arrives at the conclusion that
+  	marginal labour is an indeterminate and hence inoperational concept.
+Classification-JEL: B3, B4, D1, D2, D3
+Keywords: Marginal product, endogenization of technology, externality.
+Length: 11
+Number: 1997-24
+File-URL: Ftp://ftp.eco.aau.dk/afn/wp/1997_24.ps
+File-Format: application/postscript
+Handle: RePEc:aah:aarhec:1997-24
+
+Template-Type: ReDIF-Paper 1.0
+Title: Overinsurance in the Welfare State
+Author-Name: Alvaro Forteza
+Author-Email: Alvaro@decon.edu.uy
+Author-WorkPlace-Name: Departamento de Economia, Universidad de la Republica
+Author-WorkPlace-Postal: FCS, Jose Enrique Rodo 1854, CP 11200, Montevideo,
+  	Uruguay
+Author-WorkPlace-Fax: (5982)481917
+Abstract: Excess distortions in the welfare state might result from the
+  	government lack of ability to commit not to help unlucky agents.
+  	Incentive considerations that are crucial in standard insurance in
+  	the presence of moral hazard play no role in this case. A benevolent
+  	government that sets transfers after agents have chosen their effort
+  	faces a pure risk-sharing problem and provides full insurance,
+  	inducing too little effort. The lack of commitment ability might
+  	also cause an indeterminancy: the economy might end in any of
+  	several equilibria, without the government being able to push it to
+  	a particular one.
+Classification-JEL: D60; D82; H10; H30; I30; P16
+Keywords: Commitment, coordination failure, moral hazard, multiple
+  	equilibria, welfare state
+Length: 26
+Series: Working Paper
+Number: 1997-3
+File-URL: Ftp://ftp.eco.aau.dk/afn/wp/wp97_3.ps
+File-Format: application/postscript
+Handle: RePEc:aah:aarhec:1997-3
+
+
+Template-Type: ReDIF-Paper 1.0
+Title: Estimating Multi-Equational LQAC Models with I(1) Variables: a VAR
+  	Approach
+Author-Name: Luca Fanelli
+Author-Email: fanelli@stat.unibo.it
+Author-WorkPlace-Name: Dipartimento di Scienze Statistische Universit… di Bologna
+Author-WorkPlace-Postal: 40126 Bologna
+Author-WorkPlace-Fax: :
+Abstract: This paper extends the existing literature on linear quadratic
+  	adjustment cost (LQAC) models under rational expectations to the
+  	inferential issues arising when: (i) agents optimise with respect to
+  	a vector of endogenous variables; (ii) the behavioural equations
+  	stemming from the agent's optimisation problem are specified as
+  	'exact' rational expectations models; (iii) the stochastic processes
+  	involved are integrated of order one. We discuss estimation both in
+  	a 'limited-information' and in a 'full-information' framework. In
+  	the first case we show that consistent estimation of the structural
+  	parameters may be achieved by focusing on the open-form solution to
+  	the model, and implementing existing procedures. In the second case,
+  	by focusing on the unique and stable forward-looking solution to the
+  	model, we propose a likelihood-based inferential procedure in time
+  	domain. The key assumption is that agents form expectations through
+  	a cointegrated vector autoregression (CVAR) system representing the
+  	joint data generation process for both the endogenous and exogenous
+  	variables.
+Length: 35
+Series: Working Paper
+Number: 1997-7
+File-URL: Ftp://ftp.eco.aau.dk/afn/wp/wp97_7.ps
+File-Format: application/postscript
+Handle: RePEc:aah:aarhec:1997-7
+
+Template-Type: ReDIF-Paper 1.0
+Title: Long Run Effects of Employment and Payroll Taxes in an Efficiency
+  	Wage Model
+Author-Name: Bo Sandemann Rasmussen
+Author-Email: brasmussen@eco.aau.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: In equilibrium models of unemployment, e.g. efficiency wage
+  	models, the level of unemployment generally depends on the level of
+  	taxes on labor (see. e.g. Johnson and Layard (1986) and Pisauro
+  	(1991)). Considering labor taxes levied on firms, the tax
+  	authorities may choose between employment and payroll taxes where
+  	the former is a head tax on the number of employees while the latter
+  	is a tax on the cost of labor to firms. Pisauro (1991) has shown in
+  	a short run efficiency wage model that the incidence of employment
+  	and payroll taxes generally differ and, in particular, that
+  	employment taxes lead to less wage restraint than payroll taxes.
+  	Extending his model to the long run by allowing for free entry and
+  	exit of firms we go one step further and consider whether changes in
+  	the composition of labor taxes, balancing the government budget,
+  	affect equilibrium unemployment in the long run. Our results reveat
+  	that, perhaps somewhat surprisingly given the result that payroll
+  	taxes lead to  more wage restraint than employment taxes, that more
+  	extensive use of employment taxes instead of payroll taxes,
+  	balancing the government budget, increases the level of employment
+  	and decreases unemployment.
+Classification-JEL: J41; H22
+Keywords: Efficiency wages, long run, employment taxes, payroll taxes, tax
+  	equivalence
+Length: 9
+Series: Working Paper
+Number: 1997-8
+File-URL: Ftp://ftp.eco.aau.dk/afn/wp/wp97_8.ps
+File-Format: application/postscript
+Handle: RePEc:aah:aarhec:1997-8
+
+Template-Type: ReDIF-Paper 1.0
+Title: International Tax Competition, Tax Cooperation and Capital Controls
+Author-Name: Bo Sandemann Rasmussen
+Author-Email: brasmussen@eco.aau.dk
+Author-WorkPlace-Name:  Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: Tax competition between independent authorities is known to lead
+  	to inefficient outcomes, implying there is scope for cooperation. In
+  	and international framework where the authorities are national
+  	governments, the undesirable features of tax competition may
+  	alternatively be mitigated by imposing restrictions on international
+  	capital flows. Using a two-country model it is shown that capital
+  	controls may fully remedy the adverse effects of tax competition and
+  	thereby render tax cooperation superfluous. In more general cases,
+  	however, capital controls have some undesirable side-effects,
+  	leaving room for cooperative actions. Moreover, the mere option of
+  	imposing capital controls may promote the implementation of tax
+  	cooperation.
+Classification-JEL: H21; H26; F21
+Keywords: International tax competition, capital controls, tax cooperation,
+  	endowments, efficiency
+Length: 23
+Series: Working Paper
+Number: 1997-9
+File-URL: Ftp://ftp.eco.aau.dk/afn/wp/wp97_9.ps
+File-Format: application/postscript
+Handle: RePEc:aah:aarhec:1997-9
+
+
+Template-Type: ReDIF-Paper 1.0
+Title: Multiple Equilibria in the Welfare State with Costly Policies.
+Author-Name: Forteza, A
+Keywords: WELFARE ECONOMICS ; INFORMATION ; GOVERNMENT ; FISCAL POLICY ; CAPITALISM
+Length: 21 pages
+Abstract: Benevolent governments lacking commitment ability might provide too much insurance. Private agents might free ride on the government concern and exert too little effort. The cost of implementing the redistributive policy may work as a commitment device, alleviating the credibility problem.
+Classification-JEL: D60 ; D82 ; H10 ; H30 ; I30 ; P16
+Creation-Date: 1997
+Handle: RePEc:aah:aarhec:1997-4
+
+Template-Type: ReDIF-Paper 1.0
+Title: Contract Renewal under Uncertainty.
+Author-Name: Andersen, T-M ; Christensen, M-S
+Keywords: UNCERTAINTY ; ECONOMETRICS ; PRICES ; INFLATION
+Length: 39 pages
+Abstract: The incentive to call for contract renewal to adjust prices is considered from a bilateral perspective in a setting changes in outside opportunities drive the incentive to renew contracts and costs preclude continuous renewal. A model encompassing several contract forms is formulated, and the existence of an equilibrium to the bilateral renewal game is established.
+Classification-JEL: C72 ; D81 ; E31
+Creation-Date: 1997
+Handle: RePEc:aah:aarhec:1997-5
+
+
+Template-Type: ReDIF-Paper 1.0
+Title: Do Trade Unions Actually Worsen Economic Performance?
+Author-Name: Sorensen, J-R
+Keywords: TRADE UNIONS
+Length: 23 pages
+Abstract: The answer to the question in the title of course depends on how we define economic performance. In an overlapping generations model we show that trade unions do worsen economic performance in the sense that we get unemployment, but it is quite likely that trade unions give rise to a higher growth rate than what would have been the case if the labour market were competitive.
+Classification-JEL: J51
+Creation-Date: 1997
+Handle: RePEc:aah:aarhec:1997-6
+
+
+Template-Type: ReDIF-Paper 1.0
+Title: A Review of the Econometric Analysis of I(2) Variables.
+Author-Name: Haldrup, N.
+Keywords: ECONOMETRICS ; STATISTICS
+Length: 79 pages
+Abstract: This paper provides a survey of the recent literature dealing with 1(2) variables in economic time series, that is, processes that require to be differenced twice in order to become stationary. With reference to particular models intuition is provided of why 1(2) and polynomial cointegration are features likely to occur in economics.
+Classification-JEL: C32 ; C40
+Creation-Date: 1997
+Handle: RePEc:aah:aarhec:1997-12
+
+
+
+
+

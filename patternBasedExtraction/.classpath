@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path=""/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="var" path="JAVA_USER_LIBRARIES/jena/2.5.2/antlr-2.7.5.jar"/>
+	<classpathentry kind="var" path="JAVA_USER_LIBRARIES/jena/2.5.2/arq.jar"/>
+	<classpathentry kind="var" path="JAVA_USER_LIBRARIES/jena/2.5.2/arq-extra.jar"/>
+	<classpathentry kind="var" path="JAVA_USER_LIBRARIES/jena/2.5.2/commons-logging-1.1.jar"/>
+	<classpathentry kind="var" path="JAVA_USER_LIBRARIES/jena/2.5.2/concurrent.jar"/>
+	<classpathentry kind="var" path="JAVA_USER_LIBRARIES/jena/2.5.2/icu4j_3_4.jar"/>
+	<classpathentry kind="var" path="JAVA_USER_LIBRARIES/jena/2.5.2/iri.jar"/>
+	<classpathentry kind="var" path="JAVA_USER_LIBRARIES/jena/2.5.2/jena.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="http://jena.sourceforge.net/javadoc/index.html"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="JAVA_USER_LIBRARIES/jena/2.5.2/json.jar"/>
+	<classpathentry kind="var" path="JAVA_USER_LIBRARIES/jena/2.5.2/log4j-1.2.12.jar"/>
+	<classpathentry kind="var" path="JAVA_USER_LIBRARIES/jena/2.5.2/lucene-core-2.0.0.jar"/>
+	<classpathentry kind="var" path="JAVA_USER_LIBRARIES/jena/2.5.2/stax-api-1.0.jar"/>
+	<classpathentry kind="var" path="JAVA_USER_LIBRARIES/jena/2.5.2/wstx-asl-3.0.0.jar"/>
+	<classpathentry kind="var" path="JAVA_USER_LIBRARIES/jena/2.5.2/xercesImpl.jar"/>
+	<classpathentry kind="var" path="JAVA_USER_LIBRARIES/jena/2.5.2/xml-apis.jar"/>
+	<classpathentry kind="var" path="JAVA_USER_LIBRARIES/Stanford POS tagger/2006-05-21/postagger-2006-05-21.jar"/>
+	<classpathentry kind="var" path="JAVA_USER_LIBRARIES/mysql-connector/5.0.4/mysql-connector-java-5.0.4/mysql-connector-java-5.0.4-bin.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Util"/>
+	<classpathentry kind="var" path="JAVA_USER_LIBRARIES/hsqldb/1.8.0.7/hsqldb/lib/hsqldb.jar"/>
+	<classpathentry kind="output" path=""/>
+</classpath>

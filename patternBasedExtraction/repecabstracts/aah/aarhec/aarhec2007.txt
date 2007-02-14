@@ -1,0 +1,30 @@
+Template-Type: ReDIF-Paper 1.0
+Title: A Note on the Vogelsang Test for Additive Outliers
+Creation-Date: 20060116
+Author-Name: Niels Haldrup
+Author-X-Name-First: Niels
+Author-X-Name-Last: Haldrup
+Author-Name: Andreu Sansó
+Author-X-Name-First: Andreu
+Author-X-Name-Last: Sansó
+Author-Email: nhaldrup@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: The role of additive outliers in integrated time series has attracted
+some attention recently and research shows that outlier detection should
+be an integral part of unit root testing procedures. Recently, Vogelsang
+(1999) suggested an iterative procedure for the detection of multiple additive
+outliers in integrated time series. However, the procedure appears
+to suffr from serious size distortions towards the finding of too many
+outliers as has been shown by Perron and Rodriguez (2003). In this note
+we prove the inconsistency of the test in each step of the iterative procedure
+and hence alternative routes need to be taken to detect outliers in
+nonstationary time series.
+Classification-JEL: C12, C2, C22
+Keywords: Additive outliers, outlier detection, integrated processes
+Length: 7
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/06/wp06_01.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2006-01
+

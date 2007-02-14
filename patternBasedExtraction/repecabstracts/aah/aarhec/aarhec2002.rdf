@@ -1,0 +1,452 @@
+Template-Type: ReDIF-Paper 1.0
+Title: A Comparison of Different Estimators for Panel Data Sample Selection Models
+Author-Name: Peter Jensen
+Author-Name: Michael Rosholm
+Author-Name: Mette Verner
+Author-Email: pjensen@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: In this paper, we perform an extensive Monte Carlo study of the finite sample
+properties of different estimators for panel data sample selection models. The estimators 
+investigated are various two-step estimators and maximum likelihood estimators with
+simultaneous equations for the sampleselection process and the equation of interest. The
+main result of the MonteCarlo study is that the maximum likelihood estimators of random
+effectsmodels in general perform better than the two-step estimators.
+Classification-JEL: C23, C33
+Keywords: Panel data, sample selection, individual-specific effects
+Length: 32
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/02/wp02_1.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2002-1
+
+Template-Type: ReDIF-Paper 1.0
+Title: International Integration and the Welfare State
+Author-Name: Torben M. Andersen
+Author-Email: tandersen@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract:This paper discusses how international integration affects the need and scope for
+welfare state activities. The first part reviews the main mechanisms, which have been
+considered in the literature, namely, tax base mobility, risk and race to the bottom effects
+in welfare policies. The second part considers in more detail the implications that arise via
+labour market effects, and it is argued that the latter are crucial since product market
+integration affects the mobility of jobs, even though labour mobility across nations
+remains small. This may in turn have important consequences for the financing of welfare
+state activities through taxes levied on labour, but also the need for welfare state activities.
+The paper ends by discussing some policy options.
+Classification-JEL: E30, F10, H11
+Keywords: Risk, welfare policies; taxation; globalisation
+Length: 37
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/02/wp02_2.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2002-2
+
+Template-Type: ReDIF-Paper 1.0
+Title: Credibility, Cost of Reneging and the Choice of Fixed Exchange Rate Regime
+Author-Name: Bo Sandemann Rasmussen
+Author-Email: brasmussen@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: The choice of exchange rate regime is considered for a small open economy. Assuming
+that different forms of fixed exchange rate regimes involve different costs of reneging, it
+is shown that one potential beneficial aspect of joining a monetary union with a common
+currency is that it is less likely to be exposed to ''speculative attacks'' than less formalized
+fixed exchange rate arrangements.
+Classification-JEL: F33, F41
+Keywords: Monetary union, fixed exchange rate, credibility, cost of reneging, multiple equilibria.
+Length: 10
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/02/wp02_3.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2002-3
+
+Template-Type: ReDIF-Paper 1.0
+Title: Can Nominal Wage and Price Rigidities Be Equivalent Propagation Mechanisms?
+The Case of Open Economics
+Author-Name: Bo William Hansen
+Author-Name: Lars Mayland Nielsen
+Author-Email: lmn@nationalbanken.dk
+Author-WorkPlace-Name: The National Bank of Denmark
+Author-WorkPlace-Postal: Havnegade 5, 1093 Copenhagen K, Denmark
+Author-WorkPlace-Fax: +45 3363 63 63
+Abstract: Does it matter for the propagation mechanism following nominal shocks whether nominal
+rigidities are specified as sticky wages instead of sticky prices? We analyze the question in a
+standard dynamic general equilibrium "new open macro-economy" model, which is solved
+analytically. By comparing the adjustment patterns of the terms of trade, in an otherwise
+unchanged model under, respectively, nominal wage and price rigidities, we find that the two
+types of rigidities give rise to the same persistence pattern. Specifically, nominal wage and
+price rigidities are equivalent "impact adjusted" propagation mechanisms. Results are
+presented for one-period nominal rigidities and two-period nominal staggering.
+Classification-JEL: E32, F41
+Keywords: Nominal shocks; nominal rigidities; propagation; persistence; staggering
+Length: 18
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/02/wp02_4.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2002-4
+
+Template-Type: ReDIF-Paper 1.0
+Title: Left-Censoring in Duration Data: Theory and Applications
+Author-Name: Anna Christina D'Addio
+Author-Name: Michael Rosholm
+Author-Email: mrosholm@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: In this paper, we discuss how to best exploit the information contained in spells that are
+in progress when an observation period begins, that is, left-censored and left-truncated
+duration data. We provide a survey of censoring and truncation mechanisms in event
+history models. We describe some approaches that have been suggested in the literature
+to deal with left-censoring. Our contribution is the description of ways to use additional
+information to obtain more efficient parameter estimates using the left-censored
+informations, and particularly, the derivation of the associated likelihood expressions. In
+order to use the information efficiently, we often resort to the stationarity assumption.
+Hence, we provide a Hausman test for this assumption. The second part of the paper
+briefly presents some empirical examples which demonstrates the efficiency gains
+associated with the use of the information contained in the left-censored observations. In
+particular, we show how the use of some additional pieces of information allows us to
+obtain more efficient estimates of the parameters of interest. In doing this, we use the
+information reported in the waves 1990-1992 of the French Labour Force Surveys on young French individuals.
+Classification-JEL: C13, C41, C51, C81
+Keywords: left-censoring, left-truncation, conditional likelihood, hazard rate, stationarity
+Length: 36
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/02/wp02_5.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2002-5
+
+Template-Type: ReDIF-Paper 1.0
+Title: Efficient Inference in Multivariate Fractionally Integrated Time Series Models
+Author-Name: Morten Oerregaard Nielsen
+Author-Email: monielsen@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: We consider statistical inference for multivariate fractionally integrated time series models using
+a computationally simple conditional likelihood procedure which has recently been shown to be
+efficient in the univariate case. We show that those results generalize to the present multivariate
+setup, e.g. allowing us to efficiently estimate the memory parameters of vector ARFIMA models
+or test if two or more series are integrated of the same possibly fractional order. In particular, we
+show that all the desirable properties from standard statistical analysis apply for the time domain
+maximum likelihood estimator and related test statistics, i.e. consistency, standard asymptotic
+distributional properties, and under Gaussianity asymptotic efficiency. The finite sample
+properties of the likelihood ratio test are evaluated by Monte Carlo experiments, which show that
+rejection frequencies are very close to the asymptotic local power for samples as small as n=100.
+Classification-JEL: C12, C13, C32
+Keywords: Asymptotic Local Power; Efficient Estimation; Efficient Test; Fractional Integration;
+Multivariate ARFIMA model; Multivariate Fractional Unit Root; Nonstationarity
+Length: 29
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/02/wp02_6.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2002-6
+
+Template-Type: ReDIF-Paper 1.0
+Title: Optimal Residual Based Tests for Fractional Cointegration and Exchange Rate 
+Dynamics
+Author-Name: Morten Oerregaard Nielsen
+Author-Email: monielsen@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract:We propose a Lagrange Multiplier (LM) test of the null hypothesis of cointegration in
+fractionally cointegrated models. The test statistic utilizes fully modified residuals to cancel the
+endogeneity and serial correlation biases, and we show that standard asymptotics apply. With
+i.i.d. Gaussian errors the asymptotic Gaussian power envelope of all invariant (invariant and
+unbiased) tests is achieved by the one-sided (two-sided) test. The finite sample properties are
+illustrated by a Monte Carlo study. In an application to the dynamics among exchange rates for
+seven major currencies against the US dollar some evidence of the existence of a cointegrating
+relation is found.
+Classification-JEL: C12, C22, C32
+Keywords: Cointegration Test; Fully Modified Estimation; Nonstationarity; Optimal Test; Power Envelope
+Length: 33
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/02/wp02_7.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2002-7
+
+Template-Type: ReDIF-Paper 1.0
+Title: Local Whittle Analysis of Stationary Fractional Cointegration
+Author-Name: Morten Oerregaard Nielsen
+Author-Email: monielsen@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract:We consider a local Whittle analysis of a stationary fractionally cointegrated model. A two step
+estimator equivalent to the local Whittle QMLE is proposed to jointly estimate the integration
+orders of the regressors, the integration order of the errors, and the cointegration vector. The
+estimator is semiparametric in the sense that it employs local assumptions on the joint spectral
+density matrix of the regressors and the errors near the zero frequency. We show that, for the
+entire stationary region of the integration orders, the estimator is asymptotically normal with
+block diagonal covariance matrix. Thus, the estimates of the integration orders are asymptotically
+independent of the estimate of the cointegration vector. Furthermore, our estimator of the
+cointegrating vector is asymptotically normal for a wider range of integration orders than the
+narrow band frequency domain least squares estimator and is superior with respect to asymptotic
+variance. An application to financial volatility series is offered.
+Classification-JEL: C14, C22
+Keywords: Fractional Cointegration; Fractional Integration; Whittle Likelihood; Long Memory; Realized Volatility; Semiparametric Estimation
+Length: 27
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/02/wp02_8.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2002-8
+
+Template-Type: ReDIF-Paper 1.0
+Title: Coalitions, Agreements and Efficiency
+Author-Name: Effrosyni Diamantoudi
+Author-Name: Licun Xue
+Author-Email: faye@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: If agents negotiate openly and form coalitions, can they reach efficient agreements?
+We address this issue within a class of coalition formation games with externalities where
+agents' preferences depend solely on the coalition structures they are associated with.
+We derive Ray and Vohra's (1997) notion of equilibrium binding agreements using von Neumann
+and Morgenstern abstract stable set and then extend it to allow for arbitrary coalitional
+deviations (as opposed to nested deviations assumed originally). We show that, while the new
+notion facilitates the attainment of efficient agreements, inefficient agreements can nevertheless
+arise
+Classification-JEL: C72, C72
+Keywords: Coalition formation, externalities, efficiency, agreements
+Length: 23
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/02/wp02_9.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2002-9
+
+Template-Type: ReDIF-Paper 1.0
+Title: International Environmental Agreements -The Role of Foresight 
+Author-Name: Effrosyni Diamantoudi
+Author-Name: Eftichios S. Sartzetakis
+Author-Email: faye@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: We examine the formation of International Environmental Agreements (IEAs). We extend
+the existing literature by endogenizing the reaction of the IEA's members to a deviation
+by a member or a group of members. We assume that when a country contemplates exiting
+or joining an agreement, it takes into account the reactions of other countries ignited by
+its own actions. We identify conditions under which there always exists a unique set of
+farsighted stable IEAs. The new farsighted IEAs can be much larger than those some of
+the previous models supported but are not always Pareto efficient. We extend the analysis
+to allow for coordinated action, that is, groups of countries jointly exiting or entering the
+agreement and fully characterize the coalitionally farsighted stable IEAs.
+Classification-JEL: Q20, H41, C79 
+Keywords: International Environmental Agreements, Public good provision, Coalition formation, Foresight
+Length: 30
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/02/wp02_10.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2002-10
+
+Template-Type: ReDIF-Paper 1.0
+Title: Spectral Analysis of Fractionally Cointegrated Systems
+Author-Name: Nielsen, Morten Oe.
+Author-Email: monielsen@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: 
+Cointegration imposes restrictions on the frequency domain behavior of a time series at the
+zero-frequency. We derive these restrictions for a multivariate fractionally cointegrated system.
+In particular, we consider a p-vector time series integrated of order d with r cointegrating
+relations, given by the rows of [I_{r};ß'], where the cointegration errors are integrated of order
+d-b, d=b>0. We show that, at the zero-frequency, the spectral density matrix of the d'th
+differenced series has reduced rank (p-r), the coherence and phase measures (multiple and
+partial) equal unity and zero, respectively, and the gain is the matrix of cointegrating coefficients.
+Extensions to noncontemporaneous cointegration, seasonal cointegration, and different fractional
+values of b for each cointegrating relation are considered.
+Classification-JEL: C32
+Keywords: Common stochastic trend; fractional cointegration; frequency domain analysis; reduced rank;
+zero-frequency.
+Length: 10
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/02/wp02_11.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2002-12
+
+Template-Type: ReDIF-Paper 1.0
+Title: Duration Dependence and Timevarying Variables in Discrete Time Duration Models
+Author-Name: Anna Christina D'Addio
+Author-Name: Bo E. Honoré
+Author-Email: daddio@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: 
+This paper considers estimation of a dynamic discrete choice model with second order state
+dependence in the presence of strictly exogenous time-varying explanatory variables. We propose 
+new method for estimating such models, and a small Monte Carlo study suggests that the method 
+erforms well in practice. The method is used to test for duration dependence in labour market spells 
+for French youth. The novelty in the application is that we are able to control for time-varying 
+explanatory variables. In a discrete time duration model, duration dependence will result in second 
+order state dependence, and the paper therefore also adds to the literature on estimation of duration 
+models with unobserved heterogeneity.
+Classification-JEL: C23, C25, C41, J64
+Keywords: Panel data, Dynamic Discrete Choice, Unemployment, Duration Dependence
+Length: 50
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/02/wp02_13.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2002-13
+
+Template-Type: ReDIF-Paper 1.0
+Title: Labour Market Transitions of French Youth
+Author-Name: Anna Christina D'Addio
+Author-Name: Michael Rosholm
+Author-Email: mrosholm@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: 
+In this paper we analyse the movements of French young people between three states:
+employment, unemployment and non-participation, using data from the waves 1990-1992 of
+the French Labour Survey. Some of these event histories are left-censored. We therefore
+address the problem of  initial conditions by invoking a stationarity assumption in the 
+statistical framework of multi-states multi-spells duration models. We subsequently construct
+a Hausman test of the stationarity assumption We allow for interdependence between
+duration variables and we use an adjusted likelihood ratio test in order to choose the best
+distribution for unobservables. We are particularly interested in identifying characteristics
+that are associated with less favourable event histories. The results show that higher
+educational attainments are associated with shorter unemployment durations and with longer
+durations when employed. Another important factor is nationality; indeed to be of French
+nationality is often associated with better outcomes in the labour market.
+Classification-JEL: J60, J64, C41
+Keywords: event history models, left-censoring, discrete unobserved  heterogeneity, youth
+unemployment, semi-Markov process, Hauman test
+Length: 48
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/02/wp02_14.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2002-14
+
+Template-Type: ReDIF-Paper 1.0
+Title: Long-run forecasting in multicointegrated systems
+Author-Name: Boris Siliverstovs
+Author-Name: Tom Engsted
+Author-Name: Niels Haldrup
+Author-Email: nhaldrup@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: 
+In this paper long-run forecasting of multicointegrating variables is investigated.
+Multicointegration typically occurs in dynamic systems involving both stock and flow
+variables whereby a common feature in the form of shared stochastic trends is present across
+different levels of multiple time series. Hence, the effect of imposing this "common feature"
+restriction on out-of-sample valuation and forecasting accuracy of such variables is of
+interest. In particular, we compare the long-run forecasting performance of the
+multicointegrated variables between a model that correctly imposes the "common feature"
+restrictions and a (univariate) model that omits these multicointegrating restrictions
+completely. We employ different loss functions based on a range of mean square forecast
+error criteria, and the results indicate that different loss functions result in different ranking
+of models with respect to their infinite horizon forecasting performance. We consider loss
+functions using a standard trace mean square forecast error criterion (penalizing the forecast
+errors of flow variables only), and a loss function evaluating forecast errors of changes in
+both stock and flow variables. The latter loss function is based on the triangular
+representation of cointegrated systems and was initially suggested by Christoffersen and
+Diebold (1998). It penalizes deviations from long-run relations among the flow variables
+through cointegrating restrictions. We present a new loss function which further penalizes
+deviations in the long run relationship between the levels of stock and flow variables. It is
+derived from the triangular representation of multicointegrated systems. Using this criterion,
+system forecasts from a model incorporating multicointegration restrictions dominate
+forecasts from univariate models. The paper highlights the importance of carefully selecting
+loss functions in forecast evaluation of models involving stock and flow variables.
+Classification-JEL: C32, C53
+Keywords: Common Features, Multicointegration, Forecasting, VAR models.
+Length: 26
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/02/wp02_15.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2002-15
+
+Template-Type: ReDIF-Paper 1.0
+Title: Local Empirical Spectral Measure of Multivariate Processes with Long Range Dependence
+Author-Name: Nielsen, Morten Oe.
+Author-Email: monielsen@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: 
+We derive a functional central limit theorem for the empirical spectral measure or discretely
+averaged (integrated) periodogram of a multivariate long range dependent stochastic process
+in a degenerating neighborhood of the origin. We show that, under certain restrictions on the
+memory parameters, this local empirical spectral measure converges weakly to a Gaussian
+process with independent increments. Applications to narrow-band frequency domain
+estimation in time series regression with long range dependence, and to local (to the origin)
+goodness-of-fit testing are offered.
+Classification-JEL: C14, C22, C32
+Keywords: Brownian Motion; Fractional ARIMA; Functional Central Limit Theorem; Goodness-of-fit
+Test; Integrated Periodogram; Long Memory; Narrow-band Frequency Domain Least Squares
+Length: 18
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/02/wp02_16.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2002-16
+
+Template-Type: ReDIF-Paper 1.0
+Title: Semiparametric Estimation in Time Series Regression with Long Range Dependence
+Author-Name: Nielsen, Morten Oe.
+Author-Email: monielsen@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: 
+We consider semiparametric estimation in time series regression in the presence of long range
+dependence in both the errors and the stochastic regressors. A central limit theorem is
+established for a class of semiparametric frequency domain weighted least squares estimates,
+which includes both narrow band ordinary least squares and narrow band generalized least
+squares as special cases. The estimates are semiparametric in the sense that focus is on the
+neighborhood of the origin, and only periodogram ordinates in a degenerating band around
+the origin are used. This setting differs from earlier work on time series regression with long
+range dependence where a fully parametric approach has been employed. The generalized
+least squares estimate is infeasible when the degree of long range dependence is unknown and
+must be estimated in an initial step. In that case, we show that a feasible estimate exists,
+which has the same asymptotic properties as the infeasible estimate. By Monte Carlo
+simulation, we evaluate the finite-sample performance of the generalized least squares
+estimate and the feasible estimate.
+Classification-JEL: C14, C22
+Keywords: Fractional integration, generalized least squares, linear regression, long range
+dependence, semiparametric estimation, Whittle likelihood
+Length: 30
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/02/wp02_17.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2002-17
+
+Template-Type: ReDIF-Paper 1.0
+Title: Multivariate Lagrange Multiplier Tests for Fractional Integration
+Author-Name: Nielsen, Morten Oe.
+Author-Email: monielsen@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: 
+We introduce a multivariate Lagrange Multiplier (LM) test for fractional integration. We derive
+and analyze the LM statistic and show that it is asymptotically chi-squared distributed under local
+alternatives, and that, under Gaussianity, the LM test is asymptotically efficient against local
+alternatives. It is shown that the regression variant in Breitung & Hassler (2002, Journal of
+Econometrics 110, 167-185) is not equivalent to the LM test in the multivariate case, although it
+is in the univariate case. A generalization of the LM test that explicitly allows for different
+integration orders for each variate is also introduced. The finite sample properties of the LM test
+are evaluated and compared to the Breitung & Hassler (2002) test by Monte Carlo experiments.
+An application to multivariate time series of real interest rates for six countries is offered,
+demonstrating that more clear-cut evidence can be drawn from multivariate tests compared to
+conducting several univariate tests.
+Classification-JEL: C32
+Keywords: Asymptotic Local Power; Efficient Test; Fractional Integration; Lagrange Multiplier
+Test; Multivariate Fractional Unit Root; Nonstationarity
+Length: 24
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/02/wp02_18.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2002-18
+
+Template-Type: ReDIF-Paper 1.0
+Title: Determinants of Divorce in Denmark
+Author-Name: Svarer, Michael
+Author-Email: msvarer@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: 
+In this paper we provide an empirical investigation of the determinants of divorce in the
+Danish marriage market. The paper complements Svarer (2002) in two ways. First, it
+considers more carefully the potential endogeneity of premarital cohabitation in the divorce
+equation. Second, it discusses more thouroghly the effects of other covariates on the divorce
+hazard.
+Classification-JEL: J12
+Keywords: Marriage, divorce
+Length: 26
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/02/wp02_19.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2002-19

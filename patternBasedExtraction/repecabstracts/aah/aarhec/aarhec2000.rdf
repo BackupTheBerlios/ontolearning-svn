@@ -1,0 +1,478 @@
+Template-Type: ReDIF-Paper 1.0
+Title: On the Robustness of Unit Root Tests in the Presence of Double Unit Roots
+Author-Name: Niels Haldrup and Peter Lildholdt
+Author-Email: nhaldrup@econ.au.dk 
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: We examine some of the consequences on commonly used unit root tests when
+the underlying series is integrated of order two. It turns out that standard augmented
+Dickey-Fuller type of tests for a single unit root have excessive density in the explosive
+region of the distribution. The lower (stationary) tail, however, will be virtually unaffected
+in the presence of double unit roots. On the other hand, the Phillips-Perron test is shown
+to diverge to plus infinity asymptotically and thus will favor the explosive alternative.
+Numerical simulations are used to demonstrate the analytical results and some of the
+implications in finite samples.
+Classification-JEL: C12, C14, C22
+Keywords: Unit root tests, Phillips-Perron test, I(1) versus I(2)
+Length: 18
+File-URL: ftp://ftp.econ.au.dk/afn/wp/00/wp00_1.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2000-1
+
+Template-Type: ReDIF-Paper 1.0
+Title: Local Power Functions of Tests for Double Unit Roots
+Author-Name: Niels Haldrup and Peter Lildholdt
+Author-Email: nhaldrup@econ.au.dk 
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: The purpose of this paper is to characterize three commonly used double unit
+root tests in terms of their asymptotic local power. To this end, we study a class of nearly
+doubly integrated processes which in the limit will behave as a weighted integral of a
+double indexed Ornstein-Uhlenbeck process. Based on a numerical examination of the
+analytical distributions, a comparison of the tests is made via their asymptotic local power
+functions.
+Classification-JEL: C12, C14, C22
+Keywords: Asymptotic local power function, Brownian motion, Ornstein-Uhlenbeck
+process
+Length: 32
+File-URL: ftp://ftp.econ.au.dk/afn/wp/00/wp00_2.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2000-2
+
+Template-Type: ReDIF-Paper 1.0
+Title: Quasi-Static Macroeconomic Systems
+Author-Name: Jamsheed Shorish
+Author-Email: jshorish@econ.au.dk 
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: This paper applies quasi-static analysis to a simple closed macroeconomy. It is
+shown that if the economy satisfies a conservation of income requirement, and the
+requirement that all equivalent investments generate the same rate of return (non-
+arbitrage), then there exists a state variable which measures the opportunity cost of
+moving from one macroeconomic equilibrium to another. This state variable is an
+economic constraint which measures the expenditure necessary to change equilibria.
+Central to this analysis is a definition of economic time, which is an invariant quantity
+with respect to the state variables used as a frame of reference.
+Classification-JEL: B41, E10
+Keywords: Quasi-static systems, thermodynamics, non-arbitrage, opportunity cost,
+conservative systems
+Length: 26
+File-URL: ftp://ftp.econ.au.dk/afn/wp/00/wp00_3.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2000-3
+
+Template-Type: ReDIF-Paper 1.0
+Title: A Notion of Consistent Rationalizability - Between Weak and Pearce's Extensive
+Form Rationalizability
+Author-Name: Licun Xue
+Author-Email: Lxue@econ.au.dk 
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: Ben-Porath (1997) characterizes the strategies consistent with common certainty
+of rationality (CCR) and the origin of a generic game of perfect information. More
+generally, the notion of "weak extensive form rationalizability" (weak EFR) captures the
+implications initial CCR in an extensive form game. We go one step further by
+ascertaining at which additional information sets initial CCR can be maintained
+"consistently". Our consistency notion has two aspects: we examine whether there is
+"internal consistency" in assuming CCR at a given collection of information sets by using
+Battigalli and Siniscalchi's (1999) recent result while we introduce "external consistency"
+to account for all reachable information sets. For a class of games, including all belief-
+consistent games [cf. Reny (1993)], we identify a unique collection of information sets
+and hence a unique set of strategy profiles; moreover, we show that in this case our notion
+is outcome-equivalent to Pearce's (1984) EFR. But in general out notion is between weak
+and Pearce's EFR.
+Classification-JEL: C72
+Keywords: Rationality, beliefs, extensive games, rationalizability
+Length: 21
+File-URL: ftp://ftp.econ.au.dk/afn/wp/00/wp00_4.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2000-4
+
+Template-Type: ReDIF-Paper 1.0
+Title: Labour, An Equivocal Concept for Economic Analyses
+Author-Name: Ebbe Yndgaard
+Author-Email: Eyndgaard@econ.au.dk 
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: Ever since the adoption of the symbiosis of mathematical analytical methods and
+marginalism in economics, there has been a tendency of negligence in the sense that it is
+seldom to ask the dual question: what are the fundamental assumptions on which the
+above approach is resting and are they worth while as measured by realia? In a rather
+informal form we try to address some aspects of these basic questions. A main result is
+that it is very doubtful to rely too naively on main stream results, relying on a one-
+dimensional concept of homogenous labour. Most of the standard results on this
+foundation - including those of unemployment - are ambiguous, at best.
+Classification-JEL: B4, C0, E1, J3
+Keywords: Heterogenous labour, measurement and mathematical representability,
+economic methodology
+Length: 16
+File-URL: ftp://ftp.econ.au.dk/afn/wp/00/wp00_5.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2000-5
+
+Template-Type: ReDIF-Paper 1.0
+Title: Testing for Unit Roots with Stationary Covariates
+Author-Name: Graham Elliott and Michael Jansson
+Author-Email: mjansson@econ.au.dk 
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: We derive the family of tests for a unit root with maximal power against a point
+alternative when an arbitrary number of stationary covariates are modeled with the
+potentially integrated series. We show that very large power gains are available when such
+covariates are available. We then derive tests which are simple to construct (involving the
+running of vector autoregressions) and achieve at a point the power envelopes derived
+under very general conditions. These tests have excellent properties in small samples. We
+also show that these are obvious and internally consistent tests to run when identifying
+structural VAR's using long run restrictions.
+Classification-JEL: C3
+Keywords: Unit roots, power envelope, structural VAR's
+Length: 33
+File-URL: ftp://ftp.econ.au.dk/afn/wp/00/wp00_6.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2000-6
+
+Template-Type: ReDIF-Paper 1.0
+Title: A Dynamic Agricultural Household Model with Uncertain Income and Irreversible
+and Indivisible Investments under Credit Constraints
+Author-Name: Nikolaj Malchow-Moeller and Bo Jellesmark Thorsen
+Author-Email: nmalchow@econ.au.dk 
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: A dynamic model of agricultural household behaviour in less developed
+countries in the presence of credit constraints and income uncertainty is developed. The
+production side of the model takes into account the irreversible and indivisible nature of
+non-stationary agricultural investment options, thereby combining the standard intertem-
+poral consumption model with features from the real option pricing literature. The model
+framework represents an interesting dynamic alternative to the static household models
+in the literature. It is shown that the model can be solved by use of dynamic programming
+routines, and numerical results are obtained for a variety of parameter values. Several
+interesting results emerge: First, the consumption policy functions of the agricultural
+household can become highly non-linear, violating the standard result that increased
+wealth implies increased consumption. This has implications for empirical estimation.
+Secondly, increasing uncertainty does not in general reduce the average propensity to
+consume, or increase the propensity to save. Thirdly, increased variation of income only
+to a limited extent carries through to variation in consumption. Fourthly, the effects of
+shocks to income depend crucially on the timing of shocks. And finally, reducing
+uncertainty does not reduce poverty significantly, whereas agricultural extension services
+and cash transfers are more likely to do so.
+Classification-JEL: Q12, O12, O13, D1, D9, C61
+Keywords: agriculture, household model, credit constraints, uncertainty, irreversibility,
+indivisibility, dynamic programming.
+Length: 64
+File-URL: ftp://ftp.econ.au.dk/afn/wp/00/wp00_7.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2000-7
+
+Template-Type: ReDIF-Paper 1.0
+Title: Measurement Errors and Outliers in Seasonal Unit Root Testing
+Author-Name: Niels Haldrup, Antonio Montan‚s and Andreu Sanso
+Author-Email: nhaldrup@econ.au.dk 
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: Frequently, seasonal and non-seasonal data (especially macro time series) are
+observed with noise. For instance, the time series can have irregular abrupt changes and
+interruptions following as a result of additive or temporary change outliers caused by
+external circumstances which are irrelevant for the series of interest. Equally, the time
+series can have measurement errors. In this paper we analyse the above types of data
+irregularities on the behaviour of seasonal unit root tests. It occurs that in most cases
+outliers and measurement errors can seriously affect inference towards the rejection of
+seasonal unit roots. It is shown how the distortion of the tests will depend upon the
+frequency, magnitude, and persistence of the outliers as well as on the signal to noise ratio
+associated with measurement errors. Some solutions to the implied inference problems are
+suggested.
+Classification-JEL: C12, C2, C22
+Keywords: Seasonal unit roots, HEGY tests, additive outliers, measurement errors,
+Brownian motion
+Length: 43
+File-URL: ftp://ftp.econ.au.dk/afn/wp/00/wp00_8.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2000-8
+
+Template-Type: ReDIF-Paper 1.0
+Title: En kritisk vurdering af den generelle ligevaegtsmodel
+Author-Name: Erik Harsaae
+Author-Email:  
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: The paper was originally written in Danish as part of a planned book which
+found no publisher. Readers of the present abstract who cannot read Danish may find
+some quotations given in English in the Danish text, so it may be useful to give references
+to page numbers in that text in the present abstract. The aim of "A Criticism of the Theory
+of General Equilibrium" has been to argue that the said Theory is no model of any actual
+economic process. It simply states a number of mathematical assumptions sufficient to
+construct a model of a logically possible perfect market, but these assumptions are not
+only false as a description of actual economic systems, but as argued in the paper could
+at most be realised in a very small economic system or market. The author has felt so
+astonished by the views expressed in Joseph Schumpeter's "History of Economic
+Analysis", and by the views of economic authors such as Paul Samuelson and Robert
+Solow, and so convinced that they express a lack of real understanding of Keynesian
+views on the part of these famous economists, that he found it worthwhile to exhibit these
+weaknesses of so-called "neo-neo-classical economic theory" as strongly as possible.
+Keynesianism is incompatible with neo-classical theory based on the economic model due
+to Léon Walras. To demonstrate the truth of this statement the growth models by Roy
+Harrod representing the Keynesian and by Robert Solow representing the neo-classical
+point of view are compared and shown to be based on radically different assumptions.
+Also the IS-LM-model by John Hicks, as supported by Alvin Hansen, is shown to be un-
+Keynesian. In connection with these issues an attempt is made to replace the concept of
+equilibrium as defined by temporal stationarity by a concept of logical determination. The 
+title of the text in Danish translates as already mentioned as "A Criticism of the General
+Equilibrium Model". The logic of this model is sketched on the first page as a distribution
+of provisions procured by the "breadwinners" of some primitive tribe. Such a distribution
+may be described by a model mathematically similar to that used by Baumol and Oates
+in their "The Theory of Environmental Policy" (1975, 1988). But it is irrelevant in the
+context of actual modern markets, i.e. to Economic Policy. L‚on Walras is usually
+regarded as the original author of this model in its present form. The enthusiastic
+evaluation by Schumpeter of this model in his "History of Economic Analysis"
+(posthumous edition 1954) is illustrated by the quotations on pages 42-43 of the Danish
+text. I claim that Schumpeter's evaluation is misleading. On pages 44 et seq. the
+assessment of Keynesianism by Schumpeter in 1936 based on his review of Keynes's
+"General Theory" is described and also analysed as the expression of a lack of
+understanding. The positive evaluation of the Keynesian views by the present author has
+also been the inspiration of his criticism of American economists such as Paul Samuelson
+and Robert Solow. On pages 55-62 it is shown that Robert Solow's criticism of Roy
+Harrod's growth model is due to a completely mistaken view of the aim of that model. On
+pages 66-71 a similar criticism is given of John Hick's ISLM-model and Alvin Hansen's
+defence of this model in his "A Guide (sic!) to Keynes". It would be very na‹ve to deny
+that the use in practice of "the Keynesian recipe" in order to solve the problem of "full
+employment" (in itself a loose concept) is difficult, but Milton Friedman's criticism of
+"the Phillips Curve" (which is not Keynesian) does not hit the mark, as I think is shown
+by my arguments on pages 89-94. "Involuntary unemployment" is a real phenomenon, and
+Friedman's claim that unemployed workers will not seek employment, unless current
+wages are increased, goes against a fundamental Keynesian assumption. This assumption
+is based on an institutional fact. But economic assumptions must be based on institutional
+facts in order to be relevant in the real world. Economic problems are not solved by
+mathematics, but by the ability to diagnose shortcomings of economic systems and
+rational measures to abolish them. To determine such measures should be the real aim of
+economic science as it was to John Maynard Keynes. The concluding text of the paper on
+pages 94-105 supports the present author's own views by references to books by Nicholas
+Georgescu-Roegen and a recent book by the German author Karl-Heinz Brodbeck.
+Interested readers of this Abstract who cannot read Danish may also form some ideas of
+the contents by perusal of the References concluding the Danish text since most of the
+literature used is in English or German.
+Classification-JEL: 
+Keywords: Keynesian economics, general equilibrium, employment, economic growth
+Length: 107
+File-URL: ftp://ftp.econ.au.dk/afn/wp/00/wp00_9.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2000-9
+
+Template-Type: ReDIF-Paper 1.0
+Title: Why the ECB Should be Ultra-Liberal
+Author-Name: Rasmus Hoejbjerg Jacobsen
+Author-Email: rjacobsen@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: The statute of the ECB states that its primary target should be to maintain price
+stability. The theoretical foundation behind this target is that of a socially optimal
+conservative central banker. We challenge the robustness of this result in a model with
+endogenous labor market policy, decided upon by a politically motivated government. In
+this model, the socially optimal choice of central banker is an ultra-liberal, who eliminates
+both inflation and unemployment and removes the political distortion. Somewhat
+paradoxically, the labor union supports an ultra-conservative central banker, because this
+means a more generous labor market policy.
+Classification-JEL: E58, J51, H19
+Keywords: Monetary institutions, endogenous labour market policy, lobbying labor union
+Length: 20
+File-URL: ftp://ftp.econ.au.dk/afn/wp/00/wp00_10.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2000-10
+
+Template-Type: ReDIF-Paper 1.0
+Title: Structurally Dependent Competing Risks
+Author-Name: Michael Rosholm and Michael Svarer
+Author-Email: mrosholm@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: In this paper, we specify and estimate a structurally dependent competing risks
+model for the transitions out of unemployment into either new job or recall. The recall
+probability is allowed to affect the search intensity for new jobs.
+Classification-JEL: C41, J64
+Keywords: Competing risks, structural dependence, recall hazard, new job hazard
+Length: 10
+File-URL: ftp://ftp.econ.au.dk/afn/wp/00/wp00_11.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2000-11
+
+Template-Type: ReDIF-Paper 1.0
+Title: Farsighted Stability in Hedonic Games
+Author-Name: Effrosyni Diamantoudi and Licun Xue
+Author-Email: faye@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: We investigate how rational individuals partition themselves into different
+coalitions in "hedonic games" [see Banerjee, Konishi and S”nmez (1998) and
+Bogomolnaia and Jackson (2000)], where individuals' preferences depend solely on the
+composition of the coalition they belong to. We show that the four solution concepts
+studied in the literature (core, Nash stability, individual stability and contractual individual
+stability) exhibit myopia on the part of the players. We amend these notions by endowing
+players with foresight in that they look many steps ahead and consider only credible
+outcomes. We show the existence and study the properties of the new solutions, as well
+as their relation to the previous notions.
+Classification-JEL: C71, C78
+Keywords: Hedonic games, coalition structures, foresight
+Length: 26
+File-URL: ftp://ftp.econ.au.dk/afn/wp/00/wp00_12.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2000-12
+
+Template-Type: ReDIF-Paper 1.0
+Title: Stable Agreements in Infinitely Repeated Games
+Author-Name: Licun Xue
+Author-Email: lxue@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: This paper studies infinitely repeated games where players can form coalitions
+to coordinate their actions via self-enforcing agreements. The proposed notion of "stable
+agreements" extends a characterization of the set of subgame perfect equilibrium paths
+by Greenberg (1989, 1990) to account for self-enforcing coalitional deviations. An
+agreement is stable if no coalition can deviate in such a way that by solely coordinating
+the actions of its own members, it guarantees a higher payoff for each member. Existence
+of the proposed notion is established and its relation to other notions is investigated.
+Classification-JEL: C70, C72
+Keywords: Repeated games, renegotiation, self-enforcing agreements, coalitions
+Length: 18
+File-URL: ftp://ftp.econ.au.dk/afn/wp/00/wp00_13.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2000-13
+
+Template-Type: ReDIF-Paper 1.0
+Title: Government Debt and Capital Accumulation in the Blanchard-Cass-Yaari OLG
+Model
+Author-Name: Bo Sandemann Rasmussen
+Author-Email: brasmussen@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: It is shown that although government debt in principle has an ambiguous effect
+on the steady state capital stock in an OLG model of the Blanchard-Cass-Yaari variety,
+once stability of the steady state equilibrium is imposed there is an unambiguous negative
+relation between the level of government debt and the capital stock.
+Classification-JEL: E13, H63
+Keywords: OLG model, government debt, stability, capital accumulation
+Length: 10
+File-URL: ftp://ftp.econ.au.dk/afn/wp/00/wp00_14.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2000-14
+
+Template-Type: ReDIF-Paper 1.0
+Title: Investment under Uncertainty - the Case of Repeated Investment Options
+Author-Name: Nikolaj Malchow-Moeller and Bo Jellesmark Thorsen
+Author-Email: nmalchow@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: This paper considers optimal investment behaviour when investment options
+evolve deterministically or stochastically over time and investments are irreversible and
+indivisible. It extends the standard investment-under-uncertainty set-up with a single
+investment option to the case of repeated options. Analytical solutions are derived for the
+deterministic case and for the case of a geometric Brownian motion. It is argued that when
+investment options are repeated, the simple net-present-value rule in general fares better
+as an investment criterion than the rule derived from the single-option approach.
+Furthermore, sensitivity analyses reveal that the effects of parameter changes are very
+different when using the repeated-options approach instead of the single-option approach.
+Classification-JEL: D1, D9, O3, Q12
+Keywords: Geometric Brownian motion, indivisibility, investment, irreversibility,
+repeated options, replacement, stochastic processes, technology, uncertainty
+Length: 21
+File-URL: ftp://ftp.econ.au.dk/afn/wp/00/wp00_15.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2000-15
+
+Template-Type: ReDIF-Paper 1.0
+Title: The Bi-parameter Smooth Transition AutoRegressive model
+Author-Name: Boriss Siliverstovs
+Author-Email: bsiliverstovs@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: The paper introduces a nonlinear model that belongs to the STAR family of
+models. The main feature of the suggested Bi-parameter Smooth Transition
+AutoRegressive (BSTAR) model is that it allows for different speed of transition between
+the middle regime and each of the identical outer regimes. Thus, the BSTAR model can
+be considered as a generalization of the LSTR2 model introduced in Ter„svirta (1998)
+which imposes symmetric speed of adjustment between the middle and each of the
+identical outer regimes.
+Classification-JEL: C22, C50, E23
+Keywords: STAR models, nonlinear time series, Index of Industrial Production
+Length: 27
+File-URL: ftp://ftp.econ.au.dk/afn/wp/00/wp00_16.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2000-16
+
+Template-Type: ReDIF-Paper 1.0
+Title: Demand Policy in the Long Run
+Author-Name: Peter Skott
+Author-Email: pskott@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: This paper analyses the use of aggregate demand policies to ensure full-
+employment growth in the long run. The results support Victoria Chick's warning in
+Macroeconomics after Keynes against the misapplication of short-run Keynesian policy
+prescriptions to long-run problems.
+Classification-JEL: E12
+Keywords: Demand policy, long-run unemployment, warranted growth
+Length: 17
+File-URL: ftp://ftp.econ.au.dk/afn/wp/00/wp00_17.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2000-17
+
+Template-Type: ReDIF-Paper 1.0
+Title: Skill Asymmetries, Increasing Wage Inequality and Unemployment
+Author-Name: Paul Auerbach and Peter Skott
+Author-Email: pskott@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: Using a simple model with two levels of skill, we assume that high-skill workers
+who fail to get high-skill jobs may accept low-skill positions; low-skill workers do not
+have the analogous option of filling high-skill positions. This asymmetry implies that a
+slowdown in Hicks-neutral technical change (or other adverse, skill-neutral shocks) may
+cause an increase in wage inequality, both between and within skill categories, as well as
+an increase in unemployment, especially among low-skill workers. Movements in
+productivity, unemployment and inequality may thus be linked to induced overeducation
+and credentialism.
+Classification-JEL: J31, E24, E25, O33
+Keywords: Wage inequality, unemployment, skill-bias, Hicks-neutral technical change,
+overeducation, credentialism
+Length: 34
+File-URL: ftp://ftp.econ.au.dk/afn/wp/00/wp00_18.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2000-18
+
+Template-Type: ReDIF-Paper 1.0
+Title: Nominal Rigidities and the Optimal Rate of Inflation
+Author-Name: Torben M. Andersen
+Author-Email: tandersen@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: Inflation may enhance the efficiency of the price system in the presence of
+nominal rigidities. For the price system to function efficiently there is a need for nominal
+prices to adjust both to real and nominal shocks for relative prices to disseminate the
+appropriate signals. Since the incentive for price setters to change prices depends not only
+on the costs of changing prices but also on the realized shocks, it follows that the rate of
+inflation may affect the incentive to change prices. The higher the rate of inflation the
+larger the incentive to change prices, and in the presence of real shocks requiring
+adjustment of relative prices this may lead to a better functioning price system. Empirical
+evidence supports that nominal rigidities are more prevalent at low rates of inflation. It
+follows that there cen be welfare costs of targeting inflation at too low a level.
+Classification-JEL: E20, E30
+Keywords: Nominal rigidities, allocative efficiency, optimal rate of inflation
+Length: 20
+File-URL: ftp://ftp.econ.au.dk/afn/wp/00/wp00_19.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2000-19
