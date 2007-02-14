@@ -1,0 +1,5 @@
+To view the uml file go to: http://argouml.tigris.org/
+
+And click the link indicated by 'Launch via Java Web Start'
+
+The easiest way to use the application is to select the diagram centric view.
