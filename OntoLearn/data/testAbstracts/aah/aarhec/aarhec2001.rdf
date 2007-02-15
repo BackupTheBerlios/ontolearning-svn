@@ -1,0 +1,277 @@
+Template-Type: ReDIF-Paper 1.0
+Title: Mortality and Socio-economic Differences in a Competing Risks Model
+Author-Name: Jakob Roland Munch and Michael Svarer
+Author-Email: msvarer@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: This paper presents evidence on how mortality in Denmark is related to different
+socio-economic indicators. By use of unique and extensive sample of the Danish
+population, we examine how mortality is related to factors such as education, occupation,
+skill level and income for the years 1992-97. We employ a competing risks proportional
+hazard model to allow for different causes of death. This turns out to be of importance as 
+some factors have unequal (and sometimes opposite) influence on the cause-specific
+mortality rates. Particularly, we find that the often found inverse correlation between
+socio-economic status and mortality to a large degree is absent for women that die due to
+cancer.
+Classification-JEL: C41, I12
+Keywords: Mortality, competing risks duration model
+Length: 23
+File-URL: ftp://ftp.econ.au.dk/afn/wp/01/wp01_1.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2001-1
+
+Template-Type: ReDIF-Paper 1.0
+Title: Equilibrium Binding Agreements under Diverse Bahavioral Assumptions
+Author-Name: Effrosyni Diamantoudi
+Author-Email: faye@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: This paper extends the work of Ray and Vohra (1997). It ascertains which
+partitions of players will emerge and what actions will these players choose under each
+partition, when they can sign binding agreements and their actions have externalities. The
+emphasis, however, is placed on situations with multiple outcomes and how agents
+behave in the presence of such multiplicity. In particular, a deviating coalition considers
+all the likely outcomes that may prevail upon its deviation, and selects (if possible) a
+subset of them, avoiding thus an excessively confident behavior, which is the case under Ray and
+Vohra's notion. Three augmentations of their solution concept are defined, capturing three
+distinct behavioral assumptions. Their efficiency and relation to each other are discussed.
+Classification-JEL: C70, C71
+Keywords: Coalition structure, binding agreement, stability
+Length: 15
+File-URL: ftp://ftp.econ.au.dk/afn/wp/01/wp01_2.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2001-2
+
+Template-Type: ReDIF-Paper 1.0
+Title: Partial vs. Global Coordination of Capital Income Tax Policies
+Author-Name: Bo Sandemann Rasmussen
+Author-Email: brasmussen@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: Coordination of tax policies among policy makers is an often considered remedy
+against inefficiently low taxes on mobile tax bases induced by tax competition. Tax
+coordination may, however, not be particularly successful if some countries do not take
+part in the coordination. The outcome of such "partial coordination" in capital income
+taxation is derived within a linear-quadratic tax competition model with imperfect capital
+mobility, and the results suggest that the critical mass of countries needed for partial
+coordination to matter significantly is likely to be a very large percentage of the
+economies of the world, with the main benefits accruing to countries not participating.
+This may call for implementation of a global capital income tax treaty administered along
+the lines of the WTO trade agreements.
+Classification-JEL: H21, H25, F21
+Keywords: Capital income taxation, tax competition, tax coordination, partial
+coordination.
+Length: 20
+File-URL: ftp://ftp.econ.au.dk/afn/wp/01/wp01_3.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2001-3
+
+Template-Type: ReDIF-Paper 1.0
+Title: Semiparametric Analysis of Stationary Fractional Cointegration and the
+Implied-Realized Volatility Relation in High-Frequency Options Data
+Author-Name: Bent Jesper Christensen and Morten ù. Nielsen
+Author-Email: mnielsen@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: We consider semiparametric frequency domain analysis of cointegration
+between long memory processes, i.e. fractional cointegration. This concept allows
+derivation of useful long-run relations even among stationary long memory processes. The
+approach uses a degenerating part of the periodogram near the origin to form a frequency
+domain least squares (FDLS) estimator of the cointegrating relation. The resulting
+estimator is consistent for arbitrary short-run dynamics, whereas the latter would have to
+be specified correctly in any parametric approach. We derive the asymptotic distribution
+theory for the FDLS estimator of the cointegration vector in the stationary long memory
+case. The new theory requires a general theorem on the asymptotic order of the covariance
+between the cross-periodograms of stationary long memory processes, which we provide.
+The motivating example is the relation between the volatility realized in the stock market
+and the associated implicit volatility derived from option prices. An application to
+high-frequency U.S. stock index and option data is offered.
+Classification-JEL: C14; C32; G13 
+Keywords: Long Memory; Stationary Fractional Cointegration; Semiparametric Inference;
+Realized Volatility; High-Frequency Options Data
+Length: 35
+File-URL: ftp://ftp.econ.au.dk/afn/wp/01/wp01_4.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2001-4
+
+Template-Type: ReDIF-Paper 1.0
+Title: Efficiency Wages and the Long-Run Incidence of Progressive Taxation
+Author-Name: Bo Sandemann Rasmussen
+Author-Email: brasmussen@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: Progressive income taxation has for some time been recognized to provide
+incentives for wage restraint in models with imperfectly competitive labour markets.
+Recent research has established that bargaining over individual working hours may
+reverse the wage restraining effect such that increased tax progression may reduce
+employment. In the present paper an alternative explanation for such adverse employment
+effects is suggested. Using an efficiency wage model it is shown that long-run adjustment
+in the number of firms to changes in profits may imply that an increase in tax progression
+has adverse employment effects when all the budgetary effects of the tax reform are taken
+into account.
+Classification-JEL: J41, H22
+Keywords: Efficiency wages, employment, progressive taxation, balanced budget tax
+reforms,
+long-run equilibrium
+Length: 20
+File-URL: ftp://ftp.econ.au.dk/afn/wp/01/wp01_5.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2001-5
+
+Template-Type: ReDIF-Paper 1.0
+Title: Multicointegration in US consumption data
+Author-Name: Boriss Siliverstovs
+Author-Email: bsiliverstovs@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: The present paper tests for the existence of multicointegration between real
+per capita private consumption expenditure and real per capita disposable
+personal income in the USA. In doing so, we exploit the fact that the flows
+of disposable income and consumption expenditure on the one hand, and the
+stock of consumers' wealth, which can be considered as cumulative past
+discrepancies between the flows of income and expenditure, on the other
+hand, can be thought of as a stock-flow model, in which multicointegration is
+likely to occur. We apply recently developed I(2) techniques for
+testing for multicointegrating relations and find supporting evidence
+for the existence of multicointegration in this simple bivariate model.
+Classification-JEL: C12, C13, C22, C32, C51, E21
+Keywords: Cointegration, multicointegration, I(2) processes, consumption.
+Length: 26
+File-URL: ftp://ftp.econ.au.dk/afn/wp/01/wp01_6.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2001-6
+
+Template-Type: ReDIF-Paper 1.0
+Title: Rent Control and Tenancy Duration
+Author-Name: Jakob Roland Munch and Michael Svarer
+Author-Email: msvarer@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: This paper investigates how rent control affects mobility on the Danish private
+rental housing market. Based on a unique and extensive data set a measure of the degree
+of
+rent regulation of each housing unit is calculated, and this is coupled with socio-economic
+characteristics and spells of tenancy duration for each household. To accommodate the
+special features of such a data set we apply a proportional hazard duration model, that
+encompasses both the presence of left truncated tenancy durations, right censored
+observations and allows for a very flexible specification of the time dependency as
+captured
+by the baseline hazard function. We find that tenancy mobility is severely reduced by the
+presence of rent control. Tenancy duration for a typical household in the private rental
+sector
+is found to be more than six years longer if the apartment belongs to the 10 per cent most
+regulated units than if it belongs to the 10 per cent least regulated units.
+Classification-JEL: C41, R31, D45, L51
+Keywords: Rent control, mobility, duration model.
+Length: 24
+File-URL: ftp://ftp.econ.au.dk/afn/wp/01/wp01_7.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2001-7
+
+Template-Type: ReDIF-Paper 1.0
+Title: Efficient Likelihold Inference in Nonstationary Univariate Models
+Author-Name: Morten Oe. Nielsen
+Author-Email: monielsen@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: Recent literature shows that embedding fractionally integrated time series
+models
+with spectral poles at the long-run and/or seasonal frequencies in autoregressive
+frameworks
+leads to estimators and test statistics with non-standard limiting distributions that must be
+simulated on a case-by-case basis. However, we show that by embedding the models in
+a
+general I(d) framework the resulting estimators and tests regain all the desirable properties
+from standard statistical analysis. We derive the time domain maximum likelihood
+estimator
+and show that it is consistent, asymptotically normal, and under Gaussianity
+asymptotically
+efficient in the sense that it has asymptotic variance equal to the inverse of the Fisher
+information matrix. The three likelihood based test statistics (Wald, likelihood ratio, and
+Lagrange multiplier) are asymptotically equivalent and have the usual asymptotic
+chi-squared distribution and under the additional assumption of Gaussianity they are
+locally
+most powerful. In the special case where the dynamics of the model is characterized by
+a
+scalar parameter, we show that, in addition, the two-sided tests achieve the Gaussian
+power
+envelope of all invariant and unbiased tests, i.e. they are uniformly most powerful
+invariant
+unbiased. The finite sample properties of the tests are evaluated by Monte Carlo
+experiments. In contrast to what might be expected from the literature, the likelihood ratio
+test is found to outperform the Lagrange multiplier and Wald tests.
+Classification-JEL: C12; C13; C22 
+Keywords: Fractional Integration; Nonstationarity; Likelihood Inference; Efficient
+Estimation; Optimal Tests; Limiting Power; Small Sample Power
+Length: 48
+File-URL: ftp://ftp.econ.au.dk/afn/wp/01/wp01_8.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2001-1
+
+Template-Type: ReDIF-Paper 1.0
+Title: Equilibrium Binding Agreements under Diverse Bahavioral Assumptions
+Author-Name: Effrosyni Diamantoudi
+Author-Email: faye@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract:This paper analyzes cartel stability when firms are farsighted. It studies a price
+leadership model a la D' Aspremont et al. (1983), where the dominant cartel acts as a
+leader
+by determining the market price, while the fringe behaves competitively. According to D'
+Aspremont et al.'s (1983) approach a cartel is stable if no firm has an incentive to either
+enter or exit the cartel. In deciding whether to deviate or not, a firm compares its status
+quo
+with the outcome its unilateral deviation induces. However, the firm fails to examine
+whether the induced outcome will indeed become the new status quo that will determine
+its
+profits. Although the firm anticipates the price adjustment following its deviation, it
+ignores
+the possibility that more firms may exit (or enter) the cartel that may eventually stabilize
+in a
+very different situation from the one the firm riginally induced. In other words, the firm
+does
+not consider the fact that the outcome immediately induced by its deviation may not be
+stable itself. We propose a notion of cartel stability that allows firms to fully foresee the
+result of their deviation. Our solution concept is built in the spirit of von Neumann and
+Morgenstern's (1944) stable set, while it modifies the dominance relation following
+Harsanyi's (1974) criticism.We show that there always exists a unique, non-empty set of
+stable cartels and provide an algorithm the determines it. 
+Classification-JEL: C79, D43, D49, L13.
+Keywords: Cartel stability, Foresight, Coalition Formation 
+Length: 22
+File-URL: ftp://ftp.econ.au.dk/afn/wp/01/wp01_9.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2001-9
+
+Template-Type: ReDIF-Paper 1.0
+Title: Stable International Environmental Agreements: An Analytical Approach
+Author-Name: Effrosyni Diamantoudi; Sartzetakis, Eftichios
+Author-Email: faye@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract:
+In this paper we examine the formation of International Environmental  Agreement
+(IEAs). We provide an analytical treatment of the main model used in the literature and
+offer a formal solution of it (which has not been available so far), while we clarify some
+misconceptions that exist in the literature. We find that the unique stable IEA consist of
+either two, three or four signatories if the number of countries is greater than or equal to
+5. Furthermore, we show that the welfare of the signatories of a stable IEA is very close
+to its lowest level vs the welfare of signatories of other non-stable IEAs. While in our
+model countries' choice variable is emissions, we extend our results to the case where the
+choice variable is abatement efforts.
+Classification-JEL: D62, Q28
+Keywords: International Environmental Agreements, Coalition Formation
+Length: 20
+File-URL: ftp://ftp.econ.au.dk/afn/wp/01/wp01_10.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2001-10

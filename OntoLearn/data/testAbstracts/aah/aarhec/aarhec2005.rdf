@@ -1,0 +1,754 @@
+Template-Type: ReDIF-Paper 1.0
+Title: Testing for Additive Outliers in Seasonally Integrated Time Series
+Creation-Date: 20050203
+Author-Name: Pieter Gautier
+Author-X-Name-First: Pieter
+Author-X-Name-Last: Gautier
+Author-Name: Michael Svarer
+Author-X-Name-First: Michael
+Author-X-Name-Last: Svarer
+Author-Name: Coen Teulings
+Author-X-Name-First: Coen
+Author-X-Name-Last: Teulings
+Author-Email: msvarer@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: Do people move to cities because of marriage market considerations? In cities
+singles can meet more potential partners than in rural areas. Singles are
+therefore prepared to pay a premium in terms of higher housing prices. Once
+married, the marriage market benefits disappear while the housing premium remains.
+We extend the model of Burdett and Coles (1997) with a distinction between efficient
+(cities) and less efficient (non-cities) search markets. One implication of the
+model is that singles are more likely to move from rural areas to cities while
+married couples are more likely to make the reverse movement. A second prediction
+of the model is that attractive singles benefit most from a dense market
+(i.e. from being choosy). Those predictions are tested with a unique Danish dataset.
+Classification-JEL: J12, J64
+Keywords: Marriage, search, mobility, city
+Length: 44
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/05/wp05_1.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2005-1
+
+Template-Type: ReDIF-Paper 1.0
+Title: Improving Size and Power in Unit Root Testing
+Creation-Date: 20050322
+Author-Name: Niels Haldrup
+Author-X-Name-First: Niels
+Author-X-Name-Last: Haldrup
+Author-Name: Michael Jansson
+Author-X-Name-First: Michael
+Author-X-Name-Last: Jansson
+Author-Email: nhaldrup@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: A frequent criticism of unit root tests concerns the poor
+power and size properties that many of such tests exhibit. However, the past
+decade or so intensive research has been conducted to alleviate these problems
+and great advances have been made. The present paper provides a selective
+survey of recent contributions to improve upon both size and power of unit root
+tests and in so doing the approach of using rigorous statistical optimality criteria
+in the development of such tests is stressed. In addition to presenting tests
+where improved size can be achieved by modifying the standard Dickey-Fuller
+class of tests, the paper presents theory of optimal testing and the construction
+of power envelopes for unit root tests under different conditions allowing for
+serial correlation, deterministic components, assumptions regarding the initial
+condition, non-Gaussian errors, and the use of covariates.
+Classification-JEL: C12, C22
+Keywords: Unit roots, optimal tests, power envelope
+Length: 31
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/05/wp05_2.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2005-2
+
+Template-Type: ReDIF-Paper 1.0
+Title: Common Periodic Correlation Features and the Interaction of Stocks
+and Flows in Daily Airport Data
+Creation-Date: 20050323
+Author-Name: Niels Haldrup
+Author-X-Name-First: Niels
+Author-X-Name-Last: Haldrup
+Author-Name: Svend Hylleberg
+Author-X-Name-First: Svend 
+Author-X-Name-Last: Hylleberg
+Author-Name: Gabriel Pons
+Author-X-Name-First: Gabriel
+Author-X-Name-Last: Pons
+Author-Name: Jaume Rosselló
+Author-X-Name-First: Jaume
+Author-X-Name-Last: Rosselló
+Author-Name: Andreu Sansó
+Author-X-Name-First: Andreu
+Author-X-Name-Last: Sansó
+Author-Email: nhaldrup@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: This paper presents a new framework for coping with problems often encountered
+when modeling seasonal high frequency data containing both flow and stock variables.
+The idea is to apply a multivariate weekly representation of a daily periodic model and
+to exploit the possible cointegration and common feature properties of the variables
+in order to obtain a more parsimonious model representation. We introduce the
+notion of common periodic correlations, which are common features that co-vary -
+possibly with a phase shift - across the di?erent days of the week and possibly also
+across weeks. The paper also suggests a way of modelling the dynamic interaction
+of stock and flow variables within a periodic setting that is similar to the concept of
+multicointegration among integrated variables. The proposed modelling framework
+is applied to a data set of daily arrivals and departures in the airport of Mallorca.
+Classification-JEL: C12, C22, C32
+Keywords: Periodic autoregression, seasonality, high frequency data, cointegration,
+multicointegration, common features
+Length: 29
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/05/wp05_3.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2005-3
+
+Template-Type: ReDIF-Paper 1.0
+Title: The Macroeconomic Implications of Fiscal Policy with Tax Evasion
+Creation-Date: 20050323
+Author-Name: Francesco Busato
+Author-X-Name-First: Francesco
+Author-X-Name-Last: Busato
+Author-Name: Bruno Chiarini
+Author-X-Name-First: Bruno
+Author-X-Name-Last: Chiarini
+Author-Name: Guido M. Rey
+Author-X-Name-First: Guido M.
+Author-X-Name-Last: Rey
+Author-Email: fbusato@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: This paper studies equilibrium effect of fiscal policy
+disturbances within a dynamic general equilibrium model where tax
+evasion and underground activities are explicitly incorporated.
+There are three main results. (i) The underground sector
+mitigates the distortionary impact of fiscal policies, while
+lessening the drop (and the rise) of aggregate production after
+restrictive (expansionary) tax shocks. (ii) Tax evasion
+and underground economy can be seen as an economic mechanism that
+rationalizes the arise of non-keynesian effects in response to fiscal
+policy shocks. (iii) A dynamic general equilibrium with
+tax evasion gives a rational justification for a Laffer curve.
+Classification-JEL: E320, E13, H200, E260
+Keywords: Two-sector Dynamic General Equilibrium Models, Fiscal Policy, Tax
+Evasion and Underground Activities
+Length: 14
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/05/wp05_4.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2005-4
+
+Template-Type: ReDIF-Paper 1.0
+Title: Sequential versus simultaneous market delineation:
+The relevant antitrust market for salmon
+Creation-Date: 20050323
+Author-Name: Niels Haldrup
+Author-X-Name-First: Niels
+Author-X-Name-Last: Haldrup
+Author-Name: Peter Møllgaard
+Author-X-Name-First: Peter
+Author-X-Name-Last: Møllgaard
+Author-Name: Claus Kastberg Nielslen
+Author-X-Name-First: Claus Kastberg
+Author-X-Name-Last: Nielsen
+Author-Email: nhaldrup@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: Delineation of the relevant market forms a pivotal part of most antitrust
+cases. The standard approach is sequential. First the product market
+is delineated, then the geographical market is defined. Demand and
+supply substitution in both the product dimension and the geographical
+dimension will normally be stronger than substitution in either dimension.
+By ignoring this one might decide first to define products narrowly and
+then to define the geographical extent narrowly ignoring the possibility of
+a diagonal substitution. These reflections are important in the empirical
+delineation of product and geographical markets. Using a unique data set
+for prices of Norwegian and Scottish salmon, we propose a methodology
+for simultaneous market delineation and we demonstrate that compared
+to a sequential approach conclusions will be reversed.
+Classification-JEL: C3, K21, L41, Q22
+Keywords: Relevant market, econometric delineation, salmon
+Length: 23
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/05/wp05_5.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2005-5
+
+Template-Type: ReDIF-Paper 1.0
+Title: Do More Economists HOld Stocks?
+Creation-Date: 20050408
+Author-Name: Charlotte Christiansen
+Author-X-Name-First: Charlotte
+Author-X-Name-Last: Christiansen
+Author-Name: Juanna Shröter Joensen
+Author-X-Name-First: Juanna Schröter
+Author-X-Name-Last: Joensen
+Author-Name: Jesper Rangvid
+Author-X-Name-First: Jesper
+Author-X-Name-Last: Rangvid
+Author-Email: jjoensen@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: A unique data set enables us to test the hypothesis that more economists than
+otherwise identical investors hold stocks due to informational advantages. We
+confirm that economists have a significantly higher probability of participating
+in the stock market than investors with any other education, even when controlling
+for several background characteristics. We make use of a large register-based
+panel data set containing detailed information on the educational attainments
+and various financial and socioeconomic variables. We model the stock market
+participation decision by the probit model. The results are shown to be highly
+robust to various assumptions, including unobserved individual heterogeneity
+Classification-JEL: G11; I29; J24
+Keywords: Investor Education; Portfolio Choice; Stock Market Participation
+Length: 36
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/05/wp05_6.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2005-6
+
+Template-Type: ReDIF-Paper 1.0
+Title: Does an increase in unemployment income lead to longer unemployment spells? Evidence
+using Danish unemployment assistance data
+Creation-Date: 20050523
+Author-Name: Ott Toomet
+Author-X-Name-First: Ott
+Author-X-Name-Last: Toomet
+Author-Email: otoomet@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: Danish unemployment assistance depends on age; it increases by 70% when unemployed
+individuals turn 25. This feature is used to identify the impact of income on the
+unemployment-to-employment hazard rate. A mixed proportional hazard framework
+based on a 10% representative Danish registry data set is used. The results indicate
+that the income effect for females is negative and significant, corresponding to an 
+income elasticity of -0.4. The effect for males is positive but insignifcant.
+Classification-JEL: J64, J65
+Keywords: welfare benefts, incentive effect, unemployment duration
+Length: 40
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/05/wp05_7.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2005-7
+
+Template-Type: ReDIF-Paper 1.0
+Title: Availability and Price of High Quality Day Care and Female Employment
+Creation-Date: 20050524
+Author-Name: Marianne Simonsen
+Author-X-Name-First: Marianne
+Author-X-Name-Last: Simonsen
+Author-Email: msimonsen@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: In this paper I analyse to what degree availability and price of high quality
+publicly subsidised child care affects female employment for women living in
+couples following maternity leave. The results show that unrestricted access
+to day care has a significantly positive effect on female employment. The
+price effect is significantly negative: An increase in the price of child
+care of C=1 will decrease the female employment with 0.08% corresponding
+to a price elasticity of -0.17. This effect prevails during the first 12
+months after childbirth.
+Classification-JEL: J13, J22, J38
+Keywords: Child care, prices, waiting lists, regional variation, female employment
+Length: 21
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/05/wp05_8.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2005-8
+
+Template-Type: ReDIF-Paper 1.0
+Title: Fiscal Policy under Indeterminacy and Tax Evasion
+Creation-Date: 20050530
+Author-Name: Francesco Busato
+Author-X-Name-First: Francesco
+Author-X-Name-Last: Busato
+Author-Name: Bruno Chiarini
+Author-X-Name-First: Bruno
+Author-X-Name-Last: Chiarini
+Author-Name: Enrico Marchetti
+Author-X-Name-First: Enrico
+Author-X-Name-Last: Marchetti
+Author-Email: fbusato@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: This paper shows under indeterminacy and tax evasion, an increase in corporate,
+labor or income tax rates pushes the economy into an expansionary pattern.
+These effects are reversed when the steady state is saddle-path stable.
+Classification-JEL: E320, E13, E260, O40
+Keywords: Dynamic General Equilibrium Models, Fiscal Policy, Tax Evasion
+Length: 22
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/05/wp05_9.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2005-9
+
+Template-Type: ReDIF-Paper 1.0
+Title: Capital Subsidies and the Underground Economy
+Creation-Date: 20050710
+Author-Name: Francesco Busato
+Author-X-Name-First: Francesco
+Author-X-Name-Last: Busato
+Author-Name: Bruno Chiarini
+Author-X-Name-First: Bruno
+Author-X-Name-Last: Chiarini
+Author-Name: Pasquale de Angelis
+Author-X-Name-First: Pasquale de
+Author-X-Name-Last: Angelis
+Author-Name: Elisabetta Marzano
+Author-X-Name-First: Elisabette
+Author-X-Name-Last: Marzano
+Author-Email: fbusato@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: In this paper we investigate the effects of different fiscal policies on the firm choice
+to produce underground. We consider a tax evading firm operating simultaneously both
+in the regular and in the underground economy. We suggest that such a kind of firm,
+referred to as moonlighting firm, is able to offset the specific costs usually stressed by
+literature on underground production, such as those suggested by Loayza (1994) and
+Anderberg et al. (2003). Investigating the effects of different fiscal policy interventions,
+we find that taxation is a critical parameter to define the size of capital allocation in
+the underground production. In fact, a strong and inverse relationship is found, and
+tax reduction is the best policy to reduce the convenience to produce underground. We
+also confirm the depressing effect on investment of taxation (see, for instance, Summers,
+1981), so that tax reduction has no cost in terms of investment. By contrast, the model
+states that while enforcement is an effective tool to reduce capital allocation in the
+underground production, it also reduce the total capital stock. Moreover, we also suggest
+that the allowance of incentives to capital accumulation may generate, in this specific
+typology of firm, some unexpected effects, causing, together with a positive investment
+process, also an increase in the share of irregularity. This finding could explain, in a
+microeconomic framework, the evidence of Italian southern regions, where high incentives
+are combined with high irregularity ratios.
+Classification-JEL: E26, E22, H25, H26.
+Keywords: evasion, moonlighting, capital subsidies, underground production.
+Length: 24
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/05/wp05_10.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2005-10
+
+Template-Type: ReDIF-Paper 1.0
+Title: Do sector-specific shocks explain aggregate fluctuations?
+Creation-Date: 20050720
+Author-Name: Francesco Busato
+Author-X-Name-First: Francesco
+Author-X-Name-Last: Busato
+Author-Name: Alessandro Girardi 
+Author-X-Name-First: Alessandro
+Author-X-Name-Last: Girardi
+Author-Name: Amadeo Argentiero 
+Author-X-Name-First: Amadeo
+Author-X-Name-Last: Argentiero 
+Author-Email: fbusato@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: This paper estimates a reduced form multi-sector real business cycle model that allows for sectorspecific
+and cross-sector shocks of two different types: technology shocks and non-technology shocks.
+Long run restrictions identify the different kinds of shocks. There are four main findings.
+(i) Sector-specific technology shocks explain more than 70 percent of volatility’s productivity on
+a sector-by-sector basis; sector-specific non-technology shocks explain, on the other hand, more than
+80 percent of employment volatility in each sector. This suggests that technology shocks matters for
+explaining within-sector productivity fluctuations.
+(ii) Cross-sector technology shocks have very little explanatory power on productivity and
+employment, while cross-sector non-technology shocks explain more than 60 percent of employment
+that is reallocated across sector; this suggests that the shocks’ transmission mechanism operates
+through non-technology shocks.
+(iii) There is no evidence of an aggregate technology shocks for the United States economy;
+looking at the aggregate economy might produce misleading results because the relatively larger
+sectors drive the dynamic behavior of the aggregate economy. In this respect a disaggregate analysis
+may shed light on the mechanisms behind the propagation of shocks across sectors and over time.
+(iv) Finally, our analysis suggests that an appropriate real business model for the United States
+economy requires at least two sectors, representing, for example, durable and non-durable goods. The
+non-durable sector may follow a standard RBC model, while the durable sector should incorporate
+consumption habit formation.
+Classification-JEL: E2, E3, E32
+Keywords: Long-run Restrictions, Sector-Specific Shocks, Real Business Cycle
+Length: 36
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/05/wp05_11.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2005-11
+
+Template-Type: ReDIF-Paper 1.0
+Title: Aid Effectiveness on Accumulation. A Meta Study
+Creation-Date: 20050721
+Author-Name: Hristos Doucouliagos
+Author-X-Name-First: Hristos
+Author-X-Name-Last: Doucouliagos
+Author-Name: Martin Paldam
+Author-X-Name-First: Martin
+Author-X-Name-Last: Paldam
+Author-Email: mpaldam@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: The AEL (aid effectiveness literature) studies the macroeconomic effect of development aid 
+using cross-country or panel data econo¬metrics. It contains about 100 papers of which 43 
+study whether development aid increases accumulation in the recipient country. Taking all 43 
+aid-accumulation studies together, the results show that aid has a small insignificant positive 
+effect on investment, and a (fairly) small significant negative effect on domestic savings. The 
+aggregate result is thus an unclear effect on accumulation, but with regional differences.
+When only studies of Latin American or Asian economies are considered, a small positive 
+and statistically significant investment effect is found, together with a small negative effect on 
+domestic savings. We conclude that in Asia and Latin America, aid is a substitute to domestic
+savings, but has a net positive impact on investment.
+Classification-JEL: B2, E21, E22, F35
+Keywords: Aid effectiveness, meta study, investments, savings 
+Length: 27
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/05/wp05_12.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2005-12
+
+Template-Type: ReDIF-Paper 1.0
+Title: Aid Effectiveness on Growth. A Meta Study
+Creation-Date: 20050721
+Author-Name: Hristos Doucouliagos
+Author-X-Name-First: Hristos
+Author-X-Name-Last: Doucouliagos
+Author-Name: Martin Paldam
+Author-X-Name-First: Martin
+Author-X-Name-Last: Paldam
+Author-Email: mpaldam@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: The AEL (aid effectiveness literature) is econo¬metric studies of the macroeconomic effects of 
+development aid. It contains about 100 papers of which 68 are reduced form estimates of the
+ effect of aid on growth in the recipient country. The raw data show that growth is 
+unconnected to aid, but the AEL has put so much structure on the data that all results possible 
+have emerged. The present meta study considers both the best-set of the 68 papers and the 
+all-set of 543 regressions published. Both sets have a positive average aid-growth elasticity, 
+but it is small and insignificant: The AEL has not established that aid works. Using meta-
+regression analysis it is shown that about 20 factors influence the results. Much of the 
+variation between studies is an artifact and can be attributed to publication outlet, institu¬
+tional affiliation, and specification differences. However, some of the difference between
+studies is real. In particular, the aid-growth association is stronger for Asian countries, and 
+the aid-growth association is shown to have been weaker in the 1970s.
+Classification-JEL: B2, F35, O35 
+Keywords: Aid effectiveness, meta study, economic growth
+Length: 31
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/05/wp05_13.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2005-13
+
+Template-Type: ReDIF-Paper 1.0
+Title: Conditional Aid Effectiveness. A Meta Study
+Creation-Date: 20050721
+Author-Name: Hristos Doucouliagos
+Author-X-Name-First: Hristos
+Author-X-Name-Last: Doucouliagos
+Author-Name: Martin Paldam
+Author-X-Name-First: Martin
+Author-X-Name-Last: Paldam
+Author-Email: mpaldam@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: The AEL (aid effectiveness literature) studies the effect of development aid using econome¬
+trics on macro data. It contains about 100 papers of which a third analyzes conditional 
+models where aid effectiveness depends upon z, so that aid only works for a certain range of 
+the variable. The key term in this family of AEL models is thus an interaction term of z times 
+aid. The leading candidates for z are a good policy index and aid itself. In this paper, meta-
+analysis techniques are used (i) to determine whether the AEL has established the said 
+interaction terms, and (ii) to identify some of the determinants of the differences in results 
+between studies. Taking all available studies in consideration, we find no support for 
+conditionality with respect to policy, while conditionality regarding aid itself is dubious. 
+However, the results differ depending on the authors’ institutional affiliation.
+Classification-JEL: B2, F35, O35 
+Keywords: Aid effectiveness, meta study, economic growth, policy conditionality
+Length: 30
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/05/wp05_14.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2005-14
+
+Template-Type: ReDIF-Paper 1.0
+Title: The Aid Effectiveness Literature. The Sad Result of 40 Years of Research
+Creation-Date: 20050721
+Author-Name: Hristos Doucouliagos
+Author-X-Name-First: Hristos
+Author-X-Name-Last: Doucouliagos
+Author-Name: Martin Paldam
+Author-X-Name-First: Martin
+Author-X-Name-Last: Paldam
+Author-Email: mpaldam@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: The AEL consists of empirical macro studies of the effects of development aid. At the end of 
+2004 it had reached 97 studies of three families, which we have summarized in one study each 
+using meta-analysis. Studies of the effect on investments show that they rise by 1/3 of the aid – 
+the rest is crowded out by a fall in savings. Studies of the effect on growth show an 
+insignificant positive effect. Studies of the effect on growth, conditional on something else, 
+have till now shown weak results. The Dutch Disease effect of aid has been ignored. The best 
+aggregate estimate is that since its start in the early 1960s aid has increased the standard of 
+living in the poor countries by 20%.
+Classification-JEL: B2, E21, E22, F35, O35
+Keywords: Aid effectiveness, meta study, accumulation, growth
+Length: 26
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/05/wp05_15.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2005-15
+
+Template-Type: ReDIF-Paper 1.0
+Title: Does development aid help poor countries catch up?
+Creation-Date: 20050721
+Author-Name: Herbertsson, Tryggvi Thor
+Author-X-Name-First: Tryggvi Thor
+Author-X-Name-Last: Herbertsson
+Author-Name: Martin Paldam
+Author-X-Name-First: Martin
+Author-X-Name-Last: Paldam
+Author-Email: mpaldam@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: Aid flows are included into the standard cross-country catch-up relation. Robust¬ness of the 
+result is tested by changing time periods and by adding extra variables. The main results are:
+Absolute conver¬gence and absolute aid effec¬ti¬ve¬ness are both rejected. While conditional 
+convergence is accepted, conditional aid effecti¬ve¬ness is found to be weak. The two relations 
+are largely inde¬pendent. However, aid has a clear activity effect in the short run. Finally, we
+try to divide the countries into an A-group where aid is effective and a B-group where it 
+harms. Several criteria of division were explored, but none were very successful – the most 
+satisfactory is the one that divides countries according to their level of development.
+Classification-JEL: C14, C23, F35, O4
+Keywords: Convergence, growth, development aid effectiveness
+Length: 26
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/05/wp05_16.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2005-16
+
+Template-Type: ReDIF-Paper 1.0
+Title: Pre-Auction Offers in Asymmetric First-Price and Second-Price Auctions
+Creation-Date: 20051013
+Author-Name: Kirkegaard, René
+Author-X-Name-First: René
+Author-X-Name-Last: Kirkegaard
+Author-Name: Per Baltzer Overgaard
+Author-X-Name-First: Per Baltzer
+Author-X-Name-Last: Overgaard
+Author-Email: povergaard@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: We consider “must-sell” auctions with asymmetric buyers. First,
+we study auctions with two asymmetric buyers, where the distribution
+of valuations of the strong buyer is “stretched” relative to that of the
+weak buyer. Then, it is known that ineffcient first-price auctions are
+more profitable for the seller than effcient second-price auctions. This
+is because the former favor the weak buyer. However, we show that
+the seller can do one better by augmenting the first-price auction by
+a pre-auction offer made exclusively to the strong buyer. Should the
+strong buyer reject the offer, the object is simply sold in an ordinary
+first-price auction. The result is driven by the fact that the unmodified
+first-price auction is too favorable to the weak buyer, and that the
+pre-auction offer allows some correction of this to the benefit of the
+seller. Secondly, we show quite generally that pre-auction offers never
+increase the profitability of second-price auctions, since they introduce
+the wrong kind of favoritism from the perspective of seller profits.
+Classification-JEL: D02, D44, D82.
+Keywords: first-price and second-price auctions, asymmetric bidders, pre-auction offers. 
+Length: 19
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/05/wp05_17.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2005-17
+
+Template-Type: ReDIF-Paper 1.0
+Title: Directional Congestion and Regime Switching in a Long Memory Model 
+for Electricity Prices
+Creation-Date: 20051017
+Author-Name: Haldrup; Niels
+Author-X-Name-First: Niels
+Author-X-Name-Last: Haldrup
+Author-Name: Morten Oerregaard Nielsen
+Author-X-Name-First: Morten Oerregaard
+Author-X-Name-Last: Nielsen
+Author-Email: nhaldrup@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: The functioning of electricity markets has experienced increasing complexity
+as a result of deregulation in recent years. Consequently this affects the 
+multilateral price behaviour across regions with physical exchange of power. 
+It has been documented elsewhere that features such aslong memory and regime 
+switching reflecting congestion and non-congestion periods are empirically 
+relevant and hence are features that need to be taken into account when 
+modeling price behavior. In the present paper we further elaborate on the 
+co-existence of long memory and regime switches by focusing on the effect 
+that the direction of possible congestion episodes has on the price dynamics. 
+Under non-congestion prices are identical. The direction of possible congestion 
+is identified by the region with excess demand of power through the sign of 
+price differences and hence three different states can be considered: Non-congestion 
+and congestion periods with excess demand in the one or the other region. Using 
+data from the Nordic power exchange, Nord Pool, we find that the price dynamics
+and long memory features of the price series generally are rather different
+across the different states. Also, there is evidence of fractional cointegration
+at some grid points when conditioning on the states.
+Classification-JEL: C2, C22, C32
+Keywords: Cointegration, electricity prices, forecasting, fractional integration
+and cointegration, long memory, Markov switching
+Length: 23
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/05/wp05_18.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2005-18
+
+Template-Type: ReDIF-Paper 1.0
+Title: Directional Congestion and Regime Switching in a Long Memory Model 
+for Electricity Prices
+Creation-Date: 20051101
+Author-Name: Busato; Francesco
+Author-X-Name-First: Francesco
+Author-X-Name-Last: Busato
+Author-Name: Bruno Chiarini
+Author-X-Name-First: Bruno
+Author-X-Name-Last: Chiarini
+Author-Name: Vincenzo di Maro
+Author-X-Name-First: Vincenzo
+Author-X-Name-Last: di Maro
+Author-Email: fbusato@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: This paper generates high frequency data for the underground labor
+and the underground production using a theoretical general equilibrium
+model, over the sample 1970:01-1992:04 (32 years; 128 observations). We
+compare selected time series properties of the generated series with those
+of the corresponding series estimated with classical methodologies. The
+generated series for underground labor and underground production present a
+wider range and are more volatile than all other series estimated with
+classical methodologies. The analysis, next, suggests that the underground
+labor is pro-cyclical with respect to the GDP, that is lagging it by
+approximately one quarter, and that underground labor series generated from
+the theoretical model are highly persistent. Finally, the estimated
+correlation between the cyclical component of our generated-from-theory
+underground labor productivity and the actual series of aggregate GDP is
+negative (-0.34), while official yearly estimates present a positive (but
+very low) correlation with the cyclical component of GDP (0.12). This
+suggests that the underground sector has a positive impact over the
+productivity at the business cycle frequency, while it dampens productivity
+fluctuations at a lower frequency.
+Classification-JEL: E32, E260
+Keywords: Real Business Cycle Models, Underground Economy
+Length: 30
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/05/wp05_19.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2005-19
+
+Template-Type: ReDIF-Paper 1.0
+Title: Cartel Prosecution and Leniency Programs: Corporate versus Individual Leniency
+Creation-Date: 20051128
+Author-Name: Philipp Festerling
+Author-X-Name-First: Philipp
+Author-X-Name-Last: Festerling
+Author-Email: pfesterling@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: The paper explores the interdependencies between corporate and individual leniency
+programs. In a duopoly model where corporations are separated into representing
+owners and operating managers, conflicts between the two types of agents arise if
+the relative benefits of participating in the corresponding leniency programs differ.
+As an example of what might cause differing relative benefits, the paper considers
+the inclusion of damage payments for owners which are not covered by the corporate
+leniency program. The main findings are: (1) Individual leniency applications are never
+observed. (2) Threats by managers to apply for individual leniency may, however,
+increase the owners’ incentive to carry out corporate self-reports. (3) In other cases,
+the individual leniency program increases the owners’ tolerance for cartel activity for
+two reasons: Either the corporate leniency program is sufficiently unattractive to the
+owners, or the owners rely on the option to apply for corporate leniency after the
+Antitrust Authority has opened a case. (4) Finally, the more distortion decreases, the
+more ineffective the individual leniency program becomes.
+Classification-JEL: K21, K42, L13, L44.
+Keywords: Leniency, corporate leniency, individual leniency, cartel, law enforce-
+ment, antitrust
+Length: 55
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/05/wp05_20.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2005-20
+
+Template-Type: ReDIF-Paper 1.0
+Title: Tax-tariff reform with costs of tax administration
+Creation-Date: 20051215
+Author-Name: Knud Jørgen Munk
+Author-X-Name-First: Knud Jørgen
+Author-X-Name-Last: Munk
+Author-Email: kmunk@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: As is broadly recognized, the straightforward application of the Diamond-Mirrlees 
+(1971) production efficiency theorem implies that when lump-sum taxation is not 
+available, then it is optimal for the government in a small open economy to rely 
+on taxes on the net demand of households rather than on border taxes to finance its 
+resource requirements. However, the theorem does not hold when taxation is associated 
+with administrative costs. The present paper explores the implications for optimal 
+taxation and for desirable directions of tax-tariff reform in countries at different 
+levels of economic development taking into account the costs of tax administration. 
+The paper lends support to and clarifies the reasons for the criticism by Emran and 
+Stiglitz (2003, 2005) of the IMF and the World Bank's recommendation to developing 
+countries to adopt VAT to replace border taxes.
+Classification-JEL: F11, F13, H21
+Keywords: Optimal taxation, optimal trade policy, VAT, tax-tariff reform, costs of 
+tax administration, informal sector, developing countries
+Length: 20
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/05/wp05_21.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2005-21
+
+Template-Type: ReDIF-Paper 1.0
+Title: On the Determinants of Optimal Border Taxes for a Small Open Economy
+Creation-Date: 20051215
+Author-Name: Knud Jørgen Munk
+Author-X-Name-First: Knud Jørgen
+Author-X-Name-Last: Munk
+Author-Name: Bo Sandemann Rasmussen
+Author-X-Name-First: Bo Sandemann
+Author-X-Name-Last: Rasmussen
+Author-Email: brasmussen@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: For a small open economy where the government is restricted to raise revenue using
+border taxes only, the optimal structure of border taxes is considered. As a matter 
+of normalization exports and the supply to the market of the primary factor may be 
+assumed to be untaxed, but that the household use of the primary factor and domestic 
+consumption of the export good cannot be taxed is nevertheless a constraint; this 
+insight provides the key to understanding what determines the optimal tariff structure. 
+The optimal border tax structure is derived for both exogenous and endogenous labour 
+supply, and the results are interpreted in the spirit of the Corlett-Hague results 
+for the optimal tax structure in a closed economy and compared with results from CGE 
+models.
+Classification-JEL: H21, F13
+Keywords: Border taxes, small open economy, labour supply, Corlett-Hague.
+Length: 11
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/05/wp05_22.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2005-22
+
+Template-Type: ReDIF-Paper 1.0
+Title: Assessment of the introduction of road pricing using a Computable General Equilibrium model
+Creation-Date: 20051230
+Author-Name: Knud Jørgen Munk
+Author-X-Name-First: Knud Jørgen
+Author-X-Name-Last: Munk
+Author-Email: kmunk@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: The introduction of road pricing has important budgetary and income distributional 
+consequences. In countries like Denmark, due to high marginal rates of taxation, raising 
+government revenue and redistributing income is associated with substantial distortionary and 
+administrative costs. This paper argues that an evaluation of the introduction of road pricing 
+needs to take into account not only the effects on congestion and on the environment, but also 
+the effects on the government’s budget and the income distributional consequences and 
+therefore should be undertaken within a general equilibrium framework. A stylized 
+Computable General Equilibrium (CGE) model which represents the interaction of the 
+consumption of transport and of traffic congestion with leisure is used to illustrate this point. 
+Model simulations show that the introduction of road pricing may be associated with a double 
+dividend and make it desirable to reduce transport infrastructure, and furthermore, although 
+decreasing road congestion, increase the environmental damage.
+Classification-JEL: H2, H29
+Keywords: Project evaluation, optimal taxation, externalities, separability, road pricing, CGE models, double dividend
+Length: 28
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/05/wp05_23.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2005-23

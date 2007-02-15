@@ -1,0 +1,6 @@
+NP0:connector:(such as):connector:NPx
+(such):connector:NP0:connector:(as):connector:NPx
+NPx:connector:(or other):connector:NP0
+NPx:connector:(and other):connector:NP0
+NP0:connector:(including):connector:NPx
+NP0:connector:(especially):connector:NPx

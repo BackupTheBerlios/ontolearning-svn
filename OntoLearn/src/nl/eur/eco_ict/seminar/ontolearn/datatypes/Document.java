@@ -72,7 +72,7 @@ public class Document {
 	 */
 	protected void extractAbstracts () throws FileNotFoundException{
 		final String abstractHeader = "Abstract:";
-		final String regEndAbstract = "^([a-zA-Z\\x2D]+)(\\x3A{1})(.)*$";
+		final String regEndAbstract = "^([a-zA-Z\\x2D]+)(\\x3A{1})( )(.)*$";
 		this.abstrct = new StringBuffer();
 		BufferedReader br = new BufferedReader(new FileReader(this.file));
 		String line = null;
@@ -84,12 +84,14 @@ public class Document {
 				extract = false;
 			}
 			if (extract){
-				this.abstrct.append (line);
+				this.abstrct.append (line.trim()+" ");
 			}
 			if (!extract && line.startsWith (abstractHeader)){
 				extract = true; // take the next lines
-				this.abstrct.append (line.substring (10, line.length ()));
-			}
+				if(line.length() > 9) {
+					this.abstrct.append (line.substring (10, line.length ()).trim()+" ");
+				}
+			}			
 		}
 		}catch(Exception e){
 			e.printStackTrace ();

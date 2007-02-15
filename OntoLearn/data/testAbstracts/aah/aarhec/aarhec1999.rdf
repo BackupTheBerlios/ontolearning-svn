@@ -1,0 +1,722 @@
+Template-Type: ReDIF-Paper 1.0
+Title: Balancing the Budget: Long-Run Adverse Effects of Progressive Taxation
+Author-Name: Bo Sandemann Rasmussen
+Author-Email: brasmussen@econ.au.dk 
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: Progressive taxation is known to provide incentives for wage restraint and
+ thereby lead to a higher level of employment in various models of equilibrium
+ unemployment based on imperfectively competitive labour markets. It is shown in an
+ efficiency wage model that although an increase in tax progression holding the average
+ tax unchanged leads to a higher level of employment in the short run, once the full
+ budgetary effects of changing tax progression is taken into account and free entry and exit
+ of firms is allowed for in the long run, increasing tax progression leads to the opposite
+ result, viz. a lower level of equilibrium employment.
+Classification-JEL: J41, H22
+Keywords: Efficiency wages, employment, progressive taxation, balanced-budget tax
+ reforms, long-run equilibrium.
+Length: 18
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_1.ps
+File-Format: application/postscript
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_1.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:1999-1
+
+Template-Type: ReDIF-Paper 1.0
+Title: Higher Profits and Lower Capital Prices: Is Factor Allocation Optimal?
+Author-Name: Palle Schelde Andersen, Mark Klau and Ebbe Yndgaard
+Author-Email: eyndgaard@econ.au.dk 
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: From an international perspective, the European rate of unemployment has been 
+ relatively high and growing over the last one to two decades; on this background, the 
+ parallel rise in profit shares in a number of European countries seems to be at odds with 
+ expected economic behaviour. The paper contributes to a dissolution of this apparent enigma 
+ in two steps. First, an empirical decomposition for two sub periods (1966-1981 and 1981-1996)
+ suggests that the rise in profit shares during the second sub-period primarily originated 
+ from three sources: a marked fall in real capital prices, a clear upward shift of the return
+ to capital as a result of wage moderation, and a slowdown in the rate of growth of the 
+ capital/labour ratio, compared with the first sub-period. Second, based on various estimates 
+ of elasticities of substitution, this slowdown is analysed in greater depth. It turns out 
+ that the adjustment of firms to growing profits and falling user cost of capital compared 
+ with wages is sub-optimal. In the short run they do not substitute capital for labour in full
+ accordance with cost minimising prescriptions and the speed of convergence towards a complete
+ substitution is low. Hence, during this transitional period, investment - and thus labour 
+ productivity - has been lower than would follow from rational behaviour.
+Classification-JEL: E0, E2, J3
+Keywords: Investment, factor substitution, unemployment, profit share, labour productivity
+Length: 41
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_2.ps
+File-Format: application/postscript
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_2.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:1999-2
+
+Template-Type: ReDIF-Paper 1.0
+Title: Spurious Regression, Cointegration, and Near Cointegration: A Unifying Approach
+Author-Name: Niels Haldrup and Michael Jansson
+Author-Email: nhaldrup@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: This paper introduces a representation of an integrated vector time series in which
+ the coefficient of multiple correlation computed from the long-run covariance matrix of the
+ innovation sequences is a primitive parameter of the model. Based on this representation, a
+ notion of near cointegration is proposed and three separate applications of the model of near
+ cointegration are provided. As a first application, we give analytical corroboration of the
+ conjecture that the finite sample behavior of F-statistics based on OLS estimators depends
+ continuously on the aforementioned squared multiple correlation coefficient. Hence, the 
+ notion of near cointegration helps to bridge the gap between the polar cases of spurious
+ regression and cointegration. Secondly, we characterize the properties of conventional
+ cointegration methods under near cointegration, hereby investigating the robustness of
+ cointegration methods. Finally, we illustrate how to obtain local power functions of
+ cointegration tests that take cointegration as the null hypothesis.
+Classification-JEL: C12, C13, C22
+Keywords: Cointegration, spurious regression, near cointegration, cointegration tests, local power function, brownian motion
+Length: 40
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_3.ps
+File-Format: application/postscript
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_3.pdf
+File-Format: application/pdf
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_3.zip
+File-Format: application/zip
+Handle: RePEc:aah:aarhec:1999-3
+
+Template-Type: ReDIF-Paper 1.0
+Title: Specifying Nonlinear Econometric Models by Flexible Regression Models and
+ Relative Forecast Performance
+Author-Name: Christian M. Dahl and Svend Hylleberg
+Author-Email: cdahl@econ.au.dk 
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: The paper considers the task of selecting a flexible nonlinear model which can 
+ be used as a baseline model. The baseline model may be used as a testing ground for  
+ more structural models which are congruent with economic theory. From the limited  
+ empirical evidence obtained here it is tentatively suggested to find a baseline nonlinear 
+ flexible form for a univariate time series by following the procedure: 1. Recursively,  
+ based on h extra periods at a time specify and estimate a linear form by use of model  
+ selection criteria like Cross Validation and/or BIC. 2. After a preliminary test for  
+ linearity, recursively, specify and estimate flexible regression models like the FNL  
+ suggested by Hamilton (1999) and the Projection Pursuit model suggested by Aldrin,  
+ Boelviken and Schweder (1993) for cases of moderate nonlinearities. Use the Cross    
+ Validation and the BIC criteria. 3. Based on the remaining part of the data set select the 
+ best nonlinear flexible form by use of forecast criteria measuring the absolute forecast  
+ performance and the directional forecast performance in h-steps ahead predictions, and 
+ compare the best flexible form to the linear specification by use of the Diebold Mariano 
+ tests, see Deibold and Mariano (1995) and the forecast encompassing tests suggested by 
+ Harvey, Lebourne, and Newhold (1998). The results indicate that the FNL method and 
+ the Projection Pursuit Model are the preferable models to apply and that the CV and BIC 
+ are the best selection criteria, while the forecast encompassing tests properly modified  
+ as suggested by Harvey et. al. (1998) possess better power properties than the Diebold- 
+ Mariano test.
+Classification-JEL: C10, C45, C50
+Keywords: Nonlinear model specification
+Length: 45
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_4.ps
+File-Format: application/postscript
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_4.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:1999-4
+
+Template-Type: ReDIF-Paper 1.0
+Title: Stability of Functional Rational Expectations Equilibria
+Author-Name: David L. Kelly and Jamsheed Shorish
+Author-Email: jshorish@econ.au.dk 
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: In this paper we examine a representative agent forecasting prices 
+ in a first-order self-referential overlapping generations model. We first consider
+ intermediate stage learning, where agents update the forecasting rule every
+ periods. We show that, in theory and simulations, the learning rule does not 
+ converge to the rational expectations equilibrium (REE). We next consider two 
+ stage learning, where agents learn the functional mapping between the current 
+ forecast function and the previous forecast function. We show that in theory and 
+ simulations the two stage learning rule converges to the REE.
+Classification-JEL: D83, D84, E31
+Keywords: Functional rational expectations, learning, overlapping generations
+Length: 37
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_5.ps
+File-Format: application/postscript
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_5.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:1999-5
+
+Template-Type: ReDIF-Paper 1.0
+Title: Adapting Prices or Quantities in the Presence of Adjustment Costs?
+Author-Name: Torben M. Andersen and Eric Toulemonde
+Author-Email: tandersen@econ.au.dk 
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: A dominant explanation of price rigidity is the so-called "menu cost model"
+ according to which small costs of changing prices may imply that firms keep nominal
+ prices unchanged to nominal shocks which therefore have real effects. Crucial to this
+ explanation is the assumption that price adjustment is costly while quantity adjustment
+ is not. This paper analyses the role of costs of adjusting both prices and quantities, and
+ it is found that the "small cost" argument used to support menu cost models does not
+ hold. The predictions of menu cost models only hold if price adjustment costs are larger
+ than quantity adjustment costs. Empirical evidence clearly indicates that the costs of
+ adjusting quantities are non-trivial. Quantity adjustment costs also open for the possibility
+ of non-market clearing.
+Classification-JEL: E32
+Keywords: Menu-costs, nominal rigidities, price adjustment and quantity adjustment
+Length: 18
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_6.ps
+File-Format: application/postscript
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_6.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:1999-6
+
+Template-Type: ReDIF-Paper 1.0
+Title: Imperfectively Competitive Labour Markets and the Productivity Puzzle
+Author-Name: Torben M. Andersen and Eric Toulemonde
+Author-Email: tandersen@econ.au.dk 
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: Standard models of imperfectly competitive labour market predict that real
+ wages are unaffected by productivity. This is in conflict with empirical evidence. We
+ integrate imperfectly competitive labour markets in a fully specified dynamic
+ macromodel. While temporary shocks are consistent with the business cycle fact of little
+ real wage and large employment responsiveness, we find in accordance with empirical
+ evidence that permanent productivity changes affect real wages and not employment.
+ Hence, the model solves the productivity puzzle and is capable of matching both business
+ cycle and long-run facts concerning movements of real wages and employment.
+Classification-JEL: E32, J31, J51
+Keywords: Productivity, unions, real wages and unemployment
+Length: 22
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_7.ps
+File-Format: application/postscript
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_7.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:1999-7
+
+Template-Type: ReDIF-Paper 1.0
+Title: An Investigation of Tests for Linearity and the Accuracy of Flexible Nonlinear
+ Inference
+Author-Name: Christian M. Dahl
+Author-Email: cdahl@econ.au.dk 
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: A new approach recently suggested by Hamilton for flexible parametric
+ inference in nonlinear models is examined through simulation studies. Hamilton suggests
+ a new test for neglected nonlinearity and we compare it with the neural network test,
+ Tsay's test, White's dynamic misspecification test, Ramsey's Reset test, the so-called V23
+ test, and the nonparametric BDS test. With respect to size and power properties, the
+ results on the relative performance of Hamilton's test are very encouraging. In particular,
+ we find that against almost all the nonlinear alternatives where the size and power
+ properties of the popular neural network test are good the size and power properties of
+ Hamilton's new test are even better. Secondly, we examine the convergence properties
+ of Hamilton's estimator of the conditional mean function. Our finding suggest that in the
+ case of a true linear relationship, the costs of using the flexible nonlinear approach in
+ terms of efficiency and speed of convergence are minor. We also show that for many
+ nonlinear models the percentage improvement in fit relative to the linear least squared
+ estimator can be substantial. Finally, we present evidence showing that in finite samples
+ the flexible regression approach suggested by Hamilton clearly outperforms the neural
+ network regression approach in terms of accuracy.
+Classification-JEL: C15, C20 
+Keywords: Flexible nonlinear inference, tests for linearity, power and size comparison,
+ convergence in small samples
+Length: 37
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_8.ps
+File-Format: application/postscript
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_8.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:1999-8
+
+Template-Type: ReDIF-Paper 1.0
+Title: The Cost of Ruling. A Foundation Stone for Two Theories
+Author-Name: Peter Nannestad and Martin Paldam
+Author-Email: mpaldam@econ.au.dk 
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: It is a robust result that the average government (ruling a normal election
+ period) in an established democracy loses about 2¬% of the vote. Three explanations
+ exist: (i) The coalition-of-minorities theory. (ii) The median-gap theory. (iii) The
+ grievance-asymmetry theory. These theories can all be calibrated to explain the fact.
+ While (i) is difficult to justify, both (ii) and (iii) are integrated into other theories: (ii) is
+ integrated into the "median-voter-complex" that rules out the existence of partisan cycles.
+ (iii) is integrated into the "loss-aversion-complex" that via the grievance asymmetry
+ provides a "deep-parameter" explanation of the cost-of ruling. It is also an important
+ explanation for the partisan cycle model. We demonstrate that the two complexes are
+ alternatives and argue that the loss-aversion-complex is more powerful.
+Classification-JEL: D72, D78
+Keywords: Cost of ruling, median voter, loss and risk aversion
+Length: 23
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_9.ps
+File-Format: application/postscript
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_9.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:1999-9
+
+Template-Type: ReDIF-Paper 1.0
+Title: Propagation of Nominal Shocks in Open Economies
+Author-Name: Torben M. Andersen and Niels C. Beier
+Author-Email: tandersen@econ.au.dk 
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: The propagation of nominal shocks is analyzed in a fully specified stochastic
+ intertemporal two-country model. We show how to solve for the equilibrium analytically
+ and analyze the role of real and nominal propagation mechanisms. First we consider the
+ dynamic implications of nominal shocks having an impact effect due to one-period
+ nominal contracts when the propagation over time runs via a basic real propagation
+ mechanism in open economies (current account). We find that this case is characterized
+ by strong persistency in the real effects of nominal shocks, but the dynamic adjustment
+ path is strongly at odds with empirical evidence. Secondly, we introduce a nominal
+ propagation mechanism in the form of staggered nominal contracts. This turns out to
+ imply a radical change in the dynamic response to nominal shocks, and to generate a
+ dynamic adjustment path of the form observed empirically.
+Classification-JEL: E32, F41
+Keywords: Persistence, staggering, exchange rates, nominal shocks, current account
+Length: 44
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_10.ps
+File-Format: application/postscript
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_10.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:1999-10
+
+Template-Type: ReDIF-Paper 1.0
+Title: The Big Pattern of Corruption. Economics, Culture and the Seesaw Dynamics
+Author-Name: Martin Paldam
+Author-Email: mpaldam@econ.au.dk 
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: The 1998 corruption index from Transparency International is explained by two
+ types of cross-country models: The economic model uses the level and growth of real
+ income per capita, the rate of inflation and the amount of economic freedom. The cultural
+ model uses a set of dummies for cultural areas and the level of democracy. It is
+ demonstrated that both models work and have a strong interaction. The strongest factor
+ reducing corruption is the transition from poor to rich. The (relative) difference between
+ GDP-levels within the same cultural area is smaller than the (relative) difference between
+ the levels of corruption, so the interaction points to something entirely different from
+ culture: the inherent seesaw dynamics of corruption. 
+Classification-JEL: K49, O11, P50
+Keywords: Corruption, economic transition, dynamics of cross sections
+Length: 23
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_11.ps
+File-Format: application/postscript
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_11.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:1999-11
+
+Template-Type: ReDIF-Paper 1.0
+Title: The Location of Firms in Unionized Countries
+Author-Name: Jakob Roland Munch
+Author-Email: jmunch@econ.au.dk 
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: This paper develops a two-country model of international trade with Cournot
+ competition. The labor markets are unionized so that a trade union bargains efficiently
+ with each firm over wage and employment. It is shown that if the bargaining power of
+ unions differs among countries then, as trade costs are reduced, the country with
+ relatively weak unions gradually acquires all firms. However, for a range of trade costs
+ it is also a locally stable equilibrium for all firms to locate in the country with strong
+ unions.
+Classification-JEL: F15, J51, R11
+Keywords: Integration, agglomeration, trade unions
+Length: 23
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_12.ps
+File-Format: application/postscript
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_12.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:1999-12
+
+Template-Type: ReDIF-Paper 1.0
+Title: Market Forces and Dynamic Asset Pricing
+Author-Name: Goran Peskir and Jamsheed Shorish
+Author-Email: jshorish@econ.au.dk 
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: We study a dynamic model of asset pricing which is driven by two characteristic
+ market features: the law of investor demand (e.g. 'buy low, sell high') and the law of the
+ market institution (which codifies the trading rules under which the market operates). We
+ demonstrate in a simple investor-specialist trading market that these features are sufficient
+ to guarantee an equilibrium where investors' trading strategies and the specialist's rule
+ of price adjustments are best responses to each other. The drift term appearing in the
+ resulting equation of the asset price process may be interpreted using Newtonian
+ mechanics as the acceleration of a 'market force'. If either of the market participants is
+ risk-neutral, the result leads to risk-neutral asset pricing (e.g. the Black and Scholes
+ option pricing formula).
+Classification-JEL: C60, G12, G13
+Keywords: Market microstructure, asset pricing, market force, inertial frame of reference,
+ accelerated frame of reference, (geometric) Brownian motion, Newtonian mechanics,
+ Smoluchowski's approximation, optimal stochastic control, the Hamilton-Jacobi-Bellman
+ equation, Markov property, Ornstein-Uhlenbeck process, Lévy process
+Length: 49
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_13.ps
+File-Format: application/postscript
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_13.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:1999-13
+
+Template-Type: ReDIF-Paper 1.0
+Title: Product Market Integration and Wages in Unionized Countries
+Author-Name: Jakob Roland Munch and Jan Rose Soerensen
+Author-Email: jsoerensen@econ.au.dk 
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: This paper studies the effects of product market integration on wages. We
+ develop a two-country model of international trade with imperfectly competitive product
+ markets and unionized labor markets. Integration is modelled as either a fall in fixed or
+ variable trade costs. A reduction in fixed trade costs leads to an unambiguous decrease
+ in wages, whereas a reduction in variable trade costs has an ambiguous effect on wages.
+Classification-JEL: F15, J5, L13
+Keywords: Economic integration, trade unions, international trade, product market
+ competition
+Length: 11
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_14.ps
+File-Format: application/postscript
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_14.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:1999-14
+
+Template-Type: ReDIF-Paper 1.0
+Title: The Formation of Inflation Expectations under Changing Inflation Regimes
+Author-Name: Christian M. Dahl and Niels L. Hansen
+Author-Email: cdahl@econ.au.dk 
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: The present paper offers a careful description on empirical identification of
+ possible multiple changes in regime. We apply recently developed tools designed to select
+ between regime switching models among a broad class of linear and nonlinear regression
+ models and provide a discussion on the impact on the formation of inflation expectations
+ in the presence of multiple and recurrent changes in inflation regimes. Our empirical
+ findings give a plausible explanation why the rational expectation hypothesis based on
+ direct measures of inflation expectations from survey series is typically rejected due to
+ large systematic differences between actual and expected inflation rates. In particular, our
+ results indicate that in the case of changing and not perfectly observed inflation regimes,
+ inference about rationality and unbiasedness based on a comparison of ex ante forecasts
+ from survey series and actual inflation rate based on ex post realizations, will be
+ ambiguous due to the presence of an ex post bias. The empirical findings are based on
+ Danish inflation rates covering the period from 1957-1998. We show that it is not
+ possible to reject the hypothesis of multiple inflationary regimes and that the actual
+ inflation rate can be represented by a two state Markov regime switching model. It turns
+ out that the real time forecasts produced from this model exhibit a large degree of
+ similarity when compared to the direct measures of inflation expectations. The result
+ illustrates the important impact of switching regimes on the formation of actual and
+ expected inflation and hence of ex post bias as a main contributor to the difference
+ between actual and expected inflation observed directly from survey series.
+Classification-JEL: C14, C22, C42, C51, C52, C53
+Keywords: Markov regime switching, ex post bias, inflation and inflation expectations
+Length: 54
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_15.ps
+File-Format: application/postscript
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_15.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:1999-15
+
+Template-Type: ReDIF-Paper 1.0
+Title: Some Reflections on Time and Equilibrium
+Author-Name: Ebbe Yndgaard
+Author-Email: eyndgaard@econ.au.dk 
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: The paper commences by a discussion of the philosophical foundation of the
+ concept of time. Since the concept of equilibrium is inextricably connected with that of
+ time, it is argued that economists should be (more) careful when applying the equilibrium
+ method; it is not legitimate to apply the concept of equilibrium without an explicit
+ definition of the time concept connected with it. Much confusion arises because of
+ mixing state of affairs with that of equilibrium.
+Classification-JEL: A12, B41
+Keywords: Equilibrium, time, methodology
+Length: 29
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_16.ps
+File-Format: application/postscript
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_16.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:1999-16
+
+Template-Type: ReDIF-Paper 1.0
+Title: Deterring Entry through High Wages
+Author-Name: Eric Toulemonde
+Author-Email: etoulemonde@econ.au.dk 
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: This paper shows that incumbent firms could use wage rates to deter entry of
+ new firms. Two cases are analyzed. In the first, incumbents determine wages of all firms
+ producing the same good (an extreme case of a wage bargaining at the industry-level -a
+ kind of bargaining which is prevalent in many European countries-). In the second, each
+ firm can choose different wages, knowing that the efficiency of workers depends on their
+ wage relative to a wage that they consider fair. In both cases, there are circumstances in
+ which incumbents choose high wages in order to deter entry.
+Classification-JEL: D43, E24, J41, J50, L13, L41
+Keywords: Entry deterrence, wages, unions, fairness
+Length: 18
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_17.ps
+File-Format: application/postscript
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_17.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:1999-17
+
+Template-Type: ReDIF-Paper 1.0
+Title: On the Equivalence of Taxes Paid by Employers and Employees
+Author-Name: Pierre M. Picard and Eric Toulemonde
+Author-Email: etoulemonde@econ.au.dk 
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: In this paper we study the employment effects of a budget neutral restructuring
+ of taxes levied on employers and employees. We derive conditions for taxes levied on
+ workers to have the same employment effects as taxes levied on firms under standard
+ processes of wage determination.
+Classification-JEL: E62, H2, H3, J41, J51
+Keywords: Taxation, wages, employment
+Length: 10
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_18.ps
+File-Format: application/postscript
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_18.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:1999-18
+
+Template-Type: ReDIF-Paper 1.0
+Title: Wage Bargaining: Reconciling Theory and Evidence
+Author-Name: Eric Toulemonde
+Author-Email: etoulemonde@econ.au.dk 
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: One of the main results of the theoretical models of wage bargaining is that
+ wages are independent of productivity when the production function has a constant
+ elasticity. However empirical studies show that in the long run, wages fully react to
+ productivity shocks. This paper reconciles both results. It identifies the assumptions that
+ yield the theoretical result. By dropping these assumptions it shows that in the short run
+ the degree of real wage rigidity increases with the union power. In the long run, real
+ wages fully respond to productivity changes.
+Classification-JEL: E24, J3, J51
+Keywords: Productivity, union, real wages
+Length: 10
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_19.ps
+File-Format: application/postscript
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_19.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:1999-19
+
+Template-Type: ReDIF-Paper 1.0
+Title: Empirically Relevant Power Comparisons for Limited Dependent Variable Models
+Author-Name: N.E. Savin and Allan H. Würtz
+Author-Email: awurtz@econ.au.dk 
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: Most hypotheses in limited dependent variable (LDV) models are composite,
+ meaning that the null hypothesis H0 does not completely specify the data generating
+ process (DGP). In this case, the null specifies only that the DGP belongs to a given set.
+ As a consequence, the sampling distribution of a test statistic under H0 is unknown except
+ in special cases because it depends on the true DGP in the set specified by H0. The
+ problem is how to test the null hypothesis in this situation.  In this paper, the bootstrap
+ is used to solve the hypothesis testing problem. 
+Classification-JEL: C12, C15, C24, C25
+Keywords: Bootstrap, censored regression, critical values, composite hypotheses, finite
+ sample power, probit model
+Length: 32
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_20.ps
+File-Format: application/postscript
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_20.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:1999-20
+
+Template-Type: ReDIF-Paper 1.0
+Title: Corruption and Religion. Adding to the Economic Model?
+Author-Name: Martin Paldam
+Author-Email: mpaldam@econ.au.dk 
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: The cross-country pattern in the 1998 corruption index from Transparency
+ International is explained by a mixed economic-cultural model of corruption: (1) The
+ economic model uses the level of real income per capita, the rate of inflation and the level
+ of economic freedom. (2) The cultural model uses a set of variables giving the shares of
+ 11 religions in each country, and the Herfindahl-index for religious diversity. The
+ economic model explains the larger part of the variance, but the religions prove to have
+ considerable additional explanatory power. The largest divide is within the Christians.
+ By far the least corrupt are the Protestant and Anglicans, while Catholics, and other <<Pre-
+ Reform>> Christians, deviate to the other side - as do Buddhists. Further, it is demon-
+ strated that the more religiously divided a country, the less corrupt it is.
+Classification-JEL: K49, O11, P50
+Keywords: Corruption, economic transition, religion
+Length: 25
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_21.ps
+File-Format: application/postscript
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_21.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:1999-21
+
+Template-Type: ReDIF-Paper 1.0
+Title: Public Versus Private Production. A Study of the Cost of School Cleaning in
+ Denmark
+Author-Name: Henrik Christoffersen, Martin Paldam and Allan Würtz
+Author-Email: mpaldam@econ.au.dk 
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: The cleaning of Danish schools is produced by one of three forms of
+ organization: decentral municipal, central municipal or private. The cost function is
+ shown to be well estimated by a trans-log specification of scale and quality of cleaning.
+ For small schools the organization makes little difference. For larger schools decentral
+ municipal production is the most expensive. On average centralization reduces costs by
+ 6%, while privatization reduces costs by 29%. These cost gaps are due to the difference
+ in ability to exploit the economy of scale.
+Classification-JEL: C14, D78, H72, L33
+Keywords: Cost function, public production, private production, scale effects, non-
+ parametric regression, bootstrap
+Length: 24
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_22.ps
+File-Format: application/postscript
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_22.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:1999-22
+
+Template-Type: ReDIF-Paper 1.0
+Title: Economic Development without Fisher Separation: "Trickle-up" or "Trickle-
+ down"?
+Author-Name: Svend Jespersen
+Author-Email: sjespersen@econ.au.dk 
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: This paper shows that if development is a process of sectorial change, and
+ agents are credit constrained, then rising inequality is inherent to the initial phases of
+ development. Moreover, wealth inequality is self-enforcing during the initial phases of
+ development, where entrepreneurs are credit constrained. Later wealth inequality
+ becomes self-defeating if entrepreneurs accumulate enough to become non-constrained.
+ We find the conditions under which the long run distribution of wealth is equal, and
+ characterize unequal long run distributions of wealth. Unlike much related research, this
+ paper does not assume Fisher separation, that is, that utility maximization implies profit
+ maximization.
+Classification-JEL: D31, O11, O14, O16
+Keywords: Imperfect credit markets, choice of occupation, endogenous inequality,
+ trickle-down, the Kuznets curve, long run distribution of wealth
+Length: 37
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_23.ps
+File-Format: application/postscript
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_23.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:1999-23
+
+Template-Type: ReDIF-Paper 1.0
+Title: Should Trade Unions Appreciate Foreign Direct Investments?
+Author-Name: Mette Yde Skaksen and Jan Rose S›rensen
+Author-Email: mskaksen@econ.au.dk 
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: It is often argued that FDI hurt workers in the home country simply because
+ jobs are moved abroad. Contrary to that view, businessmen often argue that FDI benefit
+ home workers because there will be an expansion in the firm. In this paper, we show that
+ both views may be correct, and whether home workers end up gaining or losing on FDI
+ depend on which kinds of activities the firm moves to the host country. If there is a big
+ degree of substitutability (complementariness) between the activities in the home country
+ and the host country, it is likely that the workers lose (gain) on FDI.
+Classification-JEL: J51, L20, F23
+Keywords: Foreign direct investment, multinational enterprise, wage bargaining, trade
+ union
+Length: 15
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_24.ps
+File-Format: application/postscript
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_24.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:1999-24
+
+Template-Type: ReDIF-Paper 1.0
+Title: A Note on Alternative Measures of Real Bond Rates
+Author-Name: Palle Andersen
+Author-Email: pandersen@econ.au.dk 
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: The purpose of this note is to derive measures of ex ante long-term real interest
+ rates that satisfy Fisher's notion of a long-run relationship between expectations of
+ inflation and nominal interest rates. We do so by adopting a backward-looking approach
+ that also takes account of the increasing integration of financial markets by allowing for
+ global influences of national bond rates. The results point to long memories in the
+ inflation formation process as well as to significant international linkages. Moreover,
+ once these effects are allowed for, expectations of inflation and long-term bond rates
+ appear to be co-integrated with co-integration vectors of unity. However, whether the
+ measures derived provide better estimates of agents' actual perceptions of ex ante real
+ rates than those commonly used remains to be seen, as we do not test their forecasting
+ ability.
+Classification-JEL: E43
+Keywords: Expectations of inflation, real bond rates, co-integration
+Length: 33
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_25.ps
+File-Format: application/postscript
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_25.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:1999-25
+
+
+Template-Type: ReDIF-Paper 1.0
+Title: Product Market Integration and European Labour Markets
+Author-Name: Torben M. Andersen, Niels Haldrup and Jan Rose S›rensen
+Author-Email: tandersen@econ.au.dk 
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: European labour markets are in a state of flux due to the changing market
+ situation induced by international integration. This process affects wage formation
+ through more fierce product market competition and increased mobility of jobs. This
+ development is by some observers taken to enforce labour market flexibility, while it for
+ others signals an erosion of social standards and in turn possibly the welfare society.
+ Since labour is not very mobile in Europe, the effects of international integration on
+ labour markets is mostly indirect via product market integration. We review the channels
+ through which product market integration affects labour markets and perform an
+ empirical analysis of the convergence and interdependencies in wage formation among
+ EU-countries. We find that integration is changing labour market structures and inducing
+ wage convergences as well as stronger wage interdependencies, but it is a gradual
+ process. Moreover, the present study does neither support that international integration
+ will lead to a "race to the bottom" and rapidly erode domestic labour markets standards
+ nor that it will relieve politicians of the need to consider labour market reforms to
+ improve labour market performance.
+Classification-JEL: F12, J31
+Keywords: Integration, market power, wage convergence
+Length: 28
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_26.ps
+File-Format: application/postscript
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/1999_26.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:1999-26
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

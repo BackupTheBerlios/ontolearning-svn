@@ -7,6 +7,7 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.io.*;
 
 import nl.eur.eco_ict.seminar.ontolearn.datatypes.Document;
 import nl.eur.eco_ict.seminar.ontolearn.datatypes.JenaOntology;
@@ -32,17 +33,17 @@ public class OntoLearnApp {
 	 * @param args
 	 * @throws URISyntaxException 
 	 */
-	public static void main (String[] args) throws URISyntaxException {
-		OntoLearnApp app = new OntoLearnApp ();
-		app.retrieveSettings ();
-		app.start ();
+	public static void main(String[] args) throws URISyntaxException {
+		OntoLearnApp app = new OntoLearnApp();
+		app.retrieveSettings();
+		app.start();
 	}
 	
 	public void retrieveSettings (){
 		// at the moment it needs to be hardcoded, but we could also display a GUI widget to get the info
 		this.settings = new Settings ();
-		this.settings.setDocumentroot ("bla vla");
-	}
+		this.settings.setDocumentroot ("file:///D:/Java/OntoLearn/OntoLearn/data/testAbstracts/");
+	}	// +System.getProperty("user.dir")+"\\testAbstracts\\"
 	
 	public void start () throws URISyntaxException{
 		Document doc = null;

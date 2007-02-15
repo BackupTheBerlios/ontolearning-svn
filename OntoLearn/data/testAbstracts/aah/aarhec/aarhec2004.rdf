@@ -1,0 +1,392 @@
+Template-Type: ReDIF-Paper 1.0
+Title: Seasonal Unit Root Testing Based on the Temporal Aggregation of Seasonal Cycles
+Creation-Date: 20040402
+Author-Name: Gabriel Pons Rotger
+Author-X-Name-First: Gabriel Pons
+Author-X-Name-Last: Rotger
+Author-Email: gpons@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: The effects of systematic sampling and temporal aggregation on the seasonal cycle model (see
+Miron, 1993) and the seasonally integrated process (see Hylleberg et al., 1990) are discussed.
+The temporal aggregation theory is used to improve the sequential test for monthly seasonal
+unit roots of Rodrigues and Franses (2003). It is shown by simulation that the monthly
+sequential test has better finite sample properties than the BM test (see Beaulieu and Miron,
+1993). The new test is applied to monthly US Industrial Production and, contrary to the BM
+test, rejects the presence of any seasonal unit root.
+Classification-JEL: C22, C43, C52
+Keywords: Temporal aggregation; seasonal unit roots; sequential test
+Length: 26
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/04/wp04_01.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2004-1
+
+Template-Type: ReDIF-Paper 1.0
+Title: A Regime Switching Long Memory Model for Electricity Prices
+Creation-Date: 20040402
+Author-Name: Niels Haldrup
+Author-X-Name-First: Niels
+Author-X-Name-Last: Haldrup
+Author-Name: Morten O. Nielsen
+Author-X-Name-First: Morten O.
+Author-X-Name-Last: Nielsen
+Author-Email: nhaldrup@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: In this paper we develop a regime switching model which can generate long memory
+(fractional integration) in each of the regime states. This property is relevant in a number of
+cases. For instance, the deregulated market for electricity power in the Nordic countries is
+characterized by electricity spot prices with a high degree of long memory. It occurs that in
+some time periods bilateral prices are identical whereas in other periods the prices differ. The
+latter occurs when a capacity congestion exists across regions and multiple price areas will
+result. If the price series are fractionally integrated this means that in some regimes, an
+extreme form of fractional cointegration amongst prices will exist. We define a Markov
+switching fractional integration model from which the fractional orders of integration in
+separate states can be estimated using Maximum Likelihood techniques. The model is
+adapted to data for the Nordic electricity spot market, and we find that regime swithing and
+long memory are empirically relevant to co-exist. In particular, we find that the price
+behaviour for single markets can be very different depending upon the presence or absence of
+bottlenecks in electricity transmission. Using Monte Carlo forecasting we find that the regime
+switching model appears to be especially attractive in forecasting relative prices.
+Classification-JEL: C2, C22, C32
+Keywords: Cointegration; electricity prices; forecasting; fractional integration and cointegration;
+ong memory; Markov switching
+Length: 30
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/04/wp04_02.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2004-2
+
+Template-Type: ReDIF-Paper 1.0
+Title: Automatic Stabilizers in an Economy with Multiple Shocks
+Creation-Date: 20040510
+Author-Name: Morten Spange
+Author-X-Name-First: Morten
+Author-X-Name-Last: Spange
+Author-Email: mspange@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: A stochastic general equilibrium model is set up in order to analyse whether automatic
+stabilizers are a good tool in terms of mitigating risk. It is found that the potential
+benefits to be derived from automatic stabilizers depend on various factors including the
+degree of real wage rigidity and the size of the public sector. In countries with large public
+sectors automatic stabilizers in the sense of procyclical tax revenues can provide significant
+welfare improvements compared with a passive fiscal policy. For countries with smaller
+public sectors the predictions of the model are less favorable.
+Classification-JEL: E32, E62
+Keywords: Automatic stabilizers, Optimal fiscal policy, Real wage rigidity
+Length: 22
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/04/wp04_03.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2004-3
+
+Template-Type: ReDIF-Paper 1.0
+Title: The economics of immigration into a Nordic welfare state
+- and a comparison to an immigration state and a guest worker state
+Creation-Date: 20040513
+Author-Name: Sheetal K. Chand
+Author-X-Name-First: Sheetal K.
+Author-X-Name-Last: Chand
+Author-Name: Martin Paldam
+Author-X-Name-First: Martin
+Author-X-Name-Last: Paldam
+Author-Email: mpaldam@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: This paper examines the economic and related consequences of immigration from a less
+developed country (LDC) to a developed country (DC) in three different stylized cases: A
+guest worker society of the Dubai type, an immigrant society of the US type, and a tax-based
+welfare state with institutions of the Nordic type. In the Dubai type case it appears that
+mutually beneficial decisions can be made, and the same applies to a degree in the US type
+case. However, in the Nordic type evolved welfare case, immigration is only an advantage for
+the immigrant, especially one with less marketable skills, while it is a disadvantage for the
+natives. This poses an additional threat to the continuation of this type of welfare state.
+Classification-JEL: F22, J41, J70, O15
+Keywords: Immigration, welfare state
+Length: 25
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/04/wp04_04.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2004-4
+
+Template-Type: ReDIF-Paper 1.0
+Title: On the Exploitation of Market Power in the Nordic Electricity Markets. The Case of Elsam.
+Creation-Date: 20040825
+Author-Name: Svend Hylleberg
+Author-X-Name-First: Svend
+Author-X-Name-Last: Hylleberg
+Author-Email: shylleberg@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: In this paper a test is made of whether the Danish electricity producer, Elsam partly or fully
+exploits its temporary dominant position in hours of congestion at the Nordic electricity market.
+There seems to be evidences suggesting that Elsam is successful in pursuing its objective of having
+a price in Western Denmark close to the maximum price of the surrounding and connected areas.
+Classification-JEL: L12, L21, L22, L94, C1
+Keywords: Electricity markets, Objectives of the firm, exploitation of dominant positions.
+Length: 23
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/04/wp04_05.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2004-5
+
+Template-Type: ReDIF-Paper 1.0
+Title: Estimating the Threat Effect of Active Labour Market Programmes
+Creation-Date: 20040901
+Author-Name: Michael Rosholm
+Author-X-Name-First: Michael
+Author-X-Name-Last: Rosholm
+Author-Name: Michael Svarer
+Author-X-Name-First: Michael
+Author-X-Name-Last: Svarer
+Author-Email: mrosholm@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: We combine two techniques to consistently estimate the effect of active labour market programmes 
+and, in particular, active labour market policy regimes. Our aim is to explicitly estimate the threat
+effect of active labour market programmes. Based on Danish data (1998-2002) from administrative
+registers we find a strong and significantly positive threat effect. The threat effect is shown to
+reduce average unemployment duration by approximately three weeks. The implications of this
+result are discussed. 
+Classification-JEL: C41, J64
+Keywords: Active labour market policy, Threat effect, Timing-of-events, Duration model
+Length: 39
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/04/wp04_06.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2004-6
+
+Template-Type: ReDIF-Paper 1.0
+Title: Migration Incentives and Taxation: Do Marginal Taxes Matter?
+Creation-Date: 20040921
+Author-Name: Bo Sandemann Rasmussen
+Author-X-Name-First: Bo Sandemann
+Author-X-Name-Last: Rasmussen
+Author-Email: brasmussen@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: Faced with ageing populations many European countries may be tempted to 
+attract immigrants. One way to do this is to offer tax incentives. Since the decision to
+migrate is a discrete choice it should be average taxes that are important for the migration
+decision. If, however, the supply of working hours is endogenous it is shown that
+marginal taxes are also important for the migration decision, even after controlling for
+average taxes. Hence, countries interested in attracting immigrants can do so even
+without reducing average taxes by having less progressive tax systems than other
+countries.
+Classification-JEL: F22, H24
+Keywords: Migration, average taxes, marginal taxes, labor supply, population ageing.
+Length: 9
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/04/wp04_07.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2004-7
+
+Template-Type: ReDIF-Paper 1.0
+Title: On the Possibility and Desirability of Taxing E-Commerce
+Creation-Date: 20040921
+Author-Name: Bo Sandemann Rasmussen
+Author-X-Name-First: Bo Sandemann
+Author-X-Name-Last: Rasmussen
+Author-Email: brasmussen@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: Over the past decade the taxation of e-commerce has been widely discussed among
+politicians, tax law experts and economists. To put some perspective on this issue it is
+analyzed to what extent e-commerce can actually be taxed and the severity of the ensuing
+tax revenue losses following from future growth of e-commerce is discussed. Since the
+US and the EU cases differ substantially they are considered separately. Subsequently various arguments supporting the view that e-commerce should receive preferential tax
+treatment are considered. Although no firm recommendations can be provided some
+interesting topics for future research are suggested.
+Classification-JEL: H25, L12, F13
+Keywords: E-commerce, commodity taxation, tax principles, revenue loss, preferential tax treatment, auditing
+Length: 32
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/04/wp04_08.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2004-8
+
+Template-Type: ReDIF-Paper 1.0
+Title: Preferential Taxation of E-Commerce: Imperfectly Competitive Retail Markets and Trade Costs
+Creation-Date: 20040921
+Author-Name: Bo Sandemann Rasmussen
+Author-X-Name-First: Bo Sandemann
+Author-X-Name-Last: Rasmussen
+Author-Email: brasmussen@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: E-commerce in physical goods enhances the degree of product market competition but
+leads also to higher trading costs as goods bought through the internet are shipped
+individually. Do these features of e-commerce support a case for granting preferential tax
+treatment to online shopping? This is investigated using a model with a domestic
+monopolistic retailer and foreign competitive producers that can either deliver a physical
+good to the retailer (ordinary trade) or directly to domestic consumers (e-commerce).
+Although it is possible to construct cases of strictly positive welfare effects the general
+result is that granting tax preferences to e-commerce will have ambiguous welfare
+consequences.
+Classification-JEL: H25, L12, F13
+Keywords: E-commerce, imperfect competition, pro-competitive gains, trade diversion, commodity taxation, physical goods, trade costs
+Length: 29
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/04/wp04_09.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2004-9
+
+Template-Type: ReDIF-Paper 1.0
+Title: Conditionality, Commitment and Investment Response in LDCs
+Creation-Date: 20041019
+Author-Name: Mariarosaria Agostino
+Author-X-Name-First: Mariarosaria
+Author-X-Name-Last: Agostino
+Author-Email: m.agostino@unical.it
+Author-WorkPlace-Name: Department of Economics and Statistics, University of Calabria, Italy
+Author-WorkPlace-Postal: 87036 Arcavacata di Rende
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: The private investment response to structural reforms in developing countries is 
+of paramount importance, both for the future economic growth and the survival of 
+the reforms themselves. By employing a sample of countries, recipients of World 
+Bank Structural Adjustment Loans, the present paper assesses whether agreements, 
+including policy conditionality, represent a positive signal for the private 
+sector and translate into capital formation. The empirical investment equation 
+adopted is estimated using dynamic panel data econometric methods, allowing for 
+simultaneity and country-specific effects. The main result obtained is that, 
+while a higher propensity to commit does not seem to affect the private 
+investment response, a higher percentage of tied funds might impact negatively 
+on the demand of fixed investment.
+Classification-JEL: C23, E22, F35.
+Keywords: Conditional aid, policy uncertainty, investment response, dynamic panel methods.
+Length: 35
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/04/wp04_10.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2004-10
+
+Template-Type: ReDIF-Paper 1.0
+Title: Relative Demand Shocks
+Creation-Date: 20041029
+Author-Name: Francesco Busato
+Author-X-Name-First: Francesco
+Author-X-Name-Last: Busato
+Author-Email: fbusato@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: This paper introduces the concept of relative demand shocks into a
+multi-sector dynamic general equilibrium model. Relative demand shocks
+change the instantaneous structure of preferences. Under relative
+demand shocks consumer tastes randomly shift across different
+commodities, as manifested by unexpected relative increases or
+decreases in the marginal utility of the various consumption
+goods. There are no exogenous technology (productivity) shocks in
+the model. There are three main results. First, the model
+proposes an original theoretical mechanism for generating
+aggregate fluctuations and sectoral comovement by using
+inter-sectoral and idiosyncratic shocks. This mechanism is
+complementary to the standard Real Business Cycle theory.
+Second, the model is effectively able to reproduce the
+main stylized facts of the U.S. economy, also those that the
+standard Real Business Cycle model fails to explain.
+Third, the model generates a false Solow
+Residual, even though there is no technological progress in the
+model. Its size and time series properties are analogous to the
+actual Solow Residual.
+Classification-JEL: F11, E320
+Keywords: Demand Shocks, Two-sector Dynamic General Equilibrium Models
+Length: 36
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/04/wp04_11.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2004-11
+
+Template-Type: ReDIF-Paper 1.0
+Title: Indeterminacy, Underground Activities and Tax Evasion
+Creation-Date: 20041121
+Author-Name: Francesco Busato
+Author-X-Name-First: Francesco
+Author-X-Name-Last: Busato
+Author-Name: Bruno Charini
+Author-X-Name-First: Bruno
+Author-X-Name-Last: Charini
+Author-Name: Enrico Marchetti
+Author-X-Name-First: Enrico
+Author-X-Name-Last: Marchetti
+Author-Email: fbusato@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: This paper introduces underground activities and tax evasion
+into a one sector dynamic general equilibrium model with external effects.
+The model presents a novel mechanism driving the self-fulfilling prophecies, 
+which is triggered by the reallocation of resources to the underground 
+sector to avoid the excess tax burden. This mechanism differs from the 
+customary one, and it is complementary to it. In addition, the explicit 
+introduction of an (even tiny) underground sector allows to reduce the 
+aggregate degree of increasing returns required for indeterminacy, and 
+for having well behaved input demand schedules (in the sense they slope down).
+Classification-JEL: E320, E13, E260, O40 
+Keywords: Dynamic General Equilibrium Models, Fiscal Policy, Tax Evasion and
+Underground Activities, Indeterminacy and Sunspots.
+Length: 29
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/04/wp04_12.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2004-12
+
+Template-Type: ReDIF-Paper 1.0
+Title: A Danish Profiling System
+Creation-Date: 20041125
+Author-Name: Michael Rosholm
+Author-X-Name-First: Michael
+Author-X-Name-Last: Rosholm
+Author-Name: Michael Svarer
+Author-X-Name-First: Michael
+Author-X-Name-Last: Svarer
+Author-Name: Bo Hammer
+Author-X-Name-First: Bo
+Author-X-Name-Last: Hammer
+Author-Email: mrosholm@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: We describe the statistical model used for profiling new unemployed workers in Denmark.
+When a worker - during his or her first six months in unemployment - enters the employment
+office for the first time, this model predicts whether he or she will be unemployed for
+more than six months from that date or not. The case workers' assessment of how to treat
+the person is partially based upon this prediction.
+Classification-JEL: J64, J68
+Keywords: Unemployment duration, profiling
+Length: 22
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/04/wp04_13.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2004-13
+
+Template-Type: ReDIF-Paper 1.0
+Title: Testing for Additive Outliers in Seasonally Integrated Time Series
+Creation-Date: 20041221
+Author-Name: Niels Haldrup
+Author-X-Name-First: Niels
+Author-X-Name-Last: Haldrup
+Author-Name: Antonio Montañés
+Author-X-Name-First: Antonio
+Author-X-Name-Last: Montañés
+Author-Name: Andreu Sansó
+Author-X-Name-First: Andreu
+Author-X-Name-Last: Sansó
+Author-Email: nhaldrup@econ.au.dk
+Author-WorkPlace-Name: Department of Economics, University of Aarhus, Denmark
+Author-WorkPlace-Postal: 8000 Aarhus C, Denmark
+Author-WorkPlace-Fax: +45 86 13 63 34
+Abstract: The detection of additive outliers in integrated variables has attracted
+some attention recently, see e.g. Shin et al. (1996), Vogelsang (1999) and
+Perron and Rodriguez (2003). This paper serves several purposes. We
+prove the inconsistency of the test proposed by Vogelsang, we extend the
+tests proposed by Shin et al. and Perron and Rodriguez to the seasonal
+case, and we consider alternative ways of computing their tests. We also
+study the e?ects of periodically varying variances on the previous tests
+and demonstrate that these can be seriously size distorted. Subsequently,
+some new tests that allow for periodic heteroskedasticity are proposed.
+Classification-JEL: C12, C2, C22
+Keywords: Additive outliers, outlier detection, integrated processes, periodic 
+heteroscedasticity, seasonality.
+Length: 19
+File-URL: Ftp://ftp.econ.au.dk/afn/wp/04/wp04_14.pdf
+File-Format: application/pdf
+Handle: RePEc:aah:aarhec:2004-14
