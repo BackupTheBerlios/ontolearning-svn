@@ -86,7 +86,7 @@ public class Document {
 			if (extract){
 				this.abstrct.append (line);
 			}
-			if (line.startsWith (abstractHeader)){
+			if (!extract && line.startsWith (abstractHeader)){
 				extract = true; // take the next lines
 				this.abstrct.append (line.substring (10, line.length ()));
 			}
