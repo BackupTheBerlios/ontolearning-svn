@@ -20,12 +20,20 @@ public class Document {
 	public Document (File f) {
 		this.file = f;
 	}
-
+	
 	/**
-	 * @return the contents of this document (file)
+	 * @return read the whole document/file
 	 * @throws FileNotFoundException
 	 */
 	public BufferedReader read () throws FileNotFoundException {
+		return new BufferedReader (new FileReader (this.file));
+	}
+
+	/**
+	 * @return the abstracts contained in this document (file)
+	 * @throws FileNotFoundException
+	 */
+	public BufferedReader readAbstracts () throws FileNotFoundException {
 		if (this.abstrct == null && this.isRedifDocument ()){
 			this.extractAbstracts ();
 		}else{
