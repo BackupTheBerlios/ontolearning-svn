@@ -1,0 +1,19 @@
+You've got a buildpath problem, let see if we can solve it.
+
+-First check you're settings. Goto:
+Window->Preferences->Java->Build path->Classpath variables
+
+-Check if there's an entry named JAVA_USER_LIBRARIES. If it isn't there create one by pressing the 'new' button.
+For the name specify JAVA_USER_LIBRARIES, for the folder choose a folder on your disk.
+
+-Once you have the entry in this list, you should check if all the required libraries are available so browse to the folder you specified.
+
+	- If it's empty you can pickup your starter pack here: dep01-server02.fbk.eur.nl:8100/jasper/libs.zip
+	- If it already has some content you need to check if the directory structure of the folder matches that of library entries in your project (Right click on your project->Build path->Configure Build path).
+	
+- That should get you started, if not mail/msn jaspervoskuilen at hotmail dot com
+
+If you require additional libraries you can add them by downloading the required libraries, making additional folders in the the folder specified by the JAVA_USER_LIBRARIES variable. Let's say that the root folder has the libraryname with a subfolder with the versionname and in the version subfolder the actual libraries etc.
+The next step is then to modify the project's build path.
+Right click on your project->Build path->Configure Build path
+Press 'add variable' select 'JAVA_USER_LIBRARIES' press 'extend' and select the jars
