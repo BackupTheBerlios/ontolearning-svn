@@ -67,6 +67,9 @@ public class Document {
 	 * Assumes it's a REDIF file and searches the file for abstracts. When an abstract is found it is put into the global StringBuffer (a cache for repeated requests)
 	 * @throws FileNotFoundException
 	 */
+	/**
+	 * @throws FileNotFoundException
+	 */
 	protected void extractAbstracts () throws FileNotFoundException{
 		final String abstractHeader = "Abstract:";
 		final String regEndAbstract = "^([a-zA-Z\\x2D]+)(\\x3A{1})(.)*$";
@@ -77,7 +80,7 @@ public class Document {
 		
 		try{
 		while((line = br.readLine ()) != null){
-			if (line.matches (regEndAbstract)){
+			if (extract && line.matches (regEndAbstract)){
 				extract = false;
 			}
 			if (extract){
