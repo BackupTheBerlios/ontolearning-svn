@@ -39,6 +39,7 @@ public class OntoLearnApp {
 	}
 	
 	public void retrieveSettings (){
+		// at the moment it needs to be hardcoded, but we could also display a GUI widget to get the info
 		this.settings = new Settings ();
 		this.settings.setDocumentroot ("bla vla");
 	}
@@ -47,8 +48,7 @@ public class OntoLearnApp {
 		Document doc = null;
 		
 		// See if there's anything to process
-		while (this.getCrawler().hasNext ()){
-			doc = this.getCrawler ().getNext ();
+		while (this.getCrawler().hasNext () && (doc=this.getCrawler ().getNext ())!= null){
 			Iterator<Extractor> i = this.getExtractors ().iterator ();
 			while(i.hasNext()){
 				// Let each extractor process the document
@@ -80,6 +80,7 @@ public class OntoLearnApp {
 			this.extractors = new HashSet<Extractor>();
 			this.extractors.add (new HearstExtractor());
 			this.extractors.add (new AssociationBasedExtractor());
+			//extend list if new Extractors are created
 		}
 		return this.extractors;
 	}
