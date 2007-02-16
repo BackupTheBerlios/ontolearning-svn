@@ -7,7 +7,6 @@ import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Iterator;
-import java.io.*;
 
 import nl.eur.eco_ict.seminar.ontolearn.datatypes.Document;
 import nl.eur.eco_ict.seminar.ontolearn.datatypes.JenaOntology;
@@ -59,7 +58,8 @@ public class OntoLearnApp {
 			this.getPruner ().prune(this.getOntology ());
 		}
 		
-		// TODO Output ontology
+		// Output ontology
+		System.out.println (this.getOntology ().toString ());
 	}
 	
 	protected DocumentCrawler getCrawler () throws URISyntaxException{
