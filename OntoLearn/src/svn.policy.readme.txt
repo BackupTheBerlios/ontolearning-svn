@@ -1,0 +1,4 @@
+ - Let's commit often so everybody knows what's happening
+ - Let's update often so you don't miss any changes made by otherwise
+ - Let's commit only when it can be compiled so don't commit when you have errors, this will allow everyone to checkout a more or less runnable system
+ - Let's lock files that you are working on, in order to minimize the need to merge two pieces of code
