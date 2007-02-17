@@ -8,6 +8,7 @@
  */
 package nl.eur.eco_ict.seminar.ontolearn.association;
 
+import nl.eur.eco_ict.seminar.ontolearn.extractor.*;
 /**
  * @author remy
  *
