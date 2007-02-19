@@ -8,6 +8,7 @@
  */
 package nl.eur.eco_ict.seminar.ontolearn.util.impl;
 
+import java.io.File;
 import java.io.StringReader;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -28,7 +29,8 @@ public class StanfordMaxentPOSTagger implements PartOfSpeechTagger {
 	
 	public StanfordMaxentPOSTagger (){
 		try {
-			MaxentTagger.init (System.getProperty("user.dir") + "data\\stanford\\wsj3t0-18-bidirectional\\train-wsj-0-18.holder");
+			//MaxentTagger.init ("/home/remy/workspace/OntoLearn2/data/stanford/wsj3t0-18-bidirectional/train-wsj-0-18.holder");
+			MaxentTagger.init (System.getProperty("user.dir") + File.separatorChar + "data"+File.separatorChar+"stanford"+File.separatorChar+"wsj3t0-18-bidirectional"+File.separatorChar+"train-wsj-0-18.holder");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
