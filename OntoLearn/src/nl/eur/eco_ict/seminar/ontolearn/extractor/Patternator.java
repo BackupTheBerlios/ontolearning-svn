@@ -51,8 +51,8 @@ public class Patternator {
 		String regNPx = "(([a-zA-Z0-9\\- ]+)(, [a-zA-Z0-9\\- ]+)*( and [a-zA-Z0-9\\- ]*)*)";
 		String regSpacer = "((, {1,}+)|( {1,}+))";		
 		
-		for ( int i=0; i<=5; i++ ) {
-			String pattern = (String)patterns.get(i);
+		for ( int i=0; i<=this.patterns.size (); i++ ) {
+			String pattern = (String)this.patterns.get(i);
 
 			pattern = pattern.replaceAll("NP0", regNP0);
 			pattern = pattern.replaceAll("NPx", regNPx);
