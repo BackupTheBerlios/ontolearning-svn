@@ -1,0 +1,5 @@
+Dependencies:
+ - Java 1.5
+ - JENA, http://jena.sourceforge.net
+ - Stanford POS tagger, http://nlp.stanford.edu/software/lex-parser.shtml
+ - MySQL connector, http://www.mysql.com/products/connector/

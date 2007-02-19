@@ -1,7 +1,7 @@
 /**
  * 
  */
-package nl.eur.eco_ict.seminar.ontolearn;
+package nl.eur.eco_ict.seminar.ontolearn.util.impl;
 
 import java.io.File;
 import java.net.URI;
@@ -10,12 +10,16 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 import nl.eur.eco_ict.seminar.ontolearn.datatypes.Document;
+import nl.eur.eco_ict.seminar.ontolearn.datatypes.impl.DocumentFile;
+import nl.eur.eco_ict.seminar.ontolearn.util.DocumentCrawler;
 
 /**
- * @author 300353jv
+ * 
+ * A utility which crawls a directory and all of it's subdirectories for files (=documents)
+ * @author Jasper
  *
  */
-public class DocumentCrawler {
+public class DiskCrawler implements DocumentCrawler {
 	/**
 	 * the pointer to the location where the fun begins. For now we assume it is a location on a filesystem, but it could also represent a URL
 	 */
@@ -33,11 +37,11 @@ public class DocumentCrawler {
 	 */
 	protected Queue<File> dirs = new LinkedList<File>();
 	
-	public DocumentCrawler (String uri) throws URISyntaxException{
+	public DiskCrawler (String uri) throws URISyntaxException{
 		this(new URI(uri));
 	}
 	
-	public DocumentCrawler (URI uri){
+	public DiskCrawler (URI uri){
 		this.documentroot = uri;
 		this.init ();
 	}
@@ -78,7 +82,7 @@ public class DocumentCrawler {
 					return this.getNext();
 				}
 				// finally something we can harvest --> end of recursiveness
-				return new Document(doc);
+				return new DocumentFile(doc);
 			}
 			// if we get this far it means that all files of the last directory are processed. If there are more directories available for processing we can continue otherwise we will exit with a null value
 			if (!this.dirs.isEmpty ()){
@@ -99,5 +103,13 @@ public class DocumentCrawler {
 	 */
 	public boolean hasNext(){
 		return !this.dirs.isEmpty () || (this.files != null && this.files.length - this.index > 0);
+	}
+
+	/**
+	 * @see nl.eur.eco_ict.seminar.ontolearn.util.DocumentCrawler#setRoot(java.net.URI)
+	 */
+	public void setRoot (URI root) {
+		this.documentroot = root;
+		this.init ();
 	}
 }

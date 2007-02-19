@@ -8,30 +8,27 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
+import java.util.Map.Entry;
 import java.io.*;
 
-import edu.stanford.nlp.ling.Sentence;
 import nl.eur.eco_ict.seminar.ontolearn.Extractor;
-import nl.eur.eco_ict.seminar.ontolearn.Ontology;
 import nl.eur.eco_ict.seminar.ontolearn.datatypes.Document;
+import nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology;
 import nl.eur.eco_ict.seminar.ontolearn.util.PartOfSpeechTagger;
 import nl.eur.eco_ict.seminar.ontolearn.util.Tokenizer;
-import edu.stanford.nlp.tagger.maxent.MaxentTagger;
 
 /**
- * @author 300353jv
+ * @author Nico
  *
  */
 public class HearstExtractor implements Extractor {
 
 	/**
-	 * @see nl.eur.eco_ict.seminar.ontolearn.Extractor#parse(nl.eur.eco_ict.seminar.ontolearn.datatypes.Document, nl.eur.eco_ict.seminar.ontolearn.Ontology)
+	 * @see nl.eur.eco_ict.seminar.ontolearn.Extractor#parse(nl.eur.eco_ict.seminar.ontolearn.datatypes.Document, nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology)
 	 */
 	public void parse (Document doc, Ontology ontology) {
-		// TODO Auto-generated method stub
-		System.out.println("HearstExtractor is parsing.");
-		PartOfSpeechTagger posTagger = PartOfSpeechTagger.Factory.getInstance ();
+		System.out.println("HearstExtractor is parsing "+doc.getName ()+".");
+		//PartOfSpeechTagger posTagger = PartOfSpeechTagger.Factory.getInstance ();
 		
 		try {
 			List<String> l = Tokenizer.Factory.getInstance().toSentences(doc.readAbstracts());
@@ -43,18 +40,19 @@ public class HearstExtractor implements Extractor {
 				  // Run the pattern finder on the sentence
 				  // foundPatterns contains the String NP0 as key, and the String[] NPx as value(s) <-- NPx is an array!
 				  Patternator myPatternator = new Patternator();
-				  HashMap foundPatterns = myPatternator.parseString(s);
+				  HashMap<String, String[]> foundPatterns = myPatternator.parseString(s);
 				  
 				  // Test to see if the HashMap works
 				  
-				  Collection collection = foundPatterns.entrySet();
-				  Iterator iterator = collection.iterator();
+				  Collection<Entry<String, String[]>> collection = foundPatterns.entrySet();
+				  Iterator<Entry<String, String[]>> iterator = collection.iterator();
 				  
+				  Entry<String, String[]> entry = null;
 				  while(iterator.hasNext())
 				  { 
-				      Map.Entry entry = (Map.Entry)iterator.next();
-				      String key = (String)entry.getKey();
-				      String[] value = (String[])entry.getValue();
+				      entry = iterator.next();
+				      String key = entry.getKey();
+				      String[] value = entry.getValue();
 				      
 				      // Display NP0 and NPx from foundPatterns (testing)
 					  System.out.println("NP0: "+key);
@@ -68,7 +66,7 @@ public class HearstExtractor implements Extractor {
 				  // String x = posTagger.tagInternal(s); <-- x = pos tagged version of sentence s
 		    }
 		}
-		catch (FileNotFoundException e) {
+		catch (IOException e) {
 			System.out.println("Error: "+e);
 		}
 	}

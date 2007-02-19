@@ -11,6 +11,8 @@ package nl.eur.eco_ict.seminar.ontolearn.util;
 import java.io.Reader;
 import java.util.List;
 
+import nl.eur.eco_ict.seminar.ontolearn.util.impl.StanfordMaxEntTokenizer;
+
 /**
  * @author jasper
  *

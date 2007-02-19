@@ -6,13 +6,15 @@
  * - Jasper Voskuilen
  * 
  */
-package nl.eur.eco_ict.seminar.ontolearn.util;
+package nl.eur.eco_ict.seminar.ontolearn.util.impl;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.io.Reader;
 import java.io.StringReader;
+
+import nl.eur.eco_ict.seminar.ontolearn.util.Tokenizer;
 
 import edu.stanford.nlp.ling.Sentence;
 import edu.stanford.nlp.tagger.maxent.MaxentTagger;

@@ -6,7 +6,7 @@
  * - Jasper Voskuilen
  * 
  */
-package nl.eur.eco_ict.seminar.ontolearn.datatypes;
+package nl.eur.eco_ict.seminar.ontolearn.datatypes.impl;
 
 /**
  * @author 300353jv

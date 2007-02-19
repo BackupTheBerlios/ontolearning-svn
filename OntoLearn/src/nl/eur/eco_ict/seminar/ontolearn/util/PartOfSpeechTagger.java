@@ -10,6 +10,8 @@ package nl.eur.eco_ict.seminar.ontolearn.util;
 
 import java.util.Map;
 
+import nl.eur.eco_ict.seminar.ontolearn.util.impl.StanfordMaxentPOSTagger;
+
 /**
  * @author jasper
  *

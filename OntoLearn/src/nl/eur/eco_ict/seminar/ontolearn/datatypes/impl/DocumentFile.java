@@ -1,7 +1,7 @@
 /**
  * 
  */
-package nl.eur.eco_ict.seminar.ontolearn.datatypes;
+package nl.eur.eco_ict.seminar.ontolearn.datatypes.impl;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -10,14 +10,18 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.StringReader;
 
+import nl.eur.eco_ict.seminar.ontolearn.datatypes.Document;
+
 /**
- * @author 300353jv
+ * Represents documents stored on disk
+ * @author Jasper
+ * @author Nico
  */
-public class Document {
+public class DocumentFile implements Document {
 	private File file = null;
 	private StringBuffer abstrct = null;
 
-	public Document (File f) {
+	public DocumentFile (File f) {
 		this.file = f;
 	}
 	
@@ -44,6 +48,13 @@ public class Document {
 	}
 	
 	/**
+	 * @return the name of the document
+	 */
+	public String getName (){
+		return this.file.getName ();
+	}
+	
+	/**
 	 * @return it's a redif document when it starts with 'Template-Type: ReDIF-Paper'
 	 * @throws FileNotFoundException 
 	 */
@@ -65,9 +76,6 @@ public class Document {
 	
 	/**
 	 * Assumes it's a REDIF file and searches the file for abstracts. When an abstract is found it is put into the global StringBuffer (a cache for repeated requests)
-	 * @throws FileNotFoundException
-	 */
-	/**
 	 * @throws FileNotFoundException
 	 */
 	protected void extractAbstracts () throws FileNotFoundException{

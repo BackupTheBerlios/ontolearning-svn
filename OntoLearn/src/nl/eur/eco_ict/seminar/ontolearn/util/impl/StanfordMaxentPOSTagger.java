@@ -6,13 +6,15 @@
  * - Jasper Voskuilen
  * 
  */
-package nl.eur.eco_ict.seminar.ontolearn.util;
+package nl.eur.eco_ict.seminar.ontolearn.util.impl;
 
 import java.io.StringReader;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+
+import nl.eur.eco_ict.seminar.ontolearn.util.PartOfSpeechTagger;
 
 import edu.stanford.nlp.ling.HasTag;
 import edu.stanford.nlp.ling.HasWord;

@@ -9,14 +9,18 @@ import java.util.HashSet;
 import java.util.Iterator;
 
 import nl.eur.eco_ict.seminar.ontolearn.datatypes.Document;
-import nl.eur.eco_ict.seminar.ontolearn.datatypes.JenaOntology;
-import nl.eur.eco_ict.seminar.ontolearn.datatypes.Settings;
+import nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology;
+import nl.eur.eco_ict.seminar.ontolearn.datatypes.impl.JenaOntology;
+import nl.eur.eco_ict.seminar.ontolearn.datatypes.impl.Settings;
 import nl.eur.eco_ict.seminar.ontolearn.extractor.AssociationBasedExtractor;
 import nl.eur.eco_ict.seminar.ontolearn.extractor.HearstExtractor;
-import nl.eur.eco_ict.seminar.ontolearn.pruner.PrunerStub;
+import nl.eur.eco_ict.seminar.ontolearn.util.DocumentCrawler;
+import nl.eur.eco_ict.seminar.ontolearn.util.Pruner;
+import nl.eur.eco_ict.seminar.ontolearn.util.impl.DiskCrawler;
+import nl.eur.eco_ict.seminar.ontolearn.util.impl.PrunerStub;
 
 /**
- * @author 300353jv
+ * @author Jasper
  *
  */
 public class OntoLearnApp {
@@ -64,7 +68,7 @@ public class OntoLearnApp {
 	
 	protected DocumentCrawler getCrawler () throws URISyntaxException{
 		if (this.crawler == null){
-			this.crawler = new DocumentCrawler (this.getSettings().getDocumentroot ());
+			this.crawler = new DiskCrawler (this.getSettings().getDocumentroot ());
 		}
 		return this.crawler;
 	}
