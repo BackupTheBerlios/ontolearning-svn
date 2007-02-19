@@ -18,7 +18,7 @@ import java.util.HashMap;
  *
  */
 public class Patternator {
-	private static String PATTERNSFILE = System.getProperty("user.dir")+"\\data\\patterns\\patterns.txt";
+	private static String PATTERNSFILE = "file:///" + System.getProperty("user.dir") + "/data/patterns/patterns.txt";
     ArrayList patterns;
     
 	public Patternator() {
