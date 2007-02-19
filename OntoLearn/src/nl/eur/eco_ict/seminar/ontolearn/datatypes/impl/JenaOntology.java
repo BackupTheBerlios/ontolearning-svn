@@ -8,6 +8,8 @@
  */
 package nl.eur.eco_ict.seminar.ontolearn.datatypes.impl;
 
+import java.io.StringWriter;
+
 import nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology;
 
 import com.hp.hpl.jena.db.IDBConnection;
@@ -106,7 +108,7 @@ public class JenaOntology implements Ontology {
 	public OntModel getModel (){
 		if (this.model == null){
 			if (this.getDBConnection () == null){
-				this.model = ModelFactory.createOntologyModel (this.specs);
+				this.model = ModelFactory.createOntologyModel (this.getSpecs());
 			}else{
 				ModelMaker maker =  ModelFactory.createModelRDBMaker (this.getDBConnection ());
 				Model base = maker.createModel(this.dbsettings.ontologyname, false );
@@ -131,7 +133,9 @@ public class JenaOntology implements Ontology {
 	}
 	
 	public String toString (){
-		return this.getModel ().toString ();
+		StringWriter writer = new StringWriter();
+		this.getModel ().write (writer);
+		return writer.toString ();
 	}
 	
 	protected IDBConnection getDBConnection (){
