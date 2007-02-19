@@ -18,7 +18,7 @@ import java.util.HashMap;
  *
  */
 public class Patternator {
-	private static String PATTERNSFILE = "file:///" + System.getProperty("user.dir") + "/data/patterns/patterns.txt";
+	private static String PATTERNSFILE =  System.getProperty("user.dir") + "/data/patterns/patterns.txt";
     ArrayList patterns;
     
 	public Patternator() {
@@ -51,7 +51,7 @@ public class Patternator {
 		String regNPx = "(([a-zA-Z0-9\\- ]+)(, [a-zA-Z0-9\\- ]+)*( and [a-zA-Z0-9\\- ]*)*)";
 		String regSpacer = "((, {1,}+)|( {1,}+))";		
 		
-		for ( int i=0; i<=this.patterns.size (); i++ ) {
+		for ( int i=0; i<this.patterns.size (); i++ ) {
 			String pattern = (String)this.patterns.get(i);
 
 			pattern = pattern.replaceAll("NP0", regNP0);
