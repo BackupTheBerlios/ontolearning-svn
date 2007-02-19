@@ -45,7 +45,7 @@ public class OntoLearnApp {
 	public void retrieveSettings (){
 		// at the moment it needs to be hardcoded, but we could also display a GUI widget to get the info
 		this.settings = new Settings ();
-		this.settings.setDocumentroot ("file:///D:/Java/OntoLearn/OntoLearn/data/testAbstracts/");
+		this.settings.setDocumentroot ("file:///" +System.getProperty("user.dir")+ "/data/testAbstracts/");
 	}	// +System.getProperty("user.dir")+"\\testAbstracts\\"
 	
 	public void start () throws URISyntaxException{
