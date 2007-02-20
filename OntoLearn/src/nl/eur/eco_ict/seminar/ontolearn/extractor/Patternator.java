@@ -123,14 +123,17 @@ public class Patternator {
 					for(int j=0;j<cleanNPx.length; j++) {
 						cleanNPx[j] = this.myStanfordParser.getRightNP(cleanNPx[j]);
 					}
-					/*if(NP0==null) {
-						System.out.println("NP0 = null!! error!!! na NPx = []?");
-						System.out.println("Error met match: "+myMatch);
-					}*/
 				}
 				
+				if(NP0 != null) {
+					NP0 = NP0.replaceAll("(\\x2D{1})([a-zA-Z0-9]+)(\\x2D{1})","");
+				}
 				
-				
+				for(int j=0;j<cleanNPx.length; j++) {
+					if(cleanNPx[j]!=null) {
+						cleanNPx[j] = cleanNPx[j].replaceAll("(\\x2D{1})([a-zA-Z0-9]+)(\\x2D{1})","");
+					}
+				}
 				
 				foundPairs.put(NP0, cleanNPx);
 				
