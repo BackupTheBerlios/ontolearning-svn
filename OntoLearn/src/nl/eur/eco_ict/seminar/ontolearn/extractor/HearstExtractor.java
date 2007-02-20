@@ -59,9 +59,10 @@ public class HearstExtractor implements Extractor {
 				      String[] value = entry.getValue();
 				      
 				      // Display NP0 and NPx from foundPatterns (testing)
+				      /*
 					  System.out.println("NP0: "+key);
 					  System.out.println("NPx: "+Arrays.asList(value));
-					  
+					  */
 					  
 				  }
 			}

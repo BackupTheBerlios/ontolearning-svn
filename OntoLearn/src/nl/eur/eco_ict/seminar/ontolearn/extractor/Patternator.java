@@ -8,6 +8,7 @@
  */
 package nl.eur.eco_ict.seminar.ontolearn.extractor;
 
+import java.util.Arrays;
 import java.io.*;
 import java.util.regex.*;
 import java.util.ArrayList;
@@ -112,22 +113,30 @@ public class Patternator {
 				String[] cleanNPx = NPxnew.split(":splithere:");
 				
 				if(usedPattern.indexOf("NP0") < usedPattern.indexOf("NPx")) {
-					NP0 = this.myStanfordParser.getLeftNP(NP0);
+					NP0 = this.myStanfordParser.getRightNP(NP0);
+					for(int j=0;j<cleanNPx.length; j++) {
+						cleanNPx[j] = this.myStanfordParser.getLeftNP(cleanNPx[j]);
+					}
 				}
 				else {
-					NP0 = this.myStanfordParser.getRightNP(NP0);
+					NP0 = this.myStanfordParser.getLeftNP(NP0);
+					for(int j=0;j<cleanNPx.length; j++) {
+						cleanNPx[j] = this.myStanfordParser.getRightNP(cleanNPx[j]);
+					}
+					/*if(NP0==null) {
+						System.out.println("NP0 = null!! error!!! na NPx = []?");
+						System.out.println("Error met match: "+myMatch);
+					}*/
 				}
 				
-				for(int j=0;j<cleanNPx.length; j++) {
-					cleanNPx[j] = cleanNPx[j].trim();
-				}
+				
 				
 				
 				foundPairs.put(NP0, cleanNPx);
 				
 				// Display NP0 and NPx (testing)
-				// System.out.println("NP0: "+NP0);
-				// System.out.println("NPx: "+Arrays.asList(cleanNPx));
+				System.out.println("NP0: "+NP0);
+				System.out.println("NPx: "+Arrays.asList(cleanNPx));
 			}
 		}
 		
