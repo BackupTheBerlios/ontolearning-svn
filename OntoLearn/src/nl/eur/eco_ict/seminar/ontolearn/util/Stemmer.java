@@ -8,6 +8,8 @@
  */
 package nl.eur.eco_ict.seminar.ontolearn.util;
 
+import nl.eur.eco_ict.seminar.ontolearn.util.impl.EnglishStemmerKnowceans;
+
 /**
  * @author Jasper
  *
@@ -25,13 +27,13 @@ public interface Stemmer {
 	 * @author Jasper
 	 */
 	public final class Factory {
-		protected static Stemmer defLem = null; // TODO create instance
+		protected static Stemmer defStem = new EnglishStemmerKnowceans ();
 		
 		/**
 		 * @return a default stemmer
 		 */
 		public static Stemmer getInstance (){
-			return defLem;
+			return defStem;
 		}
 	}
 }
