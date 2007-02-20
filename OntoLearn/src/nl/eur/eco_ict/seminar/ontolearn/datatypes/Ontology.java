@@ -33,12 +33,6 @@ public interface Ontology {
 	
 	public Individual getIndividual (OntClass oclass, String indname);
 	
-	public void removeIndividual (Individual ind);
-	
-	public void removeIndividual (String classname, String indname);
-	
-	public void removeIndividual (OntClass oclass, String indname);
-
 	// Classes
 
 	public OntClass addOClass (String namespace, String classname);

@@ -16,6 +16,7 @@ public class DBSettings {
 	public String username;
 	public String password;
 	public String server;
+	public String servertype;
 	public String driverclass;
-	public String ontologyname;
+	public String ontologyname = "test";
 }

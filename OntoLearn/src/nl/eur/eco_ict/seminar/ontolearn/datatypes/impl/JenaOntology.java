@@ -24,6 +24,7 @@ import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.ModelMaker;
 import com.hp.hpl.jena.rdf.model.Resource;
+import com.hp.hpl.jena.util.iterator.ExtendedIterator;
 
 
 /**
@@ -140,9 +141,19 @@ public class JenaOntology implements Ontology {
 	
 	protected IDBConnection getDBConnection (){
 		if (this.dbsettings != null){
-			//TODO return ModelFactory.createSimpleRDBConnection (arg0, arg1, arg2, arg3);
+			try{
+				Class.forName (this.dbsettings.driverclass); 
+			}catch(Exception e){}
+			return ModelFactory.createSimpleRDBConnection (this.dbsettings.server, this.dbsettings.username, this.dbsettings.password, this.dbsettings.servertype);
 		}
 		return null;
+	}
+	
+	/**
+	 * @param info the data needed to establish a connection to the database which stores this ontology
+	 */
+	public void setDBInfo (DBSettings info){
+		this.dbsettings = info;
 	}
 
 	/**
@@ -225,57 +236,50 @@ public class JenaOntology implements Ontology {
 	 * @see nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology#getIndividual(java.lang.String, java.lang.String)
 	 */
 	public Individual getIndividual (String classname, String indname) {
-		// TODO Auto-generated method stub
-		return null;
+		return this.getIndividual (this.getOClass (classname), indname);
 	}
 
 	/**
 	 * @see nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology#getIndividual(com.hp.hpl.jena.ontology.OntClass, java.lang.String)
 	 */
 	public Individual getIndividual (OntClass oclass, String indname) {
-		// TODO Auto-generated method stub
-		return null;
+		ExtendedIterator i = this.getModel ().listIndividuals ();
+		Individual ind = null;
+		
+		while (i.hasNext() && ind == null){
+			ind = (Individual)i.next ();
+			if (!ind.getLocalName ().equals (indname) || !ind.getIsDefinedBy ().equals (oclass)){
+				ind = null;
+			}
+		}
+		
+		return ind;
 	}
 
 	/**
 	 * @see nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology#getProperty(java.lang.String, java.lang.String)
 	 */
 	public OntProperty getProperty (String namespace, String propertyname) {
-		// TODO Auto-generated method stub
-		return null;
+		ExtendedIterator i = this.getModel ().listOntProperties ();
+		OntProperty prop = null;
+		
+		while (i.hasNext () &&  prop == null){
+			prop = (OntProperty)i.next ();
+			if (!prop.getLocalName ().equals (propertyname) || !prop.getNameSpace ().equals (namespace)){
+				prop = null;
+			}
+		}
+		
+		return prop;
 	}
 
 	/**
 	 * @see nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology#getProperty(java.lang.String)
 	 */
 	public OntProperty getProperty (String propertyname) {
-		// TODO Auto-generated method stub
-		return null;
+		return this.getProperty (this.defaultNS, propertyname);
 	}
 
-	/**
-	 * @see nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology#removeIndividual(com.hp.hpl.jena.ontology.Individual)
-	 */
-	public void removeIndividual (Individual ind) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	/**
-	 * @see nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology#removeIndividual(java.lang.String, java.lang.String)
-	 */
-	public void removeIndividual (String classname, String indname) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	/**
-	 * @see nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology#removeIndividual(com.hp.hpl.jena.ontology.OntClass, java.lang.String)
-	 */
-	public void removeIndividual (OntClass oclass, String indname) {
-		// TODO Auto-generated method stub
-		
-	}
 
 	/**
 	 * @see nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology#removeTriplet(com.hp.hpl.jena.ontology.OntClass, com.hp.hpl.jena.ontology.OntProperty, com.hp.hpl.jena.ontology.OntClass)

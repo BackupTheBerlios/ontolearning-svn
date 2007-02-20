@@ -11,7 +11,7 @@
 	<classpathentry kind="var" path="JAVA_USER_LIBRARIES/jena/2.5.2/iri.jar"/>
 	<classpathentry kind="var" path="JAVA_USER_LIBRARIES/jena/2.5.2/jena.jar">
 		<attributes>
-			<attribute name="javadoc_location" value="http://jena.sourceforge.net/javadoc/index.html"/>
+			<attribute name="javadoc_location" value="http://jena.sourceforge.net/javadoc/"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="var" path="JAVA_USER_LIBRARIES/jena/2.5.2/json.jar"/>
@@ -22,6 +22,10 @@
 	<classpathentry kind="var" path="JAVA_USER_LIBRARIES/jena/2.5.2/xercesImpl.jar"/>
 	<classpathentry kind="var" path="JAVA_USER_LIBRARIES/jena/2.5.2/xml-apis.jar"/>
 	<classpathentry kind="var" path="JAVA_USER_LIBRARIES/Stanford POS tagger/2006-05-21/postagger-2006-05-21.jar"/>
-	<classpathentry kind="var" path="JAVA_USER_LIBRARIES/mysql-connector/5.0.4/mysql-connector-java-5.0.4/mysql-connector-java-5.0.4-bin.jar"/>
+	<classpathentry kind="var" path="JAVA_USER_LIBRARIES/hsqldb/1.8.0.7/hsqldb/lib/hsqldb.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="http://www.hsqldb.org/doc/src/"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
