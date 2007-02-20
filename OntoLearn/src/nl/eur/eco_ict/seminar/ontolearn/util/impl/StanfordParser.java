@@ -24,6 +24,29 @@ public class StanfordParser {
 		String lexParserFile = System.getProperty("user.dir") + File.separatorChar + "data"+File.separatorChar+"stanford"+File.separatorChar+"stanford-parser"+File.separatorChar+"englishPCFG.ser.gz";
 		this.myLexParser = new LexicalizedParser(lexParserFile);		
 	}
+	
+	public String getLeftNP(String myString) {
+		Tree myTree = getTree(myString);
+		
+		return getNP(myTree, true);
+	}
+	
+	public String getRightNP(String myString) {
+		Tree myTree = getTree(myString);
+		
+		return getNP(myTree, false);
+	}
+	
+	public Tree getTree(String myString) {
+		this.myLexParser.parse(myString);
+		Tree myTree = this.myLexParser.getBestParse();
+		
+		return myTree;
+	}
+	
+	public String getNP(Tree myTree, boolean fromLeft) {
+		return "Test.";
+	}
 	/*
 	public String lexicalize() {
 		if(this.myLexParser.parse(key)) {
