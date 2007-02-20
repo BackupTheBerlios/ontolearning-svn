@@ -25,7 +25,12 @@ import edu.stanford.nlp.trees.*;
  *
  */
 public class HearstExtractor implements Extractor {
-
+	LexicalizedParser myLexParser;
+	
+	public HearstExtractor() {
+		String lexParserFile = System.getProperty("user.dir") + File.separatorChar + "data"+File.separatorChar+"stanford"+File.separatorChar+"stanford-parser"+File.separatorChar+"englishPCFG.ser.gz";
+		this.myLexParser = new LexicalizedParser(lexParserFile);
+	}
 	/**
 	 * @see nl.eur.eco_ict.seminar.ontolearn.Extractor#parse(nl.eur.eco_ict.seminar.ontolearn.datatypes.Document, nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology)
 	 */
@@ -62,12 +67,11 @@ public class HearstExtractor implements Extractor {
 					  System.out.println("NPx: "+Arrays.asList(value));
 				  }
 
-				  String lexParserFile = System.getProperty("user.dir") + File.separatorChar + "data"+File.separatorChar+"stanford"+File.separatorChar+"stanford-parser"+File.separatorChar+"englishPCFG.ser.gz";
-				  LexicalizedParser myLexParser = new LexicalizedParser(lexParserFile);
 				  
-				  if(myLexParser.parse(s)) {
+				  
+				  if(this.myLexParser.parse(s)) {
 					  System.out.println("LexParser: myLexParser(s) = true");
-					  Tree myTree = myLexParser.getBestParse();
+					  Tree myTree = this.myLexParser.getBestParse();
 					  myTree.printLocalTree();
 					  myTree.pennPrint();
 					  System.out.println("Tree: "+myTree.toString());
