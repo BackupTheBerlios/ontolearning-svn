@@ -111,9 +111,17 @@ public class Patternator {
 				
 				String[] cleanNPx = NPxnew.split(":splithere:");
 				
+				if(usedPattern.indexOf("NP0") < usedPattern.indexOf("NPx")) {
+					NP0 = this.myStanfordParser.getLeftNP(NP0);
+				}
+				else {
+					NP0 = this.myStanfordParser.getRightNP(NP0);
+				}
+				
 				for(int j=0;j<cleanNPx.length; j++) {
 					cleanNPx[j] = cleanNPx[j].trim();
 				}
+				
 				
 				foundPairs.put(NP0, cleanNPx);
 				
