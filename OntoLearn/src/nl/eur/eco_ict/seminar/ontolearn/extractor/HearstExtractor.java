@@ -17,26 +17,21 @@ import nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology;
 import nl.eur.eco_ict.seminar.ontolearn.util.PartOfSpeechTagger;
 import nl.eur.eco_ict.seminar.ontolearn.util.Tokenizer;
 
-import edu.stanford.nlp.parser.lexparser.LexicalizedParser;
-import edu.stanford.nlp.trees.*;
-
 /**
  * @author Nico
  *
  */
 public class HearstExtractor implements Extractor {
-	LexicalizedParser myLexParser;
+	Patternator myPatternator;
 	
 	public HearstExtractor() {
-		String lexParserFile = System.getProperty("user.dir") + File.separatorChar + "data"+File.separatorChar+"stanford"+File.separatorChar+"stanford-parser"+File.separatorChar+"englishPCFG.ser.gz";
-		this.myLexParser = new LexicalizedParser(lexParserFile);
+		this.myPatternator = new Patternator();
 	}
 	/**
 	 * @see nl.eur.eco_ict.seminar.ontolearn.Extractor#parse(nl.eur.eco_ict.seminar.ontolearn.datatypes.Document, nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology)
 	 */
 	public void parse (Document doc, Ontology ontology) {
 		System.out.println("HearstExtractor is parsing "+doc.getName ()+".");
-		//PartOfSpeechTagger posTagger = PartOfSpeechTagger.Factory.getInstance ();
 		
 		try {
 			List<String> l = Tokenizer.Factory.getInstance().toSentences(doc.readAbstracts());
@@ -47,8 +42,8 @@ public class HearstExtractor implements Extractor {
 				  
 				  // Run the pattern finder on the sentence
 				  // foundPatterns contains the String NP0 as key, and the String[] NPx as value(s) <-- NPx is an array!
-				  Patternator myPatternator = new Patternator();
-				  HashMap<String, String[]> foundPatterns = myPatternator.parseString(s);
+				  
+				  HashMap<String, String[]> foundPatterns = this.myPatternator.parseString(s);
 				  
 				  // Test to see if the HashMap works
 				  
@@ -56,6 +51,7 @@ public class HearstExtractor implements Extractor {
 				  Iterator<Entry<String, String[]>> iterator = collection.iterator();
 				  
 				  Entry<String, String[]> entry = null;
+				 
 				  while(iterator.hasNext())
 				  { 
 				      entry = iterator.next();
@@ -65,27 +61,10 @@ public class HearstExtractor implements Extractor {
 				      // Display NP0 and NPx from foundPatterns (testing)
 					  System.out.println("NP0: "+key);
 					  System.out.println("NPx: "+Arrays.asList(value));
+					  
+					  
 				  }
-
-				  
-				  
-				  if(this.myLexParser.parse(s)) {
-					  System.out.println("LexParser: myLexParser(s) = true");
-					  Tree myTree = this.myLexParser.getBestParse();
-					  myTree.printLocalTree();
-					  myTree.pennPrint();
-					  System.out.println("Tree: "+myTree.toString());
-				  }
-				  else {
-					  System.out.println("LexParser: niet true :(");
-				  }
-				  
-				  
-				  // Run the POS tagger on the sentence
-				  // COMMENTED OUT TO TEST PATTERN FUNCTIONALITY!!!!
-				  // System.out.println(posTagger.tagInternal(s) + " \r\n");
-				  // String x = posTagger.tagInternal(s); <-- x = pos tagged version of sentence s
-		    }
+			}
 		}
 		catch (IOException e) {
 			System.out.println("Error: "+e);

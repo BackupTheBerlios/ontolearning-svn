@@ -13,6 +13,7 @@ import java.util.regex.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import nl.eur.eco_ict.seminar.ontolearn.util.impl.StanfordParser;
 /**
  * @author Nico Vaatstra
  *
@@ -20,9 +21,11 @@ import java.util.HashMap;
 public class Patternator {
 	private static String PATTERNSFILE =  System.getProperty("user.dir") + "/data/patterns/patterns.txt";
     ArrayList patterns;
+    StanfordParser myStanfordParser;
     
 	public Patternator() {
 		// Loading of the patterns from file etc. will start here.
+		this.myStanfordParser = new StanfordParser();
 		
 	    BufferedReader br;
 	    String line;
@@ -102,7 +105,7 @@ public class Patternator {
 				}
 				
 				// NPx can contain NP1, NP2, etc.. Split them and clean the array
-				String regSplitNPx = "(( , {1})|( and ))";
+				String regSplitNPx = "(( , {1})|( and )|( or ))";
 
 				String NPxnew = NPx.replaceAll(regSplitNPx, ":splithere:");
 				
