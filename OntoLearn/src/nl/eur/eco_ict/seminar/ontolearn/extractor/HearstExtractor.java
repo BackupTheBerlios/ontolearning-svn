@@ -17,6 +17,9 @@ import nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology;
 import nl.eur.eco_ict.seminar.ontolearn.util.PartOfSpeechTagger;
 import nl.eur.eco_ict.seminar.ontolearn.util.Tokenizer;
 
+import edu.stanford.nlp.parser.lexparser.LexicalizedParser;
+import edu.stanford.nlp.trees.*;
+
 /**
  * @author Nico
  *
@@ -57,6 +60,20 @@ public class HearstExtractor implements Extractor {
 				      // Display NP0 and NPx from foundPatterns (testing)
 					  System.out.println("NP0: "+key);
 					  System.out.println("NPx: "+Arrays.asList(value));
+				  }
+
+				  String lexParserFile = System.getProperty("user.dir") + File.separatorChar + "data"+File.separatorChar+"stanford"+File.separatorChar+"stanford-parser"+File.separatorChar+"englishPCFG.ser.gz";
+				  LexicalizedParser myLexParser = new LexicalizedParser(lexParserFile);
+				  
+				  if(myLexParser.parse(s)) {
+					  System.out.println("LexParser: myLexParser(s) = true");
+					  Tree myTree = myLexParser.getBestParse();
+					  myTree.printLocalTree();
+					  myTree.pennPrint();
+					  System.out.println("Tree: "+myTree.toString());
+				  }
+				  else {
+					  System.out.println("LexParser: niet true :(");
 				  }
 				  
 				  

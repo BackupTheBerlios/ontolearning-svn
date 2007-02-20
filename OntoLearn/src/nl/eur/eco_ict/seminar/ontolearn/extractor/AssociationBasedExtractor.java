@@ -3,6 +3,10 @@
  */
 package nl.eur.eco_ict.seminar.ontolearn.extractor;
 
+import java.util.List;
+
+import edu.stanford.nlp.ling.Sentence;
+import edu.stanford.nlp.tagger.maxent.MaxentTagger;
 import nl.eur.eco_ict.seminar.ontolearn.Extractor;
 import nl.eur.eco_ict.seminar.ontolearn.association.Occurance;
 import nl.eur.eco_ict.seminar.ontolearn.datatypes.Document;
@@ -30,7 +34,14 @@ public class AssociationBasedExtractor implements Extractor {
 	 * @see nl.eur.eco_ict.seminar.ontolearn.Extractor#parse(nl.eur.eco_ict.seminar.ontolearn.datatypes.Document, nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology)
 	 */
 	public void parse (Document doc, Ontology ontology) {
+
+		// TODO Auto-generated method stub
+
+
+		System.out.println("Association Rules are parsing.");
+
 		System.out.println("Association Rules are parsing "+doc.getName ()+".");
+
 		try {
 			PartOfSpeechTagger posTagger = PartOfSpeechTagger.Factory.getInstance();
 			Tokenizer tokenizer = Tokenizer.Factory.getInstance();
@@ -70,7 +81,6 @@ public class AssociationBasedExtractor implements Extractor {
 		}catch (Exception e){
 			e.printStackTrace ();
 		}
-		
 	}
 	public void add(String word, Document doc) {
 		Occurance oc = new Occurance();
