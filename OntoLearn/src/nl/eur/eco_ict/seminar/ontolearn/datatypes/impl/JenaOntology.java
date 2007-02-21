@@ -23,7 +23,9 @@ import com.hp.hpl.jena.ontology.OntProperty;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.ModelMaker;
+import com.hp.hpl.jena.rdf.model.RDFNode;
 import com.hp.hpl.jena.rdf.model.Resource;
+import com.hp.hpl.jena.shared.AlreadyExistsException;
 import com.hp.hpl.jena.util.iterator.ExtendedIterator;
 
 
@@ -112,11 +114,16 @@ public class JenaOntology implements Ontology {
 				this.model = ModelFactory.createOntologyModel (this.getSpecs());
 			}else{
 				ModelMaker maker =  ModelFactory.createModelRDBMaker (this.getDBConnection ());
-				Model base = maker.createModel(this.dbsettings.ontologyname, false );
+				Model base = null;
+				try{
+					base = maker.createModel(this.dbsettings.ontologyname, true);
+				}catch(AlreadyExistsException e){
+					base = maker.openModel (this.dbsettings.ontologyname, true);
+				}
 				this.specs = new OntModelSpec (this.getSpecs ());
 				this.specs.setImportModelMaker (maker);
 				this.model = ModelFactory.createOntologyModel (this.getSpecs (), base);
-				this.model.read (this.dbsettings.ontologyname);
+				//this.model.read (this.dbsettings.ontologyname);
 			}
 		}
 		return this.model;
@@ -187,7 +194,7 @@ public class JenaOntology implements Ontology {
 	 * @see nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology#addObjectProperty(java.lang.String)
 	 */
 	public OntProperty addObjectProperty (String propertyname) {
-		return this.addDataProperty (this.defaultNS, propertyname);
+		return this.addObjectProperty (this.defaultNS, propertyname);
 	}
 
 	/**
@@ -316,6 +323,24 @@ public class JenaOntology implements Ontology {
 		}
 		property.setDomain (domain);
 		property.setRange (datum);
+	}
+
+	/**
+	 * @see nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology#addTriplet(com.hp.hpl.jena.ontology.OntClass, com.hp.hpl.jena.ontology.OntProperty, java.lang.Object)
+	 */
+	public void addTriplet (OntClass domain, OntProperty property, Object range) {
+		property.setDomain (domain);
+		if (range instanceof OntClass){
+			property.setRange ((OntClass)range);
+			return;
+		}
+		if (range instanceof Resource){
+			property.setRange ((Resource)range);
+			return;
+		}
+		if (range instanceof RDFNode){
+			property.setPropertyValue (property, (RDFNode)range);
+		}
 	}
 
 
