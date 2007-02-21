@@ -18,6 +18,7 @@ import nl.eur.eco_ict.seminar.ontolearn.util.impl.StanfordParser;
 /**
  * @author Nico Vaatstra
  *
+ * TODO: OO-ize this. Too much done in patternator methods.
  */
 public class Patternator {
 	private static String PATTERNSFILE =  System.getProperty("user.dir") + "/data/patterns/patterns.txt";
