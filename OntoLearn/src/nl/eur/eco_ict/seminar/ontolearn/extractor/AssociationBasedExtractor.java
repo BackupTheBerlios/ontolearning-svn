@@ -7,12 +7,15 @@ import java.util.List;
 
 import edu.stanford.nlp.ling.Sentence;
 import edu.stanford.nlp.tagger.maxent.MaxentTagger;
+
 import nl.eur.eco_ict.seminar.ontolearn.Extractor;
 import nl.eur.eco_ict.seminar.ontolearn.association.Occurance;
+import nl.eur.eco_ict.seminar.ontolearn.association.AssociationDatabase;
 import nl.eur.eco_ict.seminar.ontolearn.datatypes.Document;
 import nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology;
 import nl.eur.eco_ict.seminar.ontolearn.util.PartOfSpeechTagger;
 import nl.eur.eco_ict.seminar.ontolearn.util.Tokenizer;
+
 import edu.stanford.nlp.ling.Sentence;
 import edu.stanford.nlp.tagger.maxent.MaxentTagger;
 
@@ -36,10 +39,6 @@ public class AssociationBasedExtractor implements Extractor {
 	public void parse (Document doc, Ontology ontology) {
 
 		// TODO Auto-generated method stub
-
-
-		System.out.println("Association Rules are parsing.");
-
 		System.out.println("Association Rules are parsing "+doc.getName ()+".");
 
 		try {
@@ -75,7 +74,7 @@ public class AssociationBasedExtractor implements Extractor {
 					}
 				}
 			}
-			System.out.println (this.tostring ());
+			this.conceptsToDatabase();	
 		}
 		catch (IOException e) {
 			System.out.println("Error: "+e);
@@ -111,5 +110,10 @@ public class AssociationBasedExtractor implements Extractor {
 			result += "\n";
 		}
 		return result;
+	}
+	
+	public void conceptsToDatabase() {
+		AssociationDatabase waardeDB = new AssociationDatabase();
+		System.out.println (this.tostring ());
 	}
 }
