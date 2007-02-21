@@ -3,6 +3,7 @@
  */
 package nl.eur.eco_ict.seminar.ontolearn.extractor;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import edu.stanford.nlp.ling.Sentence;
@@ -112,8 +113,9 @@ public class AssociationBasedExtractor implements Extractor {
 		return result;
 	}
 	
-	public void conceptsToDatabase() {
+	public void conceptsToDatabase() throws SQLException {
 		AssociationDatabase waardeDB = new AssociationDatabase();
+		waardeDB.add ();
 		System.out.println (this.tostring ());
 	}
 }
