@@ -34,6 +34,8 @@ import java.util.Scanner;
 public class AssociationBasedExtractor implements Extractor {
 
 	protected Collection <Occurance> occuranceMatrix = new HashSet<Occurance>();
+	AssociationDatabase waardeDB = new AssociationDatabase();
+	
 	/**
 	 * @see nl.eur.eco_ict.seminar.ontolearn.Extractor#parse(nl.eur.eco_ict.seminar.ontolearn.datatypes.Document, nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology)
 	 */
@@ -70,7 +72,8 @@ public class AssociationBasedExtractor implements Extractor {
 							this.add (test2, doc);
 						}
 						else {
-							this.getOccurance (test2, doc).wordCount++;
+							int ocWordcount = this.getOccurance (test2, doc).wordCount++;
+							waardeDB.addConcept (test2 , doc.toString (), ocWordcount);	
 						}
 					}
 				}
@@ -83,12 +86,18 @@ public class AssociationBasedExtractor implements Extractor {
 			e.printStackTrace ();
 		}
 	}
-	public void add(String word, Document doc) {
+	public void add(String word, Document doc) throws SQLException {
 		Occurance oc = new Occurance();
 		oc.word = word;
 		oc.documentName = doc.getName();
 		oc.wordCount = 1;
 		this.occuranceMatrix.add (oc);
+		
+		// add to database
+		
+		int i = oc.wordCount;
+		waardeDB.addConcept (oc.documentName, oc.word, i);		
+		
 	}
 	public Occurance getOccurance(String word, Document doc) {
 		Iterator <Occurance> i = this.occuranceMatrix.iterator ();
@@ -114,8 +123,8 @@ public class AssociationBasedExtractor implements Extractor {
 	}
 	
 	public void conceptsToDatabase() throws SQLException {
-		AssociationDatabase waardeDB = new AssociationDatabase();
-		waardeDB.add ();
+		// AssociationDatabase waardeDB = new AssociationDatabase();
+		// waardeDB.addConcepts ();
 		System.out.println (this.tostring ());
 	}
 }
