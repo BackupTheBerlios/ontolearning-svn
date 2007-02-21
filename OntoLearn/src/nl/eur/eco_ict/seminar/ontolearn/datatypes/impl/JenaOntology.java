@@ -9,6 +9,9 @@
 package nl.eur.eco_ict.seminar.ontolearn.datatypes.impl;
 
 import java.io.StringWriter;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Iterator;
 
 import nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology;
 
@@ -341,6 +344,25 @@ public class JenaOntology implements Ontology {
 		if (range instanceof RDFNode){
 			property.setPropertyValue (property, (RDFNode)range);
 		}
+	}
+	
+	public Iterator<OntClass> getClasses (){
+		return this.getModel ().listClasses ();
+	}
+	
+	public Iterator<OntClass> getSubClasses (OntClass base){
+		Collection<OntClass> classes = new HashSet<OntClass>();
+		OntClass temp = null;
+		Iterator<OntClass> i = this.getClasses ();
+		
+		while(i.hasNext ()){
+			temp = i.next ();
+			if (temp.getSuperClass ().equals (base)){
+				classes.add (temp);
+			}
+		}
+		
+		return classes.iterator ();
 	}
 
 

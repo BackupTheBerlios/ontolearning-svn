@@ -39,9 +39,12 @@ public class OntologyTest {
 		
 		c2.setSuperClass (c1);
 		
+		
 		test.addTriplet (c1, p, c2);
 		
 		System.out.println (test);
+		
+		System.out.println (c1.getLocalName ());
 	}
 
 }

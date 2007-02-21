@@ -3,6 +3,8 @@
  */
 package nl.eur.eco_ict.seminar.ontolearn.datatypes;
 
+import java.util.Iterator;
+
 import com.hp.hpl.jena.ontology.DatatypeProperty;
 import com.hp.hpl.jena.ontology.Individual;
 import com.hp.hpl.jena.ontology.ObjectProperty;
@@ -50,6 +52,10 @@ public interface Ontology {
 	public OntClass getOClass (String namespace, String classname);
 
 	public OntClass getOClass (String classname);
+	
+	public Iterator<OntClass> getClasses ();
+	
+	public Iterator<OntClass> getSubClasses (OntClass base);
 	
 	
 	// Properties
