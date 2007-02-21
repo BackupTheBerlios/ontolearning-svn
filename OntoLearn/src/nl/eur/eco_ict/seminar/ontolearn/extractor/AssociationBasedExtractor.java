@@ -65,11 +65,12 @@ public class AssociationBasedExtractor implements Extractor {
 					if (oneWordPOS.contains ("/NN") ) {
 						int endWordPosition = oneWordPOS.indexOf ("/");
 						String test = oneWordPOS.substring (0, endWordPosition);
-						if (this.getOccurance (test, doc) == null) {
-							this.add (test, doc);
+						String test2 = test.toLowerCase ();
+						if (this.getOccurance (test2, doc) == null) {
+							this.add (test2, doc);
 						}
 						else {
-							this.getOccurance (test, doc).wordCount++;
+							this.getOccurance (test2, doc).wordCount++;
 						}
 					}
 				}
