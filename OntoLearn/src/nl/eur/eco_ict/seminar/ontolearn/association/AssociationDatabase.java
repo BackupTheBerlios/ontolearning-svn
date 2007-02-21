@@ -9,6 +9,9 @@
 package nl.eur.eco_ict.seminar.ontolearn.association;
 
 import java.sql.*;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Iterator;
 /**
  * @author remy
  *
@@ -17,12 +20,12 @@ public class AssociationDatabase {
 
 	Connection con;
 	String url;
-
+	Statement stmt;
+	
+	protected Collection <Occurance> occuranceMatrix = new HashSet<Occurance>();
+	
 	public AssociationDatabase() {
-		System.out.println ("Database");
 		try {
-
-
 			//Register the JDBC driver for MySQL.
 			Class.forName("com.mysql.jdbc.Driver");
 
@@ -35,71 +38,70 @@ public class AssociationDatabase {
 			// user named auser with the password
 			// drowssap, which is password spelled
 			// backwards.
-			this.con =
-				DriverManager.getConnection(
-						this.url,"ontolearn", "ontolearn");
+			this.con = DriverManager.getConnection(this.url,"ontolearn", "ontolearn");
 
 			//Display URL and connection information
-			System.out.println("URL: " + this.url);
-			System.out.println("Connection: " + this.con);
+			// System.out.println("URL: " + this.url);
+			// System.out.println("Connection: " + this.con);
+			
+			//Get a Statement object
+			this.stmt = this.con.createStatement();
 		}
 		catch( Exception e ) {
 			e.printStackTrace();
 		}
-	}
-	public void add() throws SQLException
-	{
-		Statement stmt;
-		ResultSet rs;
-		//Get a Statement object
-		stmt = this.con.createStatement();
 
-		//As a precaution, delete myTable if it
-		// already exists as residue from a
-		// previous run.  Otherwise, if the table
-		// already exists and an attempt is made
-		// to create it, an exception will be
-		// thrown.
+	}
+	public void addConcept(String document, String word, Integer wordCount) throws SQLException {
+		System.out.println ("INSERT INTO `association_abstract` (`document`, `word`, `wordcount`) VALUES('" + document + "','" + word + "', '" + wordCount + "')");
+		this.stmt.executeUpdate("INSERT INTO `association_abstract` (`document`, `word`, `wordcount`) VALUES('" + document + "','" + word + "', '" + wordCount + "')");
+	}
+	public void updateConcept(String document, String word, Integer wordCount) throws SQLException {
+		System.out.println ("UPDATE `association_abstract` SET `wordcount` = '" + wordCount + "' WHERE `document` = '" + document + "' and `word` = '" + word + "'");
+		this.stmt.executeUpdate("UPDATE `association_abstract` SET `wordcount` = '" + wordCount + "' WHERE `document` = '" + document + "' and `word` = '" + word + "'");
+	}
+
+	public void test() throws SQLException {
+		ResultSet rs;
 		try{
-			stmt.executeUpdate("DROP TABLE myTable");
+			this.stmt.executeUpdate("DROP TABLE myTable");
 		}catch(Exception e){
 			System.out.print(e);
-			System.out.println(
-					"No existing table to delete");
+			System.out.println("No existing table to delete");
 		}//end catch
 
 		//Create a table in the database named
 		// myTable.
-		stmt.executeUpdate(
+		this.stmt.executeUpdate(
 				"CREATE TABLE myTable(test_id int," +
 		"test_val char(15) not null)");
 
 		//Insert some values into the table
-		stmt.executeUpdate(
+		this.stmt.executeUpdate(
 				"INSERT INTO myTable(test_id, " +
 		"test_val) VALUES(1,'One')");
-		stmt.executeUpdate(
+		this.stmt.executeUpdate(
 				"INSERT INTO myTable(test_id, " +
 		"test_val) VALUES(2,'Two')");
-		stmt.executeUpdate(
+		this.stmt.executeUpdate(
 				"INSERT INTO myTable(test_id, " +
 		"test_val) VALUES(3,'Three')");
-		stmt.executeUpdate(
+		this.stmt.executeUpdate(
 				"INSERT INTO myTable(test_id, " +
 		"test_val) VALUES(4,'Four')");
-		stmt.executeUpdate(
+		this.stmt.executeUpdate(
 				"INSERT INTO myTable(test_id, " +
 		"test_val) VALUES(5,'Five')");
 
 		//Get another statement object initialized
 		// as shown.
-		stmt = this.con.createStatement(
+		this.stmt = this.con.createStatement(
 				ResultSet.TYPE_SCROLL_INSENSITIVE,
 				ResultSet.CONCUR_READ_ONLY);
 
 		//Query the database, storing the result
 		// in an object of type ResultSet
-		rs = stmt.executeQuery("SELECT * " +
+		rs = this.stmt.executeQuery("SELECT * " +
 		"from myTable ORDER BY test_id");
 
 		//Use the methods of class ResultSet in a
