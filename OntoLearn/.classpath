@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="var" path="JRE_LIB" sourcepath="JRE_SRC"/>
+	<classpathentry sourcepath="JRE_SRC" kind="var" path="JRE_LIB"/>
 	<classpathentry kind="var" path="JAVA_USER_LIBRARIES/jena/2.5.2/antlr-2.7.5.jar"/>
 	<classpathentry kind="var" path="JAVA_USER_LIBRARIES/jena/2.5.2/arq.jar"/>
 	<classpathentry kind="var" path="JAVA_USER_LIBRARIES/jena/2.5.2/arq-extra.jar"/>
@@ -11,7 +11,7 @@
 	<classpathentry kind="var" path="JAVA_USER_LIBRARIES/jena/2.5.2/iri.jar"/>
 	<classpathentry kind="var" path="JAVA_USER_LIBRARIES/jena/2.5.2/jena.jar">
 		<attributes>
-			<attribute name="javadoc_location" value="http://jena.sourceforge.net/javadoc/"/>
+			<attribute value="http://jena.sourceforge.net/javadoc/" name="javadoc_location"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="var" path="JAVA_USER_LIBRARIES/jena/2.5.2/json.jar"/>
@@ -24,7 +24,7 @@
 	<classpathentry kind="var" path="JAVA_USER_LIBRARIES/Stanford POS tagger/2006-05-21/postagger-2006-05-21.jar"/>
 	<classpathentry kind="var" path="JAVA_USER_LIBRARIES/hsqldb/1.8.0.7/hsqldb/lib/hsqldb.jar">
 		<attributes>
-			<attribute name="javadoc_location" value="http://www.hsqldb.org/doc/src/"/>
+			<attribute value="http://www.hsqldb.org/doc/src/" name="javadoc_location"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="var" path="JAVA_USER_LIBRARIES/stanford-parser-2006-06-11/stanford-parser.jar"/>
