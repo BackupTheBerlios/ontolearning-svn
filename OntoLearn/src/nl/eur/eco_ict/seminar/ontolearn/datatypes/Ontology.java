@@ -72,6 +72,8 @@ public interface Ontology {
 	
 	// Triplets
 	
+	public void addTriplet (OntClass domain, OntProperty property, Object range);
+	
 	public void addTriplet (OntClass domain, ObjectProperty property, OntClass range);
 	
 	public void addTriplet (OntClass domain, DatatypeProperty property, Resource datum);

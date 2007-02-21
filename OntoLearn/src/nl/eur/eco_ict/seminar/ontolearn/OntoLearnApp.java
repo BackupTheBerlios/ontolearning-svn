@@ -47,7 +47,7 @@ public class OntoLearnApp {
 		// at the moment it needs to be hardcoded, but we could also display a GUI widget to get the info
 		this.settings = new Settings ();
 		this.settings.setDocumentroot ("file:///" +System.getProperty("user.dir").replace ('\\', '/')+"/data/testAbstracts/");
-		this.settings.setOntNamespace ("http://something.somewhere/testontology");
+		this.settings.setOntNamespace ("http://something.somewhere/testontology/");
 	}	// +System.getProperty("user.dir")+"\\testAbstracts\\"
 	
 	public void start () throws URISyntaxException{
@@ -102,8 +102,8 @@ public class OntoLearnApp {
 	protected Ontology getOntology (){
 		if (this.ontology == null){
 			this.ontology = new JenaOntology ();
-			((JenaOntology)this.ontology).setDBInfo (this.getSettings ().getDBinfo ());//TESTME comment out if it generates problems
 			this.ontology.setDefaultNamespace (this.getSettings ().getOntNamespace ());
+			((JenaOntology)this.ontology).setDBInfo (this.getSettings ().getDBinfo ());//TESTME comment out if it generates problems
 		}
 		return this.ontology;
 	}

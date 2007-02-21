@@ -113,7 +113,7 @@ public class JenaOntology implements Ontology {
 			if (this.getDBConnection () == null){
 				this.model = ModelFactory.createOntologyModel (this.getSpecs());
 			}else{
-				ModelMaker maker =  ModelFactory.createModelRDBMaker (this.getDBConnection ());
+				ModelMaker maker = ModelFactory.createModelRDBMaker (this.getDBConnection ());
 				Model base = null;
 				try{
 					base = maker.createModel(this.dbsettings.ontologyname, true);
