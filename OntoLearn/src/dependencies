@@ -3,6 +3,7 @@ Dependencies:
  - JENA, http://jena.sourceforge.net
  - Stanford POS tagger, http://nlp.stanford.edu/software/lex-parser.shtml
  - HSQLDB, http://www.hsqldb.org/
+ - Knowceans corpus base, http://www.arbylon.net/projects/
  
  Added by Nico:
  - Stanford Parser, http://nlp.stanford.edu/software/StanfordParser-2006-06-11.tar.gz
