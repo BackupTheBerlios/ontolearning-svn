@@ -37,13 +37,11 @@ public class OntologyTest {
 		OntClass c2 = test.addOClass ("niets");
 		OntProperty p = test.addObjectProperty ("heeft");
 		
-		p.addDomain (c1);
-		p.setRange (c2);
+		c2.setSuperClass (c1);
 		
 		test.addTriplet (c1, p, c2);
 		
 		System.out.println (test);
-
 	}
 
 }
