@@ -49,7 +49,6 @@ public class StanfordParser implements PartOfSpeechTagger{
 	}
 	
 	public String getRightNP(String myString) {
-		System.out.println("myString: ||" + myString + "||");
 		String myResult = null;		
 		
 		if((myString!=null) && (myString.length()>0)) {

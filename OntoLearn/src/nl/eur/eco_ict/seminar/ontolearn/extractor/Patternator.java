@@ -139,8 +139,8 @@ public class Patternator {
 				foundPairs.put(NP0, cleanNPx);
 				
 				// Display NP0 and NPx (testing)
-				System.out.println("NP0: "+NP0);
-				System.out.println("NPx: "+Arrays.asList(cleanNPx));
+				// System.out.println("NP0: "+NP0);
+				// System.out.println("NPx: "+Arrays.asList(cleanNPx));
 			}
 		}
 		

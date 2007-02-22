@@ -11,6 +11,9 @@ import java.util.List;
 import java.util.Map.Entry;
 import java.io.*;
 
+import com.hp.hpl.jena.ontology.OntClass;
+import com.hp.hpl.jena.ontology.OntProperty;
+
 import nl.eur.eco_ict.seminar.ontolearn.Extractor;
 import nl.eur.eco_ict.seminar.ontolearn.datatypes.Document;
 import nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology;
@@ -58,6 +61,13 @@ public class HearstExtractor implements Extractor {
 				      entry = iterator.next();
 				      String key = entry.getKey();
 				      String[] value = entry.getValue();
+				      
+				      OntClass myKey = ontology.addOClass (key);
+				      
+				      for(int i = 0; i < value.length; i++) {
+						  OntClass myValue = ontology.addOClass (value[i]);						
+						  myValue.setSuperClass (myKey);
+				      }
 				      
 				      // Display NP0 and NPx from foundPatterns (testing)
 				      /*
