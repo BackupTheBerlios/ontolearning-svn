@@ -38,7 +38,9 @@ public class DocumentFile implements Document {
 	 * @throws FileNotFoundException
 	 */
 	public BufferedReader readAbstracts () throws FileNotFoundException {
-		if (this.abstrct == null && this.isRedifDocument ()){
+		// if (this.abstrct == null && this.isRedifDocument ()){
+		// Nico edit: door if abstrct == null zit de StringReader die gereturned word bij de 2e extractor op de EOF en krijgt deze extractor geen data.
+		if (this.isRedifDocument ()){
 			this.extractAbstracts ();
 		}else{
 			this.abstrct = new StringBuffer();

@@ -28,7 +28,10 @@ public class StanfordParser implements PartOfSpeechTagger{
 	
 	public StanfordParser() {
 		String lexParserFile = System.getProperty("user.dir") + File.separatorChar + "data"+File.separatorChar+"stanford"+File.separatorChar+"stanford-parser"+File.separatorChar+"englishPCFG.ser.gz";
-		this.myLexParser = new LexicalizedParser(lexParserFile);		
+		this.myLexParser = new LexicalizedParser(lexParserFile);
+		
+		this.myLexParser.parse("Restrictions");
+		Tree myTree = this.myLexParser.getBestParse();
 	}
 	
 	public String getLeftNP(String myString) {
@@ -46,6 +49,7 @@ public class StanfordParser implements PartOfSpeechTagger{
 	}
 	
 	public String getRightNP(String myString) {
+		System.out.println("myString: ||" + myString + "||");
 		String myResult = null;		
 		
 		if((myString!=null) && (myString.length()>0)) {
