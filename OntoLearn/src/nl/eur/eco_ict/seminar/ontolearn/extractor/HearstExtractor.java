@@ -34,8 +34,9 @@ public class HearstExtractor implements Extractor {
 		System.out.println("HearstExtractor is parsing "+doc.getName ()+".");
 		
 		try {
+			
 			List<String> l = Tokenizer.Factory.getInstance().toSentences(doc.readAbstracts());
-				
+			
 			for (int j = 0, sz = l.size(); j < sz; j++) {
 				  String s =  l.get(j);
 				  // Each sentence in each line in the abstract can now be parsed individually
