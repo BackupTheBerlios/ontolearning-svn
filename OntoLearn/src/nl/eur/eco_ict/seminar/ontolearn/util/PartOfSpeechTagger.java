@@ -11,6 +11,7 @@ package nl.eur.eco_ict.seminar.ontolearn.util;
 import java.util.Map;
 
 import nl.eur.eco_ict.seminar.ontolearn.util.impl.StanfordMaxentPOSTagger;
+import nl.eur.eco_ict.seminar.ontolearn.util.impl.StanfordParser;
 
 /**
  * @author jasper
@@ -36,7 +37,8 @@ public interface PartOfSpeechTagger {
 	 */
 	public final class Factory{
 		protected static PartOfSpeechTagger stanfordTagger = new StanfordMaxentPOSTagger() ;
-		protected static PartOfSpeechTagger defTagger = stanfordTagger;
+		protected static PartOfSpeechTagger stanfordlexer = new StanfordParser();
+		protected static PartOfSpeechTagger defTagger = stanfordlexer;
 		
 		
 		/**
@@ -51,6 +53,10 @@ public interface PartOfSpeechTagger {
 		 */
 		public static PartOfSpeechTagger getStanfordInstance(){
 			return stanfordTagger;
+		}
+		
+		public static PartOfSpeechTagger getStanfordLexer (){
+			return stanfordlexer;
 		}
 	}
 }

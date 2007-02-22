@@ -86,6 +86,7 @@ public class AssociationBasedExtractor implements Extractor {
 			e.printStackTrace ();
 		}
 	}
+	
 	public void add(String word, Document doc) throws SQLException {
 		Occurance oc = new Occurance();
 		oc.word = word;

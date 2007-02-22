@@ -9,7 +9,12 @@
 package nl.eur.eco_ict.seminar.ontolearn.util.impl;
 
 import java.io.File;
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
+
+import nl.eur.eco_ict.seminar.ontolearn.util.PartOfSpeechTagger;
 
 import edu.stanford.nlp.trees.Tree;
 import edu.stanford.nlp.parser.lexparser.LexicalizedParser;
@@ -18,8 +23,8 @@ import edu.stanford.nlp.parser.lexparser.LexicalizedParser;
  * @author Nico
  *
  */
-public class StanfordParser {
-	LexicalizedParser myLexParser;
+public class StanfordParser implements PartOfSpeechTagger{
+	protected LexicalizedParser myLexParser;
 	
 	public StanfordParser() {
 		String lexParserFile = System.getProperty("user.dir") + File.separatorChar + "data"+File.separatorChar+"stanford"+File.separatorChar+"stanford-parser"+File.separatorChar+"englishPCFG.ser.gz";
@@ -112,5 +117,27 @@ public class StanfordParser {
 		}
 		
 		return myResult;
+	}
+
+	/**
+	 * @see nl.eur.eco_ict.seminar.ontolearn.util.PartOfSpeechTagger#tag(java.lang.String)
+	 */
+	public Map<String, String> tag (String sentence) {
+		Tree tree = this.getTree (sentence);
+		Iterator<Tree> i = tree.iterator ();
+		Map<String,String> result = new HashMap<String,String>();
+		while (i.hasNext ()){
+			tree = i.next ();
+			result.put (tree.nodeString (), tree.value ());
+		}
+		return result;
+	}
+
+	/**
+	 * @see nl.eur.eco_ict.seminar.ontolearn.util.PartOfSpeechTagger#tagInternal(java.lang.String)
+	 */
+	public String tagInternal (String sentence) throws Exception {
+		Tree tree = this.getTree (sentence);
+		return tree.pennString ();
 	}
 }

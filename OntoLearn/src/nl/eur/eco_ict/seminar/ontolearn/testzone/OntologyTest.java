@@ -7,10 +7,6 @@
  * 
  */
 package nl.eur.eco_ict.seminar.ontolearn.testzone;
-
-import java.net.MalformedURLException;
-
-import com.hp.hpl.jena.ontology.ObjectProperty;
 import com.hp.hpl.jena.ontology.OntClass;
 import com.hp.hpl.jena.ontology.OntProperty;
 
