@@ -62,6 +62,7 @@ public class AssociationDatabase {
 	public void deleteLessUsedWords() throws SQLException {
 		// get distinct information per word
 		this.stmt.executeUpdate("SELECT `word`, COUNT(`wordcount`) as `wordcount` FROM `association_abstract` GROUP BY `word`");
+		System.out.println ("TEST");
 	}
 	public void test() throws SQLException {
 		ResultSet rs;
