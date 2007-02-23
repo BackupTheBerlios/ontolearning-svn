@@ -76,7 +76,7 @@ public class AssociationBasedExtractor implements Extractor {
 						}
 						else {
 							int ocWordcount = this.getOccurance (test2, doc).wordCount++;
-							waardeDB.addConcept (test2 , doc.toString (), ocWordcount);	
+							waardeDB.addConcept (doc.getName() , test2, ocWordcount);	
 						}
 					}
 				}
