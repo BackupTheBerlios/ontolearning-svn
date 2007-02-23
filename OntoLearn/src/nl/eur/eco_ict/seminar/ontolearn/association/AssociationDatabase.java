@@ -52,14 +52,17 @@ public class AssociationDatabase {
 
 	}
 	public void addConcept(String document, String word, Integer wordCount) throws SQLException {
-		System.out.println ("INSERT INTO `association_abstract` (`document`, `word`, `wordcount`) VALUES('" + document + "','" + word + "', '" + wordCount + "')");
+		// System.out.println ("INSERT INTO `association_abstract` (`document`, `word`, `wordcount`) VALUES('" + document + "','" + word + "', '" + wordCount + "')");
 		this.stmt.executeUpdate("INSERT INTO `association_abstract` (`document`, `word`, `wordcount`) VALUES('" + document + "','" + word + "', '" + wordCount + "')");
 	}
 	public void updateConcept(String document, String word, Integer wordCount) throws SQLException {
-		System.out.println ("UPDATE `association_abstract` SET `wordcount` = '" + wordCount + "' WHERE `document` = '" + document + "' and `word` = '" + word + "'");
+		// System.out.println ("UPDATE `association_abstract` SET `wordcount` = '" + wordCount + "' WHERE `document` = '" + document + "' and `word` = '" + word + "'");
 		this.stmt.executeUpdate("UPDATE `association_abstract` SET `wordcount` = '" + wordCount + "' WHERE `document` = '" + document + "' and `word` = '" + word + "'");
 	}
-
+	public void deleteLessUsedWords() throws SQLException {
+		// get distinct information per word
+		this.stmt.executeUpdate("SELECT `word`, COUNT(`wordcount`) as `wordcount` FROM `association_abstract` GROUP BY `word`");
+	}
 	public void test() throws SQLException {
 		ResultSet rs;
 		try{
