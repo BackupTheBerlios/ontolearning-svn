@@ -11,7 +11,6 @@ package nl.eur.eco_ict.seminar.ontolearn.association;
 import java.sql.*;
 import java.util.Collection;
 import java.util.HashSet;
-import java.util.Iterator;
 /**
  * @author remy
  *
