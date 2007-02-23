@@ -47,7 +47,7 @@ public class AssociationBasedExtractor implements Extractor {
 		System.out.println("Association Rules are parsing "+doc.getName ()+".");
 
 		try {
-			PartOfSpeechTagger posTagger = PartOfSpeechTagger.Factory.getInstance();
+			// PartOfSpeechTagger posTagger = PartOfSpeechTagger.Factory.getInstance();
 			Tokenizer tokenizer = Tokenizer.Factory.getInstance();
 			List<String> myList = tokenizer.toSentences (doc.readAbstracts());
 
