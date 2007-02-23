@@ -27,6 +27,8 @@ public class TestStemmer {
 		System.out.println (word + "-->" + Stemmer.Factory.getInstance().stem (word));
 		word = "economic";
 		System.out.println (word + "-->" + Stemmer.Factory.getInstance().stem (word));
+		word = "economies";
+		System.out.println (word + "-->" + Stemmer.Factory.getInstance().stem (word));
 		word = "went";
 		System.out.println (word + "-->" + Stemmer.Factory.getInstance().stem (word));
 		word = "were";

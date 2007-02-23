@@ -31,12 +31,12 @@ public class OntologyTest {
 		
 		OntClass c1 = test.addOClass ("iets");
 		OntClass c2 = test.addOClass ("niets");
-		OntProperty p = test.addObjectProperty ("heeft");
+		OntProperty p = test.addObjectProperty ("een vorm van");
 		
 		c2.setSuperClass (c1);
 		
 		
-		test.addTriplet (c1, p, c2);
+		test.addTriplet (c2, p, c1);
 		
 		System.out.println (test);
 		

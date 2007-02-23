@@ -314,6 +314,7 @@ public class JenaOntology implements Ontology {
 		}
 		property.setDomain (domain);
 		property.setRange (range);
+		domain.setPropertyValue (property, range);
 	}
 
 
@@ -326,6 +327,7 @@ public class JenaOntology implements Ontology {
 		}
 		property.setDomain (domain);
 		property.setRange (datum);
+		domain.setPropertyValue (property, datum);
 	}
 
 	/**
@@ -342,14 +344,21 @@ public class JenaOntology implements Ontology {
 			return;
 		}
 		if (range instanceof RDFNode){
-			property.setPropertyValue (property, (RDFNode)range);
+			domain.setPropertyValue (property, (RDFNode)range);
 		}
 	}
 	
+	/**
+	 * @see nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology#getClasses()
+	 */
+	@SuppressWarnings("unchecked")
 	public Iterator<OntClass> getClasses (){
 		return this.getModel ().listClasses ();
 	}
 	
+	/**
+	 * @see nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology#getSubClasses(com.hp.hpl.jena.ontology.OntClass)
+	 */
 	public Iterator<OntClass> getSubClasses (OntClass base){
 		Collection<OntClass> classes = new HashSet<OntClass>();
 		OntClass temp = null;
@@ -363,6 +372,14 @@ public class JenaOntology implements Ontology {
 		}
 		
 		return classes.iterator ();
+	}
+
+	/**
+	 * @see nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology#addTriplet(com.hp.hpl.jena.ontology.OntClass, com.hp.hpl.jena.ontology.ObjectProperty, com.hp.hpl.jena.ontology.OntClass, com.hp.hpl.jena.ontology.OntClass)
+	 */
+	public void addTriplet (OntClass domain, ObjectProperty property, OntClass range, OntClass value) {
+		this.addTriplet (domain, property, range);
+		domain.setPropertyValue (property, value);
 	}
 
 

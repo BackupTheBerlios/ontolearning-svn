@@ -23,49 +23,130 @@ public interface Ontology {
 
 // Ontology modification methods
 	// individuals
+	/**
+	 * Create (if non existant) and retrieve a new individual
+	 * @param classname the type of individual
+	 * @param indname the unique value of an individual
+	 * @return a newly created individual of the specified type with the specified value
+	 */
 	public Individual addIndividual (String classname, String indname);
 
+	/**
+	 * Create (if non existant) and retrieve a new individual
+	 * @param oclass
+	 * @param indname
+	 * @return a newly created individual of the specified type with the specified value
+	 */
 	public Individual addIndividual (OntClass oclass, String indname);
 	
+	/**
+	 * @param classname
+	 * @param indname
+	 * @return true if an indivual of the given type and value is present in this ontology
+	 */
 	public boolean containsIndividual (String classname, String indname);
 	
+	/**
+	 * @param oclass
+	 * @param indname
+	 * @return true if an indivual of the given type and value is present in this ontology
+	 */
 	public boolean containsIndividual (OntClass oclass, String indname);
 	
+	/**
+	 * @param classname
+	 * @param indname
+	 * @return retrieve the individual of the given type and value, may return null if such an individual can not be found within the ontology
+	 */
 	public Individual getIndividual (String classname, String indname);
 	
+	/**
+	 * @param oclass
+	 * @param indname
+	 * @return retrieve the individual of the given type and value, may return null if such an individual can not be found within the ontology
+	 */
 	public Individual getIndividual (OntClass oclass, String indname);
 	
 	// Classes
 
+	/**
+	 * Create (if non existant) and retrieve a new concept
+	 * @param namespace
+	 * @param classname
+	 * @return add a new type (concept) to the ontology
+	 */
 	public OntClass addOClass (String namespace, String classname);
 
+	/**
+	 * Create (if non existant) and retrieve a new concept
+	 * @param classname
+	 * @return add a new type (concept) to the ontology, using the default namespace
+	 */
 	public OntClass addOClass (String classname);
 		// TODO Enumerated classes
 		// TODO Intersection class
 		// TODO Union class
 		// TODO Complement class
 	
+	/**
+	 * @param namespace
+	 * @param classname
+	 * @return true if a concept of the given type is contained in this ontology
+	 */
 	public boolean containsOClass (String namespace, String classname);
 	
+	/**
+	 * @param classname
+	 * @return true if a concept of the given type is contained in this ontology
+	 */
 	public boolean containsOClass (String classname);
 
 	public OntClass getOClass (String namespace, String classname);
 
 	public OntClass getOClass (String classname);
 	
+	/**
+	 * @return an iterator over all the concepts present in this ontology
+	 */
 	public Iterator<OntClass> getClasses ();
 	
+	/**
+	 * @param base
+	 * @return an iterator over the classes which subclass the <code>base</code> concept
+	 */
 	public Iterator<OntClass> getSubClasses (OntClass base);
 	
 	
 	// Properties
 	
+	/**
+	 * Create (if non existant) and retrieve a new property which can only be linked to other concepts
+	 * @param namespace
+	 * @param propertyname
+	 * @return an object-property of the given type in the given namespace
+	 */
 	public OntProperty addObjectProperty (String namespace, String propertyname);
 	
+	/**
+	 * Create (if non existant) and retrieve a new property which can only be linked to other concepts
+	 * @param propertyname
+	 * @return an object-property of the given name in the default namespace
+	 */
 	public OntProperty addObjectProperty (String propertyname);
 	
+	/**
+	 * Create (if non existant) and retrieve a new property which can only be linked to primitive datatypes
+	 * @param namespace
+	 * @param propertyname
+	 * @return a data-property of the given name in the given namespace
+	 */
 	public OntProperty addDataProperty (String namespace, String propertyname);
 	
+	/**
+	 * Create (if non existant) and retrieve a new property which can only be linked to primitive datatypes
+	 * @param propertyname
+	 * @return a data-property in the default namespace and with the given name
+	 */
 	public OntProperty addDataProperty (String propertyname);
 	
 	public boolean containsProperty (String namespace, String propertyname);
@@ -78,9 +159,16 @@ public interface Ontology {
 	
 	// Triplets
 	
+	/**
+	 * @param domain
+	 * @param property
+	 * @param range
+	 */
 	public void addTriplet (OntClass domain, OntProperty property, Object range);
 	
 	public void addTriplet (OntClass domain, ObjectProperty property, OntClass range);
+	
+	public void addTriplet (OntClass domain, ObjectProperty property, OntClass range, OntClass value);
 	
 	public void addTriplet (OntClass domain, DatatypeProperty property, Resource datum);
 	
@@ -99,7 +187,13 @@ public interface Ontology {
 	
 	// Settings
 
+	/**
+	 * @param namespace the namespace which is used if none is specified as parameter
+	 */
 	public void setDefaultNamespace (String namespace);
 	
+	/**
+	 * @return the actual model of which this class is a wrapper
+	 */
 	public OntModel getModel ();
 }

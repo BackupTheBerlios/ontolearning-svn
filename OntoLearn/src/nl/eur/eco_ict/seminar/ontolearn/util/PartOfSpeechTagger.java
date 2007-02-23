@@ -21,7 +21,7 @@ public interface PartOfSpeechTagger {
 	
 	/**
 	 * @param sentence
-	 * @return the same sentence only marked up with the relevant tags
+	 * @return the same sentence only marked up with the relevant tags like this example: From/IN the/DT beginning/NN ,/, it/PRP took/VBD a/DT man/NN with/IN extraordinary/JJ qualities/NNS to/TO succeed/VB in/IN Mexico/NNP ,/, "/" says/VBZ Kimihide/NNP Takimura/NNP ,/, president/NN of/IN Mitsui/NNS/NNP group/NN 's/POS Kensetsu/NNP Engineering/NNP Inc./NNP unit/NN ./.
 	 * @throws Exception 
 	 */
 	public String tagInternal (String sentence) throws Exception;
@@ -36,26 +36,31 @@ public interface PartOfSpeechTagger {
 	 * @author jasper
 	 */
 	public final class Factory{
-		protected static PartOfSpeechTagger stanfordTagger = new StanfordMaxentPOSTagger() ;
-		protected static PartOfSpeechTagger stanfordlexer = new StanfordParser();
-		protected static PartOfSpeechTagger defTagger = stanfordlexer;
+		protected static PartOfSpeechTagger stanfordTagger = null;
+		protected static PartOfSpeechTagger stanfordlexer = null;
 		
 		
 		/**
 		 * @return a default part of speech tagger
 		 */
 		public static PartOfSpeechTagger getInstance(){
-			return defTagger;
+			return getStanfordLexer();
 		}
 		
 		/**
 		 * @return a part of speech tagger provided by stanford 
 		 */
 		public static PartOfSpeechTagger getStanfordInstance(){
+			if (stanfordTagger == null){
+				stanfordTagger = new StanfordMaxentPOSTagger() ;
+			}
 			return stanfordTagger;
 		}
 		
 		public static PartOfSpeechTagger getStanfordLexer (){
+			if (stanfordlexer == null){
+				stanfordlexer = new StanfordParser();
+			}
 			return stanfordlexer;
 		}
 	}
