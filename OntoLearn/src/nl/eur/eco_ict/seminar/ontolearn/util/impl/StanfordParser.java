@@ -27,9 +27,6 @@ public class StanfordParser implements PartOfSpeechTagger {
 				+ File.separatorChar + "stanford-parser" + File.separatorChar
 				+ "englishPCFG.ser.gz";
 		this.myLexParser = new LexicalizedParser (lexParserFile);
-
-		this.myLexParser.parse ("Restrictions");
-		Tree myTree = this.myLexParser.getBestParse ();
 	}
 
 	public String getLeftNP (String myString) {
