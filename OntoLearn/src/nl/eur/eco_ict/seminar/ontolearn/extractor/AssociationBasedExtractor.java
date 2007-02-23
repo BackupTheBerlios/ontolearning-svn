@@ -116,7 +116,7 @@ public class AssociationBasedExtractor implements Extractor {
 	public void conceptsToDatabase () {
 		// AssociationDatabase waardeDB = new AssociationDatabase();
 		// waardeDB.addConcepts ();
-		System.out.println (this.tostring ());
+		// System.out.println (this.tostring ());
 	}
 
 	/**
