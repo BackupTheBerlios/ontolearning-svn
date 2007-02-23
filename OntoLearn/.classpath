@@ -31,6 +31,6 @@
 	<classpathentry kind="var" path="JAVA_USER_LIBRARIES/knowceans-corpusbase/20060805/lib/knowceans-tools.jar"/>
 	<classpathentry kind="var" path="JAVA_USER_LIBRARIES/knowceans-corpusbase/20060805/knowceans-corpus-base.jar"/>
 	<classpathentry kind="var" path="JAVA_USER_LIBRARIES/knowceans-corpusbase/20060805/lib/lucene-core-2.0.1-dev.jar"/>
-	<classpathentry kind="var" path="JAVA_USER_LIBRARIES/mysql-connector/5.0.4/mysql-connector-java-5.0.4/mysql-connector-java-5.0.4-bin.jar"/>
+	<classpathentry kind="var" path="JAVA_USER_LIBRARIESS/mysql-connector/5.0.4/mysql-connector-java-5.0.4/mysql-connector-java-5.0.4-bin.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
