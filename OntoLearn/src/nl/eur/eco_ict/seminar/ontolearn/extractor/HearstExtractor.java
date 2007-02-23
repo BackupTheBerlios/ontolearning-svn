@@ -62,13 +62,17 @@ public class HearstExtractor implements Extractor {
 				      String key = entry.getKey();
 				      String[] value = entry.getValue();
 				      
-				      System.out.println("Adding the following key: "+key);
-				      
-				      OntClass myKey = ontology.addOClass (key);
-				      
-				      for(int i = 0; i < value.length; i++) {
-						  OntClass myValue = ontology.addOClass (value[i]);						
-						  myValue.setSuperClass (myKey);
+				      if(checkNP(key)) {
+				    	  System.out.println("Adding the following key: "+key);
+					      
+					      OntClass myKey = ontology.addOClass (key);
+					      
+					      for(int i = 0; i < value.length; i++) {
+					    	  if(checkNP(value[i])) {
+						    	  OntClass myValue = ontology.addOClass (value[i]);						
+								  myValue.setSuperClass (myKey);
+					    	  }
+					      }
 				      }
 				      
 				      // Display NP0 and NPx from foundPatterns (testing)
@@ -83,6 +87,17 @@ public class HearstExtractor implements Extractor {
 		catch (IOException e) {
 			System.out.println("Error: "+e);
 		}
+	}
+	
+	public boolean checkNP (String myNP) {
+		boolean correctNP = true;
+		
+		if((myNP==null) || (myNP.compareTo("null")==0) || (myNP.compareTo("")==0)) {
+			correctNP = false;
+			System.out.println("wrong NP found!: "+myNP);
+		}
+		
+		return correctNP;
 	}
 
 }

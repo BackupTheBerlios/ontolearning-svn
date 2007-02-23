@@ -70,7 +70,7 @@ public class AssociationBasedExtractor implements Extractor {
 					if (oneWordPOS.contains ("/NN") ) {
 						int endWordPosition = oneWordPOS.indexOf ("/");
 						String test = oneWordPOS.substring (0, endWordPosition);
-						String test2 = test.toLowerCase ();
+						String test2 = test.toLowerCase ().replaceAll("\\x5C", "");
 						if (this.getOccurance (test2, doc) == null) {
 							this.add (test2, doc);
 						}
