@@ -61,8 +61,19 @@ public class AssociationDatabase {
 	}
 	public void deleteLessUsedWords() throws SQLException {
 		// get distinct information per word
-		this.stmt.executeUpdate("SELECT `word`, COUNT(`wordcount`) as `wordcount` FROM `association_abstract` GROUP BY `word`");
-		System.out.println ("TEST");
+		ResultSet rs;
+		
+		rs = this.stmt.executeQuery("SELECT `word`, COUNT(`wordcount`) as `wordcount` FROM `association_abstract` GROUP BY `word`");
+		System.out.println("Display all results:");
+		while(rs.next()){
+			if (rs.getInt("wordcount") < 2) {
+				System.out.println(rs.getString("word"));
+				this.deleteAllKindOfWord (rs.getString("word"));
+			}
+		}
+	}
+	public void deleteAllKindOfWord(String word) throws SQLException {
+		this.stmt.executeUpdate("DELETE FROM `association_abstract` WHERE `word` = '" + word + "'");		
 	}
 	public void test() throws SQLException {
 		ResultSet rs;
