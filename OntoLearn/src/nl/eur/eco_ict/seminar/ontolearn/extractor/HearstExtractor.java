@@ -62,6 +62,8 @@ public class HearstExtractor implements Extractor {
 				      String key = entry.getKey();
 				      String[] value = entry.getValue();
 				      
+				      System.out.println("Adding the following key: "+key);
+				      
 				      OntClass myKey = ontology.addOClass (key);
 				      
 				      for(int i = 0; i < value.length; i++) {

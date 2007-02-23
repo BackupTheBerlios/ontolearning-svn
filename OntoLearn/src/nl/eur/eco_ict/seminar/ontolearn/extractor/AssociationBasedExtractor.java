@@ -15,6 +15,7 @@ import nl.eur.eco_ict.seminar.ontolearn.association.AssociationDatabase;
 import nl.eur.eco_ict.seminar.ontolearn.datatypes.Document;
 import nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology;
 import nl.eur.eco_ict.seminar.ontolearn.util.PartOfSpeechTagger;
+import nl.eur.eco_ict.seminar.ontolearn.util.impl.StanfordMaxentPOSTagger;
 import nl.eur.eco_ict.seminar.ontolearn.util.Tokenizer;
 
 import edu.stanford.nlp.ling.Sentence;
@@ -35,6 +36,7 @@ public class AssociationBasedExtractor implements Extractor {
 
 	protected Collection <Occurance> occuranceMatrix = new HashSet<Occurance>();
 	AssociationDatabase waardeDB = new AssociationDatabase();
+	PartOfSpeechTagger myTagger = new StanfordMaxentPOSTagger();
 	
 	/**
 	 * @see nl.eur.eco_ict.seminar.ontolearn.Extractor#parse(nl.eur.eco_ict.seminar.ontolearn.datatypes.Document, nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology)
@@ -52,13 +54,14 @@ public class AssociationBasedExtractor implements Extractor {
 			for (int x = 0, mySize = myList.size(); x < mySize; x++) {
 				String mySentence = myList.get(x);
 				// System.out.println ("mySentence: "+mySentence);
-				String myPOSString = posTagger.tagInternal(mySentence);
-
+				// String myPOSString = posTagger.tagInternal(mySentence);
 				// System.out.println ("mySentence: "+ myPOSString);
 				
 				
 				// System.out.println(posTagger.tagInternal(mySentence.toString()) + " \r\n");
-				String y = posTagger.tagInternal(mySentence.toString());
+				// String y = posTagger.tagInternal(mySentence.toString());
+				// Kleine edit van nico:
+				String y = this.myTagger.tagInternal(mySentence);
 				
 				Scanner scanner = new Scanner ( y ).useDelimiter("\\s");
 				
