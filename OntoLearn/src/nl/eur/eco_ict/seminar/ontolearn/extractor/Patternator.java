@@ -8,7 +8,6 @@
  */
 package nl.eur.eco_ict.seminar.ontolearn.extractor;
 
-import java.util.Arrays;
 import java.io.*;
 import java.util.regex.*;
 import java.util.ArrayList;
@@ -22,7 +21,7 @@ import nl.eur.eco_ict.seminar.ontolearn.util.impl.StanfordParser;
  */
 public class Patternator {
 	private static String PATTERNSFILE =  System.getProperty("user.dir") + "/data/patterns/patterns.txt";
-    ArrayList patterns;
+    ArrayList<String> patterns;
     StanfordParser myStanfordParser;
     
 	public Patternator() {
@@ -34,14 +33,14 @@ public class Patternator {
 	    
 	    File patternsFile = new File(PATTERNSFILE);
 	    
-	    patterns = new ArrayList(100);
+	    this.patterns = new ArrayList(100);
 	    
 	    try {
 	    	br = new BufferedReader(new FileReader(patternsFile));
 	    
 		    while ((line = br.readLine()) != null) {
 		    	// load each pattern into the ArrayList
-		    	patterns.add(line);
+		    	this.patterns.add(line);
 			}
 	    }
 		catch(IOException e) {
@@ -57,7 +56,7 @@ public class Patternator {
 		String regSpacer = "((, {1,}+)|( {1,}+))";		
 		
 		for ( int i=0; i<this.patterns.size (); i++ ) {
-			String pattern = (String)this.patterns.get(i);
+			String pattern = this.patterns.get(i);
 
 			pattern = pattern.replaceAll("NP0", regNP0);
 			pattern = pattern.replaceAll("NPx", regNPx);
@@ -78,7 +77,7 @@ public class Patternator {
 				
 				String regBrackets = "((\\x28{1})([a-zA-Z0-9 ]+)+(\\x29{1}))";
 				
-				String usedPattern = (String)patterns.get(i);	
+				String usedPattern = this.patterns.get(i);	
 				
 				Pattern p2 = Pattern.compile(regBrackets);
 				Matcher m2 = p2.matcher(usedPattern);

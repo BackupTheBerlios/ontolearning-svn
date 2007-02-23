@@ -3,7 +3,6 @@
  */
 package nl.eur.eco_ict.seminar.ontolearn.extractor;
 
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -12,12 +11,12 @@ import java.util.Map.Entry;
 import java.io.*;
 
 import com.hp.hpl.jena.ontology.OntClass;
-import com.hp.hpl.jena.ontology.OntProperty;
+// Not used, removable?
+// import com.hp.hpl.jena.ontology.OntProperty;
 
 import nl.eur.eco_ict.seminar.ontolearn.Extractor;
 import nl.eur.eco_ict.seminar.ontolearn.datatypes.Document;
 import nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology;
-import nl.eur.eco_ict.seminar.ontolearn.util.PartOfSpeechTagger;
 import nl.eur.eco_ict.seminar.ontolearn.util.Tokenizer;
 
 /**
