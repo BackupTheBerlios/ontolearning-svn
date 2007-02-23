@@ -33,9 +33,7 @@ public class HearstExtractor implements Extractor {
 	/**
 	 * @see nl.eur.eco_ict.seminar.ontolearn.Extractor#parse(nl.eur.eco_ict.seminar.ontolearn.datatypes.Document, nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology)
 	 */
-	public void parse (Document doc, Ontology ontology) {
-		System.out.println("HearstExtractor is parsing "+doc.getName ()+".");
-		
+	public void parse (Document doc, Ontology ontology) throws Throwable {
 		try {
 			
 			List<String> l = Tokenizer.Factory.getInstance().toSentences(doc.readAbstracts());
@@ -88,6 +86,16 @@ public class HearstExtractor implements Extractor {
 			System.out.println("Error: "+e);
 		}
 	}
+	/**
+	 * @see nl.eur.eco_ict.seminar.ontolearn.Extractor#getName()
+	 */
+	public String getName () {
+		return "Hearst extractor";
+	}
+	/**
+	 * @see nl.eur.eco_ict.seminar.ontolearn.Extractor#onFinish(nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology)
+	 */
+	public void onFinish (Ontology ontology) {}
 	
 	public boolean checkNP (String myNP) {
 		boolean correctNP = true;
