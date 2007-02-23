@@ -3,7 +3,6 @@
  */
 package nl.eur.eco_ict.seminar.ontolearn;
 
-import java.io.File;
 import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.HashSet;
@@ -22,91 +21,121 @@ import nl.eur.eco_ict.seminar.ontolearn.util.impl.PrunerStub;
 
 /**
  * @author Jasper
- *
  */
 public class OntoLearnApp {
 	private DocumentCrawler crawler = null;
+
 	private Collection<Extractor> extractors = null;
+
 	private Pruner pruner = null;
+
 	private Settings settings = null;
+
 	private Ontology ontology = null;
 
-	protected OntoLearnApp (){}
-	
+	protected OntoLearnApp () {}
+
 	/**
 	 * @param args
-	 * @throws URISyntaxException 
+	 * @throws URISyntaxException
 	 */
-	public static void main(String[] args) throws URISyntaxException {
-		OntoLearnApp app = new OntoLearnApp();
-		app.retrieveSettings();
-		app.start();
+	public static void main (String[] args) throws URISyntaxException {
+		OntoLearnApp app = new OntoLearnApp ();
+		app.retrieveSettings ();
+		app.start ();
 	}
-	
-	public void retrieveSettings (){
-		// at the moment it needs to be hardcoded, but we could also display a GUI widget to get the info
+
+	public void retrieveSettings () {
+		// at the moment it needs to be hardcoded, but we could also display a
+		// GUI widget to get the info
 		this.settings = new Settings ();
-		this.settings.setDocumentroot ("file:///" +System.getProperty("user.dir").replace ('\\', '/')+"/data/testAbstracts/");
-		this.settings.setOntNamespace ("http://something.somewhere/testontology/");
-	}	// +System.getProperty("user.dir")+"\\testAbstracts\\"
-	
+		this.settings.setDocumentroot ("file:///"
+				+ System.getProperty ("user.dir").replace ('\\', '/')
+				+ "/data/testAbstracts/");
+		this.settings
+				.setOntNamespace ("http://something.somewhere/testontology/");
+	} // +System.getProperty("user.dir")+"\\testAbstracts\\"
+
 	public void start () throws URISyntaxException{
 		Document doc = null;
+		Extractor e = null;
+		Iterator<Extractor> i = null;
 		
 		// See if there's anything to process
 		while (this.getCrawler().hasNext () && (doc=this.getCrawler ().getNext ())!= null){
-			Iterator<Extractor> i = this.getExtractors ().iterator ();
+			i = this.getExtractors ().iterator ();
 			while(i.hasNext()){
 				// Let each extractor process the document
-				i.next().parse(doc, this.getOntology ());
+				e = i.next ();
+				try{
+					System.out.println(e.getName () + " is processing " + doc.getName ());
+					e.parse(doc, this.getOntology ());
+				}catch (Throwable t){
+					System.err.println (e.getName () + " messed up while processing "+doc.getName ()+":");
+					t.printStackTrace ();
+				}
 			}
 			// after all extractors have processed the document clean up
 			this.getPruner ().prune(this.getOntology ());
 		}
 		
+		// Once all documents have been processed call the onFinish method to allow them to clean up, write the last data to the ontology etc.
+		i = this.getExtractors ().iterator ();
+		while(i.hasNext()){
+			e = i.next ();
+			try{
+			e.onFinish (this.getOntology ());
+			}catch (Throwable t){
+				System.err.println (e.getName () + " messed up:");
+				t.printStackTrace ();
+			}
+		}
+		
 		// Output ontology
 		System.out.println (this.getOntology ().toString ());
 	}
-	
-	protected DocumentCrawler getCrawler () throws URISyntaxException{
-		if (this.crawler == null){
-			this.crawler = new DiskCrawler (this.getSettings().getDocumentroot ());
+
+	protected DocumentCrawler getCrawler () throws URISyntaxException {
+		if (this.crawler == null) {
+			this.crawler = new DiskCrawler (this.getSettings ()
+					.getDocumentroot ());
 		}
 		return this.crawler;
 	}
-	
-	protected Settings getSettings (){
-		if (this.settings == null){
+
+	protected Settings getSettings () {
+		if (this.settings == null) {
 			this.retrieveSettings ();
 		}
 		return this.settings;
 	}
-	
-	protected Collection<Extractor> getExtractors (){
-		if (this.extractors == null){
-			this.extractors = new HashSet<Extractor>();
-			this.extractors.add (new HearstExtractor());
-			this.extractors.add (new AssociationBasedExtractor());
-			//extend list if new Extractors are created
+
+	protected Collection<Extractor> getExtractors () {
+		if (this.extractors == null) {
+			this.extractors = new HashSet<Extractor> ();
+			this.extractors.add (new HearstExtractor ());
+			this.extractors.add (new AssociationBasedExtractor ());
+			// extend list if new Extractors are created
 		}
 		return this.extractors;
 	}
-	
-	protected Pruner getPruner (){
-		if (this.pruner == null){
-			this.pruner = new PrunerStub();//TODO create a pruner
+
+	protected Pruner getPruner () {
+		if (this.pruner == null) {
+			this.pruner = new PrunerStub ();// TODO create a pruner
 		}
 		return this.pruner;
 	}
-	
-	protected Ontology getOntology (){
-		if (this.ontology == null){
+
+	protected Ontology getOntology () {
+		if (this.ontology == null) {
 			this.ontology = new JenaOntology ();
-			this.ontology.setDefaultNamespace (this.getSettings ().getOntNamespace ());
-			((JenaOntology)this.ontology).setDBInfo (this.getSettings ().getDBinfo ());//TESTME comment out if it generates problems
+			this.ontology.setDefaultNamespace (this.getSettings ()
+					.getOntNamespace ());
+			((JenaOntology) this.ontology).setDBInfo (this.getSettings ()
+					.getDBinfo ());
 		}
 		return this.ontology;
 	}
-	
 
 }

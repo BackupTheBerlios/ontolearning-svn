@@ -52,7 +52,7 @@ public class Settings {
 	
 	public String getOntNamespace (){
 		if (this.ontNamespace == null){
-			this.ontNamespace = "";
+			this.ontNamespace = "http://someplace.somewhere/someontology/";
 		}
 		return this.ontNamespace;
 	}
