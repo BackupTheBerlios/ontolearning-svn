@@ -12,3 +12,6 @@ Dependencies:
  - MySQL Connector, http://www.mysql.com/products/connector/j/
  - MySQL Database, http://www.mysql.com
  
+ Added by Hesing:
+ - Weka 3.4 http://www.cs.waikato.ac.nz/ml/weka/
+ - Weka-src 3.4 http://www.cs.waikato.ac.nz/ml/weka/
