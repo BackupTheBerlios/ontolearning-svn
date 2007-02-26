@@ -53,10 +53,85 @@ public class Patternator {
 		}
 	}
 	
+	public boolean isKnownPattern(String myString, String NP0, String NPx) {
+		boolean isKnownPattern = false;
+		
+		String regNP0 = "([a-zA-Z0-9\\- ]+)";
+		String regNPx = "(([a-zA-Z0-9\\- ]+)(, [a-zA-Z0-9\\- ]+)*( and [a-zA-Z0-9\\- ]*)*)";
+		String regSpacer = "((, {1,}+)|( , {1,}+)|( {1,}+))";
+		
+		for ( int i=0; i<this.patterns.size (); i++ ) {
+			String pattern = this.patterns.get(i);
+
+			pattern = pattern.replaceAll("NP0", regNP0);
+			pattern = pattern.replaceAll("NPx", regNPx);
+			pattern = pattern.replaceAll(":connector:", regSpacer);
+			
+			Pattern p = Pattern.compile(pattern);
+			
+			// Create Matcher:
+			Matcher m = p.matcher(myString);
+		
+			// Loop the matcher for matches
+			if(m.find()) {
+				isKnownPattern = true;
+			}
+			
+		}
+		
+		return isKnownPattern;
+	}
+	
+	public void addPattern(String newPattern) {
+		// Add pattern to currently loaded patterns:
+		this.patterns.add(newPattern);
+		
+		// Add pattern to the patterns.txt file:
+		try {
+			File f = new File(PATTERNSFILE);
+	        
+	        if(f.exists())
+	        {
+	            long fileLength = f.length();
+	            RandomAccessFile raf = new RandomAccessFile(f, "rw");
+	            raf.seek(fileLength);
+	            
+	            raf.writeBytes(newPattern);
+	            
+	            raf.close(); 
+	        }
+		}
+		catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		System.out.println("Patternator: Added pattern: "+newPattern);
+	}
+	
+	public void identifyUnknownPattern(String myString, String NP0, String NPx) {
+		String newPattern = null;
+		
+		if(myString.indexOf(NP0) < myString.indexOf(NPx)) {
+			// Pattern: NP0 --> pattern word (like, such as, etc..) --> NPx
+			newPattern = myString.substring(myString.indexOf(NP0) + NP0.length(), myString.indexOf(NPx)).trim().replaceAll(", ","");
+			newPattern = "NP0:connector:("+newPattern+"):connector:NPx";
+		}
+		else {
+			// Pattern: NPX --> pattern word (like, such as, etc..) --> NP0
+			newPattern = myString.substring(myString.indexOf(NP0) + NP0.length(), myString.indexOf(NPx)).trim().replaceAll(", ","");
+			newPattern = "NPx:connector:("+newPattern+"):connector:NP0";
+		}
+		
+		addPattern(newPattern);
+	}
+	
 	public void stripNewPattern(String myString, String className, String subClassName) {
-		System.out.println("className: "+className+" --> subClass: "+subClassName);
-		System.out.println("found in: "+myString);
-		System.out.println();
+		if(!isKnownPattern(myString, className, subClassName)) {
+			System.out.println("className: "+className+" --> subClass: "+subClassName);
+			System.out.println("UNKNOWN PATTERN: "+myString);
+			identifyUnknownPattern(myString, className, subClassName);
+			System.out.println();
+		}
 	}
 	
 	public void scanNewPatterns(String myString, Ontology myOntology) {
