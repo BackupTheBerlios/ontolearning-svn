@@ -88,8 +88,48 @@ public class AssociationDatabase {
 			this.deleteAllKindOfWord (iWord[k]);
 		}
 	}
+	public String[] getSignificantWordsPerDocument() throws SQLException {
+		String[] documentString = null;
+		ResultSet rs;
+	
+		
+		int i = 0;
+		rs = this.stmt.executeQuery("SELECT DISTINCT `document` FROM `association_abstract` ");
+		while(rs.next()) {
+			i = i + 1;
+		}
+		documentString = new String [i];
+		int j = 0;
+		rs.first ();
+		while(rs.next()) {
+				documentString[j] = rs.getString("document");
+				j = j + 1;
+		}
+		for (int k = 0; k < documentString.length ; k++) {
+			System.out.println(documentString[k]);
+			this.getAllWordsPerDocument(documentString[k]);
+		}
+		
+		return documentString;
+	}
 	public void deleteAllKindOfWord(String word) throws SQLException {
 		this.stmt.executeUpdate("DELETE FROM `association_abstract` WHERE `word` = '" + word + "'");		
+	}
+	public void getAllWordsPerDocument(String document) throws SQLException {
+		ResultSet rs;
+		int i = 0;
+		String resultString = new String();
+		// int totalWordcount = 0;
+
+		rs = this.stmt.executeQuery("SELECT `word`,`wordcount` FROM `association_abstract` WHERE `document` = '" +  document + "'");
+		while(rs.next()) {
+			i = i + 1;
+			if (rs.getInt ("wordcount") > 6) {
+				resultString = resultString + ", " + rs.getString("word");
+				// System.out.println("Word: " + rs.getString("word") + ", #: " + rs.getInt ("wordcount"));
+			}
+		}
+		System.out.println("Relation between: " + resultString);	
 	}
 	public void test() throws SQLException {
 		ResultSet rs;
