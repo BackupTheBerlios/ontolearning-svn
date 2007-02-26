@@ -96,7 +96,7 @@ public class Patternator {
 	            RandomAccessFile raf = new RandomAccessFile(f, "rw");
 	            raf.seek(fileLength);
 	            
-	            raf.writeBytes(newPattern);
+	            raf.writeBytes("\r\n"+newPattern);
 	            
 	            raf.close(); 
 	        }
@@ -118,7 +118,7 @@ public class Patternator {
 		}
 		else {
 			// Pattern: NPX --> pattern word (like, such as, etc..) --> NP0
-			newPattern = myString.substring(myString.indexOf(NP0) + NP0.length(), myString.indexOf(NPx)).trim().replaceAll(", ","");
+			newPattern = myString.substring(myString.indexOf(NPx) + NPx.length(), myString.indexOf(NP0)).trim().replaceAll(", ","");
 			newPattern = "NPx:connector:("+newPattern+"):connector:NP0";
 		}
 		
