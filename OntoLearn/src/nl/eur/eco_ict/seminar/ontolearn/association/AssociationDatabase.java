@@ -117,19 +117,29 @@ public class AssociationDatabase {
 	}
 	public void getAllWordsPerDocument(String document) throws SQLException {
 		ResultSet rs;
+		ResultSet rsAvg;
+		
 		int i = 0;
+		int avgWordCount = 0;
+		
 		String resultString = new String();
 		// int totalWordcount = 0;
-
-		rs = this.stmt.executeQuery("SELECT `word`,`wordcount` FROM `association_abstract` WHERE `document` = '" +  document + "'");
-		while(rs.next()) {
-			i = i + 1;
-			if (rs.getInt ("wordcount") > 6) {
-				resultString = resultString + ", " + rs.getString("word");
-				// System.out.println("Word: " + rs.getString("word") + ", #: " + rs.getInt ("wordcount"));
-			}
+		rsAvg = this.stmt.executeQuery("SELECT MAX( `wordcount` ) as wc FROM `association_abstract` WHERE `document` = '" +  document + "'");
+		while (rsAvg.next ()) {
+			avgWordCount = avgWordCount + rsAvg.getInt ("wc");
 		}
-		System.out.println("Relation between: " + resultString);	
+		if (avgWordCount > 1) {
+			rs = this.stmt.executeQuery("SELECT `word`,`wordcount` FROM `association_abstract` WHERE `document` = '" +  document + "'");
+
+			while(rs.next()) {
+				i = i + 1;
+				if (rs.getInt ("wordcount") > ( avgWordCount - (avgWordCount * 0.35))) {
+					resultString = resultString + ", " + rs.getString("word");
+					// System.out.println("Word: " + rs.getString("word") + ", #: " + rs.getInt ("wordcount"));
+				}
+			}
+			System.out.println("Relation between: " + resultString + " : Max Wordcount = " + avgWordCount );	
+		}
 	}
 	public void test() throws SQLException {
 		ResultSet rs;
