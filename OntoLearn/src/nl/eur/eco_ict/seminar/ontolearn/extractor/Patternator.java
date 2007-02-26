@@ -11,8 +11,13 @@ package nl.eur.eco_ict.seminar.ontolearn.extractor;
 import java.io.*;
 import java.util.regex.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Iterator;
 
+import com.hp.hpl.jena.ontology.OntClass;
+
+import nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology;
 import nl.eur.eco_ict.seminar.ontolearn.util.impl.StanfordParser;
 /**
  * @author Nico Vaatstra
@@ -45,6 +50,41 @@ public class Patternator {
 	    }
 		catch(IOException e) {
 			System.out.println("ERROR: IOException"+e);
+		}
+	}
+	
+	public void stripNewPattern(String myString, String className, String subClassName) {
+		System.out.println("className: "+className+" --> subClass: "+subClassName);
+		System.out.println("found in: "+myString);
+		System.out.println();
+	}
+	
+	public void scanNewPatterns(String myString, Ontology myOntology) {
+		Iterator<OntClass> myClasses = myOntology.getClasses ();
+		Iterator<OntClass> mySubClasses = null;
+		OntClass tempClass = null;
+		OntClass tempSubClass = null;
+		String className = null;
+		String subClassName = null;
+		
+		if(myClasses != null) {
+			while(myClasses.hasNext ()) {
+				tempClass = myClasses.next ();
+				className = tempClass.getURI().replaceAll("http://someplace.somewhere/someontology/", "");
+				
+				if((myString.contains(className)) && (tempClass != null) && (tempClass.hasSubClass())) {
+					mySubClasses = tempClass.listSubClasses();	
+					
+					while(mySubClasses.hasNext ()) {
+						tempSubClass = mySubClasses.next ();
+						subClassName = tempSubClass.getURI().replaceAll("http://someplace.somewhere/someontology/", "");
+						
+						if(myString.contains(subClassName)) {
+							stripNewPattern(myString, className, subClassName);
+						}
+					}
+				}
+			}
 		}
 	}
 	
@@ -138,8 +178,8 @@ public class Patternator {
 				foundPairs.put(NP0, cleanNPx);
 				
 				// Display NP0 and NPx (testing)
-				// System.out.println("NP0: "+NP0);
-				// System.out.println("NPx: "+Arrays.asList(cleanNPx));
+				System.out.println("NP0: "+NP0);
+				System.out.println("NPx: "+Arrays.asList(cleanNPx));
 			}
 		}
 		

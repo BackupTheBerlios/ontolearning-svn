@@ -79,6 +79,8 @@ public class HearstExtractor implements Extractor {
 					  */
 					  
 				  }
+				  
+				  this.myPatternator.scanNewPatterns(s, ontology);
 			}
 		}
 		catch (IOException e) {
