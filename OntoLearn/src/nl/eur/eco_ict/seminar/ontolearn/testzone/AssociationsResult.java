@@ -9,11 +9,16 @@ public class AssociationsResult{
 	public static void main (String args[] ) throws SQLException{
 		AssociationsResult associationresult = new AssociationsResult();
 		associationresult.deleteUselessResults ();
+		associationresult.getSignificantWordsPerDocument();
+		
 	}
 	public void AssocationResult() throws SQLException {
 		this.deleteUselessResults();	 
 	}
 	public void deleteUselessResults() throws SQLException {
 		this.waardeDB.deleteLessUsedWords ();
+	}
+	public void getSignificantWordsPerDocument() throws SQLException {
+		this.waardeDB.getSignificantWordsPerDocument ();
 	}
 }
