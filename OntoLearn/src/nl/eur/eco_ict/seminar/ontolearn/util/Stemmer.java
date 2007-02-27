@@ -9,6 +9,7 @@
 package nl.eur.eco_ict.seminar.ontolearn.util;
 
 import nl.eur.eco_ict.seminar.ontolearn.util.impl.EnglishStemmerKnowceans;
+import nl.eur.eco_ict.seminar.ontolearn.util.impl.WordnetStemmer;
 
 /**
  * @author Jasper
@@ -27,13 +28,20 @@ public interface Stemmer {
 	 * @author Jasper
 	 */
 	public final class Factory {
-		protected static Stemmer defStem = new EnglishStemmerKnowceans ();
-		
+	
 		/**
 		 * @return a default stemmer
 		 */
 		public static Stemmer getInstance (){
-			return defStem;
+			return getJwordnetStemmer ();
+		}
+		
+		public static Stemmer getJwordnetStemmer (){
+			return WordnetStemmer.get();
+		}
+		
+		public static Stemmer getKnowceansEnglishStemmer (){
+			return new EnglishStemmerKnowceans ();
 		}
 	}
 }
