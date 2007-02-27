@@ -11,11 +11,11 @@ import nl.eur.eco_ict.seminar.ontolearn.association.Occurance;
 import nl.eur.eco_ict.seminar.ontolearn.association.AssociationDatabase;
 import nl.eur.eco_ict.seminar.ontolearn.datatypes.Document;
 import nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology;
+import nl.eur.eco_ict.seminar.ontolearn.testzone.AssociationsResult;
 import nl.eur.eco_ict.seminar.ontolearn.util.PartOfSpeechTagger;
 import nl.eur.eco_ict.seminar.ontolearn.util.Tokenizer;
-
-import java.io.BufferedReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -29,24 +29,15 @@ public class AssociationBasedExtractor implements Extractor {
 	protected Collection<Occurance> occuranceMatrix = new HashSet<Occurance> ();
 
 	AssociationDatabase waardeDB = new AssociationDatabase ();
-	
 	/**
 	 * @see nl.eur.eco_ict.seminar.ontolearn.Extractor#parse(nl.eur.eco_ict.seminar.ontolearn.datatypes.Document,
 	 *      nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology)
 	 */
 	public void parse (Document doc, Ontology ontology) throws Throwable {
-		Iterator<BufferedReader> abstracts = doc.readAbstracts ().iterator ();
-		while(abstracts.hasNext()){
-			this.parse (abstracts.next(), doc, ontology);
-		}
-	}
-	
-	
-	protected void parse (BufferedReader reader, Document doc, Ontology ontology) throws Throwable {
 		try {
-			PartOfSpeechTagger posTagger = PartOfSpeechTagger.Factory.getInstance ();
+			PartOfSpeechTagger posTagger = PartOfSpeechTagger.Factory.getStanfordInstance();
 			Tokenizer tokenizer = Tokenizer.Factory.getInstance ();
-			List<String> myList = tokenizer.toSentences (reader);
+			List<String> myList = tokenizer.toSentences (doc.readAbstracts ());
 
 			for (int x = 0, mySize = myList.size (); x < mySize; x++) {
 				String mySentence = myList.get (x);
@@ -137,8 +128,44 @@ public class AssociationBasedExtractor implements Extractor {
 		return "Association based extractor";
 	}
 
+	
+	protected double correlation (String wordX, String wordY) throws SQLException{
+		double avgx = this.waardeDB.getAvgWord (wordX);
+		double avgy = this.waardeDB.getAvgWord (wordY);
+		
+		double result =0;
+		// Laad data in CorrOcc data structuur
+		List<CorrOcc> data = new ArrayList<CorrOcc>();
+		
+		Iterator<CorrOcc> i = data.iterator ();
+		CorrOcc current = null;
+		double teller=0, noemerx=0, noemery=0, noemer=0;
+		
+		while (i.hasNext()){
+			current  = i.next ();
+			teller += (current.xcount - avgx) * (current.ycount - avgy);
+			noemerx += Math.pow (current.xcount - avgx, 2);
+			noemery += Math.pow (current.ycount - avgy, 2);
+		}
+		
+		noemer = Math.sqrt (noemerx*noemery);
+			
+		result = teller / noemer;
+			
+		return result;
+	}
+	
+	protected class CorrOcc{
+		int xcount =0;
+		int ycount =0;
+	}
+	
+	
 	/**
 	 * @see nl.eur.eco_ict.seminar.ontolearn.Extractor#onFinish(nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology)
 	 */
-	public void onFinish (Ontology ontology) {}
+	public void onFinish (Ontology ontology) {
+		AssociationsResult endResults = new AssociationsResult();
+		// endResults.
+	}
 }
