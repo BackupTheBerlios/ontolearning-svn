@@ -4,14 +4,9 @@ Dependencies:
  - Stanford POS tagger, http://nlp.stanford.edu/software/lex-parser.shtml
  - HSQLDB, http://www.hsqldb.org/
  - Knowceans corpus base, http://www.arbylon.net/projects/
- 
- Added by Nico:
  - Stanford Parser, http://nlp.stanford.edu/software/StanfordParser-2006-06-11.tar.gz
- 
- Added by Remy:
  - MySQL Connector, http://www.mysql.com/products/connector/j/
  - MySQL Database, http://www.mysql.com
- 
- Added by Hesing:
  - Weka 3.4 http://www.cs.waikato.ac.nz/ml/weka/
  - Weka-src 3.4 http://www.cs.waikato.ac.nz/ml/weka/
+ - JWordnet, http://sourceforge.net/projects/jwordnet/
