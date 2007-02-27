@@ -11,9 +11,12 @@ import nl.eur.eco_ict.seminar.ontolearn.association.Occurance;
 import nl.eur.eco_ict.seminar.ontolearn.association.AssociationDatabase;
 import nl.eur.eco_ict.seminar.ontolearn.datatypes.Document;
 import nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology;
+import nl.eur.eco_ict.seminar.ontolearn.datatypes.impl.CorrOcc;
 import nl.eur.eco_ict.seminar.ontolearn.testzone.AssociationsResult;
 import nl.eur.eco_ict.seminar.ontolearn.util.PartOfSpeechTagger;
 import nl.eur.eco_ict.seminar.ontolearn.util.Tokenizer;
+
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -33,11 +36,20 @@ public class AssociationBasedExtractor implements Extractor {
 	 * @see nl.eur.eco_ict.seminar.ontolearn.Extractor#parse(nl.eur.eco_ict.seminar.ontolearn.datatypes.Document,
 	 *      nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology)
 	 */
+	
 	public void parse (Document doc, Ontology ontology) throws Throwable {
+		Iterator<BufferedReader> abstracts = doc.readAbstracts ().iterator ();
+		while(abstracts.hasNext()){
+			this.parse (abstracts.next(), ontology, doc);
+		}
+	}
+	
+	protected void parse (BufferedReader reader, Ontology ontology, Document doc) throws Throwable {
 		try {
 			PartOfSpeechTagger posTagger = PartOfSpeechTagger.Factory.getStanfordInstance();
 			Tokenizer tokenizer = Tokenizer.Factory.getInstance ();
-			List<String> myList = tokenizer.toSentences (doc.readAbstracts ());
+			// List<String> myList = tokenizer.toSentences (doc.readAbstracts());
+			List<String> myList = tokenizer.toSentences(reader);
 
 			for (int x = 0, mySize = myList.size (); x < mySize; x++) {
 				String mySentence = myList.get (x);
@@ -129,13 +141,13 @@ public class AssociationBasedExtractor implements Extractor {
 	}
 
 	
-	protected double correlation (String wordX, String wordY) throws SQLException{
+	protected double correlation (String wordX, String wordY) throws SQLException {
 		double avgx = this.waardeDB.getAvgWord (wordX);
 		double avgy = this.waardeDB.getAvgWord (wordY);
 		
 		double result =0;
 		// Laad data in CorrOcc data structuur
-		List<CorrOcc> data = new ArrayList<CorrOcc>();
+		List<CorrOcc> data = this.waardeDB.getCorrOcc(wordX, wordY);
 		
 		Iterator<CorrOcc> i = data.iterator ();
 		CorrOcc current = null;
@@ -143,9 +155,9 @@ public class AssociationBasedExtractor implements Extractor {
 		
 		while (i.hasNext()){
 			current  = i.next ();
-			teller += (current.xcount - avgx) * (current.ycount - avgy);
-			noemerx += Math.pow (current.xcount - avgx, 2);
-			noemery += Math.pow (current.ycount - avgy, 2);
+			teller += (current.getXCount() - avgx) * (current.getYCount() - avgy);
+			noemerx += Math.pow (current.getXCount() - avgx, 2);
+			noemery += Math.pow (current.getYCount() - avgy, 2);
 		}
 		
 		noemer = Math.sqrt (noemerx*noemery);
@@ -155,17 +167,26 @@ public class AssociationBasedExtractor implements Extractor {
 		return result;
 	}
 	
-	protected class CorrOcc{
-		int xcount =0;
-		int ycount =0;
-	}
-	
 	
 	/**
 	 * @see nl.eur.eco_ict.seminar.ontolearn.Extractor#onFinish(nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology)
 	 */
 	public void onFinish (Ontology ontology) {
-		AssociationsResult endResults = new AssociationsResult();
-		// endResults.
+		// AssociationsResult endResults = new AssociationsResult();
+		
+		System.out.println("Running onFinish() for the Association-based extractor.");
+		
+		try {
+			// Test: Check the correlation between "workers" and "growth":
+			double testResult = correlation("workers", "growth");
+			System.out.println("Correlation between workers and growth: "+testResult);
+
+			// Test: Check the correlation between "monkeys" and "growth":
+			testResult = correlation("monkeys", "growth");
+			System.out.println("Correlation between monkeys and growth: "+testResult);
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }
