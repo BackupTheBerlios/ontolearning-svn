@@ -29,13 +29,22 @@ public class HearstExtractor implements Extractor {
 	public HearstExtractor() {
 		this.myPatternator = new Patternator();
 	}
+	
+	
 	/**
 	 * @see nl.eur.eco_ict.seminar.ontolearn.Extractor#parse(nl.eur.eco_ict.seminar.ontolearn.datatypes.Document, nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology)
 	 */
 	public void parse (Document doc, Ontology ontology) throws Throwable {
+		Iterator<BufferedReader> abstracts = doc.readAbstracts ().iterator ();
+		while(abstracts.hasNext()){
+			this.parse (abstracts.next(), ontology);
+		}
+	}
+	
+	
+	protected void parse (BufferedReader reader, Ontology ontology) throws Throwable {
 		try {
-			
-			List<String> l = Tokenizer.Factory.getInstance().toSentences(doc.readAbstracts());
+			List<String> l = Tokenizer.Factory.getInstance().toSentences(reader);
 			
 			for (int j = 0, sz = l.size(); j < sz; j++) {
 				  String s =  l.get(j);
@@ -83,7 +92,7 @@ public class HearstExtractor implements Extractor {
 				  this.myPatternator.scanNewPatterns(s, ontology);
 			}
 		}
-		catch (IOException e) {
+		catch (Exception e) {
 			System.out.println("Error: "+e);
 		}
 	}
