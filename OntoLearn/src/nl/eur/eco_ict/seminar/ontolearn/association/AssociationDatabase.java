@@ -252,12 +252,38 @@ public class AssociationDatabase {
 		CorrOcc tempCorrOcc = null;
 		
 		while (rsOccurence.next ()) {
-			if((rsOccurence.getString("document").compareTo(tempCorrOcc.getDocument())!=0)) {
-				// Last occurence was not the same doc, we can commit the previous CorrOcc:
-				if(tempCorrOcc!=null) {
-					data.add(tempCorrOcc);
+			if(tempCorrOcc!=null) {
+				if((rsOccurence.getString("document").compareTo(tempCorrOcc.getDocument())!=0)) {
+					// Last occurence was not the same doc, we can commit the previous CorrOcc:
+					if(tempCorrOcc!=null) {
+						data.add(tempCorrOcc);
+					}
+					
+					// Make a new CorrOcc:
+					tempCorrOcc = new CorrOcc();
+					tempCorrOcc.setDocument(rsOccurence.getString("document"));
+					
+					if(rsOccurence.getString("word").compareTo(wordX)==0) {
+						// We are processing an occurence of wordX:
+						tempCorrOcc.setXCount(rsOccurence.getInt("wordcount"));
+					}
+					else {
+						// We are processing an occurence of wordY:
+						tempCorrOcc.setYCount(rsOccurence.getInt("wordcount"));
+					}	
 				}
-				
+				else {
+					if(rsOccurence.getString("word").compareTo(wordX)==0) {
+						// We are processing an occurence of wordX:
+						tempCorrOcc.setXCount(rsOccurence.getInt("wordcount"));
+					}
+					else {
+						// We are processing an occurence of wordY:
+						tempCorrOcc.setYCount(rsOccurence.getInt("wordcount"));
+					}
+				}	
+			}
+			else {
 				// Make a new CorrOcc:
 				tempCorrOcc = new CorrOcc();
 				tempCorrOcc.setDocument(rsOccurence.getString("document"));
@@ -271,16 +297,6 @@ public class AssociationDatabase {
 					tempCorrOcc.setYCount(rsOccurence.getInt("wordcount"));
 				}	
 			}
-			else {
-				if(rsOccurence.getString("word").compareTo(wordX)==0) {
-					// We are processing an occurence of wordX:
-					tempCorrOcc.setXCount(rsOccurence.getInt("wordcount"));
-				}
-				else {
-					// We are processing an occurence of wordY:
-					tempCorrOcc.setYCount(rsOccurence.getInt("wordcount"));
-				}
-			}			
 		}
 		
 		return data;
