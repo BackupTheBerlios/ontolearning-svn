@@ -18,6 +18,7 @@ import java.util.Iterator;
 import com.hp.hpl.jena.ontology.OntClass;
 
 import nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology;
+import nl.eur.eco_ict.seminar.ontolearn.util.PartOfSpeechTagger;
 import nl.eur.eco_ict.seminar.ontolearn.util.impl.StanfordParser;
 /**
  * @author Nico Vaatstra
@@ -32,7 +33,7 @@ public class Patternator {
     
 	public Patternator() {
 		// Loading of the patterns from file etc. will start here.
-		this.myStanfordParser = new StanfordParser();
+		this.myStanfordParser = (StanfordParser)PartOfSpeechTagger.Factory.getStanfordLexer ();
 		
 	    BufferedReader br;
 	    String line;
