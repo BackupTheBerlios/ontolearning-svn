@@ -141,6 +141,30 @@ public class AssociationDatabase {
 			System.out.println("Relation between: " + resultString + " : Max Wordcount = " + avgWordCount );	
 		}
 	}
+	public double getAvgWord(String word) throws SQLException {
+		ResultSet rsAvg;
+		
+		double avgWordCount = Double.NaN;
+		
+		// int totalWordcount = 0;
+		rsAvg = this.stmt.executeQuery("SELECT AVG( `wordcount` ) as avgwc FROM `association_abstract` WHERE `word` = '" + word + "'");
+		while (rsAvg.next ()) {
+			avgWordCount = rsAvg.getDouble ("avgwc");
+		}
+		return avgWordCount;
+	}
+	public double getWordcountPerDocument(String word, String document) throws SQLException {
+		ResultSet rsAvg;
+		
+		double wordCount = Double.NaN;
+		
+		// int totalWordcount = 0;
+		rsAvg = this.stmt.executeQuery("SELECT `wordcount` FROM `association_abstract` WHERE `word` = '" + word + "' and `document` = '" + document + "'");
+		while (rsAvg.next ()) {
+			wordCount = rsAvg.getDouble ("wordcount");
+		}
+		return wordCount;
+	}
 	public void test() throws SQLException {
 		ResultSet rs;
 		
