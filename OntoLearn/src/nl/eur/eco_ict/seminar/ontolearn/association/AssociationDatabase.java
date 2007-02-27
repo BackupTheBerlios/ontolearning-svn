@@ -255,6 +255,8 @@ public class AssociationDatabase {
 			if(tempCorrOcc!=null) {
 				if((rsOccurence.getString("document").compareTo(tempCorrOcc.getDocument())!=0)) {
 					// Last occurence was not the same doc, we can commit the previous CorrOcc:
+					
+					// Gooit hier een nullpointer exception
 					if(tempCorrOcc!=null) {
 						data.add(tempCorrOcc);
 					}
