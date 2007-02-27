@@ -13,6 +13,8 @@ import nl.eur.eco_ict.seminar.ontolearn.datatypes.Document;
 import nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology;
 import nl.eur.eco_ict.seminar.ontolearn.util.PartOfSpeechTagger;
 import nl.eur.eco_ict.seminar.ontolearn.util.Tokenizer;
+
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.Collection;
 import java.util.HashSet;
@@ -27,15 +29,24 @@ public class AssociationBasedExtractor implements Extractor {
 	protected Collection<Occurance> occuranceMatrix = new HashSet<Occurance> ();
 
 	AssociationDatabase waardeDB = new AssociationDatabase ();
+	
 	/**
 	 * @see nl.eur.eco_ict.seminar.ontolearn.Extractor#parse(nl.eur.eco_ict.seminar.ontolearn.datatypes.Document,
 	 *      nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology)
 	 */
 	public void parse (Document doc, Ontology ontology) throws Throwable {
+		Iterator<BufferedReader> abstracts = doc.readAbstracts ().iterator ();
+		while(abstracts.hasNext()){
+			this.parse (abstracts.next(), doc, ontology);
+		}
+	}
+	
+	
+	protected void parse (BufferedReader reader, Document doc, Ontology ontology) throws Throwable {
 		try {
 			PartOfSpeechTagger posTagger = PartOfSpeechTagger.Factory.getInstance ();
 			Tokenizer tokenizer = Tokenizer.Factory.getInstance ();
-			List<String> myList = tokenizer.toSentences (doc.readAbstracts ());
+			List<String> myList = tokenizer.toSentences (reader);
 
 			for (int x = 0, mySize = myList.size (); x < mySize; x++) {
 				String mySentence = myList.get (x);
