@@ -75,20 +75,21 @@ public class OntoLearnApp {
 					t.printStackTrace ();
 				}
 			}
+			// Once all documents have been processed call the onFinish method to allow them to clean up, write the last data to the ontology etc.
+			if (!i.hasNext ()){
+				i = this.getExtractors ().iterator ();
+				while(i.hasNext()){
+					e = i.next ();
+					try{
+					e.onFinish (this.getOntology ());
+					}catch (Throwable t){
+						System.err.println (e.getName () + " messed up:");
+						t.printStackTrace ();
+					}
+				}
+			}
 			// after all extractors have processed the document clean up
 			this.getPruner ().prune(this.getOntology ());
-		}
-		
-		// Once all documents have been processed call the onFinish method to allow them to clean up, write the last data to the ontology etc.
-		i = this.getExtractors ().iterator ();
-		while(i.hasNext()){
-			e = i.next ();
-			try{
-			e.onFinish (this.getOntology ());
-			}catch (Throwable t){
-				System.err.println (e.getName () + " messed up:");
-				t.printStackTrace ();
-			}
 		}
 		
 		// Output ontology

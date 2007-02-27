@@ -67,6 +67,10 @@ public interface Ontology {
 	 */
 	public Individual getIndividual (OntClass oclass, String indname);
 	
+	public Iterator<Individual> getIndividuals ();
+	
+	public void remove (Individual ind);
+	 
 	// Classes
 
 	/**
@@ -104,6 +108,10 @@ public interface Ontology {
 	public OntClass getOClass (String namespace, String classname);
 
 	public OntClass getOClass (String classname);
+	
+	public void remove (OntClass oclass);
+	
+	public void removeOClass (String classname); 
 	
 	/**
 	 * @return an iterator over all the concepts present in this ontology

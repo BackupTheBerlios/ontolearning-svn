@@ -382,5 +382,32 @@ public class JenaOntology implements Ontology {
 		domain.setPropertyValue (property, value);
 	}
 
+	/**
+	 * @see nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology#remove(com.hp.hpl.jena.ontology.OntClass)
+	 */
+	public void remove (OntClass oclass) {
+		oclass.remove();
+	}
 
+	/**
+	 * @see nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology#removeOClass(java.lang.String)
+	 */
+	public void removeOClass (String classname) {
+		this.remove (this.getOClass (classname));
+	}
+
+	/**
+	 * @see nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology#getIndividuals()
+	 */
+	@SuppressWarnings("unchecked")
+	public Iterator<Individual> getIndividuals () {
+		return this.getModel ().listIndividuals ();
+	}
+
+	/**
+	 * @see nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology#remove(com.hp.hpl.jena.ontology.Individual)
+	 */
+	public void remove (Individual ind) {
+		ind.remove ();
+	}
 }

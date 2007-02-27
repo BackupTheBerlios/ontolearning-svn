@@ -5,9 +5,12 @@
 package nl.eur.eco_ict.seminar.ontolearn.util.impl;
 
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.Iterator;
 
+import com.hp.hpl.jena.ontology.Individual;
 import com.hp.hpl.jena.ontology.OntClass;
+import com.hp.hpl.jena.rdf.model.Resource;
 
 import nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology;
 import nl.eur.eco_ict.seminar.ontolearn.util.Pruner;
@@ -37,15 +40,17 @@ public class PrunerStub implements Pruner {
 		 * algorithm begins with an initial ontology O0 which is exactly Ob
 		 * (that is, O0 := Ob) and obtains OP. The steps are:
 		 */
-		// - Pruning irrelevant concepts and constraints. The result is the
-		// ontology O1.
-		this.pruneIrrelevantConcepts (ontology, cdi);
-		// - Pruning unnecessary parents. The result is the ontology O2.
-		this.pruneUnnecessaryParents (ontology, cdi);
-		// - Pruning unnecessary generalization paths. The result
-		this.pruneUnnecessaryGeneralizationPaths (ontology, cdi);
-		// - Pruning orphan individuals. The result is OP.
-		this.pruneOrphanIndividuals (ontology);
+		if (!cdi.isEmpty ()) {
+			// - Pruning irrelevant concepts and constraints. The result is the
+			// ontology O1.
+			this.pruneIrrelevantConcepts (ontology, cdi);
+			// - Pruning unnecessary parents. The result is the ontology O2.
+			this.pruneUnnecessaryParents (ontology, cdi);
+			// - Pruning unnecessary generalization paths. The result
+			this.pruneUnnecessaryGeneralizationPaths (ontology, cdi);
+			// - Pruning orphan individuals. The result is OP.
+			this.pruneOrphanIndividuals (ontology);
+		}
 	}
 
 	public void setCDISelector (ConceptsOfInterestSelection cdis) {
@@ -60,12 +65,17 @@ public class PrunerStub implements Pruner {
 		Iterator<OntClass> i = ontology.getClasses ();
 		OntClass oc = null;
 		String lemma = null;
-		
-		while(i.hasNext()){
-			// TODO check/debug
-			oc = i.next();
-			lemma = Stemmer.Factory.getInstance ().stem(oc.getLocalName ());
-			oc.setLabel (lemma, null);
+
+		while (i.hasNext ()) {
+			try {
+				// TODO check/debug
+				oc = i.next ();
+				lemma = Stemmer.Factory.getInstance ()
+						.stem (oc.getLocalName ());
+				oc.setLabel (lemma, null);
+			} catch (Exception e) {
+				System.err.println (e.getMessage ());
+			}
 		}
 	}
 
@@ -88,7 +98,21 @@ public class PrunerStub implements Pruner {
 	 */
 	protected void pruneIrrelevantConcepts (Ontology ontology,
 			Collection<OntClass> cdi) {
+		Iterator<OntClass> i = ontology.getClasses ();
+		Collection<OntClass> toRemove = new HashSet<OntClass> ();
+		OntClass current = null;
 
+		while (i.hasNext ()) {
+			current = i.next ();
+			if (!cdi.contains (current)) {
+				toRemove.add (current);
+			}
+		}
+
+		i = toRemove.iterator ();
+		while (i.hasNext ()) {
+			ontology.remove (i.next ());
+		}
 	}
 
 	/**
@@ -142,8 +166,27 @@ public class PrunerStub implements Pruner {
 	 * deleted as well.
 	 * @param ontology
 	 */
+	@SuppressWarnings("unchecked")
 	protected void pruneOrphanIndividuals (Ontology ontology) {
-
+		Iterator<Individual> i = ontology.getIndividuals();
+		Collection<Individual> toRemove = new HashSet<Individual>();
+		Individual ind = null;
+		
+		while (i.hasNext ()){
+			ind = i.next ();
+			try{
+			if (ind.getIsDefinedBy () == null){
+				toRemove.add (ind);
+			}
+			}catch(Exception e){
+				// System.err.println (e.getMessage());
+			}
+		}
+		
+		i = toRemove.iterator ();
+		while (i.hasNext ()){
+			ontology.remove (i.next ());
+		}
 	}
 
 	/**
