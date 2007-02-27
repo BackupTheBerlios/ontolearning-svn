@@ -10,6 +10,7 @@ package nl.eur.eco_ict.seminar.ontolearn.datatypes;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.util.Collection;
 
 /**
  * 
@@ -31,5 +32,5 @@ public interface Document {
 	 * @return a buffered reader over this documents abstracts if any.
 	 * @throws IOException
 	 */
-	public BufferedReader readAbstracts ()throws IOException;
+	public Collection<BufferedReader> readAbstracts ()throws IOException;
 }

@@ -9,6 +9,9 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.StringReader;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Iterator;
 
 import nl.eur.eco_ict.seminar.ontolearn.datatypes.Document;
 
@@ -19,8 +22,8 @@ import nl.eur.eco_ict.seminar.ontolearn.datatypes.Document;
  */
 public class DocumentFile implements Document {
 	private File file = null;
-
-	private StringBuffer abstrct = null;
+	
+	private Collection<String> abstracts = null;
 
 	public DocumentFile (File f) {
 		this.file = f;
@@ -38,15 +41,26 @@ public class DocumentFile implements Document {
 	 * @return the abstracts contained in this document (file)
 	 * @throws IOException
 	 */
-	public BufferedReader readAbstracts () throws IOException {
-		if (this.abstrct == null && this.isRedifDocument ()) {
+	public Collection<BufferedReader> readAbstracts () throws IOException {
+		if (this.getAbstracts ().isEmpty () && this.isRedifDocument ()) {
 			this.extractAbstracts ();
 		} else {
-			if (this.abstrct == null) {
-				this.abstrct = new StringBuffer ();
+			if (this.getAbstracts ().isEmpty ()) {
+				this.getAbstracts ().add ("");
 			}
 		}
-		return new BufferedReader (new StringReader (this.abstrct.toString ()));
+		return this.toReader (this.getAbstracts ());
+	}
+	
+	protected Collection<BufferedReader> toReader (Collection<String> strings){
+		Collection<BufferedReader> result = new HashSet<BufferedReader> ();
+		Iterator<String> i = strings.iterator ();
+		
+		while(i.hasNext()){
+			result.add (new BufferedReader(new StringReader (i.next())));
+		}
+		
+		return result;
 	}
 
 	/**
@@ -86,23 +100,29 @@ public class DocumentFile implements Document {
 	protected void extractAbstracts () throws FileNotFoundException {
 		final String abstractHeader = "Abstract:";
 		final String regEndAbstract = "^([a-zA-Z\\x2D]+)(\\x3A{1})( )(.)*$";
-		this.abstrct = new StringBuffer ();
+		StringBuffer abstrct = new StringBuffer ();
 		BufferedReader br = new BufferedReader (new FileReader (this.file));
 		String line = null;
 		boolean extract = false;
 
 		try {
 			while ((line = br.readLine ()) != null) {
+				
+				// check if an abstract is being read and whether it is the last line of the abstract
 				if (extract && line.matches (regEndAbstract)) {
 					extract = false;
+					this.getAbstracts ().add (abstrct.toString ());
 				}
+				// if an abstract is being read add the line
 				if (extract) {
-					this.abstrct.append (line.trim () + " ");
+					abstrct.append (line.trim () + " ");
 				}
+				// check when not currently reading an abstract if one is starting
 				if (!extract && line.startsWith (abstractHeader)) {
 					extract = true; // take the next lines
+					abstrct = new StringBuffer ();
 					if (line.length () > 9) {
-						this.abstrct.append (line
+						abstrct.append (line
 								.substring (10, line.length ()).trim ()
 								+ " ");
 					}
@@ -111,5 +131,12 @@ public class DocumentFile implements Document {
 		} catch (Exception e) {
 			e.printStackTrace ();
 		}
+	}
+	
+	protected Collection<String> getAbstracts (){
+		if (this.abstracts == null){
+			this.abstracts = new HashSet<String>();
+		}
+		return this.abstracts;
 	}
 }
