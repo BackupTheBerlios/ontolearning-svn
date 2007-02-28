@@ -144,6 +144,8 @@ public class AssociationBasedExtractor implements Extractor {
 	protected double correlation (String wordX, String wordY) throws SQLException {
 		double avgx = this.waardeDB.getAvgWord (wordX);
 		double avgy = this.waardeDB.getAvgWord (wordY);
+		// double docx = this.waardeDB.getWordcountPerDocument(wordX, doc);
+		// double docy = this.waardeDB.getWordcountPerDocument(wordY, doc);
 		
 		double result =0;
 		// Laad data in CorrOcc data structuur
@@ -173,7 +175,6 @@ public class AssociationBasedExtractor implements Extractor {
 	 */
 	public void onFinish (Ontology ontology) {
 		// AssociationsResult endResults = new AssociationsResult();
-		
 		System.out.println("Running onFinish() for the Association-based extractor.");
 		
 		try {
