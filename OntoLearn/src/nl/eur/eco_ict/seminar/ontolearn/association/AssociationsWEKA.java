@@ -9,10 +9,10 @@
 package nl.eur.eco_ict.seminar.ontolearn.association;
 
 import nl.eur.eco_ict.seminar.ontolearn.extractor.*;
-import weka.associations.*;
+/*import weka.associations.*;
 import weka.core.Instances;
 import weka.experiment.InstanceQuery;
-import weka.core.Instances;
+import weka.core.Instances;*/
 import java.io.BufferedReader;
 import java.io.FileReader;
 

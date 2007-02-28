@@ -10,3 +10,4 @@ Dependencies:
  - Weka 3.4 http://www.cs.waikato.ac.nz/ml/weka/
  - Weka-src 3.4 http://www.cs.waikato.ac.nz/ml/weka/
  - JWordnet, http://sourceforge.net/projects/jwordnet/
+ - Wordnet 2.0, http://wordnet.princeton.edu/oldversions

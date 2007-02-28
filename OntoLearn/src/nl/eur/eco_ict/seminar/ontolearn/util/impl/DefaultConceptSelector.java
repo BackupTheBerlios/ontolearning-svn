@@ -9,6 +9,7 @@
 package nl.eur.eco_ict.seminar.ontolearn.util.impl;
 
 import java.util.Collection;
+import java.util.HashSet;
 
 import nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology;
 
@@ -24,8 +25,9 @@ public class DefaultConceptSelector implements ConceptsOfInterestSelection {
 	 * @see nl.eur.eco_ict.seminar.ontolearn.util.impl.ConceptsOfInterestSelection#getConceptsOfInterest(nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology)
 	 */
 	public Collection<OntClass> getConceptsOfInterest (Ontology ontology) {
+		Collection<OntClass> cdi = new HashSet<OntClass> ();
 		// TODO Auto-generated method stub
-		return null;
+		return cdi;
 	}
 
 }

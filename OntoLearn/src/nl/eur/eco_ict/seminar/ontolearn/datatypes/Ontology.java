@@ -109,6 +109,8 @@ public interface Ontology {
 
 	public OntClass getOClass (String classname);
 	
+	public void replace (OntClass original, OntClass replacement);
+	
 	public void remove (OntClass oclass);
 	
 	public void removeOClass (String classname); 

@@ -73,6 +73,9 @@ public class PrunerStub implements Pruner {
 				lemma = Stemmer.Factory.getInstance ()
 						.stem (oc.getLocalName ());
 				oc.setLabel (lemma, null);
+				if (!lemma.equals (oc.getLocalName ())) {
+					ontology.replace (oc, ontology.getOClass (lemma));
+				}
 			} catch (Exception e) {
 				System.err.println (e.getMessage ());
 			}
@@ -168,23 +171,23 @@ public class PrunerStub implements Pruner {
 	 */
 	@SuppressWarnings("unchecked")
 	protected void pruneOrphanIndividuals (Ontology ontology) {
-		Iterator<Individual> i = ontology.getIndividuals();
-		Collection<Individual> toRemove = new HashSet<Individual>();
+		Iterator<Individual> i = ontology.getIndividuals ();
+		Collection<Individual> toRemove = new HashSet<Individual> ();
 		Individual ind = null;
-		
-		while (i.hasNext ()){
+
+		while (i.hasNext ()) {
 			ind = i.next ();
-			try{
-			if (ind.getIsDefinedBy () == null){
-				toRemove.add (ind);
-			}
-			}catch(Exception e){
+			try {
+				if (ind.getIsDefinedBy () == null) {
+					toRemove.add (ind);
+				}
+			} catch (Exception e) {
 				// System.err.println (e.getMessage());
 			}
 		}
-		
+
 		i = toRemove.iterator ();
-		while (i.hasNext ()){
+		while (i.hasNext ()) {
 			ontology.remove (i.next ());
 		}
 	}

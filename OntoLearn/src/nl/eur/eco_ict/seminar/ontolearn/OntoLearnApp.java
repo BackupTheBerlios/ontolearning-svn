@@ -77,7 +77,7 @@ public class OntoLearnApp {
 			}
 			
 			// after all extractors have processed the document clean up
-			// this.getPruner ().prune(this.getOntology ());
+			this.getPruner ().prune(this.getOntology ());
 		}
 		
 		// Once all documents have been processed call the onFinish method to allow them to clean up, write the last data to the ontology etc.

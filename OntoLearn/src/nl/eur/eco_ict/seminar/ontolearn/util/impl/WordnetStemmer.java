@@ -1,10 +1,6 @@
 /**
- * OntoLearn a seminar project of:
- * - Remy Stibbe
- * - Hesing Kuo
- * - Nico Vaatstra
- * - Jasper Voskuilen
- * 
+ * OntoLearn a seminar project of: - Remy Stibbe - Hesing Kuo - Nico Vaatstra -
+ * Jasper Voskuilen
  */
 package nl.eur.eco_ict.seminar.ontolearn.util.impl;
 
@@ -22,26 +18,39 @@ import nl.eur.eco_ict.seminar.ontolearn.util.Stemmer;
 
 /**
  * @author Jasper
- *
  */
 public class WordnetStemmer implements Stemmer, Lemmatizer {
 	protected static WordnetStemmer stemmer = null;
-	protected final String propfile = "data"+File.separatorChar+"wordnet"+File.separatorChar+"properties.xml";
-	
+
+	protected final String propfile = "data" + File.separatorChar + "wordnet"
+			+ File.separatorChar + "properties.xml";
+
+	protected Dictionary dict = null;
+
 	protected WordnetStemmer () {
-		
-		try {
-			JWNL.initialize(new FileInputStream(this.propfile));
-		} catch (FileNotFoundException e) {
-			System.err.println ("Error accessing the jwordnet properties file: " + this.propfile);
-			e.printStackTrace();
-		} catch (JWNLException e) {
-			e.printStackTrace();
+		if (!JWNL.isInitialized ()){
+			this.init ();
 		}
 	}
 	
-	public static WordnetStemmer get (){
-		if (stemmer == null){
+	public void init (){
+		java.util.Locale.setDefault (java.util.Locale.ENGLISH);
+
+		try {
+			JWNL.initialize (new FileInputStream (this.propfile));
+			this.dict = Dictionary.getInstance ();
+		} catch (FileNotFoundException e) {
+			System.err
+					.println ("Error accessing the jwordnet properties file: "
+							+ this.propfile);
+			e.printStackTrace ();
+		} catch (JWNLException e) {
+			e.printStackTrace ();
+		}
+	}
+
+	public static WordnetStemmer get () {
+		if (stemmer == null) {
 			stemmer = new WordnetStemmer ();
 		}
 		return stemmer;
@@ -50,16 +59,36 @@ public class WordnetStemmer implements Stemmer, Lemmatizer {
 	/**
 	 * @see nl.eur.eco_ict.seminar.ontolearn.util.Stemmer#stem(java.lang.String)
 	 */
-	public String stem (String word){
-		IndexWord iword;
-		try {
-			iword = Dictionary.getInstance().getIndexWord (POS.NOUN, word);
-			return iword.getLemma ();
-		} 
-		catch (JWNLException e) {
-			e.printStackTrace();
+	public String stem (String word) {
+		final POS[] types = new POS[]{POS.NOUN, POS.VERB, POS.ADVERB, POS.ADJECTIVE};
+		String result = null;
+		
+		for (int i = 0; i < types.length && result == null; i++){
+			try{
+				result = this.getLemma (word, types[i]);
+				if (result.equals (word)){
+					result = null;
+				}
+			}catch(Exception e){
+				result = null;
+			}
 		}
-		return word;
+		if (result == null){
+			result = word;
+		}
+
+		return result;
+	}
+	
+	protected String getLemma (String word, POS pos) throws Exception{
+		IndexWord iword;
+		
+		if (!JWNL.isInitialized ()){
+			this.init ();
+		}
+		
+		iword = this.dict.lookupIndexWord (pos,word);
+		return iword.getLemma ();
 	}
 
 	/**

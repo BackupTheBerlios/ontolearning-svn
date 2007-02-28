@@ -23,6 +23,7 @@ import com.hp.hpl.jena.ontology.OntClass;
 import com.hp.hpl.jena.ontology.OntModel;
 import com.hp.hpl.jena.ontology.OntModelSpec;
 import com.hp.hpl.jena.ontology.OntProperty;
+import com.hp.hpl.jena.rdf.model.Literal;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.ModelMaker;
@@ -409,5 +410,28 @@ public class JenaOntology implements Ontology {
 	 */
 	public void remove (Individual ind) {
 		ind.remove ();
+	}
+
+	/**
+	 * @see nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology#replace(com.hp.hpl.jena.ontology.OntClass, com.hp.hpl.jena.ontology.OntClass)
+	 */
+	@SuppressWarnings("unchecked")
+	public void replace (OntClass original, OntClass replacement) {
+		Iterator i = original.listComments (null);
+		while(i.hasNext ()){
+			replacement.addComment ((Literal)i.next ());
+		}
+		i = original.listSubClasses ();
+		while(i.hasNext ()){
+			replacement.addSubClass ((Resource)i.next ());
+		}
+		i = original.listSuperClasses ();
+		while(i.hasNext ()){
+			replacement.addSuperClass ((Resource)i.next ());
+		}
+		
+		// TODO Add the other data
+		
+		original.remove();
 	}
 }
