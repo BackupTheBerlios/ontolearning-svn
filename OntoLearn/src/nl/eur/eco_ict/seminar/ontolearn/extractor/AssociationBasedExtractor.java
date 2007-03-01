@@ -233,9 +233,20 @@ public class AssociationBasedExtractor implements Extractor {
 		}
 		try {
 			for (int k = 0; k < documentString.length ; k++) {
-				System.out.println(documentString[k]);
-				this.waardeDB.getAllWordsPerDocument(documentString[k]);
+				wordsPerDocument = this.waardeDB.getAllWordsPerDocument(documentString[k]);
+				
+				for (int i = 0; i < wordsPerDocument.length; i++) {
+					if (wordsPerDocument[i] != null) {
+						for (int l = i + 1; l < wordsPerDocument.length ; l++) {
+							if (wordsPerDocument[l] != null) {
+								System.out.println("'" + wordsPerDocument[i] + " - " + wordsPerDocument[l] + "'");
+							}
+						}
+					}
+				}
+				
 			}
+
 			// Test: Check the correlation between "workers" and "growth":
 			double testResult = correlation("workers", "growth");
 			System.out.println("Correlation between workers and growth: "+testResult);
