@@ -26,7 +26,7 @@ public class corrTester {
 		Ontology ontology = new JenaOntology ();
 		AssociationBasedExtractor testDB = new AssociationBasedExtractor();
 		
-		testDB.onFinish(ontology);
+		// testDB.onFinish(ontology);
 		
 		try {
 			double test = testDB.getCorrelation("workers", "growth");
