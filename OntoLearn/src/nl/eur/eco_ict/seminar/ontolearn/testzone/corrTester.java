@@ -11,6 +11,7 @@ package nl.eur.eco_ict.seminar.ontolearn.testzone;
 import nl.eur.eco_ict.seminar.ontolearn.extractor.AssociationBasedExtractor;
 import nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology;
 import nl.eur.eco_ict.seminar.ontolearn.datatypes.impl.JenaOntology;
+import nl.eur.eco_ict.seminar.ontolearn.Extractor;
 /**
  * @author Administrator
  *
@@ -23,7 +24,7 @@ public class corrTester {
 	public static void main (String[] args) {
 	// TODO Auto-generated method stub
 		Ontology ontology = new JenaOntology ();
-		AssociationBasedExtractor testDB = new AssociationBasedExtractor();
+		Extractor testDB = new AssociationBasedExtractor();
 		
 		testDB.onFinish(ontology);
 	}
