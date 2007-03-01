@@ -24,9 +24,16 @@ public class corrTester {
 	public static void main (String[] args) {
 	// TODO Auto-generated method stub
 		Ontology ontology = new JenaOntology ();
-		Extractor testDB = new AssociationBasedExtractor();
+		AssociationBasedExtractor testDB = new AssociationBasedExtractor();
 		
 		testDB.onFinish(ontology);
+		
+		try {
+			double test = testDB.getCorrelation("workers", "growth");
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 }

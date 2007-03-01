@@ -307,5 +307,50 @@ public class AssociationDatabase {
 		
 		return data;
 	}
+	
+	public int getDocCount() throws SQLException {
+		int result = 0;
+		
+		ResultSet rsDocCount;
+		String qryDocCount = "SELECT COUNT(*) as numDocs FROM `association_abstract` GROUP BY `document`";
+		rsDocCount = this.stmt.executeQuery(qryDocCount);
+		
+		if(rsDocCount.next()) {
+			result = rsDocCount.getInt("numDocs");
+		}
+		
+		return result;
+	}
+	
+	public int getCoOccCount(String wordA, String wordB) throws SQLException {
+		int result = 0;
+		
+		ResultSet rsCoOccCount;
+		String qryWordA = "SELECT COUNT(*) as numDocs FROM `association_abstract` WHERE `word`='"+wordA+"' and document IN ";
+		String qryWordB = "(SELECT document FROM `association_abstract` WHERE `word`='"+wordB+"')";
+		
+		rsCoOccCount = this.stmt.executeQuery(qryWordA+qryWordB);
+		
+		if(rsCoOccCount.next()) {
+			result = rsCoOccCount.getInt("numDocs");
+		}
+		
+		return result;
+	}
+	
+	public int getWordCount(String word) throws SQLException {
+		int result = 0;
+		
+		ResultSet rsWordCount;
+		String qryWordCount = "(SELECT COUNT(*) as numDocs FROM `association_abstract` WHERE `word`='"+word+"')";
+		
+		rsWordCount = this.stmt.executeQuery(qryWordCount);
+		
+		if(rsWordCount.next()) {
+			result = rsWordCount.getInt("numDocs");
+		}
+		
+		return result;
+	}
 }
 

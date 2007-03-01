@@ -169,6 +169,52 @@ public class AssociationBasedExtractor implements Extractor {
 		return result;
 	}
 	
+	public double getCorrelation (String wordA, String wordB) throws SQLException {
+		double result = 0;
+		System.out.println("Word A: "+wordA);
+		System.out.println("Word B: "+wordB);
+		
+		// Get number of rows in the table --> (number of documents.)
+		double tableRows = this.waardeDB.getDocCount();
+		System.out.println("No. of docs: "+tableRows);
+		
+		// Get number of co-occurances in the table.
+		double numAandB = this.waardeDB.getCoOccCount(wordA, wordB);
+		System.out.println("No. of co-occurances: "+numAandB);		
+		
+		// Get number of occurances for both words in the table.
+		double numA = this.waardeDB.getWordCount(wordA);
+		System.out.println("No. of occurances A: "+numA);
+		double numB = this.waardeDB.getWordCount(wordB);
+		System.out.println("No. of occurances B: "+numB);	
+		
+		// Calculate support: co-occurances / rows in the table
+		// calculate support for A-->B:
+		double supportAtoB = numAandB / tableRows;
+		System.out.println("Support A-->B: "+supportAtoB);
+		// calculate support for B-->A:
+		double supportBtoA = numAandB / tableRows;
+		System.out.println("Support B-->A: "+supportBtoA);
+			
+		// Calculate confidence: co-occurances / occurances of word A in the table.
+		// calculate confidence for A-->B:
+		double confidenceAtoB = numAandB / numA;
+		System.out.println("Confidence A-->B: "+confidenceAtoB);
+		// calculate confidence for B-->A:
+		double confidenceBtoA = numAandB / numB;
+		System.out.println("Confidence B-->A: "+confidenceBtoA);
+		
+		// Calculate lift: confidence / occurances of word B.
+		// calculate lift for A-->B:
+		double liftAtoB = confidenceAtoB / numB;
+		System.out.println("Lift A-->B: "+liftAtoB);
+		// calculate lift for B-->A:
+		double liftBtoA = confidenceBtoA / numA;
+		System.out.println("Lift B-->A: "+liftBtoA);
+		
+		
+		return result;
+	}
 	
 	/**
 	 * @see nl.eur.eco_ict.seminar.ontolearn.Extractor#onFinish(nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology)

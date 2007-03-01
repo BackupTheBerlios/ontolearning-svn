@@ -147,6 +147,8 @@ public class Patternator {
 		if(myClasses != null) {
 			while(myClasses.hasNext ()) {
 				tempClass = myClasses.next ();
+				
+				// TODO: Dit meot natuurlijk niet zo :P 
 				className = tempClass.getURI().replaceAll("http://someplace.somewhere/someontology/", "");
 				
 				if((myString.contains(className)) && (tempClass != null) && (tempClass.hasSubClass())) {
