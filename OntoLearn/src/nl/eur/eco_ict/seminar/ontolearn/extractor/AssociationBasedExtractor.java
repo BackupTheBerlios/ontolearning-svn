@@ -149,7 +149,7 @@ public class AssociationBasedExtractor implements Extractor {
 		
 		double result =0;
 		// Laad data in CorrOcc data structuur
-		List<CorrOcc> data = this.waardeDB.getCorrOcc(wordX, wordY);
+		Collection<CorrOcc> data = this.waardeDB.getCorrOcc(wordX, wordY);
 		
 		Iterator<CorrOcc> i = data.iterator ();
 		CorrOcc current = null;
