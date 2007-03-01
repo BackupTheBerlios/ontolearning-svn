@@ -235,12 +235,12 @@ public class AssociationBasedExtractor implements Extractor {
 	}
 	
 	public void parseWordPair(String wordA, String wordB) {
-		double pearsonThreshold = 0.6;
+		double pearsonThreshold = 0;
 		double confidenceThreshold = 0.6;
 		double supportThreshold = 0.5;		
 		
 		try {
-			double pearsonCoefficient = this.correlation(wordA, wordB);
+			double pearsonCoefficient = Math.abs(this.correlation(wordA, wordB));
 			Correlation wezelMethod = this.getCorrelation(wordA, wordB);
 			
 			double confidence = 0;
