@@ -34,6 +34,7 @@ public class corrTester {
 		catch(Exception e) {
 			e.printStackTrace();
 		}
+		AssociationBasedExtractor abe = new AssociationBasedExtractor();
+		abe.onFinish (ontology);
 	}
-
 }
