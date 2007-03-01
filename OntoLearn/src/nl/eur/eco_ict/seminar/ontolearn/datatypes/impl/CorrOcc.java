@@ -23,17 +23,17 @@ public class CorrOcc {
 		this.document = null;
 	}
 	
-	public CorrOcc(int xCount, int yCount) {
-		this.xCount = xCount;
-		this.yCount = yCount;
+	public CorrOcc(int xcount, int ycount) {
+		this.xCount = xcount;
+		this.yCount = ycount;
 	}
 	
-	public void setXCount(int xCount) {
-		this.xCount = xCount;
+	public void setXCount(int xcount) {
+		this.xCount = xcount;
 	}
 	
-	public void setYCount(int yCount) {
-		this.yCount = yCount;
+	public void setYCount(int ycount) {
+		this.yCount = ycount;
 	}
 	
 	public void setDocument(String document) {
