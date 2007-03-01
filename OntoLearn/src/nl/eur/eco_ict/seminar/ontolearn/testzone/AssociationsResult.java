@@ -18,7 +18,12 @@ public class AssociationsResult{
 	public void deleteUselessResults() throws SQLException {
 		this.waardeDB.deleteLessUsedWords ();
 	}
-	public void getSignificantWordsPerDocument() throws SQLException {
-		this.waardeDB.getSignificantWordsPerDocument ();
+	public void getSignificantWordsPerDocument() {
+		try {
+			this.waardeDB.getSignificantWordsPerDocument ();
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }
