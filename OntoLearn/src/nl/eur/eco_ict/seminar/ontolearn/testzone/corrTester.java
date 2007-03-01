@@ -25,7 +25,7 @@ public class corrTester {
 	// TODO Auto-generated method stub
 		Ontology ontology = new JenaOntology ();
 		
-		AssociationBasedExtractor abe = new AssociationBasedExtractor();
+		AssociationBasedExtractor abe = new AssociationBasedExtractor(false);
 		abe.onFinish (ontology);
 	}
 }

@@ -42,6 +42,12 @@ public class AssociationBasedExtractor implements Extractor {
 		this.waardeDB.cleanDB();
 	}
 	
+	public AssociationBasedExtractor(boolean cleanDB) {
+		if(cleanDB) {
+			this.waardeDB.cleanDB();
+		}
+	}
+	
 	public void parse (Document doc, Ontology ontology) throws Throwable {
 		Iterator<BufferedReader> abstracts = doc.readAbstracts ().iterator ();
 		while(abstracts.hasNext()){
@@ -229,14 +235,38 @@ public class AssociationBasedExtractor implements Extractor {
 	}
 	
 	public void parseWordPair(String wordA, String wordB) {
+		double pearsonThreshold = 0.6;
+		double confidenceThreshold = 0.6;
+		double supportThreshold = 0.5;		
+		
 		try {
-			double vicoreMethod = this.correlation(wordA, wordB);
+			double pearsonCoefficient = this.correlation(wordA, wordB);
 			Correlation wezelMethod = this.getCorrelation(wordA, wordB);
-			System.out.println("====================");
-			System.out.println("Word A: " + wordA + " || Word B: " + wordB);
-			System.out.println("vicore: " + vicoreMethod);
-			System.out.println("A->B: Confidence (" + wezelMethod.getConfidenceAtoB()+ ") Support ("+wezelMethod.getSupportAtoB()+")");
-			System.out.println("B->A: Confidence (" + wezelMethod.getConfidenceBtoA()+ ") Support ("+wezelMethod.getSupportBtoA()+")");
+			
+			double confidence = 0;
+			double support = 0;
+			String wordX;
+			String wordY;
+			
+			if(wezelMethod.getConfidenceAtoB() >= wezelMethod.getConfidenceBtoA()) {
+				confidence = wezelMethod.getConfidenceAtoB();
+				support = wezelMethod.getSupportAtoB();
+				wordX = wordA;
+				wordY = wordB;
+			}
+			else {
+				confidence = wezelMethod.getConfidenceBtoA();
+				support = wezelMethod.getSupportBtoA();
+				wordX = wordB;
+				wordY = wordA;
+			}
+			
+			if((pearsonCoefficient > pearsonThreshold) && (confidence > confidenceThreshold) && (support > supportThreshold)) {
+				System.out.println("====================");
+				System.out.println("This relation should be added: "+ wordX + " --> " + wordY);
+				System.out.println("vicore: " + pearsonCoefficient);
+				System.out.println("Confidence (" + confidence + ") Support ("+support+")");
+			}
 		}
 		catch (Exception e) {
 			e.printStackTrace();
