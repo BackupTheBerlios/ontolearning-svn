@@ -12,6 +12,7 @@ import nl.eur.eco_ict.seminar.ontolearn.association.AssociationDatabase;
 import nl.eur.eco_ict.seminar.ontolearn.datatypes.Document;
 import nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology;
 import nl.eur.eco_ict.seminar.ontolearn.datatypes.impl.CorrOcc;
+import nl.eur.eco_ict.seminar.ontolearn.datatypes.impl.Correlation;
 import nl.eur.eco_ict.seminar.ontolearn.testzone.AssociationsResult;
 import nl.eur.eco_ict.seminar.ontolearn.util.PartOfSpeechTagger;
 import nl.eur.eco_ict.seminar.ontolearn.util.Tokenizer;
@@ -169,51 +170,74 @@ public class AssociationBasedExtractor implements Extractor {
 		return result;
 	}
 	
-	public double getCorrelation (String wordA, String wordB) throws SQLException {
-		double result = 0;
-		System.out.println("Word A: "+wordA);
-		System.out.println("Word B: "+wordB);
+	
+	
+	public Correlation getCorrelation (String wordA, String wordB) throws SQLException {
+		// System.out.println("Word A: "+wordA);
+		// System.out.println("Word B: "+wordB);
+		Correlation result = new Correlation();
 		
 		// Get number of rows in the table --> (number of documents.)
 		double tableRows = this.waardeDB.getDocCount();
-		System.out.println("No. of docs: "+tableRows);
+		// System.out.println("No. of docs: "+tableRows);
 		
 		// Get number of co-occurances in the table.
 		double numAandB = this.waardeDB.getCoOccCount(wordA, wordB);
-		System.out.println("No. of co-occurances: "+numAandB);		
+		// System.out.println("No. of co-occurances: "+numAandB);		
 		
 		// Get number of occurances for both words in the table.
 		double numA = this.waardeDB.getWordCount(wordA);
-		System.out.println("No. of occurances A: "+numA);
+		// System.out.println("No. of occurances A: "+numA);
 		double numB = this.waardeDB.getWordCount(wordB);
-		System.out.println("No. of occurances B: "+numB);	
+		// System.out.println("No. of occurances B: "+numB);	
 		
 		// Calculate support: co-occurances / rows in the table
 		// calculate support for A-->B:
 		double supportAtoB = numAandB / tableRows;
-		System.out.println("Support A-->B: "+supportAtoB);
+		result.setSupportAtoB(supportAtoB);
+		// System.out.println("Support A-->B: "+supportAtoB);
 		// calculate support for B-->A:
 		double supportBtoA = numAandB / tableRows;
-		System.out.println("Support B-->A: "+supportBtoA);
+		result.setSupportBtoA(supportBtoA);
+		// System.out.println("Support B-->A: "+supportBtoA);
 			
 		// Calculate confidence: co-occurances / occurances of word A in the table.
 		// calculate confidence for A-->B:
 		double confidenceAtoB = numAandB / numA;
-		System.out.println("Confidence A-->B: "+confidenceAtoB);
+		result.setConfidenceAtoB(confidenceAtoB);
+		// System.out.println("Confidence A-->B: "+confidenceAtoB);
 		// calculate confidence for B-->A:
 		double confidenceBtoA = numAandB / numB;
-		System.out.println("Confidence B-->A: "+confidenceBtoA);
+		result.setConfidenceBtoA(confidenceBtoA);
+		// System.out.println("Confidence B-->A: "+confidenceBtoA);
 		
 		// Calculate lift: confidence / occurances of word B.
 		// calculate lift for A-->B:
 		double liftAtoB = confidenceAtoB / numB;
-		System.out.println("Lift A-->B: "+liftAtoB);
+		result.setLiftAtoB(liftAtoB);
+		// System.out.println("Lift A-->B: "+liftAtoB);
 		// calculate lift for B-->A:
 		double liftBtoA = confidenceBtoA / numA;
-		System.out.println("Lift B-->A: "+liftBtoA);
-		
-		
+		result.setLiftBtoA(liftBtoA);
+		// System.out.println("Lift B-->A: "+liftBtoA);
+				
 		return result;
+	}
+	
+	public void parseWordPair(String wordA, String wordB) {
+		try {
+			double vicoreMethod = this.correlation(wordA, wordB);
+			Correlation wezelMethod = this.getCorrelation(wordA, wordB);
+			System.out.println("====================");
+			System.out.println("Word A: " + wordA + " || Word B: " + wordB);
+			System.out.println("vicore: " + vicoreMethod);
+			System.out.println("A->B: Confidence (" + wezelMethod.getConfidenceAtoB()+ ") Support ("+wezelMethod.getSupportAtoB()+")");
+			System.out.println("B->A: Confidence (" + wezelMethod.getConfidenceBtoA()+ ") Support ("+wezelMethod.getSupportBtoA()+")");
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		
 	}
 	
 	/**
@@ -243,23 +267,14 @@ public class AssociationBasedExtractor implements Extractor {
 							if (wordsPerDocument[i] != null) {
 								for (int l = i + 1; l < wordsPerDocument.length ; l++) {
 									if (wordsPerDocument[l] != null) {
-										double testResult = correlation(wordsPerDocument[i], wordsPerDocument[l]);
-										System.out.println("Correlation between " + wordsPerDocument[i] + " and " + wordsPerDocument[l] + " : "+testResult);
-									}
+										parseWordPair(wordsPerDocument[i], wordsPerDocument[l]);
+									}									
 								}
 							}
 						} 
 					}
 				}	
 			}
-
-			// Test: Check the correlation between "workers" and "growth":
-			double testResult = correlation("workers", "growth");
-			System.out.println("Correlation between workers and growth: "+testResult);
-
-			// Test: Check the correlation between "monkeys" and "growth":
-			testResult = correlation("monkeys", "growth");
-			System.out.println("Correlation between monkeys and growth: "+testResult);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
