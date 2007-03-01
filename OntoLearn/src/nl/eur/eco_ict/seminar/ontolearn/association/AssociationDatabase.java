@@ -9,10 +9,8 @@
 package nl.eur.eco_ict.seminar.ontolearn.association;
 
 import java.sql.*;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
-import java.util.List;
 
 import nl.eur.eco_ict.seminar.ontolearn.datatypes.impl.CorrOcc;
 /**
@@ -241,51 +239,34 @@ public class AssociationDatabase {
 		this.con.close();
 	}
 	
-	public List<CorrOcc> getCorrOcc(String wordX, String wordY) throws SQLException {
-		List<CorrOcc> data = null;
+	public Collection<CorrOcc> getCorrOcc(String wordX, String wordY) throws SQLException {
+		Collection<CorrOcc> data = new HashSet<CorrOcc>();
 		
 		ResultSet rsOccurence;
 		
 		// int totalWordcount = 0;
 		rsOccurence = this.stmt.executeQuery("SELECT `document`, `word`, `wordcount` FROM `association_abstract` WHERE `word` = '" + wordX + "' or `word` = '" + wordY + "' order by document ASC");
 		
-		CorrOcc tempCorrOcc = null;
+		
+		rsOccurence.next();
+		
+		CorrOcc tempCorrOcc = new CorrOcc();
+		tempCorrOcc.setDocument(rsOccurence.getString("document"));
+		if(rsOccurence.getString("word").compareTo(wordX)==0) {
+			// We are processing an occurence of wordX:
+			tempCorrOcc.setXCount(rsOccurence.getInt("wordcount"));
+		}
+		else {
+			// We are processing an occurence of wordY:
+			tempCorrOcc.setYCount(rsOccurence.getInt("wordcount"));
+		}
 		
 		while (rsOccurence.next ()) {
-			if(tempCorrOcc!=null) {
-				if((rsOccurence.getString("document").compareTo(tempCorrOcc.getDocument())!=0)) {
-					// Last occurence was not the same doc, we can commit the previous CorrOcc:
-					
-					// Gooit hier een nullpointer exception
-					if(tempCorrOcc!=null) {
-						data.add(tempCorrOcc);
-					}
-					
-					// Make a new CorrOcc:
-					tempCorrOcc = new CorrOcc();
-					tempCorrOcc.setDocument(rsOccurence.getString("document"));
-					
-					if(rsOccurence.getString("word").compareTo(wordX)==0) {
-						// We are processing an occurence of wordX:
-						tempCorrOcc.setXCount(rsOccurence.getInt("wordcount"));
-					}
-					else {
-						// We are processing an occurence of wordY:
-						tempCorrOcc.setYCount(rsOccurence.getInt("wordcount"));
-					}	
-				}
-				else {
-					if(rsOccurence.getString("word").compareTo(wordX)==0) {
-						// We are processing an occurence of wordX:
-						tempCorrOcc.setXCount(rsOccurence.getInt("wordcount"));
-					}
-					else {
-						// We are processing an occurence of wordY:
-						tempCorrOcc.setYCount(rsOccurence.getInt("wordcount"));
-					}
-				}	
-			}
-			else {
+			if((rsOccurence.getString("document").compareTo(tempCorrOcc.getDocument())!=0)) {
+				// Last occurence was not the same doc, we can commit the previous CorrOcc:
+				
+				data.add(tempCorrOcc);
+				
 				// Make a new CorrOcc:
 				tempCorrOcc = new CorrOcc();
 				tempCorrOcc.setDocument(rsOccurence.getString("document"));
@@ -298,6 +279,16 @@ public class AssociationDatabase {
 					// We are processing an occurence of wordY:
 					tempCorrOcc.setYCount(rsOccurence.getInt("wordcount"));
 				}	
+			}
+			else {
+				if(rsOccurence.getString("word").compareTo(wordX)==0) {
+					// We are processing an occurence of wordX:
+					tempCorrOcc.setXCount(rsOccurence.getInt("wordcount"));
+				}
+				else {
+					// We are processing an occurence of wordY:
+					tempCorrOcc.setYCount(rsOccurence.getInt("wordcount"));
+				}
 			}
 		}
 		
