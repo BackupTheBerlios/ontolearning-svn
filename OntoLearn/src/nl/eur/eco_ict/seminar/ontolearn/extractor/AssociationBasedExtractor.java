@@ -176,13 +176,19 @@ public class AssociationBasedExtractor implements Extractor {
 	public void onFinish (Ontology ontology) {
 		// AssociationsResult endResults = new AssociationsResult();
 		System.out.println("Running onFinish() for the Association-based extractor.");
+		
+		String[] documentString = null;
+		
 		try {
-			this.waardeDB.getSignificantWordsPerDocument ();
+			documentString = this.waardeDB.getSignificantWordsPerDocument ();
 		} catch (SQLException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 		try {
+			for (int k = 0; k < documentString.length ; k++) {
+				System.out.println(documentString[k]);
+			}
 			// Test: Check the correlation between "workers" and "growth":
 			double testResult = correlation("workers", "growth");
 			System.out.println("Correlation between workers and growth: "+testResult);
