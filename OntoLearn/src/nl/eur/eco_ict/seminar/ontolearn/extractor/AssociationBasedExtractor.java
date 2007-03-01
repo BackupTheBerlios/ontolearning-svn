@@ -243,7 +243,8 @@ public class AssociationBasedExtractor implements Extractor {
 							if (wordsPerDocument[i] != null) {
 								for (int l = i + 1; l < wordsPerDocument.length ; l++) {
 									if (wordsPerDocument[l] != null) {
-										System.out.println("'" + wordsPerDocument[i] + " - " + wordsPerDocument[l] + "'");
+										double testResult = correlation(wordsPerDocument[i], wordsPerDocument[l]);
+										System.out.println("Correlation between " + wordsPerDocument[i] + " and " + wordsPerDocument[l] + " : "+testResult);
 									}
 								}
 							}
