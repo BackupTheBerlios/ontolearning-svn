@@ -234,19 +234,22 @@ public class AssociationBasedExtractor implements Extractor {
 			e1.printStackTrace();
 		}
 		try {
-			for (int k = 0; k < documentString.length ; k++) {
-				wordsPerDocument = this.waardeDB.getAllWordsPerDocument(documentString[k]);
-				
-				for (int i = 0; i < wordsPerDocument.length; i++) {
-					if (wordsPerDocument[i] != null) {
-						for (int l = i + 1; l < wordsPerDocument.length ; l++) {
-							if (wordsPerDocument[l] != null) {
-								System.out.println("'" + wordsPerDocument[i] + " - " + wordsPerDocument[l] + "'");
+			if (documentString != null) {
+				for (int k = 0; k < documentString.length ; k++) {
+					wordsPerDocument = this.waardeDB.getAllWordsPerDocument(documentString[k]);
+					if (wordsPerDocument != null) {
+
+						for (int i = 0; i < wordsPerDocument.length; i++) {
+							if (wordsPerDocument[i] != null) {
+								for (int l = i + 1; l < wordsPerDocument.length ; l++) {
+									if (wordsPerDocument[l] != null) {
+										System.out.println("'" + wordsPerDocument[i] + " - " + wordsPerDocument[l] + "'");
+									}
+								}
 							}
-						}
+						} 
 					}
-				}
-				
+				}	
 			}
 
 			// Test: Check the correlation between "workers" and "growth":
