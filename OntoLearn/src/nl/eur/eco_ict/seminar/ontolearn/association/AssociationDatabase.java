@@ -53,6 +53,18 @@ public class AssociationDatabase {
 		}
 
 	}
+	
+	public void cleanDB() {
+		String sqlEmptyDB = "TRUNCATE TABLE `association_abstract`";
+		
+		try {
+			this.stmt.executeQuery(sqlEmptyDB);
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
 	public void addConcept(String document, String word, Integer wordCount) throws SQLException {
 		// System.out.println ("INSERT INTO `association_abstract` (`document`, `word`, `wordcount`) VALUES('" + document + "','" + word + "', '" + wordCount + "')");
 		this.stmt.executeUpdate("INSERT INTO `association_abstract` (`document`, `word`, `wordcount`) VALUES('" + document + "','" + word + "', '" + wordCount + "')");
