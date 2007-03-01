@@ -124,8 +124,9 @@ public class AssociationDatabase {
 		String [] words = null;
 		
 		int i = 0;
+		int j = 0;
 		int avgWordCount = 0;
-		int totalRows = 0;
+		// int totalRows = 0;
 		
 		// String resultString = new String();
 		// int totalWordcount = 0;
@@ -137,17 +138,25 @@ public class AssociationDatabase {
 		if (avgWordCount > 1) {
 			rs = this.stmt.executeQuery("SELECT `word`,`wordcount` FROM `association_abstract` WHERE `document` = '" +  document + "'");
 		
-			rs.last();
-			totalRows = rs.getRow ();
-			
-			words = new String[totalRows];
+			// rs.last();
+			// totalRows = rs.getRow ();
 			
 			rs.first (); // eerste rij
 			
 			while(rs.next()) {
 				if (rs.getInt ("wordcount") > ( avgWordCount - (avgWordCount * 0.35))) {
 					i = i + 1;
-					words[i] = rs.getString("word");
+					// words[i] = rs.getString("word");
+					// resultString = resultString + ", " + rs.getString("word");
+					// System.out.println("Word: " + rs.getString("word") + ", #: " + rs.getInt ("wordcount"));
+				}
+			}
+			words = new String[i];
+			rs.first ();
+			while(rs.next()) {
+				if (rs.getInt ("wordcount") > ( avgWordCount - (avgWordCount * 0.35))) {
+					j = j + 1;
+					words[j] = rs.getString("word");
 					// resultString = resultString + ", " + rs.getString("word");
 					// System.out.println("Word: " + rs.getString("word") + ", #: " + rs.getInt ("wordcount"));
 				}
