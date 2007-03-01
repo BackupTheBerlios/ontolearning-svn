@@ -38,6 +38,10 @@ public class AssociationBasedExtractor implements Extractor {
 	 *      nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology)
 	 */
 	
+	public AssociationBasedExtractor() {
+		this.waardeDB.cleanDB();
+	}
+	
 	public void parse (Document doc, Ontology ontology) throws Throwable {
 		Iterator<BufferedReader> abstracts = doc.readAbstracts ().iterator ();
 		while(abstracts.hasNext()){
