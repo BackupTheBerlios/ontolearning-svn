@@ -224,6 +224,8 @@ public class AssociationBasedExtractor implements Extractor {
 		System.out.println("Running onFinish() for the Association-based extractor.");
 		
 		String[] documentString = null;
+		String[] wordsPerDocument = null;
+
 		
 		try {
 			documentString = this.waardeDB.getSignificantWordsPerDocument ();
