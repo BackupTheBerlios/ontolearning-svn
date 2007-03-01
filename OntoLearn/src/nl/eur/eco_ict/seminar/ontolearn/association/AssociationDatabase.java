@@ -145,20 +145,23 @@ public class AssociationDatabase {
 			
 			while(rs.next()) {
 				if (rs.getInt ("wordcount") > ( avgWordCount - (avgWordCount * 0.35))) {
-					i = i + 1;
+					if (rs.getString ("word") != null)
+						i = i + 1;
 					// words[i] = rs.getString("word");
 					// resultString = resultString + ", " + rs.getString("word");
 					// System.out.println("Word: " + rs.getString("word") + ", #: " + rs.getInt ("wordcount"));
 				}
 			}
-			words = new String[i];
+			words = new String[i + 1];
 			rs.first ();
 			while(rs.next()) {
 				if (rs.getInt ("wordcount") > ( avgWordCount - (avgWordCount * 0.35))) {
-					j = j + 1;
-					words[j] = rs.getString("word");
-					// resultString = resultString + ", " + rs.getString("word");
-					// System.out.println("Word: " + rs.getString("word") + ", #: " + rs.getInt ("wordcount"));
+					if (rs.getString ("word") != null) {
+						j = j + 1;
+						words[j] = rs.getString("word");
+						// resultString = resultString + ", " + rs.getString("word");
+						System.out.println("Word: " + rs.getString("word") + ", #: " + rs.getInt ("wordcount"));
+					}
 				}
 			}
 			// System.out.println("Relation between: " + resultString + " : Max Wordcount = " + avgWordCount );	
