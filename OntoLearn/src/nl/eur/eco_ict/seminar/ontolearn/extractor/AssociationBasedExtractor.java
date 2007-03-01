@@ -297,8 +297,7 @@ public class AssociationBasedExtractor implements Extractor {
 		double supportThreshold = 0.5;		
 		
 		try {
-			// double pearsonCoefficient = Math.abs(this.correlation(wordA, wordB));
-			double pearsonCoefficient = 10;
+			double pearsonCoefficient = Math.abs(this.correlation(wordA, wordB));
 			Correlation wezelMethod = this.getCorrelation(wordA, wordB);
 			
 			double confidence = 0;
@@ -320,6 +319,8 @@ public class AssociationBasedExtractor implements Extractor {
 			}
 			
 			if((pearsonCoefficient > pearsonThreshold) && (confidence > confidenceThreshold) && (support > supportThreshold)) {
+				// This is where wordX-->wordY relations should be added to the Ontology:
+				
 				System.out.println("====================");
 				System.out.println("This relation should be added: "+ wordX + " --> " + wordY);
 				System.out.println("vicore: " + pearsonCoefficient);
