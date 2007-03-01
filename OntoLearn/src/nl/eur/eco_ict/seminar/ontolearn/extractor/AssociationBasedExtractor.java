@@ -31,8 +31,11 @@ import java.util.Scanner;
 public class AssociationBasedExtractor implements Extractor {
 
 	protected Collection<Occurance> occuranceMatrix = new HashSet<Occurance> ();
-
+	PartOfSpeechTagger posTagger = PartOfSpeechTagger.Factory.getStanfordInstance();
+	Tokenizer tokenizer = Tokenizer.Factory.getInstance ();
 	AssociationDatabase waardeDB = new AssociationDatabase ();
+	
+	int abstractCounter;
 	/**
 	 * @see nl.eur.eco_ict.seminar.ontolearn.Extractor#parse(nl.eur.eco_ict.seminar.ontolearn.datatypes.Document,
 	 *      nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology)
@@ -49,54 +52,110 @@ public class AssociationBasedExtractor implements Extractor {
 	}
 	
 	public void parse (Document doc, Ontology ontology) throws Throwable {
+		// Start time:
+		long startTime = System.currentTimeMillis();
+		
+		this.abstractCounter = 0;
+		
 		Iterator<BufferedReader> abstracts = doc.readAbstracts ().iterator ();
-		while(abstracts.hasNext()){
+		while(abstracts.hasNext()){			
+			this.abstractCounter++;
 			this.parse (abstracts.next(), ontology, doc);
 		}
+		
+		// End time:
+		long endTime = System.currentTimeMillis();
+		
+		double timeLapsed = (endTime - startTime) / 1000;
+		
+		System.out.println("Time taken to parse "+doc.getName()+": "+timeLapsed+" seconds.");
 	}
 	
 	protected void parse (BufferedReader reader, Ontology ontology, Document doc) throws Throwable {
+		this.occuranceMatrix = new HashSet<Occurance> ();
+		
 		try {
-			PartOfSpeechTagger posTagger = PartOfSpeechTagger.Factory.getStanfordInstance();
-			Tokenizer tokenizer = Tokenizer.Factory.getInstance ();
 			// List<String> myList = tokenizer.toSentences (doc.readAbstracts());
-			List<String> myList = tokenizer.toSentences(reader);
+			List<String> myList = this.tokenizer.toSentences(reader);
 
 			for (int x = 0, mySize = myList.size (); x < mySize; x++) {
 				String mySentence = myList.get (x);
-				// System.out.println ("mySentence: "+mySentence);
-				//String myPOSString = posTagger.tagInternal (mySentence);
-
-				// System.out.println ("mySentence: "+ myPOSString);
-
-				// System.out.println(posTagger.tagInternal(mySentence.toString())
-				// + " \r\n");
-				String y = posTagger.tagInternal (mySentence);
-				//String y = this.myTagger.tagInternal (mySentence.toString ());
+				
+				String y = this.posTagger.tagInternal (mySentence);
 				
 				Scanner scanner = new Scanner (y).useDelimiter ("\\s");
-
+				
 				while (scanner.hasNext ()) {
 					String oneWordPOS = scanner.next ();
 					if (oneWordPOS.contains ("/NN")) {
 						int endWordPosition = oneWordPOS.indexOf ("/");
 						String test = oneWordPOS.substring (0, endWordPosition);
 						String test2 = test.toLowerCase ().replaceAll("\\x5C","");
-						if (this.getOccurance (test2, doc) == null) {
+						
+						// Implementatie 1:
+						this.storeWord(doc.getName(), test2);
+						
+						// Implementatie 2:
+						/*if (this.getOccurance (test2, doc) == null) {
 							this.add (test2, doc);
 						} else {
 							int ocWordcount = this.getOccurance (test2, doc).wordCount++;
 							this.waardeDB.updateConcept (doc.getName(), test2, new Integer(ocWordcount));
-						}
+						}*/
 					}
 				}
 			}
-			this.conceptsToDatabase ();
+			this.storeOccurances();
 		} catch (IOException e) {
 			System.out.println ("Error: " + e);
 		} catch (SQLException e) {
 			System.out.println ("Error: " + e);
 		}
+	}
+	
+	public void storeOccurances() {
+		Iterator<Occurance> myOccurances = this.occuranceMatrix.iterator ();
+		Occurance tempOccurance = null;
+		
+		while(myOccurances.hasNext()){
+			tempOccurance = myOccurances.next();
+			try {
+				this.waardeDB.addConcept(tempOccurance.getDocumentName()+"-"+this.abstractCounter, tempOccurance.getWord(), tempOccurance.getWordCount());
+			}
+			catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	public void storeWord(String docName, String word) {
+		Occurance tempOccurance = this.getOccurance(docName, word);
+		
+		if(tempOccurance == null) {
+			// This word/docName combination has not been recorded yet. Do so now:
+			tempOccurance = new Occurance();
+			tempOccurance.setWord(word);
+			tempOccurance.setDocumentName(docName);
+			tempOccurance.setWordCount(1);
+			this.occuranceMatrix.add(tempOccurance);
+		}
+		else {
+			// This word/docName combination exists. Increment wordcount:
+			tempOccurance.setWordCount(tempOccurance.getWordCount()+1);
+		}		
+	}
+	
+	public Occurance getOccurance (String docName, String word) {
+		Iterator<Occurance> i = this.occuranceMatrix.iterator ();
+		Occurance oc;
+		while (i.hasNext ()) {
+			oc = i.next ();
+			if (oc.documentName.equals (docName)
+					&& oc.word.equals (word)) {
+				return oc;
+			}
+		}
+		return null;
 	}
 
 	public void add (String word, Document doc) throws SQLException {
@@ -183,53 +242,51 @@ public class AssociationBasedExtractor implements Extractor {
 	
 	
 	public Correlation getCorrelation (String wordA, String wordB) throws SQLException {
-		// System.out.println("Word A: "+wordA);
-		// System.out.println("Word B: "+wordB);
 		Correlation result = new Correlation();
 		
 		// Get number of rows in the table --> (number of documents.)
 		double tableRows = this.waardeDB.getDocCount();
-		// System.out.println("No. of docs: "+tableRows);
+		// System.out.println("tableRows: "+tableRows);
 		
 		// Get number of co-occurances in the table.
 		double numAandB = this.waardeDB.getCoOccCount(wordA, wordB);
-		// System.out.println("No. of co-occurances: "+numAandB);		
+		// System.out.println("numAandB: "+numAandB);	
 		
 		// Get number of occurances for both words in the table.
 		double numA = this.waardeDB.getWordCount(wordA);
-		// System.out.println("No. of occurances A: "+numA);
-		double numB = this.waardeDB.getWordCount(wordB);
-		// System.out.println("No. of occurances B: "+numB);	
+		// System.out.println("numA: "+numA);
+		double numB = this.waardeDB.getWordCount(wordB);	
+		// System.out.println("numB: "+numB);
 		
 		// Calculate support: co-occurances / rows in the table
 		// calculate support for A-->B:
 		double supportAtoB = numAandB / tableRows;
+		// System.out.println("supportAtoB: "+supportAtoB);
 		result.setSupportAtoB(supportAtoB);
-		// System.out.println("Support A-->B: "+supportAtoB);
 		// calculate support for B-->A:
 		double supportBtoA = numAandB / tableRows;
+		// System.out.println("supportBtoA: "+supportBtoA);
 		result.setSupportBtoA(supportBtoA);
-		// System.out.println("Support B-->A: "+supportBtoA);
 			
 		// Calculate confidence: co-occurances / occurances of word A in the table.
 		// calculate confidence for A-->B:
 		double confidenceAtoB = numAandB / numA;
+		// System.out.println("confidenceAtoB: "+confidenceAtoB);
 		result.setConfidenceAtoB(confidenceAtoB);
-		// System.out.println("Confidence A-->B: "+confidenceAtoB);
 		// calculate confidence for B-->A:
 		double confidenceBtoA = numAandB / numB;
+		// System.out.println("confidenceBtoA: "+confidenceBtoA);
 		result.setConfidenceBtoA(confidenceBtoA);
-		// System.out.println("Confidence B-->A: "+confidenceBtoA);
 		
 		// Calculate lift: confidence / occurances of word B.
 		// calculate lift for A-->B:
 		double liftAtoB = confidenceAtoB / numB;
+		// System.out.println("liftAtoB: "+liftAtoB);
 		result.setLiftAtoB(liftAtoB);
-		// System.out.println("Lift A-->B: "+liftAtoB);
 		// calculate lift for B-->A:
 		double liftBtoA = confidenceBtoA / numA;
+		// System.out.println("liftBtoA: "+liftBtoA);
 		result.setLiftBtoA(liftBtoA);
-		// System.out.println("Lift B-->A: "+liftBtoA);
 				
 		return result;
 	}
@@ -240,7 +297,8 @@ public class AssociationBasedExtractor implements Extractor {
 		double supportThreshold = 0.5;		
 		
 		try {
-			double pearsonCoefficient = Math.abs(this.correlation(wordA, wordB));
+			// double pearsonCoefficient = Math.abs(this.correlation(wordA, wordB));
+			double pearsonCoefficient = 10;
 			Correlation wezelMethod = this.getCorrelation(wordA, wordB);
 			
 			double confidence = 0;
@@ -286,6 +344,7 @@ public class AssociationBasedExtractor implements Extractor {
 
 		
 		try {
+			System.out.println("Getting document list.");
 			documentString = this.waardeDB.getSignificantWordsPerDocument ();
 		} catch (SQLException e1) {
 			// TODO Auto-generated catch block
@@ -294,6 +353,7 @@ public class AssociationBasedExtractor implements Extractor {
 		try {
 			if (documentString != null) {
 				for (int k = 0; k < documentString.length ; k++) {
+					System.out.println("Parsing document: "+documentString[k]);
 					wordsPerDocument = this.waardeDB.getAllWordsPerDocument(documentString[k]);
 					if (wordsPerDocument != null) {
 

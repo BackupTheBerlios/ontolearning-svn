@@ -120,7 +120,7 @@ public class AssociationDatabase {
 				j = j + 1;
 		}
 		for (int k = 0; k < documentString.length ; k++) {
-			System.out.println(documentString[k]);
+			// System.out.println(documentString[k]);
 			this.getAllWordsPerDocument(documentString[k]);
 		}
 		
@@ -336,7 +336,7 @@ public class AssociationDatabase {
 		int result = 0;
 		
 		ResultSet rsDocCount;
-		String qryDocCount = "SELECT COUNT(*) as numDocs FROM `association_abstract` GROUP BY `document`";
+		String qryDocCount = "SELECT COUNT(DISTINCT `document`) as numDocs FROM `association_abstract`";
 		rsDocCount = this.stmt.executeQuery(qryDocCount);
 		
 		if(rsDocCount.next()) {
