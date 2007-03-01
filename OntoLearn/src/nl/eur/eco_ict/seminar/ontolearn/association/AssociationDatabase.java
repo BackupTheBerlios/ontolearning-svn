@@ -160,7 +160,7 @@ public class AssociationDatabase {
 						j = j + 1;
 						words[j] = rs.getString("word");
 						// resultString = resultString + ", " + rs.getString("word");
-						System.out.println("Word: " + rs.getString("word") + ", #: " + rs.getInt ("wordcount"));
+						// System.out.println("Word: " + rs.getString("word") + ", #: " + rs.getInt ("wordcount"));
 					}
 				}
 			}
