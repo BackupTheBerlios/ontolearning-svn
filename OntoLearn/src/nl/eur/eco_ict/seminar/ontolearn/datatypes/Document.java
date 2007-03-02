@@ -10,6 +10,7 @@ package nl.eur.eco_ict.seminar.ontolearn.datatypes;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.net.URI;
 import java.util.Collection;
 
 /**
@@ -23,6 +24,11 @@ public interface Document {
 	 * @return the name of the document
 	 */
 	public String getName ();
+	
+	/**
+	 * @return the location of this document
+	 */
+	public URI getURI ();
 	/**
 	 * @return a buffered reader over the entire content of this document
 	 * @throws IOException

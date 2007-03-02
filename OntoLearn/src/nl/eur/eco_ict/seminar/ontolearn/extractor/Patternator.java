@@ -149,14 +149,14 @@ public class Patternator {
 				tempClass = myClasses.next ();
 				
 				// TODO: Dit meot natuurlijk niet zo :P 
-				className = tempClass.getURI().replaceAll("http://someplace.somewhere/someontology/", "");
+				className = tempClass.getLocalName ();//.getURI().replaceAll("http://someplace.somewhere/someontology/", "");
 				
 				if((myString.contains(className)) && (tempClass != null) && (tempClass.hasSubClass())) {
 					mySubClasses = tempClass.listSubClasses();	
 					
 					while(mySubClasses.hasNext ()) {
 						tempSubClass = mySubClasses.next ();
-						subClassName = tempSubClass.getURI().replaceAll("http://someplace.somewhere/someontology/", "");
+						subClassName = tempSubClass.getLocalName ();//.getURI().replaceAll("http://someplace.somewhere/someontology/", "");
 						
 						if(myString.contains(subClassName)) {
 							stripNewPattern(myString, className, subClassName);
@@ -276,7 +276,7 @@ public class Patternator {
 		// int value used to populate cleanMatches[]
 		int x = 0;
 		
-		for(int i=0;i<2; i++) {
+		for(int i=0;i < roughMatches.length; i++) {
 			Matcher roughMatcher = regPattern.matcher(roughMatches[i]);
 			
 			if(roughMatcher.find()) {

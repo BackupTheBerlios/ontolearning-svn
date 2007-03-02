@@ -94,6 +94,9 @@ public class HearstExtractor implements Extractor {
 		}
 		catch (Exception e) {
 			System.out.println("Error: "+e);
+			for (int i = 0; i < 4 && i <e.getStackTrace ().length;i++){
+				System.err.println (e.getStackTrace ()[i]);
+			}
 		}
 	}
 	/**

@@ -45,6 +45,7 @@ public class WordnetStemmer implements Stemmer, Lemmatizer {
 							+ this.propfile);
 			e.printStackTrace ();
 		} catch (JWNLException e) {
+			System.err.println("Did you forget to update the path to the wordnet dictionary in the properties file("+this.propfile+")?");
 			e.printStackTrace ();
 		}
 	}

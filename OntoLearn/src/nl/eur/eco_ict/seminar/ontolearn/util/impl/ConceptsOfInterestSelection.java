@@ -25,9 +25,21 @@ public interface ConceptsOfInterestSelection {
 	 */
 	public Collection<OntClass> getConceptsOfInterest (Ontology ontology);
 	
+	public Collection<OntClass> getConceptsOfInterest (Ontology ontology, Collection<OntClass> cdi);
+	
 	public final class Factory{
+		public static ConceptsOfInterestSelection custum = null;
+		
 		public static ConceptsOfInterestSelection getSelector (){
-			return new DefaultConceptSelector ();
+			return getCustum();
+		}
+		
+		public static ConceptsOfInterestSelection getCustum (){
+			if(custum == null){
+				custum = new CooperativeConceptSelector();
+				((CooperativeConceptSelector)custum).add(new DefaultConceptSelector());
+			}
+			return custum;
 		}
 	}
 }

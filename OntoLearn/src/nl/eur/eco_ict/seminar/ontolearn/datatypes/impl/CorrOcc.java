@@ -51,4 +51,17 @@ public class CorrOcc {
 	public int getYCount() {
 		return this.yCount;
 	}
+
+	/**
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode () {
+		final int PRIME = 31;
+		int result = 1;
+		result = PRIME * result + ((this.document == null) ? 0 : this.document.hashCode ());
+		result = PRIME * result + this.xCount;
+		result = PRIME * result + this.yCount;
+		return result;
+	}
 }

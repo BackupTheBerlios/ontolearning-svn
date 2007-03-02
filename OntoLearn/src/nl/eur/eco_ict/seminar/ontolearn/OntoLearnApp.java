@@ -3,6 +3,9 @@
  */
 package nl.eur.eco_ict.seminar.ontolearn;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.HashSet;
@@ -17,7 +20,7 @@ import nl.eur.eco_ict.seminar.ontolearn.extractor.HearstExtractor;
 import nl.eur.eco_ict.seminar.ontolearn.util.DocumentCrawler;
 import nl.eur.eco_ict.seminar.ontolearn.util.Pruner;
 import nl.eur.eco_ict.seminar.ontolearn.util.impl.DiskCrawler;
-import nl.eur.eco_ict.seminar.ontolearn.util.impl.PrunerStub;
+import nl.eur.eco_ict.seminar.ontolearn.util.impl.OWLPruner;
 
 /**
  * @author Jasper
@@ -38,8 +41,9 @@ public class OntoLearnApp {
 	/**
 	 * @param args
 	 * @throws URISyntaxException
+	 * @throws IOException 
 	 */
-	public static void main (String[] args) throws URISyntaxException {
+	public static void main (String[] args) throws URISyntaxException, IOException {
 		OntoLearnApp app = new OntoLearnApp ();
 		app.retrieveSettings ();
 		app.start ();
@@ -52,48 +56,54 @@ public class OntoLearnApp {
 		this.settings.setDocumentroot ("file:///"
 				+ System.getProperty ("user.dir").replace ('\\', '/')
 				+ "/data/testAbstracts/");
-		this.settings
-				.setOntNamespace ("http://something.somewhere/testontology/");
+		this.settings.setOntNamespace ("http://X/");
 	} // +System.getProperty("user.dir")+"\\testAbstracts\\"
 
-	public void start () throws URISyntaxException{
+	public void start () throws URISyntaxException, IOException {
 		Document doc = null;
 		Extractor e = null;
 		Iterator<Extractor> i = null;
-		
+
 		// See if there's anything to process
-		while (this.getCrawler().hasNext () && (doc=this.getCrawler ().getNext ())!= null){
+		while (this.getCrawler ().hasNext ()
+				&& (doc = this.getCrawler ().getNext ()) != null) {
 			i = this.getExtractors ().iterator ();
-			while(i.hasNext()){
+			while (i.hasNext ()) {
 				// Let each extractor process the document
 				e = i.next ();
-				try{
-					System.out.println(e.getName () + " is processing " + doc.getName ());
-					e.parse(doc, this.getOntology ());
-				}catch (Throwable t){
-					System.err.println (e.getName () + " messed up while processing "+doc.getName ()+":");
+				try {
+					System.out.println (e.getName () + " is processing "
+							+ doc.getName ());
+					e.parse (doc, this.getOntology ());
+				} catch (Throwable t) {
+					System.err.println (e.getName ()
+							+ " messed up while processing " + doc.getName ()
+							+ ":");
 					t.printStackTrace ();
 				}
 			}
-			
+
 			// after all extractors have processed the document clean up
-			this.getPruner ().prune(this.getOntology ());
+			this.getPruner ().prune (this.getOntology ());
 		}
-		
-		// Once all documents have been processed call the onFinish method to allow them to clean up, write the last data to the ontology etc.
+
+		// Once all documents have been processed call the onFinish method to
+		// allow them to clean up, write the last data to the ontology etc.
 		i = this.getExtractors ().iterator ();
-		while(i.hasNext()){
+		while (i.hasNext ()) {
 			e = i.next ();
-			try{
-			e.onFinish (this.getOntology ());
-			}catch (Throwable t){
+			try {
+				e.onFinish (this.getOntology ());
+			} catch (Throwable t) {
 				System.err.println (e.getName () + " messed up:");
 				t.printStackTrace ();
 			}
+			this.getPruner ().prune (this.getOntology ());
 		}
-		
+
 		// Output ontology
 		System.out.println (this.getOntology ().toString ());
+		this.output (this.getOntology ());
 	}
 
 	protected DocumentCrawler getCrawler () throws URISyntaxException {
@@ -123,7 +133,7 @@ public class OntoLearnApp {
 
 	protected Pruner getPruner () {
 		if (this.pruner == null) {
-			this.pruner = new PrunerStub ();// TODO create a pruner
+			this.pruner = new OWLPruner ();
 		}
 		return this.pruner;
 	}
@@ -135,8 +145,24 @@ public class OntoLearnApp {
 					.getOntNamespace ());
 			((JenaOntology) this.ontology).setDBInfo (this.getSettings ()
 					.getDBinfo ());
+			if (this.getSettings ().getStartingOntology ().isAbsolute ()) {
+				this.ontology.insertOntology (this.getSettings ()
+						.getStartingOntology ());
+			}
 		}
 		return this.ontology;
+	}
+	
+	protected void output (Ontology onto) throws IOException{
+		String location = this.getSettings ().getOutputLocation ();
+		File f = new File (location);
+		if (f.canWrite ()){
+			if (!f.exists ()){
+			f.createNewFile ();
+			}
+			FileWriter fw = new FileWriter (f);
+			fw.write (onto.toString ());
+		}
 	}
 
 }

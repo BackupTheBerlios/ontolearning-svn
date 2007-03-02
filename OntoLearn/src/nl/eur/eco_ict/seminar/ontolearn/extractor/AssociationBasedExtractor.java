@@ -13,25 +13,26 @@ import nl.eur.eco_ict.seminar.ontolearn.datatypes.Document;
 import nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology;
 import nl.eur.eco_ict.seminar.ontolearn.datatypes.impl.CorrOcc;
 import nl.eur.eco_ict.seminar.ontolearn.datatypes.impl.Correlation;
-import nl.eur.eco_ict.seminar.ontolearn.testzone.AssociationsResult;
 import nl.eur.eco_ict.seminar.ontolearn.util.PartOfSpeechTagger;
 import nl.eur.eco_ict.seminar.ontolearn.util.Tokenizer;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Scanner;
+
+import com.hp.hpl.jena.ontology.DatatypeProperty;
+import com.hp.hpl.jena.ontology.OntClass;
+import com.hp.hpl.jena.ontology.OntProperty;
 
 /**
  * @author Remy
  */
 public class AssociationBasedExtractor implements Extractor {
 
-	protected Collection<Occurance> occuranceMatrix = new HashSet<Occurance> ();
-	PartOfSpeechTagger posTagger = PartOfSpeechTagger.Factory.getStanfordInstance();
+	//protected Collection<Occurance> occuranceMatrix = new HashSet<Occurance> ();
+	PartOfSpeechTagger posTagger = PartOfSpeechTagger.Factory.getStanfordLexer ();
 	Tokenizer tokenizer = Tokenizer.Factory.getInstance ();
 	AssociationDatabase waardeDB = new AssociationDatabase ();
 	
@@ -43,6 +44,7 @@ public class AssociationBasedExtractor implements Extractor {
 	
 	public AssociationBasedExtractor() {
 		this.waardeDB.cleanDB();
+		this.waardeDB.setStorage (true);
 	}
 	
 	public AssociationBasedExtractor(boolean cleanDB) {
@@ -66,13 +68,13 @@ public class AssociationBasedExtractor implements Extractor {
 		// End time:
 		long endTime = System.currentTimeMillis();
 		
-		double timeLapsed = (endTime - startTime) / 1000;
+		double timeLapsed = (endTime - startTime) / 1000.0;
 		
 		System.out.println("Time taken to parse "+doc.getName()+": "+timeLapsed+" seconds.");
 	}
 	
 	protected void parse (BufferedReader reader, Ontology ontology, Document doc) throws Throwable {
-		this.occuranceMatrix = new HashSet<Occurance> ();
+		//this.occuranceMatrix = new HashSet<Occurance> ();
 		
 		try {
 			// List<String> myList = tokenizer.toSentences (doc.readAbstracts());
@@ -93,7 +95,7 @@ public class AssociationBasedExtractor implements Extractor {
 						String test2 = test.toLowerCase ().replaceAll("\\x5C","");
 						
 						// Implementatie 1:
-						this.storeWord(doc.getName(), test2);
+						this.storeWord(this.getDocumentName (doc), test2);
 						
 						// Implementatie 2:
 						/*if (this.getOccurance (test2, doc) == null) {
@@ -114,7 +116,7 @@ public class AssociationBasedExtractor implements Extractor {
 	}
 	
 	public void storeOccurances() {
-		Iterator<Occurance> myOccurances = this.occuranceMatrix.iterator ();
+		/*Iterator<Occurance> myOccurances = this.occuranceMatrix.iterator ();
 		Occurance tempOccurance = null;
 		
 		while(myOccurances.hasNext()){
@@ -125,7 +127,7 @@ public class AssociationBasedExtractor implements Extractor {
 			catch(Exception e) {
 				e.printStackTrace();
 			}
-		}
+		}*/
 	}
 	
 	public void storeWord(String docName, String word) {
@@ -137,7 +139,12 @@ public class AssociationBasedExtractor implements Extractor {
 			tempOccurance.setWord(word);
 			tempOccurance.setDocumentName(docName);
 			tempOccurance.setWordCount(1);
-			this.occuranceMatrix.add(tempOccurance);
+			//this.occuranceMatrix.add(tempOccurance);
+			try {
+				this.waardeDB.addConcept (tempOccurance);
+			} catch (SQLException e) {
+				System.err.println ("Something went wrong adding a concept to the database. " + e.getMessage ());
+			}
 		}
 		else {
 			// This word/docName combination exists. Increment wordcount:
@@ -146,7 +153,7 @@ public class AssociationBasedExtractor implements Extractor {
 	}
 	
 	public Occurance getOccurance (String docName, String word) {
-		Iterator<Occurance> i = this.occuranceMatrix.iterator ();
+		/*Iterator<Occurance> i = this.occuranceMatrix.iterator ();
 		Occurance oc;
 		while (i.hasNext ()) {
 			oc = i.next ();
@@ -156,6 +163,8 @@ public class AssociationBasedExtractor implements Extractor {
 			}
 		}
 		return null;
+		*/
+		return this.waardeDB.getOccurance (docName, word);
 	}
 
 	public void add (String word, Document doc) throws SQLException {
@@ -163,7 +172,7 @@ public class AssociationBasedExtractor implements Extractor {
 		oc.word = word;
 		oc.documentName = doc.getName ();
 		oc.wordCount = 1;
-		this.occuranceMatrix.add (oc);
+		//this.occuranceMatrix.add (oc);
 
 		// add to database
 
@@ -173,7 +182,7 @@ public class AssociationBasedExtractor implements Extractor {
 	}
 
 	public Occurance getOccurance (String word, Document doc) {
-		Iterator<Occurance> i = this.occuranceMatrix.iterator ();
+		/*Iterator<Occurance> i = this.occuranceMatrix.iterator ();
 		Occurance oc;
 		while (i.hasNext ()) {
 			oc = i.next ();
@@ -183,10 +192,16 @@ public class AssociationBasedExtractor implements Extractor {
 			}
 		}
 		return null;
+		*/
+		return this.waardeDB.getOccurance (this.getDocumentName(doc), word);
+	}
+	
+	protected String getDocumentName (Document doc){
+		return doc.getName ()+"#"+this.abstractCounter;
 	}
 
 	public String tostring () {
-		Iterator<Occurance> i = this.occuranceMatrix.iterator ();
+		/*Iterator<Occurance> i = this.occuranceMatrix.iterator ();
 		Occurance oc;
 		String result = "";
 		while (i.hasNext ()) {
@@ -195,6 +210,8 @@ public class AssociationBasedExtractor implements Extractor {
 			result += "\n";
 		}
 		return result;
+		*/
+		return "";
 	}
 
 	public void conceptsToDatabase () {
@@ -291,7 +308,7 @@ public class AssociationBasedExtractor implements Extractor {
 		return result;
 	}
 	
-	public void parseWordPair(String wordA, String wordB) {
+	public void parseWordPair(String wordA, String wordB, Ontology ontology) {
 		double pearsonThreshold = 0;
 		double confidenceThreshold = 0.6;
 		double supportThreshold = 0.5;		
@@ -320,17 +337,53 @@ public class AssociationBasedExtractor implements Extractor {
 			
 			if((pearsonCoefficient > pearsonThreshold) && (confidence > confidenceThreshold) && (support > supportThreshold)) {
 				// This is where wordX-->wordY relations should be added to the Ontology:
-				
 				System.out.println("====================");
-				System.out.println("This relation should be added: "+ wordX + " --> " + wordY);
+				System.out.println("This relation is added: "+ wordX + " --> " + wordY);
 				System.out.println("vicore: " + pearsonCoefficient);
 				System.out.println("Confidence (" + confidence + ") Support ("+support+")");
+				this.addRelation (wordX, wordY, Math.pow (pearsonCoefficient*confidence*support,3), ontology);
 			}
 		}
 		catch (Exception e) {
 			e.printStackTrace();
 		}
 		
+	}
+	
+	/**
+	 * The following relation is added to the ontology
+	 * wordX ---strength---> wordY
+	 * @param wordX
+	 * @param wordY
+	 * @param strength
+	 * @param ontology
+	 */
+	protected void addRelation (String wordX, String wordY, double strength, Ontology ontology){
+		final String wordRelation = "associatedWith";
+		final String relationstrength = "hasStrength";
+		
+		OntProperty p = ontology.getProperty (wordRelation);
+		OntProperty association = ontology.getProperty (relationstrength);
+		OntClass x = ontology.getOClass (wordX);
+		OntClass y = ontology.getOClass (wordY);
+		
+		if (p == null){
+			p = ontology.addObjectProperty (wordRelation);
+		}
+		if (x == null){
+			x = ontology.addOClass (wordX);
+		}
+		if (y == null){
+			y = ontology.addOClass (wordY);
+		}
+		if (association == null){
+			association = ontology.addDataProperty (relationstrength);
+			association.addComment ("value between 0-1", null);
+		}
+		p.setDomain (x);
+		p.setRange (y);
+		p.addProperty (association, ""+strength);
+		x.addProperty (p, y);
 	}
 	
 	/**
@@ -362,7 +415,7 @@ public class AssociationBasedExtractor implements Extractor {
 							if (wordsPerDocument[i] != null) {
 								for (int l = i + 1; l < wordsPerDocument.length ; l++) {
 									if (wordsPerDocument[l] != null) {
-										parseWordPair(wordsPerDocument[i], wordsPerDocument[l]);
+										parseWordPair(wordsPerDocument[i], wordsPerDocument[l], ontology);
 									}									
 								}
 							}

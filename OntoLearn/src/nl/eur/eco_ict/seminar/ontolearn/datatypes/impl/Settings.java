@@ -8,6 +8,8 @@
  */
 package nl.eur.eco_ict.seminar.ontolearn.datatypes.impl;
 
+import java.net.URI;
+
 /**
  * @author 300353jv
  *
@@ -17,6 +19,7 @@ public class Settings {
 	protected String outputloc = null;
 	protected DBSettings dbsettings = null;
 	protected String ontNamespace = null;
+	protected URI startontology = null;
 	
 	public void setDocumentroot (String s){
 		this.documentroot = s;
@@ -58,6 +61,17 @@ public class Settings {
 	}
 	
 	public void setOntNamespace (String namespace){
-		
+		this.ontNamespace = namespace;
+	}
+	
+	public URI getStartingOntology (){
+		if (this.startontology != null){
+		return this.startontology;
+		}
+		return URI.create ("#");
+	}
+	
+	public void setStartingOntology (URI location){
+		this.startontology = location;
 	}
 }

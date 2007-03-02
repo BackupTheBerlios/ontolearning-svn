@@ -56,4 +56,18 @@ public class Occurance {
 	public void setWordCount (int wordCount) {
 		this.wordCount = wordCount;
 	}
+	
+	
+	/**
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode () {
+		final int PRIME = 31;
+		int result = 1;
+		result = PRIME * result + ((this.documentName == null) ? 0 : this.documentName.hashCode ());
+		result = PRIME * result + ((this.word == null) ? 0 : this.word.hashCode ());
+		result = PRIME * result + this.wordCount;
+		return result;
+	}
 }

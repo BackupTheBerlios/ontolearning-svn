@@ -3,6 +3,7 @@
  */
 package nl.eur.eco_ict.seminar.ontolearn.datatypes;
 
+import java.net.URI;
 import java.util.Iterator;
 
 import com.hp.hpl.jena.ontology.DatatypeProperty;
@@ -206,4 +207,9 @@ public interface Ontology {
 	 * @return the actual model of which this class is a wrapper
 	 */
 	public OntModel getModel ();
+	
+	/**
+	 * @param startontology
+	 */
+	public void insertOntology (URI startontology);
 }

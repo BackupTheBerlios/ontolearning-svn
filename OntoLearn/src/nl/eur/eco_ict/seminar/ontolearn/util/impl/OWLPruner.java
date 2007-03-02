@@ -23,7 +23,7 @@ import nl.eur.eco_ict.seminar.ontolearn.util.Stemmer;
  * CoopIS/DOA/ODBASE 2004, LNCS pp. 981–998.</a>
  * @author Jasper
  */
-public class PrunerStub implements Pruner {
+public class OWLPruner implements Pruner {
 
 	protected ConceptsOfInterestSelection cdi_selector = null;
 
@@ -72,9 +72,16 @@ public class PrunerStub implements Pruner {
 				oc = i.next ();
 				lemma = Stemmer.Factory.getInstance ()
 						.stem (oc.getLocalName ());
-				oc.setLabel (lemma, null);
-				if (!lemma.equals (oc.getLocalName ())) {
-					ontology.replace (oc, ontology.getOClass (lemma));
+				// leave the multiword concepts alone & also do it only when it would be different
+				if (!oc.getLocalName ().contains (" ") && !lemma.equals (oc.getLocalName ())) {
+					OntClass repl = ontology.getOClass (lemma);
+					if (repl == null){
+						repl = ontology.addOClass (lemma);
+					}
+					repl.addLabel ("Original definition: " + oc.getLocalName (), null);
+					oc.addEquivalentClass (repl);
+					repl.addEquivalentClass (oc);
+					ontology.replace (oc, repl);
 				}
 			} catch (Exception e) {
 				System.err.println (e.getMessage ());

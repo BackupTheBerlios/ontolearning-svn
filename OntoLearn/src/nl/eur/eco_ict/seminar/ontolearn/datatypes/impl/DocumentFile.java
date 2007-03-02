@@ -9,6 +9,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.StringReader;
+import java.net.URI;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -67,7 +68,8 @@ public class DocumentFile implements Document {
 	 * @return the name of the document
 	 */
 	public String getName () {
-		return this.file.getName ();
+		//return this.getURI ().getPath ();
+		return this.getURI ().toASCIIString ();
 	}
 
 	/**
@@ -138,5 +140,15 @@ public class DocumentFile implements Document {
 			this.abstracts = new HashSet<String>();
 		}
 		return this.abstracts;
+	}
+
+	/**
+	 * @see nl.eur.eco_ict.seminar.ontolearn.datatypes.Document#getURI()
+	 */
+	public URI getURI () {
+		if (this.file != null){
+		return this.file.toURI ();
+		}
+		return URI.create ("#");
 	}
 }
