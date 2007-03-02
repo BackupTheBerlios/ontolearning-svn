@@ -8,6 +8,7 @@
  */
 package nl.eur.eco_ict.seminar.ontolearn.datatypes.impl;
 
+import java.io.File;
 import java.net.URI;
 
 /**
@@ -34,6 +35,9 @@ public class Settings {
 	}
 	
 	public String getOutputLocation(){
+		if (this.outputloc == null){
+			this.outputloc = System.getProperty ("user.dir")+File.separatorChar + "output.rdf";
+		}
 		return this.outputloc;
 	}
 	
