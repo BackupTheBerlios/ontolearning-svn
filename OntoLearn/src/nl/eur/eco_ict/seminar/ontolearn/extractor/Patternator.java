@@ -116,15 +116,26 @@ public class Patternator {
 		if(myString.indexOf(NP0) < myString.indexOf(NPx)) {
 			// Pattern: NP0 --> pattern word (like, such as, etc..) --> NPx
 			newPattern = myString.substring(myString.indexOf(NP0) + NP0.length(), myString.indexOf(NPx)).trim().replaceAll(", ","");
-			newPattern = "NP0:connector:("+newPattern+"):connector:NPx";
+
+			System.out.println("newPattern.split.length ding: "+newPattern.split(" ").length);
+			if(newPattern.split(" ").length<3) {
+				newPattern = "NP0:connector:("+newPattern+"):connector:NPx";
+				addPattern(newPattern);
+			}
+			
+			
 		}
 		else {
 			// Pattern: NPX --> pattern word (like, such as, etc..) --> NP0
 			newPattern = myString.substring(myString.indexOf(NPx) + NPx.length(), myString.indexOf(NP0)).trim().replaceAll(", ","");
-			newPattern = "NPx:connector:("+newPattern+"):connector:NP0";
+
+			System.out.println("newPattern.split.length ding: "+newPattern.split(" ").length);
+			if(newPattern.split(" ").length<3) {
+				newPattern = "NPx:connector:("+newPattern+"):connector:NP0";
+				addPattern(newPattern);
+			}
 		}
 		
-		addPattern(newPattern);
 	}
 	
 	public void stripNewPattern(String myString, String className, String subClassName) {
@@ -149,14 +160,15 @@ public class Patternator {
 				tempClass = myClasses.next ();
 				
 				// TODO: Dit meot natuurlijk niet zo :P 
-				className = tempClass.getLocalName ();//.getURI().replaceAll("http://someplace.somewhere/someontology/", "");
+				// .getLocalName() werkt niet :( Die pakt alleen de tekst na de laatste spatie.
+				className = tempClass.getURI().replaceAll("http://someplace.somewhere/someontology/", "");
 				
 				if((myString.contains(className)) && (tempClass != null) && (tempClass.hasSubClass())) {
 					mySubClasses = tempClass.listSubClasses();	
 					
 					while(mySubClasses.hasNext ()) {
 						tempSubClass = mySubClasses.next ();
-						subClassName = tempSubClass.getLocalName ();//.getURI().replaceAll("http://someplace.somewhere/someontology/", "");
+						subClassName = tempSubClass.getURI().replaceAll("http://someplace.somewhere/someontology/", "");
 						
 						if(myString.contains(subClassName)) {
 							stripNewPattern(myString, className, subClassName);
