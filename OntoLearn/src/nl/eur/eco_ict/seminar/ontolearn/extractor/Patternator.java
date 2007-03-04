@@ -13,7 +13,9 @@ import java.util.regex.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
+import java.util.Collection;
 
 import com.hp.hpl.jena.ontology.OntClass;
 
@@ -28,7 +30,9 @@ import nl.eur.eco_ict.seminar.ontolearn.util.impl.StanfordParser;
  */
 public class Patternator {
 	private static String PATTERNSFILE =  System.getProperty("user.dir") + "/data/patterns/patterns.txt";
+	private static String PATTERNSMERONYMSFILE =  System.getProperty("user.dir") + "/data/patterns/patternsMeronyms.txt";
     ArrayList<String> patterns;
+    Collection<String> patternsMeronyms;
     StanfordParser myStanfordParser;
     
 	public Patternator() {
@@ -37,17 +41,26 @@ public class Patternator {
 		
 	    BufferedReader br;
 	    String line;
-	    
+
 	    File patternsFile = new File(PATTERNSFILE);
+	    File patternsMeronymsFile = new File(PATTERNSMERONYMSFILE);
 	    
 	    this.patterns = new ArrayList(100);
+	    this.patternsMeronyms = new HashSet<String>();
 	    
 	    try {
 	    	br = new BufferedReader(new FileReader(patternsFile));
-	    
+		    
 		    while ((line = br.readLine()) != null) {
 		    	// load each pattern into the ArrayList
 		    	this.patterns.add(line);
+			}
+		    
+		    br = new BufferedReader(new FileReader(patternsMeronymsFile));
+		    
+		    while ((line = br.readLine()) != null) {
+		    	// load each pattern into the ArrayList
+		    	this.patternsMeronyms.add(line);
 			}
 	    }
 		catch(IOException e) {
@@ -271,6 +284,118 @@ public class Patternator {
 				// Display NP0 and NPx (testing)
 				System.out.println("NP0: "+NP0);
 				System.out.println("NPx: "+Arrays.asList(cleanNPx));
+			}
+		}
+		
+		return foundPairs;		
+	}
+	
+	public HashMap parseString(String myString, String type) {
+		HashMap<String, String[]> foundPairs = new HashMap<String, String[]>();
+		
+		Collection<String> myPatterns = new HashSet<String>();
+		
+		if(type.compareTo("hyponym")==0) {
+			// Look for hyponyms:
+			myPatterns = this.patterns;
+		}
+		else if(type.compareTo("meronym")==0) {
+			// Look for meronyms:
+			myPatterns = this.patternsMeronyms;
+		}
+		
+		String regNP0 = "([a-zA-Z0-9\\- ]+)";
+		String regNPx = "(([a-zA-Z0-9\\- ]+)(, [a-zA-Z0-9\\- ]+)*( and [a-zA-Z0-9\\- ]*)*)";
+		String regSpacer = "((, {1,}+)|( {1,}+))";		
+		
+		Iterator<String> i = myPatterns.iterator ();
+		
+		while (i.hasNext()){
+			String pattern = i.next();
+			String patternCopy = new String(pattern);
+			
+			pattern = pattern.replaceAll("NP0", regNP0);
+			pattern = pattern.replaceAll("NPx", regNPx);
+			pattern = pattern.replaceAll(":connector:", regSpacer);
+			
+			Pattern p = Pattern.compile(pattern);
+			
+			// Create Matcher:
+			Matcher m = p.matcher(myString);
+		
+			// Loop the matcher for matches
+			while (m.find()) {
+				// Grab the string satisfying the pattern
+				String myMatch = myString.substring(m.start(), m.end());
+				
+				// Parse the string to find NP0 and NPx according to the pattern
+				// Split the string around the ( and ) tags:
+				
+				String regBrackets = "((\\x28{1})([a-zA-Z0-9 ]+)+(\\x29{1}))";
+				
+				String usedPattern = patternCopy;	
+				
+				Pattern p2 = Pattern.compile(regBrackets);
+				Matcher m2 = p2.matcher(usedPattern);
+				
+				while (m2.find()) {
+					String splitString = usedPattern.substring(m2.start()+1, m2.end()-1);
+					myMatch = myMatch.replaceAll(splitString, ":splithere:");
+				}				
+				
+				String[] splitMatches = myMatch.split(":splithere:");
+								
+				// Clean the splitted array
+				String[] cleanMatches = cleanArray(splitMatches);
+
+				// Populate NP0 and NPx from cleanMatches
+				String NP0 = new String();
+				String NPx = new String();
+				
+				if(usedPattern.indexOf("NP0") < usedPattern.indexOf("NPx")) {
+					NP0 = cleanMatches[0];
+					NPx = cleanMatches[1];
+				}
+				else {
+					NP0 = cleanMatches[1];
+					NPx = cleanMatches[0];
+				}
+				
+				// NPx can contain NP1, NP2, etc.. Split them and clean the array
+				String regSplitNPx = "(( , {1})|( and )|( or ))";
+
+				String NPxnew = NPx.replaceAll(regSplitNPx, ":splithere:");
+				
+				String[] cleanNPx = NPxnew.split(":splithere:");
+				
+				if(usedPattern.indexOf("NP0") < usedPattern.indexOf("NPx")) {
+					NP0 = this.myStanfordParser.getRightNP(NP0);
+					for(int j=0;j<cleanNPx.length; j++) {
+						cleanNPx[j] = this.myStanfordParser.getLeftNP(cleanNPx[j]);
+					}
+				}
+				else {
+					NP0 = this.myStanfordParser.getLeftNP(NP0);
+					for(int j=0;j<cleanNPx.length; j++) {
+						cleanNPx[j] = this.myStanfordParser.getRightNP(cleanNPx[j]);
+					}
+				}
+				
+				if(NP0 != null) {
+					NP0 = NP0.replaceAll("(\\x2D{1})([a-zA-Z0-9]+)(\\x2D{1})","");
+				}
+				
+				for(int j=0;j<cleanNPx.length; j++) {
+					if(cleanNPx[j]!=null) {
+						cleanNPx[j] = cleanNPx[j].replaceAll("(\\x2D{1})([a-zA-Z0-9]+)(\\x2D{1})","");
+					}
+				}
+				
+				foundPairs.put(NP0, cleanNPx);
+				
+				// Display NP0 and NPx (testing)
+				// System.out.println("NP0: "+NP0);
+				// System.out.println("NPx: "+Arrays.asList(cleanNPx));
 			}
 		}
 		

@@ -1,0 +1,4 @@
+NPx:connector:(is part of):connector:NP0
+NPx:connector:(are part of):connector:NP0
+NPx:connector:(is a member of):connector:NP0
+NPx:connector:(are members of):connector:NP0

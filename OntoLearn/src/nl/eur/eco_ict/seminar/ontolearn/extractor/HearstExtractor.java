@@ -13,6 +13,7 @@ import java.util.Map.Entry;
 import java.io.*;
 
 import com.hp.hpl.jena.ontology.OntClass;
+import com.hp.hpl.jena.ontology.OntProperty;
 // Not used, removable?
 // import com.hp.hpl.jena.ontology.OntProperty;
 
@@ -78,10 +79,16 @@ public class HearstExtractor implements Extractor {
 				  // Run the pattern finder on the sentence
 				  // foundPatterns contains the String NP0 as key, and the String[] NPx as value(s) <-- NPx is an array!
 				  
-				  HashMap<String, String[]> foundPatterns = this.myPatternator.parseString(s);
+				  // HashMap<String, String[]> foundPatterns = this.myPatternator.parseString(s);
+				  HashMap<String, String[]> foundHyponymPatterns = this.myPatternator.parseString(s, "hyponym");
+				  HashMap<String, String[]> foundMeronymPatterns = this.myPatternator.parseString(s, "meronym");
 				  
+				  // New way of doing this:
+				  parseFoundHyponymPatterns(foundHyponymPatterns, ontology);
+				  parseFoundMeronymPatterns(foundMeronymPatterns, ontology);
+				  
+				  /*
 				  // Test to see if the HashMap works
-				  
 				  Collection<Entry<String, String[]>> collection = foundPatterns.entrySet();
 				  Iterator<Entry<String, String[]>> iterator = collection.iterator();
 				  
@@ -105,14 +112,8 @@ public class HearstExtractor implements Extractor {
 					    	  }
 					      }
 				      }
-				      
-				      // Display NP0 and NPx from foundPatterns (testing)
-				      /*
-					  System.out.println("NP0: "+key);
-					  System.out.println("NPx: "+Arrays.asList(value));
-					  */
-					  
 				  }
+				  */
 				  
 				  this.myPatternator.scanNewPatterns(s, ontology);
 			}
@@ -124,6 +125,86 @@ public class HearstExtractor implements Extractor {
 			}
 		}
 	}
+	
+	public void parseFoundHyponymPatterns(HashMap<String, String[]> foundPatterns, Ontology ontology) {
+		// Test to see if the HashMap works
+	    Collection<Entry<String, String[]>> collection = foundPatterns.entrySet();
+	    Iterator<Entry<String, String[]>> iterator = collection.iterator();
+	  
+	    Entry<String, String[]> entry = null;
+	 
+	   while(iterator.hasNext())
+	   { 
+	      entry = iterator.next();
+	      String key = entry.getKey();
+	      String[] value = entry.getValue();
+	      
+	      if(checkNP(key)) {
+	    	  System.out.println("Adding the following key: "+key);
+		      
+		      OntClass myKey = ontology.addOClass (key);
+		      
+		      for(int i = 0; i < value.length; i++) {
+		    	  if(checkNP(value[i])) {
+			    	  System.out.println("Adding the following value: "+value[i]);
+			    	  OntClass myValue = ontology.addOClass (value[i]);						
+					  myValue.setSuperClass (myKey);
+		    	  }
+		      }
+	      }
+	      
+	      // Display NP0 and NPx from foundPatterns (testing)
+	      /*
+		  System.out.println("NP0: "+key);
+		  System.out.println("NPx: "+Arrays.asList(value));
+		  */
+		  
+	   }
+	}
+	
+	public void parseFoundMeronymPatterns(HashMap<String, String[]> foundPatterns, Ontology ontology) {
+		// Test to see if the HashMap works
+	    Collection<Entry<String, String[]>> collection = foundPatterns.entrySet();
+	    Iterator<Entry<String, String[]>> iterator = collection.iterator();
+	  
+	    Entry<String, String[]> entry = null;
+	 
+	   while(iterator.hasNext())
+	   { 
+	      entry = iterator.next();
+	      String key = entry.getKey();
+	      String[] value = entry.getValue();
+	      
+	      
+	      if(checkNP(key)) {
+	    	  System.out.println("Adding the following meronym key: "+key);
+		      
+		      for(int i = 0; i < value.length; i++) {
+		    	  if(checkNP(value[i])) {
+		    		  System.out.println("Adding the following meronym value: "+value[i]);
+			    	  this.addRelation(ontology, key, value[i], "isPartOf");
+		    	  }
+		      }
+	      }
+	   }
+	}
+	
+	public void addRelation(Ontology ontology, String wordX, String wordY, String wordRelation) {
+		OntProperty p = ontology.getProperty (wordRelation);
+				
+		OntClass y = ontology.addOClass (wordY);
+		OntClass x = ontology.addOClass (wordX);
+		
+		if (p == null){
+			p = ontology.addObjectProperty (wordRelation);
+		}
+		
+		p.setDomain (y);
+		p.setRange (x);
+		y.addProperty (p, x);
+	}
+	
+	
 	/**
 	 * @see nl.eur.eco_ict.seminar.ontolearn.Extractor#getName()
 	 */
