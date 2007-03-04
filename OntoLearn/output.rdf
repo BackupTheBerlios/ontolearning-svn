@@ -1,0 +1,155 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:daml="http://www.daml.org/2001/03/daml+oil#" > 
+  <rdf:Description rdf:about="http://X/non-competitive labor market models">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://X/unobserved individual heterogeneity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://X/various assumptions"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://X/Math skills">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://X/skills"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://X/low-skill workers">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://X/unemployment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://X/macro time series ">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://X/seasonal and non-seasonal data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://X/a disadvantage">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://X/the immigrant"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://X/various factors">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://X/factors">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://X/various assumptions">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://X/an important issue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://X/life"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://X/controversial Brazilian policies">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://X/administrative costs">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://X/countries"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://X/common cycles">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://X/Restrictions"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://X/seasonal and non-seasonal data">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://X/government revenue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://X/countries"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://X/cointegration">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://X/Restrictions"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://X/the immigrant">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://X/income">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://X/factors"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://X/this problem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://X/flexible regression models">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://X/skill level">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://X/factors"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://X/relative prices">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://X/the regime switching model"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://X/Robert Solow">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://X/American economists"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://X/the size">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://X/various factors"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://X/structural changes">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://X/relatively more persistent noise"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://X/road building">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://X/controversial Brazilian policies"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://X/the two taxes">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://X/non-competitive labor market models"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://X/education">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://X/factors"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://X/agreements">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://X/redistributing income">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://X/countries"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://X/temporary change outliers">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://X/relatively more persistent noise"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://X/policy conditionality">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://X/agreements"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://X/all belief">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://X/games"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://X/Cross Validation and">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://X/model selection criteria"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://X/subsidized credit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://X/controversial Brazilian policies"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://X/Denmark">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://X/countries"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://X/countries">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://X/the theoretical model">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://X/controversial Brazilian policies"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://X/Paul Samuelson">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://X/American economists"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://X/the regime switching model">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://X/Restrictions">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Cla
