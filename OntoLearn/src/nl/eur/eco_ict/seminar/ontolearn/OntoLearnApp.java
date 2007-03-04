@@ -84,7 +84,7 @@ public class OntoLearnApp {
 			}
 
 			// after all extractors have processed the document clean up
-			this.getPruner ().prune (this.getOntology ());
+			// this.getPruner ().prune (this.getOntology ());
 		}
 
 		// Once all documents have been processed call the onFinish method to
@@ -155,11 +155,15 @@ public class OntoLearnApp {
 	
 	protected void output (Ontology onto) throws IOException{
 		String location = this.getSettings ().getOutputLocation ();
+		System.out.println("Outputting resulting .rdf file to: "+location);
+		
 		File f = new File (location);
-		if (f.canWrite ()){
-			if (!f.exists ()){
+		
+		if (!f.exists ()){
 			f.createNewFile ();
-			}
+		}
+		
+		if (f.canWrite ()){
 			FileWriter fw = new FileWriter (f);
 			fw.write (onto.toString ());
 		}
