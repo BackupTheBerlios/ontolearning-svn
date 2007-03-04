@@ -3,8 +3,10 @@
  */
 package nl.eur.eco_ict.seminar.ontolearn.extractor;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map.Entry;
@@ -17,6 +19,7 @@ import com.hp.hpl.jena.ontology.OntClass;
 import nl.eur.eco_ict.seminar.ontolearn.Extractor;
 import nl.eur.eco_ict.seminar.ontolearn.datatypes.Document;
 import nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology;
+import nl.eur.eco_ict.seminar.ontolearn.datatypes.impl.CorrOcc;
 import nl.eur.eco_ict.seminar.ontolearn.util.Tokenizer;
 
 /**
@@ -25,12 +28,34 @@ import nl.eur.eco_ict.seminar.ontolearn.util.Tokenizer;
  */
 public class HearstExtractor implements Extractor {
 	Patternator myPatternator;
+	private static String COMMONWORDSFILE =  System.getProperty("user.dir") + "/data/patterns/common_words.txt";
+    Collection<String> commonWords;
 	
 	public HearstExtractor() {
 		this.myPatternator = new Patternator();
+		loadCommonWords();
 	}
 	
-	
+	public void loadCommonWords() {
+		BufferedReader br;
+	    String line;
+	    
+	    this.commonWords = new HashSet<String>();
+	    
+	    File commonWordsFile = new File(COMMONWORDSFILE);
+	    
+	    try {
+	    	br = new BufferedReader(new FileReader(commonWordsFile));
+	    
+		    while ((line = br.readLine()) != null) {
+		    	// load each pattern into the ArrayList
+		    	this.commonWords.add(line.toLowerCase());
+			}
+	    }
+		catch(IOException e) {
+			System.out.println("ERROR: IOException"+e);
+		}
+	}
 	/**
 	 * @see nl.eur.eco_ict.seminar.ontolearn.Extractor#parse(nl.eur.eco_ict.seminar.ontolearn.datatypes.Document, nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology)
 	 */
@@ -114,11 +139,21 @@ public class HearstExtractor implements Extractor {
 		boolean correctNP = true;
 		
 		if((myNP==null) || (myNP.compareTo("null")==0) || (myNP.compareTo("")==0)) {
-			correctNP = false;
-			System.out.println("wrong NP found!: "+myNP);
+			System.out.println("null NP found!: "+myNP);
+			return false;
 		}
 		
-		return correctNP;
+		// Check de commonWords Collection<String> voor matches. Een match betekend wrong NP
+		Iterator<String> i = this.commonWords.iterator ();
+		
+		while (i.hasNext()){
+			if(i.next().compareToIgnoreCase(myNP)==0) {
+				System.out.println("common-words NP found!: "+myNP);
+				return false;
+			}
+		}
+		
+		return true;
 	}
 
 }
