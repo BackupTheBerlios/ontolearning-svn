@@ -165,6 +165,9 @@ public class OntoLearnApp {
 		
 		File f = new File (location);
 		
+		if (f.exists ()){
+			f.delete ();
+		}
 		if (!f.exists ()){
 			f.createNewFile ();
 		}

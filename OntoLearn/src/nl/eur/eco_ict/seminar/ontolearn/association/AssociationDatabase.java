@@ -137,20 +137,25 @@ public class AssociationDatabase {
 	}
 
 	public Occurance getOccurance (String document, String word) {
-		Collection<Occurance> words = new HashSet<Occurance>();
-		Collection<Occurance> documents = new HashSet<Occurance>();
+		Collection<Occurance> words = null;
+		Collection<Occurance> documents = null;
+		Iterator<Occurance> i = null;
 		
 		if (this.wordOccurances.containsKey(word)){
-			words.addAll (this.wordOccurances.get (word));
+			words = this.wordOccurances.get (word);
 		}
 		if (this.docuemntOccurances.containsKey (document)){
-			documents.addAll (this.docuemntOccurances.get (document));
+			documents = this.docuemntOccurances.get (document);
 		}
-		words.retainAll (documents);
-		
-		Iterator<Occurance> i = words.iterator ();
+		if (words != null && documents != null && words.size () < documents.size ()){
+			i = words.iterator ();
+		}
+		if (i == null && documents != null && words != null && documents.size () < words.size ()){
+			i = documents.iterator ();
+		}
+
 		Occurance temp = null;
-		while (i.hasNext () && temp == null) {
+		while (i != null && i.hasNext () && temp == null) {
 			temp = i.next ();
 			if (!temp.getDocumentName ().equals (document)
 					|| !temp.getWord ().equals (word)) {
@@ -676,6 +681,14 @@ public class AssociationDatabase {
 		}
 
 		return result;
+	}
+	
+	public int getWordCount (){
+		if (!this.inmemory){
+		//TODO
+			return 0;
+		}
+		return this.wordOccurances.keySet ().size ();
 	}
 	
 	/**

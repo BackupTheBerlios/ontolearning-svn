@@ -97,6 +97,7 @@ public class AssociationBasedExtractor implements Extractor {
 				}
 			}
 			this.storeOccurances();
+			System.out.println(this.tostring ());
 		} catch (IOException e) {
 			System.out.println ("Error: " + e);
 		} catch (SQLException e) {
@@ -184,7 +185,7 @@ public class AssociationBasedExtractor implements Extractor {
 		return doc.getName ()+"#"+this.abstractCounter;
 	}
 
-	public String tostring () {
+	public String tostring () throws SQLException {
 		/*Iterator<Occurance> i = this.occuranceMatrix.iterator ();
 		Occurance oc;
 		String result = "";
@@ -195,7 +196,7 @@ public class AssociationBasedExtractor implements Extractor {
 		}
 		return result;
 		*/
-		return "";
+		return this.getName () + " knows about " + this.waardeDB.getDocCount () + " documents containing " + this.waardeDB.getWordCount () + " nouns."; 
 	}
 
 	public void conceptsToDatabase () {
@@ -294,8 +295,8 @@ public class AssociationBasedExtractor implements Extractor {
 	
 	public void parseWordPair(String wordA, String wordB, Ontology ontology) {
 		double pearsonThreshold = 0;
-		double confidenceThreshold = 0.25;
-		double supportThreshold = 0.25;		
+		double confidenceThreshold = 0;
+		double supportThreshold = 0;		
 		
 		try {
 			double pearsonCoefficient = Math.abs(this.correlation(wordA, wordB));
