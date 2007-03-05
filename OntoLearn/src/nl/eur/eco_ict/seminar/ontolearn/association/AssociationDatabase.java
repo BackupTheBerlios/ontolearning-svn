@@ -26,7 +26,10 @@ public class AssociationDatabase {
 
 	protected boolean inmemory = false;
 
-	protected Collection<Occurance> occuranceMatrix = new HashSet<Occurance> ();
+	//protected Collection<Occurance> occuranceMatrix = new HashSet<Occurance> ();
+	
+	protected Map<String, Collection<Occurance>> wordOccurances = new HashMap<String, Collection<Occurance>>();
+	protected Map<String, Collection<Occurance>> docuemntOccurances = new HashMap<String, Collection<Occurance>>();
 
 	public AssociationDatabase () {
 		if (!this.inmemory) {
@@ -53,7 +56,7 @@ public class AssociationDatabase {
 				// Get a Statement object
 				this.stmt = this.con.createStatement ();
 			} catch (Exception e) {
-				e.printStackTrace ();
+				//e.printStackTrace ();
 			}
 		}
 
@@ -69,16 +72,29 @@ public class AssociationDatabase {
 				e.printStackTrace ();
 			}
 		} else {
-			this.occuranceMatrix.clear ();
+			//this.occuranceMatrix.clear ();
+			this.wordOccurances.clear ();
+			this.docuemntOccurances.clear ();
 		}
 
 	}
 	
 	public void addConcept (Occurance occ) throws SQLException{
-		this.addConcept (occ.getDocumentName (), occ.getWord (), new Integer(occ.getWordCount ()));
+		if (!this.inmemory){
+			this.addConcept (occ.getDocumentName (), occ.getWord (), new Integer(occ.getWordCount ()));
+		}else{
+			if (this.wordOccurances.containsKey (occ.getWord ())){
+				this.wordOccurances.put (occ.getWord (), new HashSet<Occurance>());
+			}
+			this.wordOccurances.get (occ.getWord ()).add (occ);
+			if (this.docuemntOccurances.containsKey (occ.getDocumentName ())){
+				this.docuemntOccurances.put (occ.getDocumentName (), new HashSet<Occurance>());
+			}
+			this.docuemntOccurances.get (occ.getDocumentName ()).add(occ);
+		}
 	}
 
-	public void addConcept (String document, String word, Integer wordCount)
+	protected void addConcept (String document, String word, Integer wordCount)
 			throws SQLException {
 		if (!this.inmemory) {
 
@@ -98,7 +114,7 @@ public class AssociationDatabase {
 			occ.setDocumentName (document);
 			occ.setWord (word);
 			occ.setWordCount (wordCount.intValue ());
-			this.occuranceMatrix.add (occ);
+			this.addConcept (occ);
 		}
 	}
 
@@ -121,7 +137,12 @@ public class AssociationDatabase {
 	}
 
 	public Occurance getOccurance (String document, String word) {
-		Iterator<Occurance> i = this.occuranceMatrix.iterator ();
+		Collection<Occurance> words = new HashSet<Occurance>(this.wordOccurances.get (word));
+		Collection<Occurance> documents = new HashSet<Occurance>(this.docuemntOccurances.get (document));
+		
+		words.retainAll (documents);
+		
+		Iterator<Occurance> i = words.iterator ();
 		Occurance temp = null;
 		while (i.hasNext () && temp == null) {
 			temp = i.next ();
@@ -164,7 +185,7 @@ public class AssociationDatabase {
 				this.deleteAllKindOfWord (iWord[k]);
 			}
 		} else {
-
+			// TODO
 		}
 	}
 
@@ -191,7 +212,7 @@ public class AssociationDatabase {
 				this.getAllWordsPerDocument (documentString[k]);
 			}
 		} else {
-
+			// TODO
 		}
 
 		return documentString;
@@ -203,11 +224,33 @@ public class AssociationDatabase {
 					.executeUpdate ("DELETE FROM `association_abstract` WHERE `word` = '"
 							+ word + "'");
 		} else {
-			Iterator<Occurance> i = this.occuranceMatrix.iterator ();
+			Iterator<Occurance> i = this.wordOccurances.get (word).iterator ();
+			Collection<Occurance> toRemove = new HashSet<Occurance>();
+			Occurance occ = null;
 			while (i.hasNext ()) {
-				if (i.next ().getWord ().equals (word)) {
-					i.remove ();
+				occ = i.next ();
+				if (occ.getWord ().equals (word)) {
+					toRemove.add (occ);
 				}
+			}
+			i = toRemove.iterator ();
+			while(i.hasNext ()){
+				this.remove (i.next ());
+			}
+		}
+	}
+	
+	public void remove (Occurance occ){
+		if (!this.inmemory){
+			// TODO
+		}else{
+			Collection<Occurance> occs = this.wordOccurances.get (occ.getWord ());
+			if (occs.contains (occ)){
+				occs.remove (occ);
+			}
+			occs = this.docuemntOccurances.get (occ.getDocumentName ());
+			if (occs.contains (occ)){
+				occs.remove (occ);
 			}
 		}
 	}
@@ -274,7 +317,7 @@ public class AssociationDatabase {
 			}
 		} else {
 			HashSet<String> wordset = new HashSet<String>();
-			Iterator<Occurance> i = this.occuranceMatrix.iterator ();
+			Iterator<Occurance> i = this.docuemntOccurances.get (document).iterator ();
 			Occurance occ = null;
 			while (i.hasNext ()){
 				occ = i.next ();
@@ -300,7 +343,7 @@ public class AssociationDatabase {
 			}
 		} else {
 			int count=0, sum=0;
-			Iterator<Occurance> i = this.occuranceMatrix.iterator ();
+			Iterator<Occurance> i = this.wordOccurances.get (word).iterator ();
 			Occurance occ = null;
 			while (i.hasNext ()){
 				occ = i.next ();
@@ -460,10 +503,12 @@ public class AssociationDatabase {
 				}
 			}
 		} else {
-			// TODO
 			Map<String, Integer> xOcc = new HashMap<String, Integer>();
 			Map<String, Integer> yOcc = new HashMap<String, Integer>();
-			Iterator<Occurance> i = this.occuranceMatrix.iterator ();
+			Collection<Occurance> ocss = new HashSet<Occurance>();
+			ocss.addAll (this.wordOccurances.get (wordX));
+			ocss.addAll (this.wordOccurances.get (wordY));			
+			Iterator<Occurance> i = ocss.iterator ();
 			Occurance occ = null;
 			while (i.hasNext ()){
 				occ = i.next ();
@@ -529,16 +574,7 @@ public class AssociationDatabase {
 				result = rsDocCount.getInt ("numDocs");
 			}
 		} else {
-			HashSet<String> docs = new HashSet<String>();
-			Iterator<Occurance> i = this.occuranceMatrix.iterator ();
-			Occurance occ = null;
-			while(i.hasNext ()){
-				occ = i.next ();
-				if (!docs.contains (occ.getDocumentName ())){
-					docs.add (occ.getDocumentName ());
-				}
-			}
-			result = docs.size ();
+			result = this.docuemntOccurances.keySet ().size ();
 		}
 
 		return result;
@@ -566,7 +602,10 @@ public class AssociationDatabase {
 				result = rsCoOccCount.getInt ("numDocs");
 			}
 		} else {
-			Iterator<Occurance> i = this.occuranceMatrix.iterator ();
+			Collection<Occurance> occs = new HashSet<Occurance>();
+			occs.addAll (this.wordOccurances.get (wordA));
+			occs.addAll (this.wordOccurances.get (wordB));
+			Iterator<Occurance> i = occs.iterator ();
 			Map<String, Integer> aOcc = new HashMap<String,Integer>();
 			Map<String, Integer> bOcc = new HashMap<String,Integer>();
 			Occurance temp = null;
@@ -619,7 +658,7 @@ public class AssociationDatabase {
 				result = rsWordCount.getInt ("numDocs");
 			}
 		} else {
-			Iterator<Occurance> i = this.occuranceMatrix.iterator ();
+			Iterator<Occurance> i = this.wordOccurances.get (word).iterator ();
 			Occurance temp = null;
 			while(i.hasNext ()){
 				temp = i.next ();
