@@ -171,7 +171,7 @@ public class OntoLearnApp {
 		
 		if (f.canWrite ()){
 			FileWriter fw = new FileWriter (f);
-			fw.write (onto.toString ());
+			onto.getModel ().write (fw);
 		}
 	}
 
