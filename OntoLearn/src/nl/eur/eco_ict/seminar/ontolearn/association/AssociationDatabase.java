@@ -83,11 +83,11 @@ public class AssociationDatabase {
 		if (!this.inmemory){
 			this.addConcept (occ.getDocumentName (), occ.getWord (), new Integer(occ.getWordCount ()));
 		}else{
-			if (this.wordOccurances.containsKey (occ.getWord ())){
+			if (!this.wordOccurances.containsKey (occ.getWord ())){
 				this.wordOccurances.put (occ.getWord (), new HashSet<Occurance>());
 			}
 			this.wordOccurances.get (occ.getWord ()).add (occ);
-			if (this.docuemntOccurances.containsKey (occ.getDocumentName ())){
+			if (!this.docuemntOccurances.containsKey (occ.getDocumentName ())){
 				this.docuemntOccurances.put (occ.getDocumentName (), new HashSet<Occurance>());
 			}
 			this.docuemntOccurances.get (occ.getDocumentName ()).add(occ);
@@ -137,9 +137,15 @@ public class AssociationDatabase {
 	}
 
 	public Occurance getOccurance (String document, String word) {
-		Collection<Occurance> words = new HashSet<Occurance>(this.wordOccurances.get (word));
-		Collection<Occurance> documents = new HashSet<Occurance>(this.docuemntOccurances.get (document));
+		Collection<Occurance> words = new HashSet<Occurance>();
+		Collection<Occurance> documents = new HashSet<Occurance>();
 		
+		if (this.wordOccurances.containsKey(word)){
+			words.addAll (this.wordOccurances.get (word));
+		}
+		if (this.docuemntOccurances.containsKey (document)){
+			documents.addAll (this.docuemntOccurances.get (document));
+		}
 		words.retainAll (documents);
 		
 		Iterator<Occurance> i = words.iterator ();

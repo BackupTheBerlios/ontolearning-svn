@@ -22,7 +22,6 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.Scanner;
 
-import com.hp.hpl.jena.ontology.DatatypeProperty;
 import com.hp.hpl.jena.ontology.OntClass;
 import com.hp.hpl.jena.ontology.OntProperty;
 
@@ -43,8 +42,8 @@ public class AssociationBasedExtractor implements Extractor {
 	 */
 	
 	public AssociationBasedExtractor() {
-		this.waardeDB.cleanDB();
 		this.waardeDB.setStorage (true);
+		this.waardeDB.cleanDB();
 	}
 	
 	public AssociationBasedExtractor(boolean cleanDB) {
@@ -54,9 +53,6 @@ public class AssociationBasedExtractor implements Extractor {
 	}
 	
 	public void parse (Document doc, Ontology ontology) throws Throwable {
-		// Start time:
-		long startTime = System.currentTimeMillis();
-		
 		this.abstractCounter = 0;
 		
 		Iterator<BufferedReader> abstracts = doc.readAbstracts ().iterator ();
@@ -64,13 +60,6 @@ public class AssociationBasedExtractor implements Extractor {
 			this.abstractCounter++;
 			this.parse (abstracts.next(), ontology, doc);
 		}
-		
-		// End time:
-		long endTime = System.currentTimeMillis();
-		
-		double timeLapsed = (endTime - startTime) / 1000.0;
-		
-		System.out.println("Time taken to parse "+doc.getName()+": "+timeLapsed+" seconds.");
 	}
 	
 	protected void parse (BufferedReader reader, Ontology ontology, Document doc) throws Throwable {
@@ -173,12 +162,7 @@ public class AssociationBasedExtractor implements Extractor {
 		oc.documentName = doc.getName ();
 		oc.wordCount = 1;
 		//this.occuranceMatrix.add (oc);
-
-		// add to database
-
-		int i = oc.wordCount;
-		this.waardeDB.addConcept (oc.documentName, oc.word, new Integer(i));
-
+		this.waardeDB.addConcept (oc);
 	}
 
 	public Occurance getOccurance (String word, Document doc) {
@@ -310,8 +294,8 @@ public class AssociationBasedExtractor implements Extractor {
 	
 	public void parseWordPair(String wordA, String wordB, Ontology ontology) {
 		double pearsonThreshold = 0;
-		double confidenceThreshold = 0.6;
-		double supportThreshold = 0.5;		
+		double confidenceThreshold = 0.25;
+		double supportThreshold = 0.25;		
 		
 		try {
 			double pearsonCoefficient = Math.abs(this.correlation(wordA, wordB));
@@ -341,7 +325,7 @@ public class AssociationBasedExtractor implements Extractor {
 				System.out.println("This relation is added: "+ wordX + " --> " + wordY);
 				System.out.println("vicore: " + pearsonCoefficient);
 				System.out.println("Confidence (" + confidence + ") Support ("+support+")");
-				this.addRelation (wordX, wordY, Math.pow (pearsonCoefficient*confidence*support,3), ontology);
+				this.addRelation (wordX, wordY, Math.pow (pearsonCoefficient*confidence*support,-3), ontology);
 			}
 		}
 		catch (Exception e) {

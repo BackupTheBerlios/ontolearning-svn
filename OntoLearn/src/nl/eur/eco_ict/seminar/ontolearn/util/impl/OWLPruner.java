@@ -4,13 +4,14 @@
  */
 package nl.eur.eco_ict.seminar.ontolearn.util.impl;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.List;
 
 import com.hp.hpl.jena.ontology.Individual;
 import com.hp.hpl.jena.ontology.OntClass;
-import com.hp.hpl.jena.rdf.model.Resource;
 
 import nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology;
 import nl.eur.eco_ict.seminar.ontolearn.util.Pruner;
@@ -68,7 +69,6 @@ public class OWLPruner implements Pruner {
 
 		while (i.hasNext ()) {
 			try {
-				// TODO check/debug
 				oc = i.next ();
 				lemma = Stemmer.Factory.getInstance ()
 						.stem (oc.getLocalName ());
@@ -164,7 +164,117 @@ public class OWLPruner implements Pruner {
 	 */
 	protected void pruneUnnecessaryGeneralizationPaths (Ontology ontology,
 			Collection<OntClass> cdi) {
-
+		Iterator<OntClass> i = ontology.getClasses ();
+		Iterator<OntClass> j = null;
+		OntClass ci = null, cj = null;
+		while(i.hasNext ()){
+			ci = i.next ();
+			j = ontology.getClasses ();
+			while (j.hasNext ()){
+				cj = j.next ();
+				if (ci != cj){
+					this.pruneUnnecessaryGeneralizationPaths (ci, cj, cdi);
+				}
+			}
+		}
+	}
+	
+	protected void pruneUnnecessaryGeneralizationPaths (OntClass c1, OntClass c2, Collection<OntClass> cdi){
+		if (this.hasGeneralizationPath (c1, c2)){
+			Collection<List<OntClass>> paths = this.getGeneralizationPaths (c1, c2);
+			Iterator<List<OntClass>> i = paths.iterator ();
+			List<OntClass> path = null;
+			Iterator<OntClass> classes = null;
+			OntClass oclass = null;
+			
+			// remove the nonredundant paths
+			while(i.hasNext ()){
+				path = i.next ();
+				path.remove (c1);
+				path.remove (c2);
+				// must have more than one intermediate step
+				if (!path.isEmpty ()){
+					classes = path.iterator ();
+					boolean none = true;
+					// all classes must not be part of cdi and not have more than one sub or super class relationship
+					while (classes.hasNext ()){
+						oclass = classes.next ();
+						none = none && !cdi.contains (oclass);
+						none = none && oclass.listSubClasses (true).toSet ().size () == 1;
+						none = none && oclass.listSuperClasses (true).toSet ().size () == 1;
+					}
+					if (!none){
+						i.remove ();
+					}
+				}else{
+					i.remove ();
+				}
+			}
+			
+			// remove all but one redundant path
+			i = paths.iterator ();
+			while (paths.size () > 1 && i.hasNext ()){
+				path = i.next ();
+				classes = path.iterator ();
+				while (classes.hasNext ()){
+					classes.next ().remove ();
+				}
+			}
+		}
+	}
+	
+	protected Collection<List<OntClass>> getGeneralizationPaths (OntClass c1, OntClass c2){
+		Collection<List<OntClass>> paths = new HashSet<List<OntClass>>();
+		List<OntClass> path = null;
+		path = new ArrayList<OntClass> ();
+		path.add (c1);
+		paths.add (path);
+		
+		this.getGeneralizationPaths (c1, c2, paths, path);
+		
+		// prune incomplete paths
+		Iterator<List<OntClass>> i = paths.iterator();
+		path = null;
+		while(i.hasNext ()){
+			path = i.next ();
+			if (!path.contains (c1) || !path.contains (c2)){
+				i.remove ();
+			}
+		}
+		
+		return paths;
+	}
+	
+	@SuppressWarnings("unchecked")
+	protected Collection<List<OntClass>> getGeneralizationPaths (OntClass c1, OntClass c2, Collection<List<OntClass>> paths, List<OntClass> curpath){
+		Iterator<OntClass> i = c1.listSubClasses (true);
+		OntClass temp = null;
+		List<OntClass> path = null;
+		
+		while (i.hasNext ()){
+			temp = i.next ();
+			path = new ArrayList<OntClass>();
+			path.addAll (curpath);
+			path.add (temp);
+			paths.add (path);
+			if (temp.equals (c2)){
+				return paths;
+			}
+			this.getGeneralizationPaths (temp, c2, paths, path);
+		}
+		
+		return paths;
+	}
+	
+	@SuppressWarnings("unchecked")
+	protected boolean hasGeneralizationPath (OntClass c1, OntClass c2){
+		Iterator<OntClass> i = c1.listSubClasses (false);
+		while (i.hasNext ()){
+			if (i.next ().equals (c2)){
+				return true;
+			}
+		}
+		return false;
 	}
 
 	/**

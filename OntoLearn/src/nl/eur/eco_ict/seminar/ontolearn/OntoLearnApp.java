@@ -21,6 +21,7 @@ import nl.eur.eco_ict.seminar.ontolearn.util.DocumentCrawler;
 import nl.eur.eco_ict.seminar.ontolearn.util.Pruner;
 import nl.eur.eco_ict.seminar.ontolearn.util.impl.DiskCrawler;
 import nl.eur.eco_ict.seminar.ontolearn.util.impl.OWLPruner;
+import nl.eur.eco_ict.seminar.ontolearn.util.impl.SettingsWindow;
 
 /**
  * @author Jasper
@@ -57,12 +58,14 @@ public class OntoLearnApp {
 				+ System.getProperty ("user.dir").replace ('\\', '/')
 				+ "/data/testAbstracts/");
 		this.settings.setOntNamespace ("http://X/");
+		new SettingsWindow (this.settings);
 	} // +System.getProperty("user.dir")+"\\testAbstracts\\"
 
 	public void start () throws URISyntaxException, IOException {
 		Document doc = null;
 		Extractor e = null;
 		Iterator<Extractor> i = null;
+		long start, finish;
 
 		// See if there's anything to process
 		while (this.getCrawler ().hasNext ()
@@ -71,6 +74,7 @@ public class OntoLearnApp {
 			while (i.hasNext ()) {
 				// Let each extractor process the document
 				e = i.next ();
+				start = System.currentTimeMillis ();
 				try {
 					System.out.println (e.getName () + " is processing "
 							+ doc.getName ());
@@ -81,6 +85,8 @@ public class OntoLearnApp {
 							+ ":");
 					t.printStackTrace ();
 				}
+				finish = System.currentTimeMillis ();
+				System.out.println(e.getName () + " took " + ((finish-start)/1000.0) + " seconds to process " + doc.getName ());
 			}
 
 			// after all extractors have processed the document clean up
