@@ -30,7 +30,6 @@ import com.hp.hpl.jena.ontology.OntProperty;
  */
 public class AssociationBasedExtractor implements Extractor {
 
-	//protected Collection<Occurance> occuranceMatrix = new HashSet<Occurance> ();
 	PartOfSpeechTagger posTagger = PartOfSpeechTagger.Factory.getStanfordLexer ();
 	Tokenizer tokenizer = Tokenizer.Factory.getInstance ();
 	AssociationDatabase waardeDB = new AssociationDatabase ();
@@ -63,10 +62,8 @@ public class AssociationBasedExtractor implements Extractor {
 	}
 	
 	protected void parse (BufferedReader reader, Ontology ontology, Document doc) throws Throwable {
-		//this.occuranceMatrix = new HashSet<Occurance> ();
 		
 		try {
-			// List<String> myList = tokenizer.toSentences (doc.readAbstracts());
 			List<String> myList = this.tokenizer.toSentences(reader);
 
 			for (int x = 0, mySize = myList.size (); x < mySize; x++) {
@@ -83,41 +80,16 @@ public class AssociationBasedExtractor implements Extractor {
 						String test = oneWordPOS.substring (0, endWordPosition);
 						String test2 = test.toLowerCase ().replaceAll("\\x5C","");
 						
-						// Implementatie 1:
 						this.storeWord(this.getDocumentName (doc), test2);
-						
-						// Implementatie 2:
-						/*if (this.getOccurance (test2, doc) == null) {
-							this.add (test2, doc);
-						} else {
-							int ocWordcount = this.getOccurance (test2, doc).wordCount++;
-							this.waardeDB.updateConcept (doc.getName(), test2, new Integer(ocWordcount));
-						}*/
 					}
 				}
 			}
-			this.storeOccurances();
 			System.out.println(this.tostring ());
 		} catch (IOException e) {
 			System.out.println ("Error: " + e);
 		} catch (SQLException e) {
 			System.out.println ("Error: " + e);
 		}
-	}
-	
-	public void storeOccurances() {
-		/*Iterator<Occurance> myOccurances = this.occuranceMatrix.iterator ();
-		Occurance tempOccurance = null;
-		
-		while(myOccurances.hasNext()){
-			tempOccurance = myOccurances.next();
-			try {
-				this.waardeDB.addConcept(tempOccurance.getDocumentName()+"-"+this.abstractCounter, tempOccurance.getWord(), tempOccurance.getWordCount());
-			}
-			catch(Exception e) {
-				e.printStackTrace();
-			}
-		}*/
 	}
 	
 	public void storeWord(String docName, String word) {
@@ -129,7 +101,6 @@ public class AssociationBasedExtractor implements Extractor {
 			tempOccurance.setWord(word);
 			tempOccurance.setDocumentName(docName);
 			tempOccurance.setWordCount(1);
-			//this.occuranceMatrix.add(tempOccurance);
 			try {
 				this.waardeDB.addConcept (tempOccurance);
 			} catch (SQLException e) {
@@ -143,17 +114,6 @@ public class AssociationBasedExtractor implements Extractor {
 	}
 	
 	public Occurance getOccurance (String docName, String word) {
-		/*Iterator<Occurance> i = this.occuranceMatrix.iterator ();
-		Occurance oc;
-		while (i.hasNext ()) {
-			oc = i.next ();
-			if (oc.documentName.equals (docName)
-					&& oc.word.equals (word)) {
-				return oc;
-			}
-		}
-		return null;
-		*/
 		return this.waardeDB.getOccurance (docName, word);
 	}
 
@@ -162,22 +122,10 @@ public class AssociationBasedExtractor implements Extractor {
 		oc.word = word;
 		oc.documentName = doc.getName ();
 		oc.wordCount = 1;
-		//this.occuranceMatrix.add (oc);
 		this.waardeDB.addConcept (oc);
 	}
 
 	public Occurance getOccurance (String word, Document doc) {
-		/*Iterator<Occurance> i = this.occuranceMatrix.iterator ();
-		Occurance oc;
-		while (i.hasNext ()) {
-			oc = i.next ();
-			if (oc.documentName.equals (doc.getName ())
-					&& oc.word.equals (word)) {
-				return oc;
-			}
-		}
-		return null;
-		*/
 		return this.waardeDB.getOccurance (this.getDocumentName(doc), word);
 	}
 	
@@ -186,23 +134,7 @@ public class AssociationBasedExtractor implements Extractor {
 	}
 
 	public String tostring () throws SQLException {
-		/*Iterator<Occurance> i = this.occuranceMatrix.iterator ();
-		Occurance oc;
-		String result = "";
-		while (i.hasNext ()) {
-			oc = i.next ();
-			result += oc.word + " " + oc.documentName + " " + oc.wordCount;
-			result += "\n";
-		}
-		return result;
-		*/
 		return this.getName () + " knows about " + this.waardeDB.getDocCount () + " documents containing " + this.waardeDB.getWordCount () + " nouns."; 
-	}
-
-	public void conceptsToDatabase () {
-		// AssociationDatabase waardeDB = new AssociationDatabase();
-		// waardeDB.addConcepts ();
-		// System.out.println (this.tostring ());
 	}
 
 	/**
@@ -327,7 +259,7 @@ public class AssociationBasedExtractor implements Extractor {
 				System.out.println("This relation is added: "+ wordX + " --> " + wordY);
 				System.out.println("vicore: " + pearsonCoefficient);
 				System.out.println("Confidence (" + confidence + ") Support ("+support+")");
-				this.addRelation (wordX, wordY, Math.pow (pearsonCoefficient*confidence*support,-3), ontology);
+				this.addRelation (wordX, wordY, Math.pow (pearsonCoefficient*confidence*support,-2), ontology);
 			}
 		}
 		catch (Exception e) {
@@ -366,8 +298,6 @@ public class AssociationBasedExtractor implements Extractor {
 			association = ontology.addDataProperty (relationstrength);
 			association.addComment ("value between 0-1", null);
 		}
-		p.setDomain (x);
-		p.setRange (y);
 		p.addProperty (association, ""+strength);
 		x.addProperty (p, y);
 	}
