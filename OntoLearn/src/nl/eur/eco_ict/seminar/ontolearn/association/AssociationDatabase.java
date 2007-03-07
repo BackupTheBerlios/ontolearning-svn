@@ -137,6 +137,10 @@ public class AssociationDatabase {
 	}
 
 	public Occurance getOccurance (String document, String word) {
+		Occurance temp = null;
+		if (!this.inmemory){
+			//TODO
+		}else{
 		Collection<Occurance> words = null;
 		Collection<Occurance> documents = null;
 		Iterator<Occurance> i = null;
@@ -154,13 +158,14 @@ public class AssociationDatabase {
 			i = documents.iterator ();
 		}
 
-		Occurance temp = null;
+		
 		while (i != null && i.hasNext () && temp == null) {
 			temp = i.next ();
 			if (!temp.getDocumentName ().equals (document)
 					|| !temp.getWord ().equals (word)) {
 				temp = null;
 			}
+		}
 		}
 		return temp;
 	}
@@ -223,7 +228,7 @@ public class AssociationDatabase {
 				this.getAllWordsPerDocument (documentString[k]);
 			}
 		} else {
-			// TODO
+			return this.docuemntOccurances.keySet ().toArray (new String[this.docuemntOccurances.keySet ().size ()]);
 		}
 
 		return documentString;
