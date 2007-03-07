@@ -26,10 +26,12 @@ public class AssociationDatabase {
 
 	protected boolean inmemory = false;
 
-	//protected Collection<Occurance> occuranceMatrix = new HashSet<Occurance> ();
-	
-	protected Map<String, Collection<Occurance>> wordOccurances = new HashMap<String, Collection<Occurance>>();
-	protected Map<String, Collection<Occurance>> docuemntOccurances = new HashMap<String, Collection<Occurance>>();
+	// protected Collection<Occurance> occuranceMatrix = new HashSet<Occurance>
+	// ();
+
+	protected Map<String, Collection<Occurance>> wordOccurances = new HashMap<String, Collection<Occurance>> ();
+
+	protected Map<String, Collection<Occurance>> documentOccurances = new HashMap<String, Collection<Occurance>> ();
 
 	public AssociationDatabase () {
 		if (!this.inmemory) {
@@ -56,7 +58,7 @@ public class AssociationDatabase {
 				// Get a Statement object
 				this.stmt = this.con.createStatement ();
 			} catch (Exception e) {
-				//e.printStackTrace ();
+				// e.printStackTrace ();
 			}
 		}
 
@@ -72,43 +74,90 @@ public class AssociationDatabase {
 				e.printStackTrace ();
 			}
 		} else {
-			//this.occuranceMatrix.clear ();
+			// this.occuranceMatrix.clear ();
 			this.wordOccurances.clear ();
-			this.docuemntOccurances.clear ();
+			this.documentOccurances.clear ();
 		}
 
 	}
-	
-	public void addConcept (Occurance occ) throws SQLException{
-		if (!this.inmemory){
-			this.addConcept (occ.getDocumentName (), occ.getWord (), new Integer(occ.getWordCount ()));
-		}else{
-			if (!this.wordOccurances.containsKey (occ.getWord ())){
-				this.wordOccurances.put (occ.getWord (), new HashSet<Occurance>());
+
+	public void addConcept (Occurance occ) throws SQLException {
+		if (!this.inmemory) {
+			// Tolerate only one document instance in memory if another document
+			// is added write the data for the existing document to the database
+			if (this.documentOccurances.keySet ().size () > 0
+					&& !this.documentOccurances.containsKey (occ
+							.getDocumentName ())) {
+				this.dumpMemoryToDB ();
+			}
+			boolean temp = this.inmemory;
+			this.inmemory = true;
+			this.addConcept (occ);
+			this.inmemory = temp;
+		} else {
+			if (!this.wordOccurances.containsKey (occ.getWord ())) {
+				this.wordOccurances.put (occ.getWord (),
+						new HashSet<Occurance> ());
 			}
 			this.wordOccurances.get (occ.getWord ()).add (occ);
-			if (!this.docuemntOccurances.containsKey (occ.getDocumentName ())){
-				this.docuemntOccurances.put (occ.getDocumentName (), new HashSet<Occurance>());
+			if (!this.documentOccurances.containsKey (occ.getDocumentName ())) {
+				this.documentOccurances.put (occ.getDocumentName (),
+						new HashSet<Occurance> ());
 			}
-			this.docuemntOccurances.get (occ.getDocumentName ()).add(occ);
+			this.documentOccurances.get (occ.getDocumentName ()).add (occ);
 		}
+	}
+
+	/**
+	 * output all occurences held in memory to the database and clean the memory
+	 * @throws SQLException
+	 */
+	protected void dumpMemoryToDB () throws SQLException {
+
+		// Transfer data from memory to DB
+		Iterator<String> d = this.documentOccurances.keySet ().iterator ();
+		while (d.hasNext ()) {
+			Iterator<Occurance> i = this.documentOccurances.get (d.next ())
+					.iterator ();
+			while (i.hasNext ()) {
+				this.addConceptToDB (i.next ());
+			}
+		}
+
+		// Clear memory
+		this.documentOccurances.clear ();
+		this.wordOccurances.clear ();
+	}
+
+	protected void addConceptToDB (String document, String word,
+			Integer wordCount) throws SQLException {
+		// System.out.println ("INSERT INTO `association_abstract`
+		// (`document`, `word`, `wordcount`) VALUES('" + document + "','" +
+		// word + "', '" + wordCount + "')");
+		this.stmt
+				.executeUpdate ("INSERT INTO `association_abstract` (`document`, `word`, `wordcount`) VALUES('"
+						+ document + "','" + word + "', '" + wordCount + "')");
+	}
+
+	protected void addConceptToDB (Occurance occ) throws SQLException {
+		this.addConceptToDB (occ.getDocumentName (), occ.getWord (),
+				new Integer (occ.getWordCount ()));
 	}
 
 	protected void addConcept (String document, String word, Integer wordCount)
 			throws SQLException {
 		if (!this.inmemory) {
+			// Tolerate only one document instance in memory if another document
+			// is added write the data for the existing document to the database
+			if (this.documentOccurances.keySet ().size () > 0
+					&& !this.documentOccurances.containsKey (document)) {
+				this.dumpMemoryToDB ();
+			}
+			boolean temp = this.inmemory;
+			this.inmemory = true;
+			this.addConcept (document, word, wordCount);
+			this.inmemory = temp;
 
-			// System.out.println ("INSERT INTO `association_abstract`
-			// (`document`, `word`, `wordcount`) VALUES('" + document + "','" +
-			// word + "', '" + wordCount + "')");
-			this.stmt
-					.executeUpdate ("INSERT INTO `association_abstract` (`document`, `word`, `wordcount`) VALUES('"
-							+ document
-							+ "','"
-							+ word
-							+ "', '"
-							+ wordCount
-							+ "')");
 		} else {
 			Occurance occ = new Occurance ();
 			occ.setDocumentName (document);
@@ -138,34 +187,43 @@ public class AssociationDatabase {
 
 	public Occurance getOccurance (String document, String word) {
 		Occurance temp = null;
-		if (!this.inmemory){
-			//TODO
-		}else{
-		Collection<Occurance> words = null;
-		Collection<Occurance> documents = null;
-		Iterator<Occurance> i = null;
-		
-		if (this.wordOccurances.containsKey(word)){
-			words = this.wordOccurances.get (word);
-		}
-		if (this.docuemntOccurances.containsKey (document)){
-			documents = this.docuemntOccurances.get (document);
-		}
-		if (words != null && documents != null && words.size () < documents.size ()){
-			i = words.iterator ();
-		}
-		if (i == null && documents != null && words != null && documents.size () < words.size ()){
-			i = documents.iterator ();
-		}
-
-		
-		while (i != null && i.hasNext () && temp == null) {
-			temp = i.next ();
-			if (!temp.getDocumentName ().equals (document)
-					|| !temp.getWord ().equals (word)) {
-				temp = null;
+		if (!this.inmemory) {
+			// If the occurance is cached in memory retrieve it from memory, otherwise look it up in the DB
+			if (this.wordOccurances.containsKey (word) && this.documentOccurances.containsKey (document)){
+				boolean m = this.inmemory;
+				this.inmemory = true;
+				temp = this.getOccurance (document, word);
+				this.inmemory = m;
+			}else{
+			// TODO
 			}
-		}
+		} else {
+			Collection<Occurance> words = null;
+			Collection<Occurance> documents = null;
+			Iterator<Occurance> i = null;
+
+			if (this.wordOccurances.containsKey (word)) {
+				words = this.wordOccurances.get (word);
+			}
+			if (this.documentOccurances.containsKey (document)) {
+				documents = this.documentOccurances.get (document);
+			}
+			if (words != null && documents != null
+					&& words.size () < documents.size ()) {
+				i = words.iterator ();
+			}
+			if (i == null && documents != null && words != null
+					&& documents.size () < words.size ()) {
+				i = documents.iterator ();
+			}
+
+			while (i != null && i.hasNext () && temp == null) {
+				temp = i.next ();
+				if (!temp.getDocumentName ().equals (document)
+						|| !temp.getWord ().equals (word)) {
+					temp = null;
+				}
+			}
 		}
 		return temp;
 	}
@@ -228,7 +286,8 @@ public class AssociationDatabase {
 				this.getAllWordsPerDocument (documentString[k]);
 			}
 		} else {
-			return this.docuemntOccurances.keySet ().toArray (new String[this.docuemntOccurances.keySet ().size ()]);
+			return this.documentOccurances.keySet ().toArray (
+					new String[this.documentOccurances.keySet ().size ()]);
 		}
 
 		return documentString;
@@ -241,7 +300,7 @@ public class AssociationDatabase {
 							+ word + "'");
 		} else {
 			Iterator<Occurance> i = this.wordOccurances.get (word).iterator ();
-			Collection<Occurance> toRemove = new HashSet<Occurance>();
+			Collection<Occurance> toRemove = new HashSet<Occurance> ();
 			Occurance occ = null;
 			while (i.hasNext ()) {
 				occ = i.next ();
@@ -250,22 +309,23 @@ public class AssociationDatabase {
 				}
 			}
 			i = toRemove.iterator ();
-			while(i.hasNext ()){
+			while (i.hasNext ()) {
 				this.remove (i.next ());
 			}
 		}
 	}
-	
-	public void remove (Occurance occ){
-		if (!this.inmemory){
+
+	public void remove (Occurance occ) {
+		if (!this.inmemory) {
 			// TODO
-		}else{
-			Collection<Occurance> occs = this.wordOccurances.get (occ.getWord ());
-			if (occs.contains (occ)){
+		} else {
+			Collection<Occurance> occs = this.wordOccurances.get (occ
+					.getWord ());
+			if (occs.contains (occ)) {
 				occs.remove (occ);
 			}
-			occs = this.docuemntOccurances.get (occ.getDocumentName ());
-			if (occs.contains (occ)){
+			occs = this.documentOccurances.get (occ.getDocumentName ());
+			if (occs.contains (occ)) {
 				occs.remove (occ);
 			}
 		}
@@ -332,12 +392,14 @@ public class AssociationDatabase {
 				// Max Wordcount = " + avgWordCount );
 			}
 		} else {
-			HashSet<String> wordset = new HashSet<String>();
-			Iterator<Occurance> i = this.docuemntOccurances.get (document).iterator ();
+			HashSet<String> wordset = new HashSet<String> ();
+			Iterator<Occurance> i = this.documentOccurances.get (document)
+					.iterator ();
 			Occurance occ = null;
-			while (i.hasNext ()){
+			while (i.hasNext ()) {
 				occ = i.next ();
-				if (occ.getDocumentName ().equals (document) && !wordset.contains (occ.getWord ())){
+				if (occ.getDocumentName ().equals (document)
+						&& !wordset.contains (occ.getWord ())) {
 					wordset.add (occ.getWord ());
 				}
 			}
@@ -358,17 +420,17 @@ public class AssociationDatabase {
 				avgWordCount = rsAvg.getDouble ("avgwc");
 			}
 		} else {
-			int count=0, sum=0;
+			int count = 0, sum = 0;
 			Iterator<Occurance> i = this.wordOccurances.get (word).iterator ();
 			Occurance occ = null;
-			while (i.hasNext ()){
+			while (i.hasNext ()) {
 				occ = i.next ();
-				if (occ.getWord ().equals (word)){
+				if (occ.getWord ().equals (word)) {
 					sum += occ.getWordCount ();
-					count ++;
+					count++;
 				}
 			}
-			avgWordCount = (double)sum / (double)count;
+			avgWordCount = (double) sum / (double) count;
 		}
 		return avgWordCount;
 	}
@@ -519,53 +581,56 @@ public class AssociationDatabase {
 				}
 			}
 		} else {
-			Map<String, Integer> xOcc = new HashMap<String, Integer>();
-			Map<String, Integer> yOcc = new HashMap<String, Integer>();
-			Collection<Occurance> ocss = new HashSet<Occurance>();
+			Map<String, Integer> xOcc = new HashMap<String, Integer> ();
+			Map<String, Integer> yOcc = new HashMap<String, Integer> ();
+			Collection<Occurance> ocss = new HashSet<Occurance> ();
 			ocss.addAll (this.wordOccurances.get (wordX));
-			ocss.addAll (this.wordOccurances.get (wordY));			
+			ocss.addAll (this.wordOccurances.get (wordY));
 			Iterator<Occurance> i = ocss.iterator ();
 			Occurance occ = null;
-			while (i.hasNext ()){
+			while (i.hasNext ()) {
 				occ = i.next ();
-				if (occ.getWord ().equals(wordX)){
-					xOcc.put (occ.getDocumentName (), new Integer(occ.getWordCount ()));
+				if (occ.getWord ().equals (wordX)) {
+					xOcc.put (occ.getDocumentName (), new Integer (occ
+							.getWordCount ()));
 				}
-				if (occ.getWord ().equals (wordY)){
-					yOcc.put (occ.getDocumentName (), new Integer(occ.getWordCount ()));
+				if (occ.getWord ().equals (wordY)) {
+					yOcc.put (occ.getDocumentName (), new Integer (occ
+							.getWordCount ()));
 				}
 			}
-			
+
 			Iterator<String> docs = null;
 			String doc = null;
-			
+
 			// Process all the dosuments in which wordX occurrs
 			docs = xOcc.keySet ().iterator ();
-			while(docs.hasNext ()){
+			while (docs.hasNext ()) {
 				doc = docs.next ();
 				CorrOcc cOcc = new CorrOcc ();
 				cOcc.setDocument (doc);
 				cOcc.setXCount (xOcc.get (doc).intValue ());
-				if (yOcc.containsKey (doc)){
+				if (yOcc.containsKey (doc)) {
 					cOcc.setYCount (yOcc.get (doc).intValue ());
-				}else{
+				} else {
 					cOcc.setYCount (0);
 				}
 				data.add (cOcc);
 			}
-			
-			// get the documents in which wordY occurs but which not have been processed yet
-			Collection<String> remdocs = new HashSet<String>(yOcc.keySet ());
+
+			// get the documents in which wordY occurs but which not have been
+			// processed yet
+			Collection<String> remdocs = new HashSet<String> (yOcc.keySet ());
 			remdocs.removeAll (xOcc.keySet ());
 			docs = remdocs.iterator ();
-			while(docs.hasNext ()){
+			while (docs.hasNext ()) {
 				doc = docs.next ();
 				CorrOcc cOcc = new CorrOcc ();
 				cOcc.setDocument (doc);
 				cOcc.setYCount (yOcc.get (doc).intValue ());
-				if (xOcc.containsKey (doc)){
+				if (xOcc.containsKey (doc)) {
 					cOcc.setXCount (xOcc.get (doc).intValue ());
-				}else{
+				} else {
 					cOcc.setXCount (0);
 				}
 				data.add (cOcc);
@@ -590,7 +655,7 @@ public class AssociationDatabase {
 				result = rsDocCount.getInt ("numDocs");
 			}
 		} else {
-			result = this.docuemntOccurances.keySet ().size ();
+			result = this.documentOccurances.keySet ().size ();
 		}
 
 		return result;
@@ -599,8 +664,7 @@ public class AssociationDatabase {
 	/**
 	 * @param wordA
 	 * @param wordB
-	 * @return ??? the number of documents in which both words occur 
-	 * OR the 
+	 * @return ??? the number of documents in which both words occur OR the
 	 * @throws SQLException
 	 */
 	public int getCoOccCount (String wordA, String wordB) throws SQLException {
@@ -618,34 +682,38 @@ public class AssociationDatabase {
 				result = rsCoOccCount.getInt ("numDocs");
 			}
 		} else {
-			Collection<Occurance> occs = new HashSet<Occurance>();
+			Collection<Occurance> occs = new HashSet<Occurance> ();
 			occs.addAll (this.wordOccurances.get (wordA));
 			occs.addAll (this.wordOccurances.get (wordB));
 			Iterator<Occurance> i = occs.iterator ();
-			Map<String, Integer> aOcc = new HashMap<String,Integer>();
-			Map<String, Integer> bOcc = new HashMap<String,Integer>();
+			Map<String, Integer> aOcc = new HashMap<String, Integer> ();
+			Map<String, Integer> bOcc = new HashMap<String, Integer> ();
 			Occurance temp = null;
-			while(i.hasNext ()){
+			while (i.hasNext ()) {
 				temp = i.next ();
-				if (temp.getWord ().equals (wordA)){
-					aOcc.put (temp.getDocumentName (), new Integer(temp.getWordCount ()));
+				if (temp.getWord ().equals (wordA)) {
+					aOcc.put (temp.getDocumentName (), new Integer (temp
+							.getWordCount ()));
 				}
-				if (temp.getWord ().equals (wordB)){
-					bOcc.put (temp.getDocumentName (), new Integer(temp.getWordCount ()));
+				if (temp.getWord ().equals (wordB)) {
+					bOcc.put (temp.getDocumentName (), new Integer (temp
+							.getWordCount ()));
 				}
 			}
-			
+
 			// for each document in which wordA occurred
 			Iterator<String> d = aOcc.keySet ().iterator ();
 			String doc = "";
 			int cocount = 0;
-			while(d.hasNext ()){
+			while (d.hasNext ()) {
 				doc = d.next ();
 				// check if the bword also occured in this document
-				if (bOcc.containsKey (doc)){
-					// If you're only interested in the number of documents in which they co-occur uncomment the next line
+				if (bOcc.containsKey (doc)) {
+					// If you're only interested in the number of documents in
+					// which they co-occur uncomment the next line
 					// cocount++;
-					cocount = Math.min (aOcc.get (doc).intValue (), bOcc.get (doc).intValue ());
+					cocount = Math.min (aOcc.get (doc).intValue (), bOcc.get (
+							doc).intValue ());
 					result += cocount;
 				}
 			}
@@ -656,19 +724,21 @@ public class AssociationDatabase {
 
 	/**
 	 * @param word
-	 * @return ???? the number of documents the word appears in vs. the number of times the word is counted over all documents
+	 * @return ???? the number of documents the word appears in vs. the number
+	 *         of times the word is counted over all documents
 	 * @throws SQLException
 	 */
 	public int getWordCount (String word) throws SQLException {
 		int result = 0;
 		if (!this.inmemory) {
 			ResultSet rsWordCount;
-			//FIXME should we return the number of documents in which the word occured or the number of times the word actually occurred in all the documents? e.g. SUM instead of count
+			// FIXME should we return the number of documents in which the word
+			// occured or the number of times the word actually occurred in all
+			// the documents? e.g. SUM instead of count
 			String qryWordCount = "(SELECT COUNT(*) as numDocs FROM `association_abstract` WHERE `word`='"
 					+ word + "')";
 
 			rsWordCount = this.stmt.executeQuery (qryWordCount);
-
 
 			if (rsWordCount.next ()) {
 				result = rsWordCount.getInt ("numDocs");
@@ -676,10 +746,11 @@ public class AssociationDatabase {
 		} else {
 			Iterator<Occurance> i = this.wordOccurances.get (word).iterator ();
 			Occurance temp = null;
-			while(i.hasNext ()){
+			while (i.hasNext ()) {
 				temp = i.next ();
-				if (temp.getWord ().equals (word)){
-					// now the sum of all occurances is calculated change to +=1 to count only in how many documents it occurred
+				if (temp.getWord ().equals (word)) {
+					// now the sum of all occurances is calculated change to +=1
+					// to count only in how many documents it occurred
 					result += temp.getWordCount ();
 				}
 			}
@@ -687,19 +758,21 @@ public class AssociationDatabase {
 
 		return result;
 	}
-	
-	public int getWordCount (){
-		if (!this.inmemory){
-		//TODO
+
+	public int getWordCount () {
+		if (!this.inmemory) {
+			// TODO
 			return 0;
 		}
 		return this.wordOccurances.keySet ().size ();
 	}
-	
+
 	/**
-	 * @param mem if true, data will be stored in memory otherwise it is written to a database
+	 * @param mem
+	 *            if true, data will be stored in memory otherwise it is written
+	 *            to a database
 	 */
-	public void setStorage (boolean mem){
+	public void setStorage (boolean mem) {
 		this.inmemory = mem;
 	}
 }
