@@ -295,8 +295,9 @@ public class AssociationBasedExtractor implements Extractor {
 	
 	public void parseWordPair(String wordA, String wordB, Ontology ontology) {
 		double pearsonThreshold = 0;
-		double confidenceThreshold = 0;
-		double supportThreshold = 0;		
+		double confidenceThreshold = 0.05;
+		double supportThreshold = 0.05;		
+
 		
 		try {
 			double pearsonCoefficient = Math.abs(this.correlation(wordA, wordB));
