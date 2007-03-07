@@ -36,7 +36,7 @@ public class Settings {
 	
 	public String getOutputLocation(){
 		if (this.outputloc == null){
-			this.outputloc = System.getProperty ("user.dir")+File.separatorChar + "output.rdf";
+			this.outputloc = System.getProperty ("user.dir")+File.separatorChar + "output.owl";
 		}
 		return this.outputloc;
 	}
