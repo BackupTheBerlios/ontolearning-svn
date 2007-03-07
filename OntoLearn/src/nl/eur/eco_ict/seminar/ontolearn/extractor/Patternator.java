@@ -410,10 +410,11 @@ public class Patternator {
 		String regValidMatch = "([a-zA-Z0-9 ]+)+";
 		Pattern regPattern = Pattern.compile(regValidMatch);
 		
+		
 		// int value used to populate cleanMatches[]
 		int x = 0;
 		
-		for(int i=0;i < roughMatches.length; i++) {
+		for(int i=0;i < cleanMatches.length; i++) {
 			Matcher roughMatcher = regPattern.matcher(roughMatches[i]);
 			
 			if(roughMatcher.find()) {
