@@ -108,6 +108,7 @@ public class JenaOntology implements Ontology {
 	 */
 	public void setDefaultNamespace (String namespace) {
 		this.defaultNS = namespace;
+		this.getModel().setNsPrefix ("myNS", namespace);
 	}
 
 	public void insertOntology (URI ontologyuri) {
