@@ -64,6 +64,7 @@ public class OWLPruner implements Pruner {
 	 */
 	protected void lemmatize (Ontology ontology) {
 		Iterator<OntClass> i = ontology.getClasses ();
+		Collection<OntClass> toRemove = new HashSet<OntClass> ();
 		OntClass oc = null;
 		String lemma = null;
 
@@ -82,10 +83,16 @@ public class OWLPruner implements Pruner {
 					oc.addEquivalentClass (repl);
 					repl.addEquivalentClass (oc);
 					ontology.replace (oc, repl);
+					toRemove.add (oc);
 				}
 			} catch (Exception e) {
 				System.err.println (e.getMessage ());
 			}
+		}
+		
+		i = toRemove.iterator ();
+		while(i.hasNext ()){
+			ontology.remove (i.next ());
 		}
 	}
 

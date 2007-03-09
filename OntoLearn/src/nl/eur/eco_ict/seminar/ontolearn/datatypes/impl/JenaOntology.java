@@ -553,6 +553,5 @@ public class JenaOntology implements Ontology {
 
 		// TODO Add the other data -> mainly properties
 
-		this.remove (original);
 	}
 }
