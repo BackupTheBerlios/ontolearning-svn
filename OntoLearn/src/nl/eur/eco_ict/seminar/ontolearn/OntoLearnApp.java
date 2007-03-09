@@ -90,7 +90,12 @@ public class OntoLearnApp {
 			}
 
 			// after all extractors have processed the document clean up
+			try{
 			this.getPruner ().prune (this.getOntology ());
+			}catch (Throwable t){
+				System.err.println ("The pruner messed up");
+				t.printStackTrace ();
+			}
 		}
 
 		// Once all documents have been processed call the onFinish method to
@@ -104,7 +109,12 @@ public class OntoLearnApp {
 				System.err.println (e.getName () + " messed up:");
 				t.printStackTrace ();
 			}
-			this.getPruner ().prune (this.getOntology ());
+			try{
+				this.getPruner ().prune (this.getOntology ());
+				}catch (Throwable t){
+					System.err.println ("The pruner messed up");
+					t.printStackTrace ();
+				}
 		}
 
 		// Output ontology
