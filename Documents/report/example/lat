@@ -1,0 +1,7 @@
+latex $1
+bibtex $1
+latex $1
+latex $1
+dvips -t a4 -Ppdf $1
+ps2pdf r.ps
+%distill -colorres 600 -encodecolor off -encodegray off -encodemono off paper_v22.ps
