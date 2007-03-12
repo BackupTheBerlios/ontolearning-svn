@@ -1,0 +1,26 @@
+\begin{thebibliography}{1}
+
+\bibitem{mustapha}
+Mustapha, N.B., Aufaure, M., Baazhaoui-Zghal, H.:
+\newblock Towards an architecture of ontological components for the semantic
+  web.
+\newblock In: Web Information Systems Modelling. (2006)
+
+\bibitem{staab}
+Staab, S., Schnurr, H., Studer, R., Sure, Y.:
+\newblock Knowledge processes and ontologies.
+\newblock IEEE Intelligent Systems, Special Issue on Knowledge Management
+  (2001)
+
+\bibitem{hearstWordNet}
+Hearst, M.A.:
+\newblock Automated discovery of wordnet relations.
+\newblock Wordnet: An Electronic Lexical Database (1998)
+
+\bibitem{hearstThesis}
+Hearst, M.A.:
+\newblock Context and structure in automated full-text information access.
+\newblock Technical report, Computer Science division (EECS) University of
+  California. Berkeley. (1994)
+
+\end{thebibliography}
