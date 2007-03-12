@@ -75,6 +75,7 @@ public class OntologyMonitor {
 		int count = 0;
 		Iterator<?> i= this.tomonitor.getClasses ();
 		while (i.hasNext()){
+			i.next ();
 			count++;
 		}
 		return count;
@@ -84,6 +85,7 @@ public class OntologyMonitor {
 		int count = 0;
 		Iterator<?> i= this.tomonitor.getIndividuals ();
 		while (i.hasNext()){
+			i.next ();
 			count++;
 		}
 		return count;
@@ -97,6 +99,7 @@ public class OntologyMonitor {
 			temp = i.next ();
 			Iterator<?> r = temp.listProperties ();
 			while (r.hasNext ()){
+				r.next ();
 			count++;
 			}
 		}
