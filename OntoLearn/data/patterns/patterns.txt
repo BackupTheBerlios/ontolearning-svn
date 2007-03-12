@@ -4,5 +4,60 @@ NPx:connector:(or other):connector:NP0
 NPx:connector:(and other):connector:NP0
 NP0:connector:(including):connector:NPx
 NP0:connector:(especially):connector:NPx
-NP0:connector:(like):connector:NPx
-NP0:connector:(mainly):connector:NPx
+NPx:connector:(h an LDC outward migration are calculated for both):connector:NP0
+NPx:connector:():connector:NP0
+NPx:connector:(objectives of the monetary):connector:NP0
+NPx:connector:(In this paper we analyze the above types of):connector:NP0
+NPx:connector:(An application to high-frequency U.S. stock index and option):connector:NP0
+NPx:connector:(The paper presents a comparative study on the performance of commonly used estimators of the fractional order of integration when):connector:NP0
+NPx:connector:(Both have been reached on a sample of about 1\/3 of the available):connector:NP0
+NPx:connector:(It is then replicated on as much of the available):connector:NP0
+NPx:connector:(Neither model replicates outside the original):connector:NP0
+NPx:connector:(We estimate the relation by a fixed effect non-linear panel):connector:NP0
+NPx:connector:(The analyses rely entirely on the use of price):connector:NP0
+NPx:connector:(We also consider situations with):connector:NP0
+NPx:connector:(h ageing populations many European countries may be tempted to attract):connector:NP0
+NPx:connector:(Based on Danish):connector:NP0
+NPx:connector:(Those predictions are tested with a unique Danish):connector:NP0
+NPx:connector:(The AEL -LRB- aid effectiveness literature -RRB- studies the macroeconomic effect of development aid using cross-country or panel):connector:NP0
+NPx:connector:(A unique):connector:NP0
+NPx:connector:(We make use of a large register-based panel):connector:NP0
+NPx:connector:(The AEL -LRB- aid effectiveness literature -RRB- studies the effect of development aid using econome trics on macro):connector:NP0
+NPx:connector:(A mixed proportional hazard framework based on a 10 % representative Danish registry):connector:NP0
+NPx:connector:(This paper presents a new framework for coping with problems often encountered when modeling seasonal high frequency):connector:NP0
+NPx:connector:(The proposed modelling framework is applied to a):connector:NP0
+NPx:connector:(The main objective behind the production of seasonally adjusted time series is to give an easy access to a common time series):connector:NP0
+NPx:connector:(In this article we present several di erent ways to integrate the seasonal adjustment into the econometric analysis in addition to applying):connector:NP0
+NPx:connector:(The main objective behind the production of seasonally adjusted time series is to give an easy access to a common time series):connector:NP0
+NPx:connector:(In this article we present several di erent ways to integrate the seasonal adjustment into the econometric analysis in addition to applying):connector:NP0
+NPx:connector:(The main objective behind the production of seasonally adjusted time series is to give an easy access to a common time series):connector:NP0
+NPx:connector:(In this article we present several di erent ways to integrate the seasonal adjustment into the econometric analysis in addition to applying):connector:NP0
+NPx:connector:(The key assumption is that agents form expectations through a cointegrated vector autoregression -LRB- CVAR -RRB- system representing the joint):connector:NP0
+NPx:connector:(The empirical model is estimated using panel):connector:NP0
+NP0:connector:('' according to which small costs of changing):connector:NPx
+NPx:connector:(in a first-order self-referential overlapping generations):connector:NP0
+NPx:connector:(In this paper we analyze the above types of):connector:NP0
+NPx:connector:(An application to high-frequency U.S. stock index and option):connector:NP0
+NPx:connector:(The analyses rely entirely on the use of price):connector:NP0
+NPx:connector:(We also consider situations with):connector:NP0
+NPx:connector:(We estimate the relation by a fixed effect non-linear panel):connector:NP0
+NPx:connector:(The paper presents a comparative study on the performance of commonly used estimators of the fractional order of integration when):connector:NP0
+NPx:connector:(Both have been reached on a sample of about 1\/3 of the available):connector:NP0
+NPx:connector:(It is then replicated on as much of the available):connector:NP0
+NPx:connector:(Neither model replicates outside the original):connector:NP0
+NPx:connector:(h ageing populations many European countries may be tempted to attract):connector:NP0
+NPx:connector:(Based on Danish):connector:NP0
+NPx:connector:(Those predictions are tested with a unique Danish):connector:NP0
+NPx:connector:(A mixed proportional hazard framework based on a 10 % representative Danish registry):connector:NP0
+NPx:connector:(A unique):connector:NP0
+NPx:connector:(We make use of a large register-based panel):connector:NP0
+NPx:connector:(The AEL -LRB- aid effectiveness literature -RRB- studies the macroeconomic effect of development aid using cross-country or panel):connector:NP0
+NPx:connector:(This paper presents a new framework for coping with problems often encountered when modeling seasonal high frequency):connector:NP0
+NPx:connector:(The proposed modelling framework is applied to a):connector:NP0
+NPx:connector:(The AEL -LRB- aid effectiveness literature -RRB- studies the effect of development aid using econome trics on macro):connector:NP0
+NPx:connector:(The main objective behind the production of seasonally adjusted time series is to give an easy access to a common time series):connector:NP0
+NPx:connector:(In this article we present several di erent ways to integrate the seasonal adjustment into the econometric analysis in addition to applying):connector:NP0
+NPx:connector:(The main objective behind the production of seasonally adjusted time series is to give an easy access to a common time series):connector:NP0
+NPx:connector:(In this article we present several di erent ways to integrate the seasonal adjustment into the econometric analysis in addition to applying):connector:NP0
+NPx:connector:(The main objective behind the production of seasonally adjusted time series is to give an easy access to a common time series):connector:NP0
+NPx:connector:(In this article we present several di erent ways to integrate the seasonal adjustment into the econometric analysis in addition to applying):connector:NP0

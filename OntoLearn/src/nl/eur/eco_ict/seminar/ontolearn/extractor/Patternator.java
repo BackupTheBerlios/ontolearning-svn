@@ -414,7 +414,7 @@ public class Patternator {
 		// int value used to populate cleanMatches[]
 		int x = 0;
 		
-		for(int i=0;i < cleanMatches.length; i++) {
+		for(int i=0;i < cleanMatches.length && i < roughMatches.length; i++) {
 			Matcher roughMatcher = regPattern.matcher(roughMatches[i]);
 			
 			if(roughMatcher.find()) {

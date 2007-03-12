@@ -21,6 +21,7 @@ import nl.eur.eco_ict.seminar.ontolearn.util.DocumentCrawler;
 import nl.eur.eco_ict.seminar.ontolearn.util.Pruner;
 import nl.eur.eco_ict.seminar.ontolearn.util.impl.DiskCrawler;
 import nl.eur.eco_ict.seminar.ontolearn.util.impl.OWLPruner;
+import nl.eur.eco_ict.seminar.ontolearn.util.impl.OntologyMonitor;
 import nl.eur.eco_ict.seminar.ontolearn.util.impl.SettingsWindow;
 
 /**
@@ -51,21 +52,20 @@ public class OntoLearnApp {
 	}
 
 	public void retrieveSettings () {
-		// at the moment it needs to be hardcoded, but we could also display a
-		// GUI widget to get the info
 		this.settings = new Settings ();
 		this.settings.setDocumentroot ("file:///"
 				+ System.getProperty ("user.dir").replace ('\\', '/')
 				+ "/data/testAbstracts/");
 		this.settings.setOntNamespace ("http://X/");
 		new SettingsWindow (this.settings);
-	} // +System.getProperty("user.dir")+"\\testAbstracts\\"
+	} 
 
 	public void start () throws URISyntaxException, IOException {
 		Document doc = null;
 		Extractor e = null;
 		Iterator<Extractor> i = null;
 		long start, finish;
+		OntologyMonitor ontoMonitor = new OntologyMonitor (this.getOntology ());
 
 		// See if there's anything to process
 		while (this.getCrawler ().hasNext ()
@@ -87,11 +87,13 @@ public class OntoLearnApp {
 				}
 				finish = System.currentTimeMillis ();
 				System.out.println(e.getName () + " took " + ((finish-start)/1000.0) + " seconds to process " + doc.getName ());
+				System.out.println (e.getName () + " modified the ontology: " + ontoMonitor.getDifferenceMsg ());
 			}
 
 			// after all extractors have processed the document clean up
 			try{
 			this.getPruner ().prune (this.getOntology ());
+			System.out.println ("The pruner modified the ontology: " + ontoMonitor.getDifferenceMsg ());
 			}catch (Throwable t){
 				System.err.println ("The pruner messed up");
 				t.printStackTrace ();
@@ -105,12 +107,14 @@ public class OntoLearnApp {
 			e = i.next ();
 			try {
 				e.onFinish (this.getOntology ());
+				System.out.println (e.getName () + " modified the ontology: " + ontoMonitor.getDifferenceMsg ());
 			} catch (Throwable t) {
 				System.err.println (e.getName () + " messed up:");
 				t.printStackTrace ();
 			}
 			try{
 				this.getPruner ().prune (this.getOntology ());
+				System.out.println ("The pruner modified the ontology: " + ontoMonitor.getDifferenceMsg ());
 				}catch (Throwable t){
 					System.err.println ("The pruner messed up");
 					t.printStackTrace ();

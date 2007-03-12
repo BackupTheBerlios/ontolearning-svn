@@ -32,8 +32,6 @@ public class OWLPruner implements Pruner {
 	 * @see nl.eur.eco_ict.seminar.ontolearn.util.Pruner#prune(nl.eur.eco_ict.seminar.ontolearn.datatypes.Ontology)
 	 */
 	public void prune (Ontology ontology) {
-		// rename concepts to their base lemma / stem
-		this.lemmatize (ontology);
 		Collection<OntClass> cdi = this.getConceptsOfDirectInterest (ontology);
 		/*
 		 * Once all the concepts of direct interest have been selected
@@ -52,6 +50,9 @@ public class OWLPruner implements Pruner {
 			// - Pruning orphan individuals. The result is OP.
 			this.pruneOrphanIndividuals (ontology);
 		}
+		
+		//		 rename concepts to their base lemma / stem
+		this.lemmatize (ontology);
 	}
 
 	public void setCDISelector (ConceptsOfInterestSelection cdis) {

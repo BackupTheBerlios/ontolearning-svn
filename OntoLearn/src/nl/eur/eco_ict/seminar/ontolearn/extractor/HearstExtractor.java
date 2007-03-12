@@ -148,7 +148,7 @@ public class HearstExtractor implements Extractor {
 		    	  if(checkNP(value[i])) {
 			    	  System.out.println("Adding the following value: "+value[i]);
 			    	  OntClass myValue = ontology.addOClass (value[i]);						
-					  myValue.addSuperClass (myKey);
+					  myValue.setSuperClass (myKey);
 		    	  }
 		      }
 	      }
