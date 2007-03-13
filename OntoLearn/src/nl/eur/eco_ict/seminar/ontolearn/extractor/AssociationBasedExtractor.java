@@ -1,3 +1,4 @@
+
 /**
  * 
  */
@@ -286,7 +287,8 @@ public class AssociationBasedExtractor implements Extractor {
 		OntClass y = ontology.getOClass (wordY);
 		
 		if (p == null){
-			p = ontology.addObjectProperty (wordRelation);
+			p = ontology.addDataProperty (wordRelation);
+			p.addComment ("", null);
 		}
 		if (x == null){
 			x = ontology.addOClass (wordX);
@@ -300,6 +302,7 @@ public class AssociationBasedExtractor implements Extractor {
 		}
 		p.addProperty (association, ""+strength);
 		x.addProperty (p, y);
+		x.addComment (wordRelation + " with " + y + " strength: " + strength, null);
 	}
 	
 	/**

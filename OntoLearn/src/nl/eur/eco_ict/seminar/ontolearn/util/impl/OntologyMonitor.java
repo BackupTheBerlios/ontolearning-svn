@@ -47,7 +47,7 @@ public class OntologyMonitor {
 		
 		c = this.getNumConcepts ();
 		r = this.getNumRelations ();
-		i = this.getNumRelations ();
+		i = this.getNumInstances ();
 		
 		result += this.addedOrRemoved (this.concepts, c, "concepts");
 		result += ", ";
